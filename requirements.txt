@@ -3,8 +3,13 @@
 # 核心依赖
 requests>=2.28.0
 
-# 可选：Web 界面
+# 语音输入（可选）
+# SpeechRecognition>=3.10.0
+# pyaudio>=0.2.13
+# 安装语音支持：pip3 install SpeechRecognition pyaudio
+
+# Web 界面（可选）
 # flask>=2.3.0
 
-# 可选：高级 NLP 功能
+# 高级 NLP 功能（可选）
 # jieba>=0.42.0  # 中文分词
