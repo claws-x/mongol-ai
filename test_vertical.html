@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒙古文竖排测试</title>
+    <style>
+        body {
+            background: #1e3c72;
+            padding: 40px;
+            font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
+        }
+        
+        .test-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        /* 测试 1: writing-mode */
+        .test1 {
+            writing-mode: vertical-lr;
+            font-size: 36px;
+            line-height: 1.8;
+        }
+        
+        /* 测试 2: writing-mode + text-orientation */
+        .test2 {
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            font-size: 36px;
+            line-height: 1.8;
+        }
+        
+        /* 测试 3: transform 旋转 */
+        .test3 {
+            display: inline-block;
+            transform: rotate(90deg);
+            transform-origin: top left;
+            font-size: 36px;
+            line-height: 1.8;
+            white-space: nowrap;
+        }
+        
+        /* 测试 4: 组合方案 */
+        .test4 {
+            writing-mode: vertical-lr;
+            text-orientation: sideways;
+            font-size: 36px;
+            line-height: 1.8;
+        }
+        
+        h3 {
+            color: white;
+            margin: 20px 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: white;">🧪 蒙古文竖排测试</h1>
+    
+    <h3>测试 1: writing-mode: vertical-lr</h3>
+    <div class="test-box">
+        <div class="test1">ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ</div>
+    </div>
+    
+    <h3>测试 2: writing-mode + text-orientation: upright</h3>
+    <div class="test-box">
+        <div class="test2">ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ</div>
+    </div>
+    
+    <h3>测试 3: transform: rotate(90deg)</h3>
+    <div class="test-box">
+        <div class="test3">ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ</div>
+    </div>
+    
+    <h3>测试 4: writing-mode + text-orientation: sideways</h3>
+    <div class="test-box">
+        <div class="test4">ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ</div>
+    </div>
+    
+    <script>
+        console.log('🧪 测试页面加载完成');
+        console.log('User Agent:', navigator.userAgent);
+    </script>
+</body>
+</html>
