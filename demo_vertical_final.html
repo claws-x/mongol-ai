@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>传统蒙古文 AI 助手 - 自研算法 v1.0</title>
+    <title>传统蒙古文 AI 助手 - 竖排显示</title>
+    
+    <!-- 引入蒙古文竖排 CSS -->
+    <link rel="stylesheet" href="mongolian-vertical.css">
     
     <!-- 加载字体 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,23 +52,33 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         
-        /* 蒙古文竖排样式 - 使用自研算法 */
+        /* 蒙古文竖排样式 - 参考 cjvlang.com 和 W3C 标准 */
         .mongolian-vertical {
-            /* 使用 transform 强制旋转 90 度（测试有效）*/
-            display: inline-block;
-            transform: rotate(90deg);
-            transform-origin: top left;
-            white-space: nowrap;
+            /* 标准竖排设置 */
+            writing-mode: vertical-lr;           /* 竖排：从上到下，列从左到右 */
+            -webkit-writing-mode: vertical-lr;   /* WebKit 前缀 */
+            -moz-writing-mode: vertical-lr;      /* Mozilla 前缀 */
+            -ms-writing-mode: tb-lr;             /* IE 设置 */
             
+            /* 字符方向 */
+            text-orientation: upright;
+            -webkit-text-orientation: sideways-right;  /* WebKit 特殊处理 */
+            
+            /* 文本对齐和布局 */
+            text-align: right;                   /* 右对齐（底部对齐）*/
+            text-justify: inter-ideograph;       /* 标点压缩 */
+            
+            /* 字体和大小 */
             font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
             font-size: 32px;
-            line-height: 1.8;
-            padding: 20px;
-            background: linear-gradient(to bottom, #fffef8, #fff);
-            border-radius: 15px;
-            border: 2px solid #d4a574;
-            box-shadow: inset 0 0 20px rgba(212, 165, 116, 0.2);
-            min-width: 300px;
+            
+            /* 间距 */
+            margin: 2px 1px 0px 1px;
+            padding: 0px;
+            
+            /* 保持连续 */
+            display: inline-block;
+            white-space: nowrap;
         }
         
         .chat-row {
@@ -158,7 +171,7 @@
         
         <div class="chat-container">
             <h2 style="text-align: center; margin-bottom: 20px; color: #1e3c72;">
-                📜 传统蒙古文竖排显示（自研算法）
+                📜 传统蒙古文竖排显示（参考 mongolfont.com）
             </h2>
             
             <div id="chat-content">
@@ -167,14 +180,14 @@
         </div>
         
         <div class="info-box">
-            <h3>🔬 自研算法说明</h3>
+            <h3>📚 学习来源</h3>
             <ul>
-                <li>✅ MongolianLayoutEngine v1.0 - OpenClaw 自主研发</li>
-                <li>✅ 智能浏览器检测 - 自动选择最优渲染策略</li>
-                <li>✅ 自适应布局算法 - 根据容器宽度动态调整</li>
-                <li>✅ 性能优化 - 支持长文本懒加载</li>
-                <li>✅ 跨浏览器兼容 - WebKit/Gecko/Blink</li>
-                <li>✅ 不依赖第三方库 - 纯原生 JavaScript</li>
+                <li>✅ Mongolfont 官网：http://www.mongolfont.com/</li>
+                <li>✅ CJVLang 教程：http://www.cjvlang.com/</li>
+                <li>✅ W3C 标准：Mongolian Layout Requirements</li>
+                <li>✅ 字体：Mongolian White / Mongolian Baiti</li>
+                <li>✅ 书写模式：vertical-lr（从左到右）</li>
+                <li>✅ 字符方向：upright / sideways-right</li>
             </ul>
         </div>
         
@@ -244,10 +257,16 @@
             chatItem.appendChild(aiRow);
             chatContent.appendChild(chatItem);
             
-            // 直接设置文本（不使用引擎分割）
+            // 使用 CSS 类渲染蒙古文竖排
             setTimeout(() => {
-                document.getElementById(`user-msg-${index}`).textContent = chat.user;
-                document.getElementById(`ai-msg-${index}`).textContent = chat.ai;
+                const userEl = document.getElementById(`user-msg-${index}`);
+                const aiEl = document.getElementById(`ai-msg-${index}`);
+                
+                userEl.className = 'mongolian-vertical mongolian-white';
+                aiEl.className = 'mongolian-vertical mongolian-white';
+                
+                userEl.textContent = chat.user;
+                aiEl.textContent = chat.ai;
             }, 100);
         });
     </script>
