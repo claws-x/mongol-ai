@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>传统蒙古文 AI 助手 - 竖排显示</title>
+    <title>传统蒙古文 AI 助手 - 手写体竖排显示</title>
     
-    <!-- 加载 Noto Sans Mongolian 字体 -->
+    <!-- 加载传统蒙古文手写体字体 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
     
     <style>
+        @font-face {
+            font-family: 'Mongolian Usug';
+            src: local('Mongolian Usug'), 
+                 local('MongolianScript'), 
+                 local('Mongolian Baiti'),
+                 url('https://cdn.jsdelivr.net/gh/superpowers04/Fonts@main/Mongolian%20Usag.ttf') format('truetype');
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -22,7 +30,7 @@
             min-height: 100vh;
             padding: 20px;
             color: #333;
-            font-family: "Noto Sans Mongolian", "Mongolian Baiti", sans-serif;
+            font-family: 'Mongolian Usug', 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif;
         }
         
         .container {
@@ -49,19 +57,20 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         
-        /* 传统蒙古文竖排样式 */
+        /* 传统蒙古文手写体竖排样式 */
         .mongolian-vertical {
-            writing-mode: vertical-rl;           /* 竖排，从右到左（传统蒙古文标准）*/
+            writing-mode: vertical-rl;           /* 竖排，从右到左 */
             text-orientation: upright;           /* 字符保持直立 */
-            font-family: "Noto Sans Mongolian", "Mongolian Baiti", sans-serif;
-            font-size: 36px;
-            line-height: 2;
-            letter-spacing: 2px;
+            font-family: 'Mongolian Usug', 'Mongolian Baiti', 'Noto Sans Mongolian', cursive;
+            font-size: 40px;
+            line-height: 2.2;
+            letter-spacing: 3px;
             max-width: 100%;
             padding: 20px;
-            background: #fafafa;
-            border-radius: 10px;
-            border: 1px solid #ddd;
+            background: linear-gradient(to bottom, #fffef8, #fff);
+            border-radius: 15px;
+            border: 2px solid #d4a574;
+            box-shadow: inset 0 0 20px rgba(212, 165, 116, 0.2);
         }
         
         .chat-row {
@@ -128,6 +137,27 @@
             padding: 5px 0;
             font-size: 16px;
         }
+        
+        /* 字体选择器 */
+        .font-selector {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            writing-mode: horizontal-tb;
+        }
+        
+        .font-selector label {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        
+        .font-selector select {
+            padding: 8px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 <body>
@@ -135,13 +165,23 @@
         <header>
             <h1>🐎 传统蒙古文 AI 助手</h1>
             <p>Mongolian AI Assistant - Traditional Vertical Script</p>
-            <p style="font-size: 20px; margin-top: 10px;">ᠮᠣᠩᠭᠣᠯ AI ᠲᠠᠨᠢᠯᠴᠠᠭᠤᠯᠠᠭᠴᠢ</p>
+            <p style="font-size: 20px; margin-top: 10px; font-family: 'Mongolian Usug', cursive;">ᠮᠣᠩᠭᠣᠯ AI ᠲᠠᠨᠢᠯᠴᠠᠭᠤᠯᠠᠭᠴᠢ</p>
         </header>
         
         <div class="chat-container">
             <h2 style="text-align: center; margin-bottom: 20px; color: #1e3c72;">
-                📜 传统蒙古文竖排显示（onon.cn 标准）
+                📜 传统蒙古文手写体竖排显示
             </h2>
+            
+            <!-- 字体选择器 -->
+            <div class="font-selector">
+                <label>🎨 选择字体：</label>
+                <select id="fontSelect" onchange="changeFont()">
+                    <option value="'Mongolian Usug', cursive">蒙古文手写体 (Mongolian Usug)</option>
+                    <option value="'Mongolian Baiti', serif">蒙古文白体 (Mongolian Baiti)</option>
+                    <option value="'Noto Sans Mongolian', sans-serif">蒙古文黑体 (Noto Sans Mongolian)</option>
+                </select>
+            </div>
             
             <div id="chat-content">
                 <!-- 对话内容将由 JavaScript 加载 -->
@@ -149,19 +189,19 @@
         </div>
         
         <div class="info-box">
-            <h3>📝 关于传统蒙古文竖排（参考 onon.cn）</h3>
+            <h3>📝 关于传统蒙古文手写体</h3>
             <ul>
+                <li>✅ 手写体字体：Mongolian Usug / MongolianScript</li>
+                <li>✅ 印刷体字体：Mongolian Baiti / Noto Sans Mongolian</li>
                 <li>✅ 竖排显示：writing-mode: vertical-rl</li>
                 <li>✅ 字符方向：text-orientation: upright</li>
-                <li>✅ 字体：Noto Sans Mongolian / Mongolian Baiti</li>
-                <li>✅ 编码：国家标准编码（MN）/ 蒙科立编码（MK）/ 民委编码（MW）</li>
-                <li>✅ Onon 输入法提供竖排文本编辑器</li>
-                <li>✅ 参考：http://ime.onon.cn</li>
+                <li>✅ 参考：onon.cn 斡仑科技蒙古文输入法</li>
+                <li>✅ 字体下载：https://github.com/superpowers04/Fonts</li>
             </ul>
         </div>
         
         <footer>
-            <p>🚀 Gitea 自驱动开发 | v1.7.0 | 2026-03-30</p>
+            <p>🚀 Gitea 自驱动开发 | v1.8.0 | 2026-03-30</p>
             <p style="margin-top: 10px; font-size: 16px;">
                 项目地址：/Users/aiagent_master/.openclaw/workspace/mongolian-ai-assistant/
             </p>
@@ -169,6 +209,16 @@
     </div>
     
     <script>
+        // 字体切换函数
+        function changeFont() {
+            const fontSelect = document.getElementById('fontSelect');
+            const mongolianTexts = document.querySelectorAll('.mongolian-vertical');
+            
+            mongolianTexts.forEach(text => {
+                text.style.fontFamily = fontSelect.value;
+            });
+        }
+        
         // 示例对话数据
         const chatData = [
             { round: 1, user: "ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ？", ai: "ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠠ！ᠪᠢ ᠮᠣᠩᠭᠣᠯ AI ᠲᠠᠨᠢᠯᠴᠠᠭᠤᠯᠠᠭᠴᠢ ᠪᠠᠶᠢᠨᠠ᠃" },
@@ -177,7 +227,7 @@
             { round: 4, user: "ᠪᠠᠶᠠᠷ ᠬᠦᠷᠦᠭᠡ！", ai: "ᠪᠠᠶᠠᠷ ᠬᠦᠷᠦᠭᠡ！ᠳᠠᠷᠤᠢ ᠤᠳᠠ ᠤᠴᠢᠷᠠᠯᠴᠢᠶᠡ᠃" },
         ];
         
-        // 渲染对话（竖排显示）
+        // 渲染对话（手写体竖排显示）
         const chatContent = document.getElementById('chat-content');
         
         chatData.forEach((chat, index) => {
