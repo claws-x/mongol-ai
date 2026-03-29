@@ -51,16 +51,19 @@
         
         /* 蒙古文竖排样式 - 使用自研算法 */
         .mongolian-vertical {
+            writing-mode: vertical-lr;           /* 竖排：从上到下，列从左到右 */
+            text-orientation: upright;           /* 字符保持直立（蒙古文标准）*/
             font-family: 'Mongolian Usug', 'Mongolian Baiti', 'Noto Sans Mongolian', cursive;
             font-size: 40px;
-            line-height: 2.2;
-            letter-spacing: 3px;
+            line-height: 1.8;
+            letter-spacing: 0;                   /* 移除字符间距，避免分开 */
             padding: 20px;
             background: linear-gradient(to bottom, #fffef8, #fff);
             border-radius: 15px;
             border: 2px solid #d4a574;
             box-shadow: inset 0 0 20px rgba(212, 165, 116, 0.2);
-            /* 由 MongolianLayoutEngine 动态设置 writing-mode 和 text-orientation */
+            display: inline-block;               /* 保持文本连续 */
+            white-space: nowrap;                 /* 不换行，保持连续 */
         }
         
         .chat-row {
@@ -239,10 +242,10 @@
             chatItem.appendChild(aiRow);
             chatContent.appendChild(chatItem);
             
-            // 使用引擎渲染文本
+            // 直接设置文本（不使用引擎分割）
             setTimeout(() => {
-                layoutEngine.render(chat.user, document.getElementById(`user-msg-${index}`));
-                layoutEngine.render(chat.ai, document.getElementById(`ai-msg-${index}`));
+                document.getElementById(`user-msg-${index}`).textContent = chat.user;
+                document.getElementById(`ai-msg-${index}`).textContent = chat.ai;
             }, 100);
         });
     </script>
