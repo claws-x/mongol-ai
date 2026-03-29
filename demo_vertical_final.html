@@ -60,7 +60,7 @@
         /* 传统蒙古文手写体竖排样式 */
         .mongolian-vertical {
             writing-mode: vertical-lr;           /* 竖排，从左到右（蒙古文标准）*/
-            text-orientation: sideways-right;    /* 字符向右旋转 90 度（蒙古文正确显示）*/
+            text-orientation: sideways;          /* 字符方向（WebKit 需要，兼容 Safari）*/
             font-family: 'Mongolian Usug', 'Mongolian Baiti', 'Noto Sans Mongolian', cursive;
             font-size: 40px;
             line-height: 2.2;
