@@ -79,6 +79,9 @@ class MongolianChatEngine:
         self.conversation_history = []
         self.max_history = 10
         
+        # 加载词汇数据
+        self.vocabulary = self._load_vocabulary()
+        
         # 加载语料数据
         if data_dir:
             self.corpus_dir = Path(data_dir)
@@ -86,6 +89,14 @@ class MongolianChatEngine:
         else:
             self.corpus_dir = None
             self.training_data = []
+    
+    def _load_vocabulary(self) -> Dict:
+        """加载词汇库"""
+        vocab_file = Path(__file__).parent.parent / 'data' / 'vocabulary.json'
+        if vocab_file.exists():
+            with open(vocab_file, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        return {'words': [], 'phrases': []}
     
     def _load_corpus(self) -> List[Dict]:
         """加载蒙古文语料库"""
@@ -245,6 +256,17 @@ class MongolianChatEngine:
         Returns:
             dict: 词汇信息
         """
+        # 先在扩展词汇库中查找
+        for vocab_word in self.vocabulary.get('words', []):
+            if vocab_word['mongolian'] == word:
+                return {
+                    'word': word,
+                    'meaning': vocab_word['chinese'],
+                    'pinyin': vocab_word.get('pinyin', ''),
+                    'transliteration': self.processor.transliterate(word),
+                }
+        
+        # 再在基础词汇库中查找
         meaning = self.processor.lookup_word(word)
         if meaning:
             return {
@@ -253,6 +275,14 @@ class MongolianChatEngine:
                 'transliteration': self.processor.transliterate(word),
             }
         return None
+    
+    def get_vocabulary_stats(self) -> Dict:
+        """获取词汇库统计"""
+        return {
+            'total_words': len(self.vocabulary.get('words', [])),
+            'total_phrases': len(self.vocabulary.get('phrases', [])),
+            'version': self.vocabulary.get('version', 'unknown'),
+        }
 
 
 # 测试函数
