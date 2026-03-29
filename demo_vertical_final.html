@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>传统蒙古文 AI 助手 - 正确竖排显示（ChatGPT 方案）</title>
+    <title>传统蒙古文 AI 助手 - 竖排换行显示</title>
     
     <!-- 加载 Noto Sans Mongolian 字体 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,10 +60,11 @@
             font-family: "Noto Sans Mongolian", "Mongolian Baiti", sans-serif;
             font-size: 48px;
             line-height: 1.4;
-            white-space: nowrap;                 /* 不换行，让排版引擎处理 */
+            white-space: pre;                    /* 保留换行 */
             border: 1px solid #ccc;
             padding: 16px;
             min-height: 320px;
+            display: inline-block;
         }
         
         /* 方案 B：Safari / iOS 回退方案 */
@@ -197,49 +198,55 @@
         
         <div class="chat-container">
             <h2 style="text-align: center; margin-bottom: 20px; color: #1e3c72;">
-                📜 传统蒙古文竖排测试（ChatGPT 方案）
+                📜 传统蒙古文竖排测试（换行显示）
             </h2>
             
             <!-- 测试区域：方案 A -->
             <div class="test-section">
-                <h3>📝 方案 A：标准优先（Chrome/Firefox）</h3>
+                <h3>📝 方案 A：标准优先（每个字符换行）</h3>
                 <p style="writing-mode: horizontal-tb; margin: 10px 0; color: #666;">
-                    CSS: writing-mode: vertical-lr + text-orientation: mixed
+                    CSS: writing-mode: vertical-lr + text-orientation: mixed + white-space: pre
                 </p>
                 <div class="test-grid">
-                    <div class="test-item mongolian" style="background: #f0f7ff;">
+                    <div class="test-item" style="background: #f0f7ff;">
                         <h4>ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ</h4>
-                        ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ
+                        <div class="mongolian">ᠮ
+ᠣ
+ᠩ
+ᠭ
+ᠣ
+ᠯ
+ᠪ
+ᠢ
+ᠴ
+ᠢ
+ᠭ</div>
                     </div>
-                    <div class="test-item mongolian" style="background: #fff8f0;">
+                    <div class="test-item" style="background: #fff8f0;">
                         <h4>ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ</h4>
-                        ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ
+                        <div class="mongolian">ᠰ
+ᠠ
+ᠶ
+ᠢ
+ᠨ
+ᠪ
+ᠠ
+ᠶ
+ᠢ
+ᠨ
+ᠤ
+ᠤ</div>
                     </div>
-                    <div class="test-item mongolian" style="background: #f0fff4;">
+                    <div class="test-item" style="background: #f0fff4;">
                         <h4>ᠪᠠᠶᠠᠷᠲᠠᠢ</h4>
-                        ᠪᠠᠶᠠᠷᠲᠠᠢ
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 测试区域：方案 B -->
-            <div class="test-section">
-                <h3>📝 方案 B：Safari / iOS 回退</h3>
-                <p style="writing-mode: horizontal-tb; margin: 10px 0; color: #666;">
-                    CSS: writing-mode: vertical-lr + text-orientation: sideways
-                </p>
-                <div class="test-grid">
-                    <div class="test-item mongolian ios-fallback" style="background: #f0f7ff;">
-                        <h4>ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ</h4>
-                        ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ
-                    </div>
-                    <div class="test-item mongolian ios-fallback" style="background: #fff8f0;">
-                        <h4>ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ</h4>
-                        ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ
-                    </div>
-                    <div class="test-item mongolian ios-fallback" style="background: #f0fff4;">
-                        <h4>ᠪᠠᠶᠠᠷᠲᠠᠢ</h4>
-                        ᠪᠠᠶᠠᠷᠲᠠᠢ
+                        <div class="mongolian">ᠪ
+ᠠ
+ᠶ
+ᠠ
+ᠷ
+ᠲ
+ᠠ
+ᠢ</div>
                     </div>
                 </div>
             </div>
@@ -250,19 +257,19 @@
         </div>
         
         <div class="info-box">
-            <h3>📝 关于传统蒙古文竖排（ChatGPT 建议）</h3>
+            <h3>📝 关于传统蒙古文竖排（换行显示）</h3>
             <ul>
-                <li>✅ writing-mode: vertical-lr 只决定排版方向</li>
-                <li>✅ text-orientation 决定字符方向（mixed 或 sideways）</li>
-                <li>✅ 字体必须支持蒙古文（Noto Sans Mongolian / Mongolian Baiti）</li>
-                <li>✅ Safari/iOS 可能需要 text-orientation: sideways</li>
-                <li>✅ 传统蒙古文是连写文字，不要用 &lt;br&gt; 手动换行</li>
+                <li>✅ 每个蒙古文字符单独一行，从上到下排列</li>
+                <li>✅ writing-mode: vertical-lr 列从左到右推进</li>
+                <li>✅ text-orientation: mixed 字符方向正确</li>
+                <li>✅ white-space: pre 保留换行符</li>
+                <li>✅ 字体：Noto Sans Mongolian / Mongolian Baiti</li>
                 <li>✅ W3C 标准：https://www.w3.org/TR/mlreq/</li>
             </ul>
         </div>
         
         <footer>
-            <p>🚀 Gitea 自驱动开发 | v1.4.0 | 2026-03-30</p>
+            <p>🚀 Gitea 自驱动开发 | v1.5.0 | 2026-03-30</p>
             <p style="margin-top: 10px; font-size: 16px;">
                 项目地址：/Users/aiagent_master/.openclaw/workspace/mongolian-ai-assistant/
             </p>
@@ -270,6 +277,11 @@
     </div>
     
     <script>
+        // 蒙古文换行函数 - 每个字符单独一行
+        function addLineBreaks(text) {
+            return text.split('').join('\n');
+        }
+        
         // 示例对话数据
         const chatData = [
             { round: 1, user: "ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ？ᠲᠠ ᠬᠡᠨ ᠪᠡᠨ？", ai: "ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠠ！ᠪᠢ ᠮᠣᠩᠭᠣᠯ AI ᠲᠠᠨᠢᠯᠴᠠᠭᠤᠯᠠᠭᠴᠢ ᠪᠠᠶᠢᠨᠠ᠃ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭᠠ ᠪᠠᠶᠢᠭᠠ ᠤᠤ？" },
@@ -284,27 +296,32 @@
             { round: 10, user: "ᠲᠠᠨᠳ ᠭᠡᠷ ᠪᠦᠯᠡᠭᠡᠨ ᠪᠠᠶᠢᠨᠠ ᠤᠤ？", ai: "ᠦᠭᠡᠢ，ᠪᠢ AI ᠲᠠᠨᠢᠯᠴᠠᠭᠤᠯᠠᠭᠴᠢ ᠪᠣᠯᠬᠤ ᠳᠤᠤᠷ ᠭᠡᠷ ᠦᠭᠡᠢ᠃" },
         ];
         
-        // 渲染对话
+        // 渲染对话（每个字符换行）
         const chatContent = document.getElementById('chat-content');
         
         chatData.forEach((chat, index) => {
             const chatItem = document.createElement('div');
             chatItem.className = 'chat-item';
+            
+            // 蒙古文文本添加换行
+            const userTextVertical = addLineBreaks(chat.user);
+            const aiTextVertical = addLineBreaks(chat.ai);
+            
             chatItem.innerHTML = `
                 <div class="chat-row">
                     <div class="role-label user-label">
                         <div style="writing-mode: horizontal-tb;">👤 第${chat.round}轮</div>
                     </div>
-                    <div class="message user-message mongolian">
-                        ${chat.user}
+                    <div class="message user-message">
+                        <div class="mongolian">${userTextVertical}</div>
                     </div>
                 </div>
                 <div class="chat-row">
                     <div class="role-label ai-label">
                         <div style="writing-mode: horizontal-tb;">🤖 AI</div>
                     </div>
-                    <div class="message ai-message mongolian">
-                        ${chat.ai}
+                    <div class="message ai-message">
+                        <div class="mongolian">${aiTextVertical}</div>
                     </div>
                 </div>
             `;
