@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>传统蒙古文 AI 助手 - iOS 风格</title>
+    
+    <!-- 引入蒙古文竖排 CSS -->
+    <link rel="stylesheet" href="mongolian-vertical.css">
+    
+    <!-- 加载字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* iOS 颜色系统 */
+            --ios-blue: #007AFF;
+            --ios-green: #34C759;
+            --ios-orange: #FF9500;
+            --ios-red: #FF3B30;
+            --ios-gray: #8E8E93;
+            --ios-light-gray: #F2F2F7;
+            --ios-white: #FFFFFF;
+            --ios-black: #000000;
+            
+            /* 系统字体 */
+            --ios-font: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: var(--ios-font);
+            background: var(--ios-light-gray);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* iOS 导航栏 */
+        .ios-navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+            padding: env(safe-area-inset-top) 16px 12px;
+        }
+        
+        .ios-navbar-title {
+            font-size: 17px;
+            font-weight: 600;
+            text-align: center;
+            color: var(--ios-black);
+        }
+        
+        /* iOS 聊天容器 */
+        .chat-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+        
+        /* iOS 消息气泡 */
+        .ios-message {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .ios-message.user {
+            flex-direction: row-reverse;
+        }
+        
+        /* 头像 */
+        .ios-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+            background: var(--ios-light-gray);
+        }
+        
+        /* 消息内容 */
+        .ios-message-content {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            font-size: 17px;
+            line-height: 1.4;
+            position: relative;
+        }
+        
+        .ios-message.user .ios-message-content {
+            background: var(--ios-blue);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+        
+        .ios-message.ai .ios-message-content {
+            background: white;
+            color: var(--ios-black);
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 竖排蒙古文 */
+        .mongolian-vertical {
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            -webkit-writing-mode: vertical-lr;
+            -webkit-text-orientation: sideways-right;
+            
+            font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
+            font-size: 24px;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            
+            display: inline-block;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        
+        /* 时间戳 */
+        .message-time {
+            font-size: 11px;
+            color: var(--ios-gray);
+            margin-top: 4px;
+            text-align: right;
+        }
+        
+        .ios-message.user .message-time {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* iOS 输入框 */
+        .ios-input-bar {
+            position: sticky;
+            bottom: 0;
+            background: var(--ios-white);
+            border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+            padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+            display: flex;
+            gap: 8px;
+            align-items: flex-end;
+        }
+        
+        .ios-input {
+            flex: 1;
+            border: 0.5px solid rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 17px;
+            font-family: var(--ios-font);
+            resize: none;
+            max-height: 100px;
+        }
+        
+        .ios-input:focus {
+            outline: none;
+            border-color: var(--ios-blue);
+        }
+        
+        .ios-send-button {
+            background: var(--ios-blue);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        
+        .ios-send-button:active {
+            opacity: 0.6;
+        }
+        
+        /* iOS 分隔符 */
+        .ios-divider {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .ios-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 0.5px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        
+        .ios-divider span {
+            position: relative;
+            background: var(--ios-light-gray);
+            padding: 0 12px;
+            font-size: 13px;
+            color: var(--ios-gray);
+        }
+        
+        /* 深色模式支持 */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --ios-light-gray: #1C1C1E;
+                --ios-white: #2C2C2E;
+                --ios-black: #FFFFFF;
+            }
+            
+            .ios-navbar {
+                background: rgba(44, 44, 46, 0.95);
+            }
+            
+            .ios-message.ai .ios-message-content {
+                background: var(--ios-white);
+                color: var(--ios-black);
+            }
+        }
+        
+        /* 响应式 */
+        @media (max-width: 375px) {
+            .ios-message-content {
+                max-width: 80%;
+            }
+            
+            .mongolian-vertical {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- iOS 导航栏 -->
+    <nav class="ios-navbar">
+        <div class="ios-navbar-title">🐎 蒙古文 AI 助手</div>
+    </nav>
+    
+    <!-- 聊天容器 -->
+    <div class="chat-container">
+        <div id="chat-content">
+            <!-- 对话内容将由 JavaScript 加载 -->
+        </div>
+        
+        <!-- 日期分隔符 -->
+        <div class="ios-divider">
+            <span>今天</span>
+        </div>
+    </div>
+    
+    <!-- iOS 输入框 -->
+    <div class="ios-input-bar">
+        <textarea 
+            class="ios-input" 
+            placeholder="输入蒙古文..."
+            rows="1"
+            id="message-input"
+        ></textarea>
+        <button class="ios-send-button" onclick="sendMessage()">发送</button>
+    </div>
+    
+    <script>
+        // 获取当前时间
+        function getCurrentTime() {
+            const now = new Date();
+            return now.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+        }
+        
+        // 对话数据
+        const chatData = [
+            { 
+                role: 'user', 
+                text: 'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ？',
+                time: '09:00'
+            },
+            { 
+                role: 'ai', 
+                text: 'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠠ！ᠪᠢ ᠮᠣᠩᠭᠣᠯ AI ᠲᠠᠨᠢᠯᠴᠠᠭᠤᠯᠠᠭᠴᠢ ᠪᠠᠶᠢᠨᠠ᠃',
+                time: '09:00'
+            },
+            { 
+                role: 'user', 
+                text: 'ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ ᠰᠤᠷᠤᠮᠠᠷ ᠪᠠᠶᠢᠨᠠ᠃',
+                time: '09:01'
+            },
+            { 
+                role: 'ai', 
+                text: 'ᠮᠡᠳᠡᠭᠡ ᠪᠠᠶᠢᠨᠠ！ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ ᠪᠣᠯ ᠡᠷᠲᠡ ᠵᠣᠬᠢᠶᠠᠯᠲᠠᠢ ᠬᠡᠯᠡ ᠪᠣᠯᠤᠭᠰᠠᠨ ᠤᠴᠢᠷ ᠶᠡᠬᠡ ᠪᠠᠶᠢᠨ᠎ᠠ᠃',
+                time: '09:01'
+            },
+            { 
+                role: 'user', 
+                text: 'ᠪᠠᠶᠠᠷᠲᠠᠢ！',
+                time: '09:02'
+            },
+            { 
+                role: 'ai', 
+                text: 'ᠪᠠᠶᠠᠷᠲᠠᠢ！ᠮᠢᠨᠦ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠤᠭᠰᠠᠨᠳᠠ ᠪᠠᠶᠠᠷᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠨᠠ᠃',
+                time: '09:02'
+            },
+        ];
+        
+        // 渲染对话
+        const chatContent = document.getElementById('chat-content');
+        
+        function renderMessage(message) {
+            const messageEl = document.createElement('div');
+            messageEl.className = `ios-message ${message.role}`;
+            
+            messageEl.innerHTML = `
+                <div class="ios-avatar">
+                    ${message.role === 'user' ? '👤' : '🤖'}
+                </div>
+                <div>
+                    <div class="ios-message-content">
+                        <div class="mongolian-vertical">
+                            ${message.text}
+                        </div>
+                        <div class="message-time">${message.time || getCurrentTime()}</div>
+                    </div>
+                </div>
+            `;
+            
+            return messageEl;
+        }
+        
+        // 初始渲染
+        chatData.forEach(message => {
+            chatContent.appendChild(renderMessage(message));
+        });
+        
+        // 滚动到底部
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+        
+        // 发送消息
+        function sendMessage() {
+            const input = document.getElementById('message-input');
+            const text = input.value.trim();
+            
+            if (!text) return;
+            
+            // 添加用户消息
+            const userMessage = {
+                role: 'user',
+                text: text,
+                time: getCurrentTime()
+            };
+            
+            chatContent.appendChild(renderMessage(userMessage));
+            input.value = '';
+            scrollToBottom();
+            
+            // 模拟 AI 回复（延迟 1 秒）
+            setTimeout(() => {
+                const aiMessage = {
+                    role: 'ai',
+                    text: 'ᠮᠡᠳᠡᠭᠡ ᠪᠠᠶᠢᠨᠠ！ᠪᠢ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠨᠠ᠃',
+                    time: getCurrentTime()
+                };
+                
+                chatContent.appendChild(renderMessage(aiMessage));
+                scrollToBottom();
+            }, 1000);
+        }
+        
+        // 回车发送
+        document.getElementById('message-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+        
+        // 自动调整输入框高度
+        document.getElementById('message-input').addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = Math.min(this.scrollHeight, 100) + 'px';
+        });
+        
+        // 初始化滚动
+        scrollToBottom();
+    </script>
+</body>
+</html>
