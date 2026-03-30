@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒙古文 AI 助手 - AI 驱动版</title>
+    
+    <!-- 引入蒙古文竖排 CSS -->
+    <link rel="stylesheet" href="mongolian-vertical.css">
+    
+    <!-- 加载字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #007AFF;
+            --primary-dark: #0056CC;
+            --success: #34C759;
+            --warning: #FF9500;
+            --error: #FF3B30;
+            --gray-100: #F2F2F7;
+            --gray-200: #E5E5EA;
+            --gray-300: #D1D1D6;
+            --gray-400: #8E8E93;
+            --white: #FFFFFF;
+            --black: #000000;
+            --ai-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #F2F2F7 0%, #FFFFFF 100%);
+            min-height: 100vh;
+            padding-bottom: 280px;
+        }
+        
+        /* AI 导航栏 */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: var(--ai-gradient);
+            backdrop-filter: blur(20px);
+            padding: calc(env(safe-area-inset-top) + 16px) 16px 16px;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .navbar-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar-title {
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .ai-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 20px;
+            color: white;
+            font-size: 12px;
+        }
+        
+        .ai-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        /* AI 状态栏 */
+        .ai-status-bar {
+            max-width: 800px;
+            margin: 16px auto;
+            padding: 12px 16px;
+            background: var(--ai-gradient);
+            border-radius: 12px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .ai-stat {
+            text-align: center;
+        }
+        
+        .ai-stat-value {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .ai-stat-label {
+            font-size: 11px;
+            opacity: 0.9;
+        }
+        
+        /* 聊天容器 */
+        .chat-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        
+        .message {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .message.user {
+            flex-direction: row-reverse;
+        }
+        
+        .avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+            background: var(--gray-100);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .message-content {
+            max-width: 70%;
+            padding: 16px 18px;
+            border-radius: 20px;
+            font-size: 17px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .message.user .message-content {
+            background: var(--primary);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+        
+        .message.ai .message-content {
+            background: white;
+            color: var(--black);
+            border-bottom-left-radius: 4px;
+            border: 0.5px solid var(--gray-200);
+        }
+        
+        /* AI 思考指示器 */
+        .ai-thinking {
+            display: flex;
+            gap: 4px;
+            padding: 16px 18px;
+            background: white;
+            border-radius: 20px;
+            width: fit-content;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            animation: slideIn 0.3s ease;
+        }
+        
+        .thinking-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gray-400);
+            animation: thinkingBounce 1.4s infinite;
+        }
+        
+        .thinking-dot:nth-child(2) { animation-delay: 0.2s; }
+        .thinking-dot:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes thinkingBounce {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-8px); }
+        }
+        
+        /* AI 预测提示 */
+        .ai-prediction {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-top: 8px;
+        }
+        
+        .prediction-label {
+            font-size: 11px;
+            color: var(--gray-400);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .prediction-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .prediction-chip {
+            background: white;
+            border: 0.5px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 6px 12px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .prediction-chip:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        /* 竖排蒙古文容器 */
+        .mongolian-vertical-container {
+            height: 200px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            display: flex;
+            flex-direction: row;
+            gap: 4px;
+            padding: 0;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        
+        .mongolian-column {
+            writing-mode: vertical-lr !important;
+            text-orientation: upright !important;
+            -webkit-writing-mode: vertical-lr !important;
+            -webkit-text-orientation: upright !important;
+            font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif !important;
+            font-size: 24px;
+            line-height: 0.9;
+            height: 100%;
+            flex-shrink: 0;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: -10px;
+            padding-top: 0;
+        }
+        
+        .mongolian-column .mongolian-vertical {
+            display: inline-block !important;
+            margin: 0;
+            padding: 0;
+            transform: rotate(90deg) !important;
+            transform-origin: center center;
+        }
+        
+        /* 内嵌输入法 */
+        .input-method-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--gray-100);
+            border-top: 0.5px solid var(--gray-300);
+            padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+            z-index: 1000;
+        }
+        
+        /* AI 输入模式切换 */
+        .input-mode-switch {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .mode-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .mode-btn.active {
+            background: var(--ai-gradient);
+            color: white;
+        }
+        
+        /* 候选词区域 */
+        .candidate-area {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 12px;
+            display: none;
+            overflow-x: auto;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .candidate-area.active {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .candidate-item {
+            padding: 8px 14px;
+            background: var(--gray-100);
+            border-radius: 8px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+        
+        .candidate-item:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* 输入框区域 */
+        .input-area {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .input-field {
+            flex: 1;
+            border: 0.5px solid var(--gray-300);
+            border-radius: 14px;
+            padding: 12px 16px;
+            font-size: 17px;
+            background: white;
+            transition: all 0.2s;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+        }
+        
+        .send-btn {
+            background: var(--ai-gradient);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            padding: 0 24px;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .send-btn:active {
+            transform: scale(0.95);
+        }
+        
+        /* 蒙古文键盘 */
+        .mongolian-keyboard {
+            background: white;
+            border-radius: 12px;
+            padding: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+        
+        .keyboard-column {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .key {
+            width: 44px;
+            height: 44px;
+            border: 0.5px solid var(--gray-200);
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .key:active {
+            background: var(--primary);
+            color: white;
+            transform: scale(0.9);
+        }
+        
+        .key .mongolian-vertical {
+            font-size: 20px;
+            max-height: 35px;
+            display: inline-block !important;
+            font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif !important;
+            transform: rotate(90deg) !important;
+            transform-origin: center center;
+        }
+        
+        .key-tall {
+            height: 92px;
+        }
+        
+        .key-tall .mongolian-vertical {
+            max-height: 80px;
+        }
+        
+        .key-enter {
+            height: 92px;
+            background: var(--ai-gradient);
+            color: white;
+        }
+        
+        .key-enter .mongolian-vertical {
+            max-height: 80px;
+            color: white;
+        }
+        
+        .key .latin-or-chinese {
+            transform: rotate(-90deg);
+            transform-origin: center center;
+            display: inline-block;
+            font-size: 14px;
+        }
+        
+        .key-tall .latin-or-chinese {
+            transform: rotate(-90deg);
+            display: inline-block;
+        }
+        
+        .key-enter .latin-or-chinese {
+            transform: rotate(-90deg);
+            color: white;
+            display: inline-block;
+        }
+        
+        /* 拉丁转写提示 */
+        .transliteration-hint {
+            font-size: 12px;
+            color: var(--gray-400);
+            text-align: center;
+            margin-top: 8px;
+        }
+        
+        /* 拉丁键盘 */
+        .mongolian-keyboard[style*="display: none"] + .mongolian-keyboard {
+            display: flex !important;
+        }
+        
+        /* AI 功能按钮 */
+        .ai-features {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .ai-feature-btn {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            background: white;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .ai-feature-btn:hover {
+            background: var(--ai-gradient);
+            color: white;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 400px) {
+            .key {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            .key-space {
+                max-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- AI 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-title">🤖 蒙古文 AI 助手</div>
+            <div class="ai-indicator">
+                <div class="ai-dot"></div>
+                <span>AI 在线</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- AI 状态栏 -->
+    <div class="ai-status-bar">
+        <div class="ai-stat">
+            <div class="ai-stat-value" id="stat-words">0</div>
+            <div class="ai-stat-label">词汇量</div>
+        </div>
+        <div class="ai-stat">
+            <div class="ai-stat-value" id="stat-predictions">0</div>
+            <div class="ai-stat-label">预测数</div>
+        </div>
+        <div class="ai-stat">
+            <div class="ai-stat-value" id="stat-corrections">0</div>
+            <div class="ai-stat-label">纠错数</div>
+        </div>
+        <div class="ai-stat">
+            <div class="ai-stat-value" id="stat-messages">0</div>
+            <div class="ai-stat-label">对话数</div>
+        </div>
+    </div>
+    
+    <!-- 聊天容器 -->
+    <div class="chat-container">
+        <div id="chat-content">
+            <!-- AI 欢迎消息 -->
+            <div class="message ai">
+                <div class="avatar">🤖</div>
+                <div class="message-content">
+                    <div class="mongolian-vertical-container"></div>
+                    <div style="margin-top: 8px; font-size: 14px; color: var(--gray-400);">
+                        ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ？ᠪᠢ ᠮᠣᠩᠭᠣᠯ AI ᠲᠡᠭᠦᠰᠯᠡᠭᠴᠢ ᠪᠠᠶᠢᠨ᠎ᠠ᠃
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 内嵌输入法 -->
+    <div class="input-method-container">
+        <!-- AI 功能按钮 -->
+        <div class="ai-features">
+            <button class="ai-feature-btn" onclick="toggleAI('predict')">🔮 AI 预测</button>
+            <button class="ai-feature-btn" onclick="toggleAI('correct')">✨ AI 纠错</button>
+            <button class="ai-feature-btn" onclick="toggleAI('translate')">🌐 AI 翻译</button>
+        </div>
+        
+        <!-- 输入模式切换 -->
+        <div class="input-mode-switch">
+            <button class="mode-btn active" onclick="switchKeyboard('mongolian')">
+                <span class="mongolian-vertical" style="writing-mode: vertical-lr; font-size: 14px;">ᠮᠣᠩᠭᠣᠯ</span>
+            </button>
+            <button class="mode-btn" onclick="switchKeyboard('latin')">
+                <span style="transform: rotate(-90deg); display: inline-block;">Latin</span>
+            </button>
+        </div>
+        
+        <!-- AI 预测区域 -->
+        <div class="candidate-area" id="ai-predictions">
+            <!-- 动态填充 -->
+        </div>
+        
+        <!-- 候选词区域 -->
+        <div class="candidate-area" id="candidate-area">
+            <!-- 动态填充 -->
+        </div>
+        
+        <!-- 输入框 -->
+        <div class="input-area">
+            <input 
+                type="text" 
+                class="input-field" 
+                id="message-input"
+                placeholder="输入蒙古文或拉丁转写..."
+            >
+            <button class="send-btn" onclick="sendMessage()">发送</button>
+        </div>
+        
+        <!-- 蒙古文键盘 -->
+        <div class="mongolian-keyboard" id="mongolian-keyboard">
+            <!-- 第 1 列：元音 -->
+            <div class="keyboard-column">
+                <div class="key" onclick="inputChar('ᠠ')"><span class="mongolian-vertical">ᠠ</span></div>
+                <div class="key" onclick="inputChar('ᠡ')"><span class="mongolian-vertical">ᠡ</span></div>
+                <div class="key" onclick="inputChar('ᠢ')"><span class="mongolian-vertical">ᠢ</span></div>
+                <div class="key" onclick="inputChar('ᠣ')"><span class="mongolian-vertical">ᠣ</span></div>
+                <div class="key" onclick="inputChar('ᠤ')"><span class="mongolian-vertical">ᠤ</span></div>
+                <div class="key" onclick="inputChar('ᠥ')"><span class="mongolian-vertical">ᠥ</span></div>
+                <div class="key" onclick="inputChar('ᠦ')"><span class="mongolian-vertical">ᠦ</span></div>
+            </div>
+            
+            <!-- 第 2 列：辅音 1 -->
+            <div class="keyboard-column">
+                <div class="key" onclick="inputChar('ᠨ')"><span class="mongolian-vertical">ᠨ</span></div>
+                <div class="key" onclick="inputChar('ᠪ')"><span class="mongolian-vertical">ᠪ</span></div>
+                <div class="key" onclick="inputChar('ᠫ')"><span class="mongolian-vertical">ᠫ</span></div>
+                <div class="key" onclick="inputChar('ᠬ')"><span class="mongolian-vertical">ᠬ</span></div>
+                <div class="key" onclick="inputChar('ᠭ')"><span class="mongolian-vertical">ᠭ</span></div>
+                <div class="key" onclick="inputChar('ᠮ')"><span class="mongolian-vertical">ᠮ</span></div>
+                <div class="key" onclick="inputChar('ᠯ')"><span class="mongolian-vertical">ᠯ</span></div>
+            </div>
+            
+            <!-- 第 3 列：辅音 2 -->
+            <div class="keyboard-column">
+                <div class="key" onclick="inputChar('ᠰ')"><span class="mongolian-vertical">ᠰ</span></div>
+                <div class="key" onclick="inputChar('ᠱ')"><span class="mongolian-vertical">ᠱ</span></div>
+                <div class="key" onclick="inputChar('ᠲ')"><span class="mongolian-vertical">ᠲ</span></div>
+                <div class="key" onclick="inputChar('ᠳ')"><span class="mongolian-vertical">ᠳ</span></div>
+                <div class="key" onclick="inputChar('ᠴ')"><span class="mongolian-vertical">ᠴ</span></div>
+                <div class="key" onclick="inputChar('ᠵ')"><span class="mongolian-vertical">ᠵ</span></div>
+                <div class="key" onclick="inputChar('ᠶ')"><span class="mongolian-vertical">ᠶ</span></div>
+            </div>
+            
+            <!-- 第 4 列：辅音 3 + 功能 -->
+            <div class="keyboard-column">
+                <div class="key" onclick="inputChar('ᠷ')"><span class="mongolian-vertical">ᠷ</span></div>
+                <div class="key" onclick="inputChar('ᠸ')"><span class="mongolian-vertical">ᠸ</span></div>
+                <div class="key" onclick="inputChar('ᠹ')"><span class="mongolian-vertical">ᠹ</span></div>
+                <div class="key" onclick="inputChar('ᠺ')"><span class="mongolian-vertical">ᠺ</span></div>
+                <div class="key" onclick="inputChar('ᠻ')"><span class="mongolian-vertical">ᠻ</span></div>
+                <div class="key" onclick="inputChar('ᠼ')"><span class="mongolian-vertical">ᠼ</span></div>
+                <div class="key key-tall" onclick="deleteChar()"><span class="mongolian-vertical">⌫</span></div>
+            </div>
+            
+            <!-- 第 5 列：标点 + 空格 + 发送 -->
+            <div class="keyboard-column">
+                <div class="key" onclick="inputChar('᠂')"><span class="mongolian-vertical">᠂</span></div>
+                <div class="key" onclick="inputChar('᠃')"><span class="mongolian-vertical">᠃</span></div>
+                <div class="key" onclick="inputChar('᠄')"><span class="mongolian-vertical">᠄</span></div>
+                <div class="key key-tall" onclick="inputChar(' ')"><span class="latin-or-chinese">空格</span></div>
+                <div class="key key-enter" onclick="sendMessage()"><span class="latin-or-chinese">发送</span></div>
+            </div>
+            
+            <!-- 拉丁转写提示 -->
+            <div class="transliteration-hint">
+                💡 提示：也可以用拉丁字母转写输入（如：sain bainuu）
+            </div>
+        </div>
+        
+        <!-- 拉丁键盘（隐藏） -->
+        <div class="mongolian-keyboard" id="latin-keyboard" style="display: none;">
+            <div class="keyboard-column">
+                <div class="key" onclick="inputChar('a')"><span class="mongolian-vertical">a</span></div>
+                <div class="key" onclick="inputChar('e')"><span class="mongolian-vertical">e</span></div>
+                <div class="key" onclick="inputChar('i')"><span class="mongolian-vertical">i</span></div>
+                <div class="key" onclick="inputChar('o')"><span class="mongolian-vertical">o</span></div>
+                <div class="key" onclick="inputChar('u')"><span class="mongolian-vertical">u</span></div>
+                <div class="key" onclick="inputChar('ü')"><span class="mongolian-vertical">ü</span></div>
+                <div class="key" onclick="inputChar('ö')"><span class="mongolian-vertical">ö</span></div>
+            </div>
+            
+            <div class="keyboard-column">
+                <div class="key" onclick="inputChar('n')"><span class="mongolian-vertical">n</span></div>
+                <div class="key" onclick="inputChar('b')"><span class="mongolian-vertical">b</span></div>
+                <div class="key" onclick="inputChar('p')"><span class="mongolian-vertical">p</span></div>
+                <div class="key" onclick="inputChar('q')"><span class="mongolian-vertical">q</span></div>
+                <div class="key" onclick="inputChar('γ')"><span class="mongolian-vertical">γ</span></div>
+                <div class="key" onclick="inputChar('m')"><span class="mongolian-vertical">m</span></div>
+                <div class="key" onclick="inputChar('l')"><span class="mongolian-vertical">l</span></div>
+            </div>
+            
+            <div class="keyboard-column">
+                <div class="key" onclick="inputChar('s')"><span class="mongolian-vertical">s</span></div>
+                <div class="key" onclick="inputChar('š')"><span class="mongolian-vertical">š</span></div>
+                <div class="key" onclick="inputChar('t')"><span class="mongolian-vertical">t</span></div>
+                <div class="key" onclick="inputChar('d')"><span class="mongolian-vertical">d</span></div>
+                <div class="key" onclick="inputChar('č')"><span class="mongolian-vertical">č</span></div>
+                <div class="key" onclick="inputChar('j')"><span class="mongolian-vertical">j</span></div>
+                <div class="key" onclick="inputChar('y')"><span class="mongolian-vertical">y</span></div>
+            </div>
+            
+            <div class="keyboard-column">
+                <div class="key" onclick="inputChar('r')"><span class="mongolian-vertical">r</span></div>
+                <div class="key" onclick="inputChar('w')"><span class="mongolian-vertical">w</span></div>
+                <div class="key" onclick="inputChar('f')"><span class="mongolian-vertical">f</span></div>
+                <div class="key" onclick="inputChar('k')"><span class="mongolian-vertical">k</span></div>
+                <div class="key" onclick="inputChar('g')"><span class="mongolian-vertical">g</span></div>
+                <div class="key" onclick="inputChar('h')"><span class="mongolian-vertical">h</span></div>
+                <div class="key key-tall" onclick="deleteChar()"><span class="mongolian-vertical">⌫</span></div>
+            </div>
+            
+            <div class="keyboard-column">
+                <div class="key" onclick="inputChar(',')"><span class="mongolian-vertical">,</span></div>
+                <div class="key" onclick="inputChar('.')"><span class="mongolian-vertical">.</span></div>
+                <div class="key" onclick="inputChar('?')"><span class="mongolian-vertical">?</span></div>
+                <div class="key key-tall" onclick="inputChar(' ')"><span class="latin-or-chinese">Space</span></div>
+                <div class="key key-enter" onclick="sendMessage()"><span class="latin-or-chinese">Send</span></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // AI 引擎（简化版前端实现）
+        const AIEngine = {
+            vocabulary: {
+                'ᠰᠠᠶᠢᠨ': { pinyin: 'sain', meaning: '好' },
+                'ᠪᠠᠶᠢᠨ᠎ᠠ': { pinyin: 'bain-a', meaning: '在' },
+                'ᠤᠤ': { pinyin: 'uu', meaning: '吗' },
+                'ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ': { pinyin: 'bayarlal-a', meaning: '谢谢' },
+                'ᠮᠡᠳᠡᠭᠡ': { pinyin: 'medege', meaning: '知道' },
+                'ᠮᠣᠩᠭᠣᠯ': { pinyin: 'monggol', meaning: '蒙古' },
+                'ᠬᠡᠯᠡ': { pinyin: 'kele', meaning: '语言' },
+            },
+            
+            transliteration: {
+                'sain': 'ᠰᠠᠶᠢᠨ',
+                'baina': 'ᠪᠠᠶᠢᠨ᠎ᠠ',
+                'bayarlala': 'ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ',
+                'monggol': 'ᠮᠣᠩᠭᠣᠯ',
+                'kele': 'ᠬᠡᠯᠡ',
+                'medege': 'ᠮᠡᠳᠡᠭᠡ',
+            },
+            
+            predict: function(context) {
+                // AI 预测下一个字符
+                const predictions = [];
+                if (context.endsWith('ᠰᠠ')) {
+                    predictions.push('ᠶ');
+                    predictions.push('ᠷ');
+                } else if (context.endsWith('ᠪᠠ')) {
+                    predictions.push('ᠶ');
+                    predictions.push('ᠢ');
+                }
+                return predictions;
+            },
+            
+            getCandidates: function(input) {
+                // 获取候选词
+                const candidates = [];
+                for (const word in this.vocabulary) {
+                    if (word.startsWith(input)) {
+                        candidates.push(word);
+                    }
+                }
+                return candidates.slice(0, 5);
+            },
+            
+            latinToMongolian: function(latin) {
+                // 拉丁转写转蒙古文
+                return this.transliteration[latin] || latin;
+            },
+            
+            correct: function(text) {
+                // AI 纠错
+                return text; // TODO: 实现纠错逻辑
+            },
+            
+            translate: function(text, from, to) {
+                // AI 翻译
+                return text; // TODO: 实现翻译逻辑
+            }
+        };
+        
+        // 统计
+        let stats = {
+            words: 20,
+            predictions: 0,
+            corrections: 0,
+            messages: 1
+        };
+        
+        function updateStats() {
+            document.getElementById('stat-words').textContent = stats.words;
+            document.getElementById('stat-predictions').textContent = stats.predictions;
+            document.getElementById('stat-corrections').textContent = stats.corrections;
+            document.getElementById('stat-messages').textContent = stats.messages;
+        }
+        
+        // 渲染竖排文字
+        function renderVerticalText(container, text) {
+            container.innerHTML = '';
+            const chars = text.split('').filter(c => c.trim());
+            const MAX_CHARS_PER_COLUMN = 5;
+            
+            let currentColumn = null;
+            let charCount = 0;
+            
+            chars.forEach((char) => {
+                if (!currentColumn || charCount >= MAX_CHARS_PER_COLUMN) {
+                    currentColumn = document.createElement('div');
+                    currentColumn.className = 'mongolian-column';
+                    container.appendChild(currentColumn);
+                    charCount = 0;
+                }
+                
+                const charEl = document.createElement('span');
+                charEl.className = 'mongolian-vertical';
+                charEl.textContent = char;
+                currentColumn.appendChild(charEl);
+                
+                charCount++;
+            });
+            
+            container.scrollLeft = container.scrollWidth;
+        }
+        
+        // 添加消息
+        function addMessage(role, text) {
+            const chatContent = document.getElementById('chat-content');
+            const messageEl = document.createElement('div');
+            messageEl.className = `message ${role}`;
+            
+            messageEl.innerHTML = `
+                <div class="avatar">${role === 'user' ? '👤' : '🤖'}</div>
+                <div class="message-content">
+                    <div class="mongolian-vertical-container"></div>
+                    <div style="margin-top: 8px; font-size: 14px; color: var(--gray-400);">
+                        ${text}
+                    </div>
+                </div>
+            `;
+            
+            chatContent.appendChild(messageEl);
+            
+            const container = messageEl.querySelector('.mongolian-vertical-container');
+            renderVerticalText(container, text);
+            
+            scrollToBottom();
+            stats.messages++;
+            updateStats();
+        }
+        
+        // 显示 AI 思考
+        function showThinking() {
+            const chatContent = document.getElementById('chat-content');
+            const thinkingEl = document.createElement('div');
+            thinkingEl.className = 'ai-thinking';
+            thinkingEl.id = 'thinking-indicator';
+            thinkingEl.innerHTML = `
+                <div class="thinking-dot"></div>
+                <div class="thinking-dot"></div>
+                <div class="thinking-dot"></div>
+            `;
+            chatContent.appendChild(thinkingEl);
+            scrollToBottom();
+        }
+        
+        // 隐藏 AI 思考
+        function hideThinking() {
+            const thinkingEl = document.getElementById('thinking-indicator');
+            if (thinkingEl) thinkingEl.remove();
+        }
+        
+        // 显示 AI 预测
+        function showPredictions(predictions) {
+            const predictionArea = document.getElementById('ai-predictions');
+            if (predictions.length === 0) {
+                predictionArea.classList.remove('active');
+                return;
+            }
+            
+            predictionArea.innerHTML = `
+                <div class="prediction-label">🔮 AI 预测</div>
+                <div class="prediction-chips">
+                    ${predictions.map(p => `<div class="prediction-chip" onclick="selectPrediction('${p}')">${p}</div>`).join('')}
+                </div>
+            `;
+            predictionArea.classList.add('active');
+            stats.predictions += predictions.length;
+            updateStats();
+        }
+        
+        // 显示候选词
+        function showCandidates(candidates) {
+            const candidateArea = document.getElementById('candidate-area');
+            if (candidates.length === 0) {
+                candidateArea.classList.remove('active');
+                return;
+            }
+            
+            candidateArea.innerHTML = candidates.map((c, i) => 
+                `<div class="candidate-item" onclick="selectCandidate(${i})">${c}</div>`
+            ).join('');
+            candidateArea.classList.add('active');
+        }
+        
+        // 滚动到底部
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+        
+        // 输入字符
+        function inputChar(char) {
+            const input = document.getElementById('message-input');
+            input.value += char;
+            input.focus();
+            
+            // AI 预测
+            const predictions = AIEngine.predict(input.value);
+            showPredictions(predictions);
+            
+            // AI 候选词
+            const candidates = AIEngine.getCandidates(input.value);
+            showCandidates(candidates);
+        }
+        
+        // 删除字符
+        function deleteChar() {
+            const input = document.getElementById('message-input');
+            input.value = input.value.slice(0, -1);
+            input.focus();
+            
+            const predictions = AIEngine.predict(input.value);
+            showPredictions(predictions);
+        }
+        
+        // 选择预测
+        function selectPrediction(char) {
+            const input = document.getElementById('message-input');
+            input.value += char;
+            input.focus();
+        }
+        
+        // 选择候选词
+        function selectCandidate(index) {
+            const candidates = AIEngine.getCandidates(document.getElementById('message-input').value);
+            if (index < candidates.length) {
+                document.getElementById('message-input').value = candidates[index];
+                document.getElementById('candidate-area').classList.remove('active');
+            }
+        }
+        
+        // 切换键盘
+        function switchKeyboard(type) {
+            document.querySelectorAll('.mode-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            if (type === 'mongolian') {
+                document.getElementById('mongolian-keyboard').style.display = 'flex';
+                document.getElementById('latin-keyboard').style.display = 'none';
+                event.target.classList.add('active');
+            } else {
+                document.getElementById('mongolian-keyboard').style.display = 'none';
+                document.getElementById('latin-keyboard').style.display = 'flex';
+                event.target.classList.add('active');
+            }
+        }
+        
+        // 切换 AI 功能
+        function toggleAI(feature) {
+            alert('AI ' + feature + ' 功能已启用');
+        }
+        
+        // 发送消息
+        function sendMessage() {
+            const input = document.getElementById('message-input');
+            const text = input.value.trim();
+            
+            if (!text) return;
+            
+            // 检查是否是拉丁转写
+            let mongolianText = text;
+            if (!/[\u1800-\u18AF]/.test(text)) {
+                mongolianText = AIEngine.latinToMongolian(text);
+            }
+            
+            // 添加用户消息
+            addMessage('user', mongolianText);
+            
+            input.value = '';
+            document.getElementById('candidate-area').classList.remove('active');
+            document.getElementById('ai-predictions').classList.remove('active');
+            
+            // AI 思考
+            showThinking();
+            
+            // AI 回复（模拟）
+            setTimeout(() => {
+                hideThinking();
+                
+                const responses = [
+                    'ᠮᠡᠳᠡᠭᠡ ᠪᠠᠶᠢᠨ᠎ᠠ！ᠪᠢ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠨᠠ᠃',
+                    'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ！ᠲᠠ ᠶᠠᠮᠠᠷ ᠠᠰᠤᠭᠤᠯᠲᠠᠢ？',
+                    'ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ！ᠮᠢᠨᠦ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠤᠭᠰᠠᠨᠳᠠ ᠪᠠᠶᠠᠷᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠨ᠎ᠠ᠃',
+                ];
+                
+                const response = responses[Math.floor(Math.random() * responses.length)];
+                addMessage('ai', response);
+            }, 1000 + Math.random() * 1000);
+        }
+        
+        // 回车发送
+        document.getElementById('message-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+        
+        // 初始化
+        updateStats();
+        
+        // 渲染欢迎消息
+        setTimeout(() => {
+            const container = document.querySelector('#chat-content .mongolian-vertical-container');
+            renderVerticalText(container, 'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ');
+        }, 100);
+    </script>
+</body>
+</html>
