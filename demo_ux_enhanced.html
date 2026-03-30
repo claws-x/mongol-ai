@@ -494,19 +494,21 @@
     <div class="chat-container">
         <!-- 欢迎卡片 -->
         <div class="welcome-card">
-            <h2>ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ！</h2>
+            <h2>ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ？</h2>
             <p>我是您的蒙古文 AI 助手，可以帮助您学习蒙古语、翻译文本、解答问题。</p>
             
             <!-- 竖排快捷菜单 -->
             <div class="quick-replies-vertical">
-                <button class="quick-reply-btn-vertical" onclick="sendQuickReply('ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ？')">
+                <button class="quick-reply-btn-vertical" onclick="sendQuickReply('ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ？')">
                     <span class="mongolian-vertical">ᠰᠠᠶᠢᠨ</span>
-                    <span class="mongolian-vertical">ᠪᠠᠶᠢᠨᠤᠤ？</span>
+                    <span class="mongolian-vertical">ᠪᠠᠶᠢᠨ᠎ᠠ</span>
+                    <span class="mongolian-vertical">ᠤᠤ？</span>
                 </button>
                 <button class="quick-reply-btn-vertical" onclick="sendQuickReply('ᠪᠠᠶᠠᠷᠲᠠᠢ！')">
                     <span class="mongolian-vertical">ᠪᠠᠶᠠᠷᠲᠠᠢ！</span>
                 </button>
-                <button class="quick-reply-btn-vertical" onclick="sendQuickReply('ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ ᠰᠤᠷᠤᠮᠠᠷ ᠪᠠᠶᠢᠨᠠ᠃')">
+                <button class="quick-reply-btn-vertical" onclick="sendQuickReply('ᠪᠢ ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ ᠰᠤᠷᠤᠵᠤ ᠪᠠᠶᠢᠨᠠ᠃')">
+                    <span class="mongolian-vertical">ᠪᠢ</span>
                     <span class="mongolian-vertical">ᠮᠣᠩᠭᠣᠯ</span>
                     <span class="mongolian-vertical">ᠬᠡᠯᠡ</span>
                 </button>
@@ -547,12 +549,12 @@
         let chatData = [
             { 
                 role: 'user', 
-                text: 'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ？',
+                text: 'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ？',
                 time: '09:00'
             },
             { 
                 role: 'ai', 
-                text: 'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠠ！ᠪᠢ ᠮᠣᠩᠭᠣᠯ AI ᠲᠠᠨᠢᠯᠴᠠᠭᠤᠯᠠᠭᠴᠢ ᠪᠠᠶᠢᠨᠠ᠃ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠭ᠎ᠠ ᠤᠤ？',
+                text: 'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ！ᠪᠢ ᠮᠣᠩᠭᠣᠯ AI ᠲᠡᠭᠦᠰᠯᠡᠭᠴᠢ ᠪᠠᠶᠢᠨ᠎ᠠ᠃ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠭ᠎ᠠ ᠤᠤ？',
                 time: '09:00'
             },
         ];
@@ -646,7 +648,7 @@
                 
                 const aiMessage = {
                     role: 'ai',
-                    text: 'ᠮᠡᠳᠡᠭᠡ ᠪᠠᠶᠢᠨᠠ！ᠪᠢ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠨᠠ᠃ ᠲᠠ ᠶᠠᠮᠠᠷ ᠠᠰᠤᠭᠤᠯᠲᠠᠢ？',
+                    text: 'ᠮᠡᠳᠡᠭᠡ ᠪᠠᠶᠢᠨ᠎ᠠ！ᠪᠢ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠨᠠ᠃ ᠲᠠ ᠶᠠᠮᠠᠷ ᠠᠰᠤᠭᠤᠯᠲᠠᠢ？',
                     time: getCurrentTime()
                 };
                 
