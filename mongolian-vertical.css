@@ -1,234 +1,138 @@
 /*
- * Mongolian Vertical Text CSS
- * 蒙古文竖排显示样式表
+ * Mongolian Vertical Text CSS - 标准方案
+ * 蒙古文竖排显示样式表（W3C 标准方案）
  * 
  * 参考：
- * - http://www.mongolfont.com/
- * - http://www.cjvlang.com/Writing/writmongol/tradmononsite.html
  * - W3C Mongolian Layout Requirements
+ * - https://www.w3.org/TR/mlreq/
+ * - https://www.w3.org/International/articles/vertical-text/
  * 
- * 版本：v1.0
- * 日期：2026-03-30
+ * 版本：v2.0
+ * 日期：2026-03-31
+ * 
+ * 核心原理：
+ * - writing-mode: vertical-lr (竖排 + 从左到右换列)
+ * - text-orientation: upright (字符保持直立)
+ * - 不使用 transform: rotate() (这是临时方案)
  */
 
 /* ============================================
-   1. 字体导入 - 使用 Mongolfont 字体
-   ============================================ */
-@font-face {
-    font-family: 'Mongolian White';
-    src: local('Mongolian White'),
-         local('Mongolian Baiti'),
-         url('fonts/mnglwhiteaat.ttf') format('truetype'),
-         url('fonts/mnglwhiteotf.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Mongolian Writing';
-    src: local('Mongolian Writing'),
-         url('fonts/mnglwritingaat.ttf') format('truetype'),
-         url('fonts/mnglwritingotf.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Mongolian Art';
-    src: local('Mongolian Art'),
-         url('fonts/mnglartaat.ttf') format('truetype'),
-         url('fonts/mnglartotf.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Mongolian Title';
-    src: local('Mongolian Title'),
-         url('fonts/mngltitleaat.ttf') format('truetype'),
-         url('fonts/mngltitleotf.ttf') format('truetype');
-}
-
-/* ============================================
-   2. 基础竖排样式 - 短文本片段
+   1. 基础竖排样式 - 标准方案
    ============================================ */
 .mongolian-vertical {
     /* 书写模式：竖排，从左到右 */
     writing-mode: vertical-lr;
-    -webkit-writing-mode: vertical-lr;
-    -moz-writing-mode: vertical-lr;
-    -o-writing-mode: vertical-lr;
-    -ms-writing-mode: tb-lr;
-    
-    /* 字符方向 */
     text-orientation: upright;
-    -webkit-text-orientation: sideways-right;
     
-    /* 对齐方式 */
-    text-align: right;
-    text-justify: inter-ideograph;
+    /* 浏览器兼容 */
+    -webkit-writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
     
     /* 字体设置 */
-    font-family: 'Mongolian White', 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif;
-    font-size: 20px;
+    font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
     
-    /* 间距 */
-    margin: 2px 1px 0px 1px;
-    padding: 0px;
-    
-    /* 保持连续 */
+    /* 布局 */
     display: inline-block;
     white-space: nowrap;
 }
 
 /* ============================================
-   3. 不同字体变体
+   2. 连续文本竖排 - 支持自动换列
    ============================================ */
-.mongolian-white {
-    font-family: 'Mongolian White', 'Mongolian Baiti', sans-serif;
-}
-
-.mongolian-writing {
-    font-family: 'Mongolian Writing', sans-serif;
-}
-
-.mongolian-art {
-    font-family: 'Mongolian Art', sans-serif;
-}
-
-.mongolian-title {
-    font-family: 'Mongolian Title', sans-serif;
-    font-size: 25px;
+.mongolian-continuous {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
+    
+    font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif;
+    font-size: 24px;
+    line-height: 1.5;
+    
+    /* 固定高度，自动换列 */
+    height: 300px;
+    overflow-y: auto;
 }
 
 /* ============================================
-   4. 固定高度容器 - 长文本跨页显示
+   3. 聊天消息竖排
    ============================================ */
-.mongolian-band {
-    height: 420px;  /* 约智能手机窗口高度 */
-    margin: 4px;
-    padding: 4px;
-    overflow: auto;  /* 允许滚动 */
-    
-    /* 书写模式 */
+.mongolian-message {
     writing-mode: vertical-lr;
-    -webkit-writing-mode: vertical-lr;
-    -moz-writing-mode: vertical-lr;
-    -o-writing-mode: vertical-lr;
-    -ms-writing-mode: tb-lr;
-    
-    /* 字符方向 */
     text-orientation: upright;
-    -webkit-text-orientation: sideways-right;
+    -webkit-writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
     
-    /* 对齐 */
-    text-align: justify;
-    text-justify: inter-ideograph;
-    
-    /* 字体 */
-    font-family: 'Mongolian White', 'Mongolian Baiti', sans-serif;
+    font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif;
     font-size: 20px;
-}
-
-/* ============================================
-   5. 文本框 - 浮动短文本
-   ============================================ */
-.mongolian-square {
-    height: 100px;
-    min-width: 70px;
-    float: right;
-    clear: both;
+    line-height: 1.6;
     
-    /* 字体 */
-    font-family: 'Mongolian White', 'Mongolian Baiti', sans-serif;
-    font-size: 22px;
-    
-    /* 间距 */
-    margin-top: 0px;
-    margin-left: 15px;
-    margin-bottom: 30px;
-    padding: 3px;
-    
-    /* 背景 */
-    background-color: #fff2e6;
-    
-    /* 书写模式 */
-    writing-mode: vertical-lr;
-    -webkit-writing-mode: vertical-lr;
-    -moz-writing-mode: vertical-lr;
-    -o-writing-mode: vertical-lr;
-    -ms-writing-mode: tb-lr;
-    
-    /* 字符方向 */
-    -webkit-text-orientation: sideways-right;
-}
-
-/* ============================================
-   6. 行内蒙古文 - 嵌入横排文本中
-   ============================================ */
-.mongolian-inline {
+    /* 聊天消息样式 */
     display: inline-block;
-    writing-mode: vertical-lr;
-    -webkit-writing-mode: vertical-lr;
-    -ms-writing-mode: tb-lr;
-    
-    text-orientation: upright;
-    -webkit-text-orientation: sideways-right;
-    
-    font-family: 'Mongolian White', 'Mongolian Baiti', sans-serif;
-    font-size: 18px;
-    margin: 0 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 8px;
 }
 
 /* ============================================
-   7. 表格中的蒙古文
+   4. 键盘按键竖排
    ============================================ */
-.mongolian-table-cell {
-    /* 注意：不要直接在 td 上应用类，而是在 td 内的 span/div 上应用 */
+.mongolian-key {
     writing-mode: vertical-lr;
-    -webkit-writing-mode: vertical-lr;
-    -ms-writing-mode: tb-lr;
-    
     text-orientation: upright;
-    -webkit-text-orientation: sideways-right;
+    -webkit-writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
     
-    font-family: 'Mongolian White', 'Mongolian Baiti', sans-serif;
-    font-size: 18px;
-    padding: 5px;
+    font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif;
+    font-size: 22px;
+    line-height: 1;
+    
+    /* 按键样式 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
 }
 
 /* ============================================
-   8. 响应式调整
+   5. 响应式调整
    ============================================ */
 @media (max-width: 768px) {
     .mongolian-vertical {
-        font-size: 18px;
+        font-size: 20px;
     }
     
-    .mongolian-band {
-        height: 300px;
-        font-size: 18px;
+    .mongolian-continuous {
+        height: 250px;
+        font-size: 20px;
     }
     
-    .mongolian-title {
-        font-size: 22px;
+    .mongolian-key {
+        font-size: 18px;
+        width: 44px;
+        height: 44px;
     }
 }
 
 @media (max-width: 480px) {
     .mongolian-vertical {
-        font-size: 16px;
+        font-size: 18px;
     }
     
-    .mongolian-band {
-        height: 250px;
-        font-size: 16px;
+    .mongolian-continuous {
+        height: 200px;
+        font-size: 18px;
     }
-}
-
-/* ============================================
-   9. 打印样式
-   ============================================ */
-@media print {
-    .mongolian-vertical,
-    .mongolian-band,
-    .mongolian-square {
-        overflow: visible;
+    
+    .mongolian-key {
+        font-size: 16px;
+        width: 40px;
+        height: 40px;
     }
 }
