@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>蒙古文 AI 助手 v3 - 智能增强版</title>
+    
+    <!-- 引入蒙古文竖排 CSS -->
+    <link rel="stylesheet" href="mongolian-vertical.css">
+    
+    <!-- 加载字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #007AFF;
+            --primary-dark: #0056CC;
+            --success: #34C759;
+            --warning: #FF9500;
+            --error: #FF3B30;
+            --purple: #AF52DE;
+            --gray-50: #F9FAFB;
+            --gray-100: #F2F2F7;
+            --gray-200: #E5E5EA;
+            --gray-300: #D1D1D6;
+            --gray-400: #8E8E93;
+            --white: #FFFFFF;
+            --black: #000000;
+            --ai-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #F2F2F7 0%, #FFFFFF 100%);
+            min-height: 100vh;
+            padding-bottom: 450px;
+            overflow-x: hidden;
+        }
+        
+        /* 导航栏 */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: var(--ai-gradient);
+            backdrop-filter: blur(20px);
+            padding: calc(env(safe-area-inset-top) + 16px) 16px 16px;
+            box-shadow: var(--shadow-md);
+            z-index: 100;
+        }
+        
+        .navbar-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar-title {
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .navbar-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 12px;
+            border-radius: 20px;
+            color: white;
+            font-size: 12px;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        /* 聊天容器 */
+        .chat-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 16px;
+            min-height: 300px;
+        }
+        
+        .message {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .message.user {
+            flex-direction: row-reverse;
+        }
+        
+        .avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+            background: var(--gray-100);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .message-content {
+            max-width: 70%;
+            padding: 16px 18px;
+            border-radius: 20px;
+            font-size: 17px;
+            box-shadow: var(--shadow-sm);
+            -webkit-user-select: text;
+            user-select: text;
+        }
+        
+        .message.user .message-content {
+            background: var(--primary);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+        
+        .message.ai .message-content {
+            background: white;
+            color: var(--black);
+            border-bottom-left-radius: 4px;
+            border: 0.5px solid var(--gray-200);
+        }
+        
+        /* AI 思考指示器 */
+        .typing-indicator {
+            display: none;
+            gap: 4px;
+            padding: 16px 18px;
+            background: white;
+            border-radius: 20px;
+            width: fit-content;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 20px;
+            margin-left: 56px;
+            animation: slideIn 0.3s ease;
+        }
+        
+        .typing-indicator.active {
+            display: flex;
+        }
+        
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gray-400);
+            animation: typingBounce 1.4s infinite;
+        }
+        
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes typingBounce {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-8px); }
+        }
+        
+        /* 输入区域 */
+        .input-section {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.98);
+            border-top: 0.5px solid var(--gray-300);
+            padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+            z-index: 1000;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .input-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .input-field {
+            flex: 1;
+            border: 0.5px solid var(--gray-300);
+            border-radius: 14px;
+            padding: 12px 16px;
+            font-size: 17px;
+            background: white;
+            transition: all 0.2s;
+            -webkit-user-select: text;
+            user-select: text;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+        }
+        
+        .send-btn {
+            background: var(--ai-gradient);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            padding: 0 24px;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .send-btn:active {
+            transform: scale(0.95);
+        }
+        
+        /* 工具栏 */
+        .toolbar {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .toolbar-btn {
+            flex-shrink: 0;
+            padding: 8px 16px;
+            border: 0.5px solid var(--gray-300);
+            border-radius: 20px;
+            background: white;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        
+        .toolbar-btn.active {
+            background: var(--ai-gradient);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .toolbar-btn:active {
+            transform: scale(0.95);
+        }
+        
+        /* 智能建议 */
+        .smart-suggestions {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, rgba(102,126,234,0.05) 0%, rgba(118,75,162,0.05) 100%);
+            border-radius: 10px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border: 0.5px solid rgba(102,126,234,0.2);
+        }
+        
+        .suggestion-tag {
+            flex-shrink: 0;
+            padding: 6px 12px;
+            background: white;
+            border: 0.5px solid var(--gray-300);
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--purple);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .suggestion-tag:active {
+            background: var(--ai-gradient);
+            color: white;
+            border-color: transparent;
+        }
+        
+        /* 最近使用 */
+        .recent-chars {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            background: white;
+            border-radius: 10px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .recent-char {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .recent-char:active {
+            background: var(--ai-gradient);
+            color: white;
+        }
+        
+        /* 蒙古文键盘 */
+        .mongolian-keyboard {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .keyboard-section {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 0.5px solid var(--gray-200);
+        }
+        
+        .keyboard-section:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .section-label {
+            font-size: 11px;
+            color: var(--gray-400);
+            margin-bottom: 6px;
+            padding-left: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .keyboard-row {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .keyboard-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .key {
+            flex: 1;
+            min-width: 40px;
+            max-width: 50px;
+            height: 44px;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+            cursor: pointer;
+            transition: all 0.15s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .key::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, transparent 100%);
+            pointer-events: none;
+        }
+        
+        .key:active {
+            background: var(--ai-gradient);
+            transform: scale(0.92);
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+        }
+        
+        .key:active .key-char {
+            color: white;
+        }
+        
+        .key:active .key-label {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .key-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+        
+        .key-char {
+            font-size: 22px;
+            font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif;
+            color: #333;
+            line-height: 1;
+            margin-bottom: 2px;
+        }
+        
+        .key-label {
+            font-size: 9px;
+            color: var(--gray-400);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .key-wide {
+            max-width: 70px;
+        }
+        
+        .key-space {
+            max-width: 120px;
+        }
+        
+        .key-function {
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            border-color: #667eea;
+        }
+        
+        .key-function .key-char {
+            color: white;
+            font-size: 18px;
+        }
+        
+        .key-function .key-label {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        /* 拉丁键盘 */
+        .latin-keyboard {
+            display: none;
+        }
+        
+        .latin-keyboard.active {
+            display: block;
+        }
+        
+        /* 统计面板 */
+        .stats-panel {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 10px;
+            padding: 12px 8px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .stat-number {
+            font-size: 20px;
+            font-weight: 700;
+            background: var(--ai-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 10px;
+            color: var(--gray-400);
+        }
+        
+        /* 响应式 */
+        @media (max-width: 400px) {
+            .key {
+                min-width: 36px;
+                max-width: 44px;
+                height: 40px;
+            }
+            
+            .key-char {
+                font-size: 20px;
+            }
+            
+            .key-space {
+                max-width: 100px;
+            }
+            
+            .stats-panel {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* 滚动条美化 */
+        ::-webkit-scrollbar {
+            height: 4px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--gray-100);
+            border-radius: 2px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--gray-400);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-title">🤖 蒙古文 AI 助手 v3</div>
+            <div class="navbar-status">
+                <div class="status-dot"></div>
+                <span>在线</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 聊天容器 -->
+    <div class="chat-container">
+        <div id="chat-content">
+            <!-- AI 欢迎消息 -->
+            <div class="message ai">
+                <div class="avatar">🤖</div>
+                <div class="message-content">
+                    <div>ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ？ᠪᠢ ᠮᠣᠩᠭᠣᠯ AI ᠲᠡᠭᠦᠰᠯᠡᠭᠴᠢ v3 ᠪᠠᠶᠢᠨ᠎ᠠ᠃ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠭ᠎ᠠ ᠤᠤ？</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- AI 思考指示器 -->
+        <div class="typing-indicator" id="typing-indicator">
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+        </div>
+    </div>
+    
+    <!-- 输入区域 -->
+    <div class="input-section">
+        <!-- 统计面板 -->
+        <div class="stats-panel">
+            <div class="stat-card">
+                <div class="stat-number" id="stat-chars">0</div>
+                <div class="stat-label">字符数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-words">0</div>
+                <div class="stat-label">词数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-messages">1</div>
+                <div class="stat-label">对话数</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-speed">0</div>
+                <div class="stat-label">WPM</div>
+            </div>
+        </div>
+        
+        <!-- 输入框 -->
+        <div class="input-row">
+            <input 
+                type="text" 
+                class="input-field" 
+                id="message-input"
+                placeholder="输入蒙古文..."
+            >
+            <button class="send-btn" onclick="sendMessage()">发送</button>
+        </div>
+        
+        <!-- 智能建议 -->
+        <div class="smart-suggestions" id="smart-suggestions">
+            <div class="suggestion-tag" onclick="inputSuggestion('ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ？')">ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ？</div>
+            <div class="suggestion-tag" onclick="inputSuggestion('ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ！')">ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ！</div>
+            <div class="suggestion-tag" onclick="inputSuggestion('ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ！')">ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ！</div>
+            <div class="suggestion-tag" onclick="inputSuggestion('ᠪᠠᠶᠠᠷ ᠬᠦᠷᠦᠭᠡ！')">ᠪᠠᠶᠠᠷ ᠬᠦᠷᠦᠭᠡ！</div>
+        </div>
+        
+        <!-- 工具栏 -->
+        <div class="toolbar">
+            <button class="toolbar-btn active" onclick="showKeyboard('mongolian')">⌨️ 蒙古文</button>
+            <button class="toolbar-btn" onclick="showKeyboard('latin')">🔤 Latin</button>
+            <button class="toolbar-btn" onclick="clearInput()">🗑️ 清空</button>
+            <button class="toolbar-btn" onclick="copyText()">📋 复制</button>
+        </div>
+        
+        <!-- 最近使用 -->
+        <div class="recent-chars" id="recent-chars">
+            <div class="recent-char" onclick="inputRecent('ᠰ')">ᠰ</div>
+            <div class="recent-char" onclick="inputRecent('ᠠ')">ᠠ</div>
+            <div class="recent-char" onclick="inputRecent('ᠶ')">ᠶ</div>
+            <div class="recent-char" onclick="inputRecent('ᠢ')">ᠢ</div>
+            <div class="recent-char" onclick="inputRecent('ᠨ')">ᠨ</div>
+        </div>
+        
+        <!-- 蒙古文键盘 -->
+        <div class="mongolian-keyboard" id="keyboard-mongolian">
+            <!-- 元音 -->
+            <div class="keyboard-section">
+                <div class="section-label">元音 Vowels</div>
+                <div class="keyboard-row">
+                    <div class="key" onclick="inputChar('ᠠ')"><div class="key-wrapper"><span class="key-char">ᠠ</span><span class="key-label">A</span></div></div>
+                    <div class="key" onclick="inputChar('ᠡ')"><div class="key-wrapper"><span class="key-char">ᠡ</span><span class="key-label">E</span></div></div>
+                    <div class="key" onclick="inputChar('ᠢ')"><div class="key-wrapper"><span class="key-char">ᠢ</span><span class="key-label">I</span></div></div>
+                    <div class="key" onclick="inputChar('ᠣ')"><div class="key-wrapper"><span class="key-char">ᠣ</span><span class="key-label">O</span></div></div>
+                    <div class="key" onclick="inputChar('ᠤ')"><div class="key-wrapper"><span class="key-char">ᠤ</span><span class="key-label">U</span></div></div>
+                    <div class="key" onclick="inputChar('ᠥ')"><div class="key-wrapper"><span class="key-char">ᠥ</span><span class="key-label">Ö</span></div></div>
+                    <div class="key" onclick="inputChar('ᠦ')"><div class="key-wrapper"><span class="key-char">ᠦ</span><span class="key-label">Ü</span></div></div>
+                </div>
+            </div>
+            
+            <!-- 辅音 1 -->
+            <div class="keyboard-section">
+                <div class="section-label">辅音 Consonants 1</div>
+                <div class="keyboard-row">
+                    <div class="key" onclick="inputChar('ᠨ')"><div class="key-wrapper"><span class="key-char">ᠨ</span><span class="key-label">N</span></div></div>
+                    <div class="key" onclick="inputChar('ᠪ')"><div class="key-wrapper"><span class="key-char">ᠪ</span><span class="key-label">B</span></div></div>
+                    <div class="key" onclick="inputChar('ᠫ')"><div class="key-wrapper"><span class="key-char">ᠫ</span><span class="key-label">P</span></div></div>
+                    <div class="key" onclick="inputChar('ᠬ')"><div class="key-wrapper"><span class="key-char">ᠬ</span><span class="key-label">Q</span></div></div>
+                    <div class="key" onclick="inputChar('ᠭ')"><div class="key-wrapper"><span class="key-char">ᠭ</span><span class="key-label">G</span></div></div>
+                    <div class="key" onclick="inputChar('ᠮ')"><div class="key-wrapper"><span class="key-char">ᠮ</span><span class="key-label">M</span></div></div>
+                    <div class="key" onclick="inputChar('ᠯ')"><div class="key-wrapper"><span class="key-char">ᠯ</span><span class="key-label">L</span></div></div>
+                </div>
+            </div>
+            
+            <!-- 辅音 2 -->
+            <div class="keyboard-section">
+                <div class="section-label">辅音 Consonants 2</div>
+                <div class="keyboard-row">
+                    <div class="key" onclick="inputChar('ᠰ')"><div class="key-wrapper"><span class="key-char">ᠰ</span><span class="key-label">S</span></div></div>
+                    <div class="key" onclick="inputChar('ᠱ')"><div class="key-wrapper"><span class="key-char">ᠱ</span><span class="key-label">Š</span></div></div>
+                    <div class="key" onclick="inputChar('ᠲ')"><div class="key-wrapper"><span class="key-char">ᠲ</span><span class="key-label">T</span></div></div>
+                    <div class="key" onclick="inputChar('ᠳ')"><div class="key-wrapper"><span class="key-char">ᠳ</span><span class="key-label">D</span></div></div>
+                    <div class="key" onclick="inputChar('ᠴ')"><div class="key-wrapper"><span class="key-char">ᠴ</span><span class="key-label">Č</span></div></div>
+                    <div class="key" onclick="inputChar('ᠵ')"><div class="key-wrapper"><span class="key-char">ᠵ</span><span class="key-label">J</span></div></div>
+                    <div class="key" onclick="inputChar('ᠶ')"><div class="key-wrapper"><span class="key-char">ᠶ</span><span class="key-label">Y</span></div></div>
+                </div>
+            </div>
+            
+            <!-- 辅音 3 -->
+            <div class="keyboard-section">
+                <div class="section-label">辅音 Consonants 3</div>
+                <div class="keyboard-row">
+                    <div class="key" onclick="inputChar('ᠷ')"><div class="key-wrapper"><span class="key-char">ᠷ</span><span class="key-label">R</span></div></div>
+                    <div class="key" onclick="inputChar('ᠸ')"><div class="key-wrapper"><span class="key-char">ᠸ</span><span class="key-label">W</span></div></div>
+                    <div class="key" onclick="inputChar('ᠹ')"><div class="key-wrapper"><span class="key-char">ᠹ</span><span class="key-label">F</span></div></div>
+                    <div class="key" onclick="inputChar('ᠺ')"><div class="key-wrapper"><span class="key-char">ᠺ</span><span class="key-label">K</span></div></div>
+                    <div class="key" onclick="inputChar('ᠻ')"><div class="key-wrapper"><span class="key-char">ᠻ</span><span class="key-label">KHA</span></div></div>
+                    <div class="key" onclick="inputChar('ᠼ')"><div class="key-wrapper"><span class="key-char">ᠼ</span><span class="key-label">TSA</span></div></div>
+                    <div class="key" onclick="inputChar('ᠽ')"><div class="key-wrapper"><span class="key-char">ᠽ</span><span class="key-label">ZA</span></div></div>
+                </div>
+            </div>
+            
+            <!-- 功能键 -->
+            <div class="keyboard-section">
+                <div class="section-label">功能 Function</div>
+                <div class="keyboard-row">
+                    <div class="key" onclick="inputChar('ᠾ')"><div class="key-wrapper"><span class="key-char">ᠾ</span><span class="key-label">HAA</span></div></div>
+                    <div class="key" onclick="inputChar('ᠿ')"><div class="key-wrapper"><span class="key-char">ᠿ</span><span class="key-label">ZRA</span></div></div>
+                    <div class="key" onclick="inputChar('ᡀ')"><div class="key-wrapper"><span class="key-char">ᡀ</span><span class="key-label">LH</span></div></div>
+                    <div class="key" onclick="inputChar('ᡁ')"><div class="key-wrapper"><span class="key-char">ᡁ</span><span class="key-label">ZHI</span></div></div>
+                    <div class="key" onclick="inputChar('᠂')"><div class="key-wrapper"><span class="key-char">᠂</span><span class="key-label">,</span></div></div>
+                    <div class="key" onclick="inputChar('᠃')"><div class="key-wrapper"><span class="key-char">᠃</span><span class="key-label">.</span></div></div>
+                    <div class="key key-wide" onclick="deleteChar()"><div class="key-wrapper"><span class="key-char">⌫</span><span class="key-label">DEL</span></div></div>
+                </div>
+                <div class="keyboard-row" style="margin-top: 5px;">
+                    <div class="key key-space" onclick="inputChar(' ')"><div class="key-wrapper"><span class="key-char">␣</span><span class="key-label">SPACE</span></div></div>
+                    <div class="key key-function" onclick="sendMessage()"><div class="key-wrapper"><span class="key-char">↵</span><span class="key-label">SEND</span></div></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 拉丁键盘 -->
+        <div class="latin-keyboard" id="keyboard-latin">
+            <div class="keyboard-section">
+                <div class="keyboard-row">
+                    <div class="key" onclick="inputChar('a')"><div class="key-wrapper"><span class="key-char">a</span></div></div>
+                    <div class="key" onclick="inputChar('e')"><div class="key-wrapper"><span class="key-char">e</span></div></div>
+                    <div class="key" onclick="inputChar('i')"><div class="key-wrapper"><span class="key-char">i</span></div></div>
+                    <div class="key" onclick="inputChar('o')"><div class="key-wrapper"><span class="key-char">o</span></div></div>
+                    <div class="key" onclick="inputChar('u')"><div class="key-wrapper"><span class="key-char">u</span></div></div>
+                    <div class="key" onclick="inputChar('ü')"><div class="key-wrapper"><span class="key-char">ü</span></div></div>
+                    <div class="key" onclick="inputChar('ö')"><div class="key-wrapper"><span class="key-char">ö</span></div></div>
+                </div>
+                <div class="keyboard-row" style="margin-top: 5px;">
+                    <div class="key" onclick="inputChar('n')"><div class="key-wrapper"><span class="key-char">n</span></div></div>
+                    <div class="key" onclick="inputChar('b')"><div class="key-wrapper"><span class="key-char">b</span></div></div>
+                    <div class="key" onclick="inputChar('p')"><div class="key-wrapper"><span class="key-char">p</span></div></div>
+                    <div class="key" onclick="inputChar('q')"><div class="key-wrapper"><span class="key-char">q</span></div></div>
+                    <div class="key" onclick="inputChar('γ')"><div class="key-wrapper"><span class="key-char">γ</span></div></div>
+                    <div class="key" onclick="inputChar('m')"><div class="key-wrapper"><span class="key-char">m</span></div></div>
+                    <div class="key" onclick="inputChar('l')"><div class="key-wrapper"><span class="key-char">l</span></div></div>
+                </div>
+                <div class="keyboard-row" style="margin-top: 5px;">
+                    <div class="key key-wide" onclick="deleteChar()"><div class="key-wrapper"><span class="key-char">⌫</span><span class="key-label">DEL</span></div></div>
+                    <div class="key key-space" onclick="inputChar(' ')"><div class="key-wrapper"><span class="key-char">␣</span><span class="key-label">SPACE</span></div></div>
+                    <div class="key key-function" onclick="sendMessage()"><div class="key-wrapper"><span class="key-char">↵</span><span class="key-label">SEND</span></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 状态管理
+        let recentChars = ['ᠰ', 'ᠠ', 'ᠶ', 'ᠢ', 'ᠨ'];
+        let messageCount = 1;
+        let startTime = Date.now();
+        let totalChars = 0;
+        
+        // 显示键盘
+        function showKeyboard(type) {
+            document.querySelectorAll('.toolbar-btn').forEach(btn => {
+                if (!btn.textContent.includes('清空') && !btn.textContent.includes('复制')) {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            document.getElementById('keyboard-mongolian').style.display = 'none';
+            document.getElementById('keyboard-latin').classList.remove('active');
+            
+            if (type === 'mongolian') {
+                document.getElementById('keyboard-mongolian').style.display = 'block';
+                event.target.classList.add('active');
+            } else {
+                document.getElementById('keyboard-latin').classList.add('active');
+                event.target.classList.add('active');
+            }
+        }
+        
+        // 输入字符
+        function inputChar(char) {
+            const input = document.getElementById('message-input');
+            input.value += char;
+            input.focus();
+            
+            addToRecent(char);
+            updateStats();
+        }
+        
+        // 输入建议
+        function inputSuggestion(text) {
+            const input = document.getElementById('message-input');
+            input.value = text;
+            input.focus();
+            updateStats();
+        }
+        
+        // 输入最近字符
+        function inputRecent(char) {
+            inputChar(char);
+        }
+        
+        // 添加到最近使用
+        function addToRecent(char) {
+            if (!recentChars.includes(char)) {
+                recentChars.unshift(char);
+                recentChars = recentChars.slice(0, 5);
+                updateRecentDisplay();
+            }
+        }
+        
+        // 更新最近使用显示
+        function updateRecentDisplay() {
+            const container = document.getElementById('recent-chars');
+            container.innerHTML = recentChars.map(char => 
+                `<div class="recent-char" onclick="inputRecent('${char}')">${char}</div>`
+            ).join('');
+        }
+        
+        // 删除字符
+        function deleteChar() {
+            const input = document.getElementById('message-input');
+            input.value = input.value.slice(0, -1);
+            input.focus();
+            updateStats();
+        }
+        
+        // 清空输入
+        function clearInput() {
+            document.getElementById('message-input').value = '';
+            document.getElementById('message-input').focus();
+            updateStats();
+        }
+        
+        // 复制文本
+        function copyText() {
+            const input = document.getElementById('message-input');
+            input.select();
+            document.execCommand('copy');
+            
+            // 显示提示
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = '✅ 已复制';
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 1500);
+        }
+        
+        // 更新统计
+        function updateStats() {
+            const input = document.getElementById('message-input');
+            const text = input.value;
+            
+            // 字符数
+            totalChars = text.length;
+            document.getElementById('stat-chars').textContent = totalChars;
+            
+            // 词数（按空格分）
+            const words = text.split(/\s+/).filter(w => w.length > 0);
+            document.getElementById('stat-words').textContent = words.length;
+            
+            // 输入速度（WPM）
+            const elapsed = (Date.now() - startTime) / 1000 / 60;
+            if (elapsed > 0) {
+                const wpm = Math.round((totalChars / 5) / elapsed);
+                document.getElementById('stat-speed').textContent = wpm;
+            }
+        }
+        
+        // 显示 AI 思考
+        function showTyping() {
+            document.getElementById('typing-indicator').classList.add('active');
+        }
+        
+        // 隐藏 AI 思考
+        function hideTyping() {
+            document.getElementById('typing-indicator').classList.remove('active');
+        }
+        
+        // 添加消息
+        function addMessage(role, text) {
+            const chatContent = document.getElementById('chat-content');
+            const messageEl = document.createElement('div');
+            messageEl.className = `message ${role}`;
+            
+            messageEl.innerHTML = `
+                <div class="avatar">${role === 'user' ? '👤' : '🤖'}</div>
+                <div class="message-content">
+                    <div>${text}</div>
+                </div>
+            `;
+            
+            chatContent.appendChild(messageEl);
+            scrollToBottom();
+            
+            if (role === 'user') {
+                messageCount++;
+                document.getElementById('stat-messages').textContent = messageCount;
+            }
+        }
+        
+        // 滚动到底部
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+        
+        // 发送消息
+        function sendMessage() {
+            const input = document.getElementById('message-input');
+            const text = input.value.trim();
+            
+            if (!text) return;
+            
+            addMessage('user', text);
+            input.value = '';
+            updateStats();
+            
+            // 显示 AI 思考
+            showTyping();
+            
+            // AI 回复
+            setTimeout(() => {
+                hideTyping();
+                
+                const responses = [
+                    'ᠮᠡᠳᠡᠭᠡ ᠪᠠᠶᠢᠨ᠎ᠠ！ᠪᠢ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠨᠠ᠃',
+                    'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ！ᠲᠠ ᠶᠠᠮᠠᠷ ᠠᠰᠤᠭᠤᠯᠲᠠᠢ？',
+                    'ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ！ᠮᠢᠨᠦ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠤᠭᠰᠠᠨᠳᠠ ᠪᠠᠶᠠᠷᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠨ᠎ᠠ᠃',
+                    'ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ ᠪᠣᠯ ᠮᠣᠩᠭᠣᠯ ᠦᠨᠳᠦᠰᠦᠲᠡᠨ ᠦ ᠬᠡᠯᠡ ᠪᠣᠯᠤᠭᠰᠠᠨ ᠤᠴᠢᠷ ᠶᠡᠬᠡ ᠪᠠᠶᠢᠨ᠎ᠠ᠃',
+                    'ᠰᠠᠶᠢᠨ！ᠲᠠᠨᠳ ᠬᠠᠮᠲᠤ ᠶᠠᠷᠢᠴᠢᠬᠤ ᠳᠠ ᠪᠠᠶᠠᠷᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠨ᠎ᠠ᠃',
+                ];
+                
+                const response = responses[Math.floor(Math.random() * responses.length)];
+                addMessage('ai', response);
+            }, 1000 + Math.random() * 1000);
+        }
+        
+        // 回车发送
+        document.getElementById('message-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+        
+        // 初始化
+        updateRecentDisplay();
+        updateStats();
+    </script>
+</body>
+</html>
