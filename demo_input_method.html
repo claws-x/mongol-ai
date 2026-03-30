@@ -108,6 +108,7 @@
             padding: 14px 18px;
             border-radius: 20px;
             font-size: 17px;
+            overflow-x: auto;
         }
         
         .message.user .message-content {
@@ -123,6 +124,33 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
         
+        /* 竖排蒙古文容器 - 固定高度，自动换列 */
+        .mongolian-vertical-container {
+            height: 200px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            padding: 4px;
+        }
+        
+        /* 单个竖排列 */
+        .mongolian-column {
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            -webkit-writing-mode: vertical-lr;
+            -webkit-text-orientation: sideways-right;
+            font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
+            font-size: 24px;
+            line-height: 1.8;
+            height: 100%;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        
         .mongolian-vertical {
             writing-mode: vertical-lr;
             text-orientation: upright;
@@ -132,7 +160,6 @@
             font-size: 24px;
             line-height: 1.8;
             display: inline-block;
-            max-height: 200px;
         }
         
         /* 内嵌输入法 */
@@ -492,7 +519,7 @@
             return now.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
         }
         
-        // 渲染对话
+        // 渲染对话 - 支持自动换列
         function renderChat() {
             const chatContent = document.getElementById('chat-content');
             chatContent.innerHTML = '';
@@ -504,14 +531,52 @@
                 messageEl.innerHTML = `
                     <div class="avatar">${message.role === 'user' ? '👤' : '🤖'}</div>
                     <div class="message-content">
-                        <div class="mongolian-vertical">${message.text}</div>
+                        <div class="mongolian-vertical-container" id="msg-${Date.now()}-${Math.random()}"></div>
                     </div>
                 `;
                 
                 chatContent.appendChild(messageEl);
+                
+                // 渲染竖排文字，自动换列
+                const container = messageEl.querySelector('.mongolian-vertical-container');
+                renderVerticalText(container, message.text);
             });
             
             scrollToBottom();
+        }
+        
+        // 渲染竖排文字 - 固定高度，自动换列
+        function renderVerticalText(container, text) {
+            const CHAR_HEIGHT = 43; // 每个字符高度（24px font + 1.8 line-height + gap）
+            const MAX_HEIGHT = 200; // 容器最大高度
+            const MAX_CHARS_PER_COLUMN = Math.floor(MAX_HEIGHT / CHAR_HEIGHT); // 每列最大字符数
+            
+            // 移除空格，只保留蒙古文字符
+            const chars = text.split('').filter(c => c.trim());
+            
+            let currentColumn = null;
+            let charCount = 0;
+            
+            chars.forEach((char, index) => {
+                // 如果当前列为空或已满，创建新列
+                if (!currentColumn || charCount >= MAX_CHARS_PER_COLUMN) {
+                    currentColumn = document.createElement('div');
+                    currentColumn.className = 'mongolian-column';
+                    container.appendChild(currentColumn);
+                    charCount = 0;
+                }
+                
+                // 添加字符到当前列
+                const charEl = document.createElement('span');
+                charEl.className = 'mongolian-vertical';
+                charEl.textContent = char;
+                currentColumn.appendChild(charEl);
+                
+                charCount++;
+            });
+            
+            // 自动滚动到最右列
+            container.scrollLeft = container.scrollWidth;
         }
         
         // 滚动到底部
