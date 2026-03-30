@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传统蒙古文 AI 助手 - 蒙古包对话框</title>
+    
+    <!-- 引入蒙古文竖排 CSS -->
+    <link rel="stylesheet" href="mongolian-vertical.css">
+    
+    <!-- 加载字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            /* 草原蓝天背景 */
+            background: linear-gradient(180deg, 
+                #87CEEB 0%,    /* 蓝天 */
+                #87CEEB 50%,   /* 天空 */
+                #90EE90 50%,   /* 草原 */
+                #228B22 100%   /* 深绿草地 */
+            );
+            min-height: 100vh;
+            padding: 20px;
+            font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* 标题 - 蒙古文风格 */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            border-radius: 20px 20px 0 0;
+            border: 3px solid #FFD700;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        
+        header h1 {
+            color: white;
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        header p {
+            color: #FFD700;
+            font-size: 18px;
+        }
+        
+        /* 蒙古包风格的聊天容器 */
+        .chat-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            border: 5px solid #8B4513;
+            position: relative;
+        }
+        
+        /* 蒙古包顶部装饰 */
+        .chat-container::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 30px solid #8B4513;
+        }
+        
+        /* 传统图案边框 */
+        .mongolian-pattern {
+            border: 3px solid #FFD700;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            background: linear-gradient(135deg, #FFF8DC, #FFEBCD);
+            position: relative;
+        }
+        
+        /* 对话框样式 */
+        .message-box {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .message-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        /* 用户对话框 - 蓝色 */
+        .user-message-box {
+            border-left: 5px solid #4169E1;
+            background: linear-gradient(135deg, #E6F3FF, #FFFFFF);
+        }
+        
+        /* AI 对话框 - 橙色 */
+        .ai-message-box {
+            border-left: 5px solid #FF8C00;
+            background: linear-gradient(135deg, #FFF5E6, #FFFFFF);
+        }
+        
+        /* 头像 */
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            flex-shrink: 0;
+            border: 3px solid;
+        }
+        
+        .user-avatar {
+            background: linear-gradient(135deg, #4169E1, #1E90FF);
+            border-color: #4169E1;
+        }
+        
+        .ai-avatar {
+            background: linear-gradient(135deg, #FF8C00, #FFA500);
+            border-color: #FF8C00;
+        }
+        
+        /* 对话内容 */
+        .message-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        
+        .message-role {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .message-time {
+            font-size: 14px;
+            color: #999;
+        }
+        
+        /* 竖排蒙古文内容 */
+        .mongolian-text {
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            -webkit-writing-mode: vertical-lr;
+            -webkit-text-orientation: sideways-right;
+            
+            font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
+            font-size: 28px;
+            line-height: 1.8;
+            letter-spacing: 2px;
+            
+            padding: 10px;
+            background: linear-gradient(to bottom, #FFFef8, #FFF);
+            border-radius: 10px;
+            border: 2px solid #D4A574;
+            
+            display: inline-block;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        /* 传统装饰元素 */
+        .decoration {
+            text-align: center;
+            font-size: 24px;
+            color: #8B4513;
+            margin: 20px 0;
+        }
+        
+        /* 底部信息 */
+        .footer-info {
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            border-radius: 0 0 20px 20px;
+            text-align: center;
+        }
+        
+        .footer-info p {
+            margin: 5px 0;
+        }
+        
+        /* 云朵装饰 */
+        .cloud {
+            position: fixed;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: float 20s infinite linear;
+        }
+        
+        @keyframes float {
+            from { transform: translateX(-100vw); }
+            to { transform: translateX(100vw); }
+        }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .message-box {
+                flex-direction: column;
+            }
+            
+            .avatar {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+            
+            .mongolian-text {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 云朵装饰 -->
+    <div class="cloud" style="width: 100px; height: 100px; top: 10%; left: -100px;"></div>
+    <div class="cloud" style="width: 150px; height: 150px; top: 20%; left: -150px; animation-delay: -5s;"></div>
+    <div class="cloud" style="width: 80px; height: 80px; top: 15%; left: -80px; animation-delay: -10s;"></div>
+    
+    <div class="container">
+        <header>
+            <h1>🐎 传统蒙古文 AI 助手</h1>
+            <p>Mongolian AI Assistant - 蒙古包风格对话框</p>
+        </header>
+        
+        <div class="chat-container">
+            <h2 style="text-align: center; color: #1e3c72; margin-bottom: 20px;">
+                📜 蒙古文对话演示
+            </h2>
+            
+            <!-- 传统图案装饰 -->
+            <div class="decoration">
+                𓋨𓋨𓋨 𓋨𓋨𓋨 𓋨𓋨𓋨
+            </div>
+            
+            <div id="chat-content">
+                <!-- 对话内容将由 JavaScript 加载 -->
+            </div>
+            
+            <!-- 传统图案装饰 -->
+            <div class="decoration">
+                𓋨𓋨𓋨 𓋨𓋨𓋨 𓋨𓋨𓋨
+            </div>
+        </div>
+        
+        <div class="footer-info">
+            <p>🚀 Gitea 自驱动开发 | v2.0.0 | 2026-03-30</p>
+            <p>📍 项目地址：/Users/aiagent_master/.openclaw/workspace/mongolian-ai-assistant/</p>
+            <p>📚 学习来源：Mongolfont | CJVLang | W3C | Unicode UTN #57</p>
+        </div>
+    </div>
+    
+    <script>
+        // 获取当前时间
+        function getCurrentTime() {
+            const now = new Date();
+            return now.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+        }
+        
+        // 对话数据
+        const chatData = [
+            { 
+                role: 'user', 
+                text: 'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ？',
+                translation: '你好吗？'
+            },
+            { 
+                role: 'ai', 
+                text: 'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠠ！ᠪᠢ ᠮᠣᠩᠭᠣᠯ AI ᠲᠠᠨᠢᠯᠴᠠᠭᠤᠯᠠᠭᠴᠢ ᠪᠠᠶᠢᠨᠠ᠃ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠭ᠎ᠠ ᠤᠤ？',
+                translation: '我很好！我是蒙古 AI 助手。有什么可以帮您？'
+            },
+            { 
+                role: 'user', 
+                text: 'ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ ᠰᠤᠷᠤᠮᠠᠷ ᠪᠠᠶᠢᠨᠠ᠃',
+                translation: '我在学蒙古语'
+            },
+            { 
+                role: 'ai', 
+                text: 'ᠮᠡᠳᠡᠭᠡ ᠪᠠᠶᠢᠨᠠ！ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ ᠪᠣᠯ ᠡᠷᠲᠡ ᠵᠣᠬᠢᠶᠠᠯᠲᠠᠢ ᠬᠡᠯᠡ ᠪᠣᠯᠤᠭᠰᠠᠨ ᠤᠴᠢᠷ ᠶᠡᠬᠡ ᠪᠠᠶᠢᠨ᠎ᠠ᠃ ᠪᠢ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠨᠠ！',
+                translation: '我知道！蒙古语是一门历史悠久的语言。我可以帮助您！'
+            },
+            { 
+                role: 'user', 
+                text: 'ᠪᠠᠶᠠᠷᠲᠠᠢ！',
+                translation: '谢谢！'
+            },
+            { 
+                role: 'ai', 
+                text: 'ᠪᠠᠶᠠᠷᠲᠠᠢ！ᠮᠢᠨᠦ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠤᠭᠰᠠᠨᠳᠠ ᠪᠠᠶᠠᠷᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠨᠠ᠃ ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ ᠰᠤᠷᠤᠬᠤ ᠳᠤ ᠠᠮᠠᠷ ᠲᠡᠨᠬᠡᠷ ᠬᠦᠰᠡᠭᠡᠶ᠎ᠡ！',
+                translation: '谢谢！很高兴能帮助您。祝您学习蒙古语顺利！'
+            },
+        ];
+        
+        // 渲染对话
+        const chatContent = document.getElementById('chat-content');
+        
+        chatData.forEach((chat, index) => {
+            const messageBox = document.createElement('div');
+            messageBox.className = `message-box ${chat.role === 'user' ? 'user-message-box' : 'ai-message-box'}`;
+            
+            messageBox.innerHTML = `
+                <div class="avatar ${chat.role === 'user' ? 'user-avatar' : 'ai-avatar'}">
+                    ${chat.role === 'user' ? '👤' : '🤖'}
+                </div>
+                <div class="message-content">
+                    <div class="message-header">
+                        <span class="message-role">${chat.role === 'user' ? '👤 用户' : '🤖 AI 助手'}</span>
+                        <span class="message-time">${getCurrentTime()}</span>
+                    </div>
+                    <div class="mongolian-text">
+                        ${chat.text}
+                    </div>
+                    <div style="font-size: 14px; color: #666; margin-top: 5px;">
+                        ${chat.translation}
+                    </div>
+                </div>
+            `;
+            
+            chatContent.appendChild(messageBox);
+        });
+        
+        // 动态添加云朵
+        setInterval(() => {
+            const cloud = document.createElement('div');
+            cloud.className = 'cloud';
+            cloud.style.width = Math.random() * 100 + 50 + 'px';
+            cloud.style.height = cloud.style.width;
+            cloud.style.top = Math.random() * 30 + '%';
+            cloud.style.left = '-150px';
+            cloud.style.animation = 'float 20s infinite linear';
+            document.body.appendChild(cloud);
+            
+            // 清理超出屏幕的云朵
+            setTimeout(() => {
+                cloud.remove();
+            }, 20000);
+        }, 5000);
+    </script>
+</body>
+</html>
