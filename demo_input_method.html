@@ -150,11 +150,19 @@
             height: 100%;
             flex-shrink: 0;
             display: flex !important;
-            flex-direction: column !important;
+            flex-direction: row !important;
             align-items: flex-start;
             justify-content: flex-start;
             margin-top: -10px;
             padding-top: 0;
+        }
+        
+        .mongolian-column .mongolian-vertical {
+            display: inline-block !important;
+            margin: 0;
+            padding: 0;
+            transform: rotate(90deg) !important;
+            transform-origin: center center;
         }
         
         .mongolian-vertical {
@@ -169,7 +177,6 @@
             margin: 0;
             padding: 0;
             vertical-align: top;
-            /* 蒙古文本身是竖排文字，不需要旋转 */
         }
         
         /* 内嵌输入法 */
@@ -264,7 +271,8 @@
             max-height: 35px;
             display: inline-block !important;
             font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif !important;
-            /* 蒙古文本身是竖排文字，不需要旋转 */
+            transform: rotate(90deg) !important;
+            transform-origin: center center;
         }
         
         /* 中文/英文需要旋转 90 度，蒙古文不需要 */
