@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>传统蒙古文 AI 助手 - 内嵌输入法</title>
+    
+    <!-- 引入蒙古文竖排 CSS -->
+    <link rel="stylesheet" href="mongolian-vertical.css">
+    
+    <!-- 加载字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #007AFF;
+            --primary-dark: #0056CC;
+            --success: #34C759;
+            --gray-100: #F2F2F7;
+            --gray-200: #E5E5EA;
+            --gray-300: #D1D1D6;
+            --white: #FFFFFF;
+            --black: #000000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #F2F2F7 0%, #FFFFFF 100%);
+            min-height: 100vh;
+            padding-bottom: 220px;
+        }
+        
+        /* 导航栏 */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 0.5px solid var(--gray-200);
+            padding: calc(env(safe-area-inset-top) + 12px) 16px 12px;
+            z-index: 100;
+        }
+        
+        .navbar-content {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar-title {
+            font-size: 17px;
+            font-weight: 600;
+        }
+        
+        /* 聊天区域 */
+        .chat-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+        
+        .message {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .message.user {
+            flex-direction: row-reverse;
+        }
+        
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .message-content {
+            max-width: 70%;
+            padding: 14px 18px;
+            border-radius: 20px;
+            font-size: 17px;
+        }
+        
+        .message.user .message-content {
+            background: var(--primary);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+        
+        .message.ai .message-content {
+            background: white;
+            color: var(--black);
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mongolian-vertical {
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            -webkit-writing-mode: vertical-lr;
+            -webkit-text-orientation: sideways-right;
+            font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
+            font-size: 24px;
+            line-height: 1.8;
+            display: inline-block;
+            max-height: 200px;
+        }
+        
+        /* 内嵌输入法 */
+        .input-method-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--gray-100);
+            border-top: 0.5px solid var(--gray-300);
+            padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+            z-index: 1000;
+        }
+        
+        /* 输入框区域 */
+        .input-area {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .input-field {
+            flex: 1;
+            border: 0.5px solid var(--gray-300);
+            border-radius: 16px;
+            padding: 12px 16px;
+            font-size: 17px;
+            background: white;
+            transition: all 0.2s;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+        }
+        
+        .send-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            padding: 0 20px;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .send-btn:active {
+            transform: scale(0.95);
+        }
+        
+        /* 蒙古文键盘 */
+        .mongolian-keyboard {
+            background: white;
+            border-radius: 12px;
+            padding: 8px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .keyboard-row {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 4px;
+            justify-content: center;
+        }
+        
+        .keyboard-row:last-child {
+            margin-bottom: 0;
+        }
+        
+        .key {
+            flex: 1;
+            max-width: 40px;
+            height: 44px;
+            border: 0.5px solid var(--gray-200);
+            border-radius: 6px;
+            background: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .key:active {
+            background: var(--primary);
+            color: white;
+            transform: scale(0.9);
+        }
+        
+        .key-wide {
+            max-width: 60px;
+            font-size: 14px;
+        }
+        
+        .key-space {
+            max-width: 200px;
+        }
+        
+        /* 候选词区域 */
+        .candidate-area {
+            background: white;
+            border-radius: 8px;
+            padding: 8px;
+            margin-bottom: 8px;
+            display: none;
+            overflow-x: auto;
+        }
+        
+        .candidate-area.active {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .candidate-item {
+            padding: 8px 16px;
+            background: var(--gray-100);
+            border-radius: 6px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+        
+        .candidate-item:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* 输入模式切换 */
+        .input-mode-switch {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .mode-btn {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            background: var(--gray-200);
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .mode-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* 拉丁转写提示 */
+        .transliteration-hint {
+            font-size: 12px;
+            color: var(--gray-400);
+            text-align: center;
+            margin-top: 4px;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 400px) {
+            .key {
+                max-width: 35px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            .key-space {
+                max-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-title">
+                <span class="mongolian-vertical" style="font-size: 16px; max-height: 40px;">🐎 ᠮᠣᠩᠭᠣᠯ AI</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 聊天区域 -->
+    <div class="chat-container">
+        <div id="chat-content">
+            <!-- 对话内容 -->
+        </div>
+    </div>
+    
+    <!-- 内嵌输入法 -->
+    <div class="input-method-container">
+        <!-- 输入模式切换 -->
+        <div class="input-mode-switch">
+            <button class="mode-btn active" onclick="switchKeyboard('mongolian')">
+                <span class="mongolian-vertical" style="font-size: 14px; max-height: 30px;">ᠮᠣᠩᠭᠣᠯ</span>
+            </button>
+            <button class="mode-btn" onclick="switchKeyboard('latin')">
+                <span class="mongolian-vertical" style="font-size: 14px; max-height: 30px;">Latin</span>
+            </button>
+        </div>
+        
+        <!-- 候选词区域 -->
+        <div class="candidate-area" id="candidate-area"></div>
+        
+        <!-- 输入框 -->
+        <div class="input-area">
+            <input 
+                type="text" 
+                class="input-field" 
+                id="message-input"
+                placeholder="输入蒙古文..."
+            >
+            <button class="send-btn" onclick="sendMessage()">发送</button>
+        </div>
+        
+        <!-- 蒙古文键盘 -->
+        <div class="mongolian-keyboard" id="mongolian-keyboard">
+            <!-- 第 1 行：元音 -->
+            <div class="keyboard-row">
+                <div class="key" onclick="inputChar('ᠠ')">ᠠ</div>
+                <div class="key" onclick="inputChar('ᠡ')">ᠡ</div>
+                <div class="key" onclick="inputChar('ᠢ')">ᠢ</div>
+                <div class="key" onclick="inputChar('ᠣ')">ᠣ</div>
+                <div class="key" onclick="inputChar('ᠤ')">ᠤ</div>
+                <div class="key" onclick="inputChar('ᠥ')">ᠥ</div>
+                <div class="key" onclick="inputChar('ᠦ')">ᠦ</div>
+            </div>
+            
+            <!-- 第 2 行：辅音 1 -->
+            <div class="keyboard-row">
+                <div class="key" onclick="inputChar('ᠨ')">ᠨ</div>
+                <div class="key" onclick="inputChar('ᠪ')">ᠪ</div>
+                <div class="key" onclick="inputChar('ᠫ')">ᠫ</div>
+                <div class="key" onclick="inputChar('ᠬ')">ᠬ</div>
+                <div class="key" onclick="inputChar('ᠭ')">ᠭ</div>
+                <div class="key" onclick="inputChar('ᠮ')">ᠮ</div>
+                <div class="key" onclick="inputChar('ᠯ')">ᠯ</div>
+            </div>
+            
+            <!-- 第 3 行：辅音 2 -->
+            <div class="keyboard-row">
+                <div class="key" onclick="inputChar('ᠰ')">ᠰ</div>
+                <div class="key" onclick="inputChar('ᠱ')">ᠱ</div>
+                <div class="key" onclick="inputChar('ᠲ')">ᠲ</div>
+                <div class="key" onclick="inputChar('ᠳ')">ᠳ</div>
+                <div class="key" onclick="inputChar('ᠴ')">ᠴ</div>
+                <div class="key" onclick="inputChar('ᠵ')">ᠵ</div>
+                <div class="key" onclick="inputChar('ᠶ')">ᠶ</div>
+            </div>
+            
+            <!-- 第 4 行：辅音 3 + 功能 -->
+            <div class="keyboard-row">
+                <div class="key" onclick="inputChar('ᠷ')">ᠷ</div>
+                <div class="key" onclick="inputChar('ᠸ')">ᠸ</div>
+                <div class="key" onclick="inputChar('ᠹ')">ᠹ</div>
+                <div class="key" onclick="inputChar('ᠺ')">ᠺ</div>
+                <div class="key" onclick="inputChar('ᠻ')">ᠻ</div>
+                <div class="key" onclick="inputChar('ᠼ')">ᠼ</div>
+                <div class="key key-wide" onclick="deleteChar()">⌫</div>
+            </div>
+            
+            <!-- 第 5 行：空格 + 标点 -->
+            <div class="keyboard-row">
+                <div class="key" onclick="inputChar('᠂')">᠂</div>
+                <div class="key" onclick="inputChar('᠃')">᠃</div>
+                <div class="key" onclick="inputChar('᠄')">᠄</div>
+                <div class="key key-space" onclick="inputChar(' ')">空格</div>
+                <div class="key key-wide" onclick="sendMessage()">发送</div>
+            </div>
+            
+            <!-- 拉丁转写提示 -->
+            <div class="transliteration-hint">
+                提示：也可以用拉丁字母转写输入（如：sain bainuu）
+            </div>
+        </div>
+        
+        <!-- 拉丁键盘（隐藏） -->
+        <div class="mongolian-keyboard" id="latin-keyboard" style="display: none;">
+            <div class="keyboard-row">
+                <div class="key" onclick="inputChar('a')">a</div>
+                <div class="key" onclick="inputChar('e')">e</div>
+                <div class="key" onclick="inputChar('i')">i</div>
+                <div class="key" onclick="inputChar('o')">o</div>
+                <div class="key" onclick="inputChar('u')">u</div>
+                <div class="key" onclick="inputChar('ü')">ü</div>
+                <div class="key" onclick="inputChar('ö')">ö</div>
+            </div>
+            
+            <div class="keyboard-row">
+                <div class="key" onclick="inputChar('n')">n</div>
+                <div class="key" onclick="inputChar('b')">b</div>
+                <div class="key" onclick="inputChar('p')">p</div>
+                <div class="key" onclick="inputChar('q')">q</div>
+                <div class="key" onclick="inputChar('γ')">γ</div>
+                <div class="key" onclick="inputChar('m')">m</div>
+                <div class="key" onclick="inputChar('l')">l</div>
+            </div>
+            
+            <div class="keyboard-row">
+                <div class="key" onclick="inputChar('s')">s</div>
+                <div class="key" onclick="inputChar('š')">š</div>
+                <div class="key" onclick="inputChar('t')">t</div>
+                <div class="key" onclick="inputChar('d')">d</div>
+                <div class="key" onclick="inputChar('č')">č</div>
+                <div class="key" onclick="inputChar('j')">j</div>
+                <div class="key" onclick="inputChar('y')">y</div>
+            </div>
+            
+            <div class="keyboard-row">
+                <div class="key" onclick="inputChar('r')">r</div>
+                <div class="key" onclick="inputChar('w')">w</div>
+                <div class="key" onclick="inputChar('f')">f</div>
+                <div class="key" onclick="inputChar('k')">k</div>
+                <div class="key" onclick="inputChar('g')">g</div>
+                <div class="key" onclick="inputChar('h')">h</div>
+                <div class="key key-wide" onclick="deleteChar()">⌫</div>
+            </div>
+            
+            <div class="keyboard-row">
+                <div class="key" onclick="inputChar(',')">,</div>
+                <div class="key" onclick="inputChar('.')">.</div>
+                <div class="key" onclick="inputChar('?')">?</div>
+                <div class="key key-space" onclick="inputChar(' ')">Space</div>
+                <div class="key key-wide" onclick="sendMessage()">Send</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 对话数据
+        let chatData = [
+            { 
+                role: 'ai', 
+                text: 'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ？ᠪᠢ ᠮᠣᠩᠭᠣᠯ AI ᠲᠡᠭᠦᠰᠯᠡᠭᠴᠢ ᠪᠠᠶᠢᠨ᠎ᠠ᠃ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠭ᠎ᠠ ᠤᠤ？',
+                time: getCurrentTime()
+            },
+        ];
+        
+        // 获取当前时间
+        function getCurrentTime() {
+            const now = new Date();
+            return now.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+        }
+        
+        // 渲染对话
+        function renderChat() {
+            const chatContent = document.getElementById('chat-content');
+            chatContent.innerHTML = '';
+            
+            chatData.forEach(message => {
+                const messageEl = document.createElement('div');
+                messageEl.className = `message ${message.role}`;
+                
+                messageEl.innerHTML = `
+                    <div class="avatar">${message.role === 'user' ? '👤' : '🤖'}</div>
+                    <div class="message-content">
+                        <div class="mongolian-vertical">${message.text}</div>
+                    </div>
+                `;
+                
+                chatContent.appendChild(messageEl);
+            });
+            
+            scrollToBottom();
+        }
+        
+        // 滚动到底部
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+        
+        // 输入字符
+        function inputChar(char) {
+            const input = document.getElementById('message-input');
+            input.value += char;
+            input.focus();
+            showCandidates(char);
+        }
+        
+        // 删除字符
+        function deleteChar() {
+            const input = document.getElementById('message-input');
+            input.value = input.value.slice(0, -1);
+            input.focus();
+        }
+        
+        // 显示候选词
+        function showCandidates(char) {
+            const candidateArea = document.getElementById('candidate-area');
+            const input = document.getElementById('message-input');
+            const inputValue = input.value;
+            
+            // 简单候选词示例
+            const candidates = {
+                'ᠰᠠᠶ': ['ᠰᠠᠶᠢᠨ', 'ᠰᠠᠶᠢᠬᠤ'],
+                'ᠪᠠᠶ': ['ᠪᠠᠶᠢᠨ᠎ᠠ', 'ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ'],
+                'ᠮᠣᠩ': ['ᠮᠣᠩᠭᠣᠯ', 'ᠮᠣᠩᠭᠣᠯᠴᠢᠨ'],
+            };
+            
+            // 查找匹配的候选词
+            let matched = [];
+            for (const [key, words] of Object.entries(candidates)) {
+                if (inputValue.includes(key)) {
+                    matched = words;
+                    break;
+                }
+            }
+            
+            if (matched.length > 0) {
+                candidateArea.innerHTML = matched.map(word => 
+                    `<div class="candidate-item" onclick="selectCandidate('${word}')">
+                        <span class="mongolian-vertical" style="font-size: 18px; max-height: 80px;">${word}</span>
+                    </div>`
+                ).join('');
+                candidateArea.classList.add('active');
+            } else {
+                candidateArea.classList.remove('active');
+            }
+        }
+        
+        // 选择候选词
+        function selectCandidate(word) {
+            const input = document.getElementById('message-input');
+            input.value = word;
+            document.getElementById('candidate-area').classList.remove('active');
+            input.focus();
+        }
+        
+        // 切换键盘
+        function switchKeyboard(type) {
+            document.querySelectorAll('.mode-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            if (type === 'mongolian') {
+                document.getElementById('mongolian-keyboard').style.display = 'block';
+                document.getElementById('latin-keyboard').style.display = 'none';
+                event.target.classList.add('active');
+            } else {
+                document.getElementById('mongolian-keyboard').style.display = 'none';
+                document.getElementById('latin-keyboard').style.display = 'block';
+                event.target.classList.add('active');
+            }
+        }
+        
+        // 发送消息
+        function sendMessage() {
+            const input = document.getElementById('message-input');
+            const text = input.value.trim();
+            
+            if (!text) return;
+            
+            // 添加用户消息
+            chatData.push({
+                role: 'user',
+                text: text,
+                time: getCurrentTime()
+            });
+            
+            input.value = '';
+            document.getElementById('candidate-area').classList.remove('active');
+            renderChat();
+            
+            // 模拟 AI 回复
+            setTimeout(() => {
+                chatData.push({
+                    role: 'ai',
+                    text: 'ᠮᠡᠳᠡᠭᠡ ᠪᠠᠶᠢᠨ᠎ᠠ！ᠪᠢ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠨᠠ᠃',
+                    time: getCurrentTime()
+                });
+                renderChat();
+            }, 1000);
+        }
+        
+        // 回车发送
+        document.getElementById('message-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+        
+        // 拉丁转写转换（简单示例）
+        const transliterationMap = {
+            'sain': 'ᠰᠠᠶᠢᠨ',
+            'baina': 'ᠪᠠᠶᠢᠨ᠎ᠠ',
+            'uu': 'ᠤᠤ',
+            'bayarlala': 'ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ',
+            'monggol': 'ᠮᠣᠩᠭᠣᠯ',
+            'kele': 'ᠬᠡᠯᠡ',
+        };
+        
+        // 初始化
+        renderChat();
+    </script>
+</body>
+</html>
