@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传统蒙古文 AI 助手 - 深度学习模式</title>
+    
+    <!-- 引入蒙古文竖排 CSS -->
+    <link rel="stylesheet" href="mongolian-vertical.css">
+    
+    <!-- 加载字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #007AFF;
+            --success: #34C759;
+            --warning: #FF9500;
+            --gray-100: #F2F2F7;
+            --gray-200: #E5E5EA;
+            --white: #FFFFFF;
+            --black: #000000;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #F2F2F7 0%, #FFFFFF 100%);
+            min-height: 100vh;
+        }
+        
+        /* 导航栏 */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 0.5px solid var(--gray-200);
+            padding: calc(env(safe-area-inset-top) + 12px) 16px 12px;
+        }
+        
+        .navbar-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* 学习模式切换 */
+        .mode-tabs {
+            display: flex;
+            gap: 8px;
+            margin: 16px auto;
+            max-width: 800px;
+            padding: 0 16px;
+        }
+        
+        .mode-tab {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: var(--gray-100);
+            color: var(--black);
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .mode-tab.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* 学习内容容器 */
+        .learning-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+        
+        /* 课程卡片 */
+        .lesson-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .lesson-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--black);
+        }
+        
+        .lesson-progress {
+            font-size: 14px;
+            color: var(--primary);
+        }
+        
+        /* 竖排词汇展示 */
+        .vocabulary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+        
+        .vocab-card {
+            background: var(--gray-100);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .vocab-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .vocab-card .mongolian-vertical {
+            font-size: 22px;
+            max-height: 150px;
+            margin: 0 auto 8px;
+        }
+        
+        .vocab-pronunciation {
+            font-size: 12px;
+            color: var(--gray-400);
+            margin-top: 8px;
+        }
+        
+        .vocab-meaning {
+            font-size: 14px;
+            color: var(--black);
+            margin-top: 4px;
+        }
+        
+        /* 语法讲解 */
+        .grammar-box {
+            background: linear-gradient(135deg, #E8F4FD, #FFFFFF);
+            border-left: 4px solid var(--primary);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .grammar-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+        
+        .grammar-content {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        /* 对话练习 */
+        .practice-dialog {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        
+        .practice-line {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        
+        .practice-line.user {
+            flex-direction: row-reverse;
+        }
+        
+        .practice-bubble {
+            max-width: 70%;
+            padding: 14px 18px;
+            border-radius: 18px;
+            background: var(--gray-100);
+        }
+        
+        .practice-line.user .practice-bubble {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .practice-bubble .mongolian-vertical {
+            font-size: 20px;
+            max-height: 120px;
+        }
+        
+        /* 测验卡片 */
+        .quiz-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 20px 0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .quiz-question {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .quiz-options {
+            display: grid;
+            gap: 12px;
+        }
+        
+        .quiz-option {
+            padding: 16px;
+            border: 2px solid var(--gray-200);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--primary);
+            background: rgba(0, 122, 255, 0.05);
+        }
+        
+        .quiz-option.correct {
+            border-color: var(--success);
+            background: rgba(52, 199, 89, 0.1);
+        }
+        
+        .quiz-option.incorrect {
+            border-color: var(--error);
+            background: rgba(255, 59, 48, 0.1);
+        }
+        
+        /* 进度条 */
+        .progress-bar {
+            height: 8px;
+            background: var(--gray-200);
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--success));
+            transition: width 0.3s ease;
+        }
+        
+        /* 按钮 */
+        .btn {
+            padding: 14px 24px;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+        
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .vocabulary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div style="font-size: 20px; font-weight: 600;">
+                <span class="mongolian-vertical" style="font-size: 18px; max-height: 50px;">📚 ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ</span>
+            </div>
+            <div style="font-size: 14px; color: var(--gray-400);">
+                学习进度：<span id="total-progress">0%</span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 学习模式切换 -->
+    <div class="mode-tabs">
+        <button class="mode-tab active" onclick="switchMode('vocabulary')">
+            <span class="mongolian-vertical" style="font-size: 16px; max-height: 40px;">ᠦᠭᠡ</span>
+        </button>
+        <button class="mode-tab" onclick="switchMode('grammar')">
+            <span class="mongolian-vertical" style="font-size: 16px; max-height: 40px;">ᠳ᠋ᠦᠷᠢᠮ</span>
+        </button>
+        <button class="mode-tab" onclick="switchMode('practice')">
+            <span class="mongolian-vertical" style="font-size: 16px; max-height: 40px;">ᠳ᠋ᠦᠷᠰᠢᠯ</span>
+        </button>
+        <button class="mode-tab" onclick="switchMode('quiz')">
+            <span class="mongolian-vertical" style="font-size: 16px; max-height: 40px;">ᠰᠢᠰᠢᠯᠲᠡ</span>
+        </button>
+    </div>
+    
+    <!-- 学习内容 -->
+    <div class="learning-container">
+        <!-- 词汇学习 -->
+        <div id="vocabulary-mode">
+            <div class="lesson-card">
+                <div class="lesson-header">
+                    <div class="lesson-title">第 1 课：基础问候语</div>
+                    <div class="lesson-progress">进度：0/8</div>
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                
+                <div class="vocabulary-grid">
+                    <div class="vocab-card" onclick="playAudio('sain')">
+                        <div class="mongolian-vertical">ᠰᠠᠶᠢᠨ</div>
+                        <div class="vocab-pronunciation">sain</div>
+                        <div class="vocab-meaning">好</div>
+                    </div>
+                    
+                    <div class="vocab-card" onclick="playAudio('baina')">
+                        <div class="mongolian-vertical">ᠪᠠᠶᠢᠨ᠎ᠠ</div>
+                        <div class="vocab-pronunciation">bain-a</div>
+                        <div class="vocab-meaning">在</div>
+                    </div>
+                    
+                    <div class="vocab-card" onclick="playAudio('uu')">
+                        <div class="mongolian-vertical">ᠤᠤ</div>
+                        <div class="vocab-pronunciation">uu</div>
+                        <div class="vocab-meaning">吗</div>
+                    </div>
+                    
+                    <div class="vocab-card" onclick="playAudio('bayartai')">
+                        <div class="mongolian-vertical">ᠪᠠᠶᠠᠷᠲᠠᠢ</div>
+                        <div class="vocab-pronunciation">bayartai</div>
+                        <div class="vocab-meaning">谢谢</div>
+                    </div>
+                    
+                    <div class="vocab-card" onclick="playAudio('medege')">
+                        <div class="mongolian-vertical">ᠮᠡᠳᠡᠭᠡ</div>
+                        <div class="vocab-pronunciation">medege</div>
+                        <div class="vocab-meaning">知道</div>
+                    </div>
+                    
+                    <div class="vocab-card" onclick="playAudio('tusulal-a')">
+                        <div class="mongolian-vertical">ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ</div>
+                        <div class="vocab-pronunciation">tusulal-a</div>
+                        <div class="vocab-meaning">帮助</div>
+                    </div>
+                    
+                    <div class="vocab-card" onclick="playAudio('suruju')">
+                        <div class="mongolian-vertical">ᠰᠤᠷᠤᠵᠤ</div>
+                        <div class="vocab-pronunciation">suruju</div>
+                        <div class="vocab-meaning">学习</div>
+                    </div>
+                    
+                    <div class="vocab-card" onclick="playAudio('kele')">
+                        <div class="mongolian-vertical">ᠬᠡᠯᠡ</div>
+                        <div class="vocab-pronunciation">kele</div>
+                        <div class="vocab-meaning">语言</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 语法学习 -->
+        <div id="grammar-mode" style="display: none;">
+            <div class="lesson-card">
+                <div class="lesson-header">
+                    <div class="lesson-title">语法：疑问句构成</div>
+                </div>
+                
+                <div class="grammar-box">
+                    <div class="grammar-title">疑问语气词 ᠤᠤ (uu)</div>
+                    <div class="grammar-content">
+                        <p>蒙古文的疑问句通过在陈述句末尾添加疑问语气词构成。</p>
+                        <br>
+                        <p><strong>基本结构：</strong></p>
+                        <p>陈述句 + ᠤᠤ = 疑问句</p>
+                        <br>
+                        <p><strong>示例：</strong></p>
+                        <p>ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ (你好) + ᠤᠤ = ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ (你好吗？)</p>
+                    </div>
+                </div>
+                
+                <div class="grammar-box">
+                    <div class="grammar-title">现在时动词词尾 ᠵᠤ (ju)</div>
+                    <div class="grammar-content">
+                        <p>动词的现在时副动词形式通过在词干后加 ᠵᠤ 构成。</p>
+                        <br>
+                        <p><strong>示例：</strong></p>
+                        <p>ᠰᠤᠷᠤ (学习词干) + ᠵᠤ = ᠰᠤᠷᠤᠵᠤ (正在学习)</p>
+                        <p>ᠪᠢ ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ ᠰᠤᠷᠤᠵᠤ ᠪᠠᠶᠢᠨᠠ᠃ (我在学蒙古语)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 对话练习 -->
+        <div id="practice-mode" style="display: none;">
+            <div class="lesson-card">
+                <div class="lesson-header">
+                    <div class="lesson-title">对话练习：初次见面</div>
+                </div>
+                
+                <div class="practice-dialog">
+                    <div class="practice-line user">
+                        <div class="practice-bubble">
+                            <div class="mongolian-vertical">ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ？</div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-line">
+                        <div class="practice-bubble">
+                            <div class="mongolian-vertical">ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ᠂ ᠪᠠᠶᠠᠷᠲᠠᠢ！</div>
+                            <div style="font-size: 12px; margin-top: 8px; opacity: 0.7;">很好，谢谢！</div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-line user">
+                        <div class="practice-bubble">
+                            <div class="mongolian-vertical">ᠲᠠ ᠶᠠᠮᠠᠷ ᠨᠡᠷᠡᠲᠡᠢ？</div>
+                        </div>
+                    </div>
+                    
+                    <div class="practice-line">
+                        <div class="practice-bubble">
+                            <div class="mongolian-vertical">ᠪᠢ ᠪᠠᠲᠤ ᠭᠡᠵᠦ ᠨᠡᠷᠡᠲᠡᠢ᠃</div>
+                            <div style="font-size: 12px; margin-top: 8px; opacity: 0.7;">我叫巴图</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="startPractice()">
+                    开始对话练习
+                </button>
+            </div>
+        </div>
+        
+        <!-- 测验 -->
+        <div id="quiz-mode" style="display: none;">
+            <div class="quiz-card">
+                <div class="quiz-question">
+                    <span class="mongolian-vertical" style="font-size: 22px; max-height: 80px;">"你好吗？"的蒙古文是？</span>
+                </div>
+                
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">
+                        <span class="mongolian-vertical" style="font-size: 20px; max-height: 60px;">ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠠ</span>
+                    </div>
+                    
+                    <div class="quiz-option" onclick="selectAnswer(this, true)">
+                        <span class="mongolian-vertical" style="font-size: 20px; max-height: 60px;">ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ？</span>
+                    </div>
+                    
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">
+                        <span class="mongolian-vertical" style="font-size: 20px; max-height: 60px;">ᠪᠠᠶᠠᠷᠲᠠᠢ</span>
+                    </div>
+                    
+                    <div class="quiz-option" onclick="selectAnswer(this, false)">
+                        <span class="mongolian-vertical" style="font-size: 20px; max-height: 60px;">ᠮᠡᠳᠡᠭᠡ ᠪᠠᠶᠢᠨ᠎ᠠ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 切换学习模式
+        function switchMode(mode) {
+            // 隐藏所有模式
+            document.getElementById('vocabulary-mode').style.display = 'none';
+            document.getElementById('grammar-mode').style.display = 'none';
+            document.getElementById('practice-mode').style.display = 'none';
+            document.getElementById('quiz-mode').style.display = 'none';
+            
+            // 移除所有 active 类
+            document.querySelectorAll('.mode-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // 显示选中的模式
+            document.getElementById(mode + '-mode').style.display = 'block';
+            event.target.classList.add('active');
+        }
+        
+        // 播放音频（模拟）
+        function playAudio(word) {
+            console.log('Playing audio for:', word);
+            // TODO: 实现真实的 TTS 功能
+            alert('播放发音：' + word);
+        }
+        
+        // 开始对话练习
+        function startPractice() {
+            alert('开始对话练习功能（待实现）');
+        }
+        
+        // 选择答案
+        function selectAnswer(element, isCorrect) {
+            // 移除所有选项的样式
+            document.querySelectorAll('.quiz-option').forEach(opt => {
+                opt.classList.remove('correct', 'incorrect');
+            });
+            
+            // 添加正确/错误样式
+            if (isCorrect) {
+                element.classList.add('correct');
+                setTimeout(() => {
+                    alert('✅ 正确！');
+                }, 300);
+            } else {
+                element.classList.add('incorrect');
+                setTimeout(() => {
+                    alert('❌ 错误，请再试一次');
+                }, 300);
+            }
+        }
+        
+        // 更新进度
+        function updateProgress() {
+            const learned = 0; // TODO: 实现学习进度追踪
+            const total = 8;
+            const percentage = Math.round((learned / total) * 100);
+            
+            document.querySelector('.progress-fill').style.width = percentage + '%';
+            document.querySelector('.lesson-progress').textContent = `进度：${learned}/${total}`;
+            document.getElementById('total-progress').textContent = percentage + '%';
+        }
+        
+        // 初始化
+        updateProgress();
+    </script>
+</body>
+</html>
