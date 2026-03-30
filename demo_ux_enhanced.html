@@ -182,7 +182,7 @@
             opacity: 0.9;
         }
         
-        /* 快捷回复 */
+        /* 快捷回复 - 横排（旧） */
         .quick-replies {
             display: flex;
             gap: 8px;
@@ -204,6 +204,37 @@
         .quick-reply-btn:active {
             background: rgba(255, 255, 255, 0.3);
             transform: scale(0.95);
+        }
+        
+        /* 快捷菜单 - 竖排（新增） */
+        .quick-replies-vertical {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        
+        .quick-reply-btn-vertical {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 12px;
+            color: white;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .quick-reply-btn-vertical:active {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0.95);
+        }
+        
+        .quick-reply-btn-vertical .mongolian-vertical {
+            font-size: 20px;
+            max-height: 120px;
         }
         
         /* 消息气泡 */
@@ -445,10 +476,16 @@
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="navbar-content">
-            <div class="navbar-title">🐎 蒙古文 AI 助手</div>
+            <div class="navbar-title">
+                <span class="mongolian-vertical" style="font-size: 18px; max-height: 50px; vertical-align: middle;">🐎 ᠮᠣᠩᠭᠣᠯ AI</span>
+            </div>
             <div class="navbar-actions">
-                <button class="icon-button" onclick="toggleTheme()" title="切换主题">🌙</button>
-                <button class="icon-button" onclick="clearChat()" title="清空对话">🗑️</button>
+                <button class="icon-button" onclick="toggleTheme()" title="切换主题">
+                    <span class="mongolian-vertical" style="font-size: 14px; max-height: 25px;">🌙</span>
+                </button>
+                <button class="icon-button" onclick="clearChat()" title="清空对话">
+                    <span class="mongolian-vertical" style="font-size: 14px; max-height: 25px;">🗑️</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -460,10 +497,19 @@
             <h2>ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ！</h2>
             <p>我是您的蒙古文 AI 助手，可以帮助您学习蒙古语、翻译文本、解答问题。</p>
             
-            <div class="quick-replies">
-                <button class="quick-reply-btn" onclick="sendQuickReply('ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ？')">ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ？</button>
-                <button class="quick-reply-btn" onclick="sendQuickReply('ᠪᠠᠶᠠᠷᠲᠠᠢ！')">ᠪᠠᠶᠠᠷᠲᠠᠢ！</button>
-                <button class="quick-reply-btn" onclick="sendQuickReply('ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ ᠰᠤᠷᠤᠮᠠᠷ ᠪᠠᠶᠢᠨᠠ᠃')">ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ</button>
+            <!-- 竖排快捷菜单 -->
+            <div class="quick-replies-vertical">
+                <button class="quick-reply-btn-vertical" onclick="sendQuickReply('ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ？')">
+                    <span class="mongolian-vertical">ᠰᠠᠶᠢᠨ</span>
+                    <span class="mongolian-vertical">ᠪᠠᠶᠢᠨᠤᠤ？</span>
+                </button>
+                <button class="quick-reply-btn-vertical" onclick="sendQuickReply('ᠪᠠᠶᠠᠷᠲᠠᠢ！')">
+                    <span class="mongolian-vertical">ᠪᠠᠶᠠᠷᠲᠠᠢ！</span>
+                </button>
+                <button class="quick-reply-btn-vertical" onclick="sendQuickReply('ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ ᠰᠤᠷᠤᠮᠠᠷ ᠪᠠᠶᠢᠨᠠ᠃')">
+                    <span class="mongolian-vertical">ᠮᠣᠩᠭᠣᠯ</span>
+                    <span class="mongolian-vertical">ᠬᠡᠯᠡ</span>
+                </button>
             </div>
         </div>
         
