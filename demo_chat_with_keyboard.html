@@ -39,7 +39,7 @@
             font-family: -apple-system, BlinkMacSystemFont, sans-serif;
             background: linear-gradient(180deg, #F2F2F7 0%, #FFFFFF 100%);
             min-height: 100vh;
-            padding-bottom: 400px;
+            padding-bottom: 380px;
         }
         
         /* 导航栏 */
@@ -190,7 +190,7 @@
         }
         
         .keyboard-section {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .keyboard-section:last-child {
@@ -198,17 +198,17 @@
         }
         
         .section-label {
-            font-size: 11px;
+            font-size: 10px;
             color: var(--gray-400);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             padding-left: 4px;
             font-weight: 600;
         }
         
         .keyboard-row {
             display: flex;
-            gap: 6px;
-            margin-bottom: 6px;
+            gap: 4px;
+            margin-bottom: 4px;
         }
         
         .keyboard-row:last-child {
@@ -217,10 +217,10 @@
         
         .key {
             flex: 1;
-            max-width: 50px;
-            height: 48px;
+            max-width: 42px;
+            height: 40px;
             border: 1px solid var(--gray-300);
-            border-radius: 8px;
+            border-radius: 6px;
             background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
             cursor: pointer;
             transition: all 0.15s;
@@ -242,18 +242,18 @@
         }
         
         .key-char {
-            font-size: 24px;
+            font-size: 20px;
             font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif;
             color: #333;
             transition: color 0.15s;
         }
         
         .key-wide {
-            max-width: 80px;
+            max-width: 60px;
         }
         
         .key-space {
-            max-width: 150px;
+            max-width: 100px;
         }
         
         .key-function {
@@ -350,19 +350,11 @@
             <button class="send-btn" onclick="sendMessage()">发送</button>
         </div>
         
-        <!-- 键盘切换 -->
-        <div class="keyboard-tabs">
-            <button class="tab-btn active" onclick="switchKeyboard('vowels')">元音</button>
-            <button class="tab-btn" onclick="switchKeyboard('consonants1')">辅音 1</button>
-            <button class="tab-btn" onclick="switchKeyboard('consonants2')">辅音 2</button>
-            <button class="tab-btn" onclick="switchKeyboard('consonants3')">辅音 3</button>
-            <button class="tab-btn" onclick="switchKeyboard('functions')">功能</button>
-        </div>
-        
-        <!-- 元音键盘 -->
-        <div class="mongolian-keyboard" id="keyboard-vowels">
+        <!-- 完整键盘（一页显示） -->
+        <div class="mongolian-keyboard">
+            <!-- 元音 -->
             <div class="keyboard-section">
-                <div class="section-label">元音字母 (Vowels)</div>
+                <div class="section-label">元音 (Vowels)</div>
                 <div class="keyboard-row">
                     <div class="key" onclick="inputChar('ᠠ')"><span class="key-char">ᠠ</span></div>
                     <div class="key" onclick="inputChar('ᠡ')"><span class="key-char">ᠡ</span></div>
@@ -373,12 +365,10 @@
                     <div class="key" onclick="inputChar('ᠦ')"><span class="key-char">ᠦ</span></div>
                 </div>
             </div>
-        </div>
-        
-        <!-- 辅音键盘 1 -->
-        <div class="mongolian-keyboard" id="keyboard-consonants1" style="display: none;">
+            
+            <!-- 辅音 1 -->
             <div class="keyboard-section">
-                <div class="section-label">辅音字母 (Consonants) Part 1</div>
+                <div class="section-label">辅音 1</div>
                 <div class="keyboard-row">
                     <div class="key" onclick="inputChar('ᠨ')"><span class="key-char">ᠨ</span></div>
                     <div class="key" onclick="inputChar('ᠪ')"><span class="key-char">ᠪ</span></div>
@@ -389,12 +379,10 @@
                     <div class="key" onclick="inputChar('ᠯ')"><span class="key-char">ᠯ</span></div>
                 </div>
             </div>
-        </div>
-        
-        <!-- 辅音键盘 2 -->
-        <div class="mongolian-keyboard" id="keyboard-consonants2" style="display: none;">
+            
+            <!-- 辅音 2 -->
             <div class="keyboard-section">
-                <div class="section-label">辅音字母 (Consonants) Part 2</div>
+                <div class="section-label">辅音 2</div>
                 <div class="keyboard-row">
                     <div class="key" onclick="inputChar('ᠰ')"><span class="key-char">ᠰ</span></div>
                     <div class="key" onclick="inputChar('ᠱ')"><span class="key-char">ᠱ</span></div>
@@ -405,12 +393,10 @@
                     <div class="key" onclick="inputChar('ᠶ')"><span class="key-char">ᠶ</span></div>
                 </div>
             </div>
-        </div>
-        
-        <!-- 辅音键盘 3 -->
-        <div class="mongolian-keyboard" id="keyboard-consonants3" style="display: none;">
+            
+            <!-- 辅音 3 -->
             <div class="keyboard-section">
-                <div class="section-label">辅音字母 (Consonants) Part 3</div>
+                <div class="section-label">辅音 3</div>
                 <div class="keyboard-row">
                     <div class="key" onclick="inputChar('ᠷ')"><span class="key-char">ᠷ</span></div>
                     <div class="key" onclick="inputChar('ᠸ')"><span class="key-char">ᠸ</span></div>
@@ -421,23 +407,21 @@
                     <div class="key" onclick="inputChar('ᠽ')"><span class="key-char">ᠽ</span></div>
                 </div>
             </div>
-        </div>
-        
-        <!-- 功能键盘 -->
-        <div class="mongolian-keyboard" id="keyboard-functions" style="display: none;">
+            
+            <!-- 功能键 -->
             <div class="keyboard-section">
-                <div class="section-label">特殊字符 + 功能键</div>
+                <div class="section-label">功能键</div>
                 <div class="keyboard-row">
                     <div class="key" onclick="inputChar('ᠾ')"><span class="key-char">ᠾ</span></div>
                     <div class="key" onclick="inputChar('ᠿ')"><span class="key-char">ᠿ</span></div>
                     <div class="key" onclick="inputChar('ᡀ')"><span class="key-char">ᡀ</span></div>
                     <div class="key" onclick="inputChar('ᡁ')"><span class="key-char">ᡁ</span></div>
-                    <div class="key key-wide" onclick="deleteChar()"><span class="key-char">⌫</span></div>
-                </div>
-                <div class="keyboard-row" style="margin-top: 6px;">
                     <div class="key" onclick="inputChar('᠂')"><span class="key-char">᠂</span></div>
                     <div class="key" onclick="inputChar('᠃')"><span class="key-char">᠃</span></div>
                     <div class="key" onclick="inputChar('᠄')"><span class="key-char">᠄</span></div>
+                </div>
+                <div class="keyboard-row" style="margin-top: 4px;">
+                    <div class="key key-wide" onclick="deleteChar()"><span class="key-char">⌫</span></div>
                     <div class="key key-space" onclick="inputChar(' ')"><span class="key-char">空格</span></div>
                     <div class="key key-function" onclick="sendMessage()"><span class="key-char">发送</span></div>
                 </div>
@@ -490,24 +474,17 @@
     </div>
     
     <script>
-        // 切换键盘
-        function switchKeyboard(type) {
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
+        // 切换拉丁键盘
+        function toggleLatinKeyboard() {
+            const latinKb = document.getElementById('keyboard-latin');
+            const mongolKb = document.querySelector('.mongolian-keyboard');
             
-            document.querySelectorAll('.mongolian-keyboard').forEach(kb => {
-                kb.style.display = 'none';
-            });
-            
-            document.getElementById('keyboard-latin').classList.remove('active');
-            
-            if (type === 'latin') {
-                document.getElementById('keyboard-latin').classList.add('active');
-                event.target.classList.add('active');
+            if (latinKb.style.display === 'block') {
+                latinKb.style.display = 'none';
+                mongolKb.style.display = 'block';
             } else {
-                document.getElementById('keyboard-' + type).style.display = 'block';
-                event.target.classList.add('active');
+                latinKb.style.display = 'block';
+                mongolKb.style.display = 'none';
             }
         }
         
