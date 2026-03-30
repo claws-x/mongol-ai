@@ -398,67 +398,100 @@
             transform: scale(0.95);
         }
         
-        /* 蒙古文键盘 */
+        /* 蒙古文键盘 - 迭代优化版 */
         .mongolian-keyboard {
-            background: white;
-            border-radius: 12px;
-            padding: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(180deg, #F8F9FA 0%, #FFFFFF 100%);
+            border-radius: 16px;
+            padding: 12px;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
             display: flex;
-            gap: 8px;
+            gap: 6px;
             justify-content: center;
+            border: 1px solid var(--gray-200);
         }
         
         .keyboard-column {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 6px;
         }
         
         .key {
-            width: 44px;
-            height: 44px;
-            border: 0.5px solid var(--gray-200);
-            border-radius: 6px;
-            background: white;
+            width: 48px;
+            height: 48px;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
             cursor: pointer;
-            transition: all 0.1s;
+            transition: all 0.15s;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .key::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+        }
+        
+        .key:hover {
+            background: linear-gradient(180deg, #F0F2F5 0%, #E8EAED 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         
         .key:active {
-            background: var(--primary);
+            background: var(--ai-gradient);
             color: white;
-            transform: scale(0.9);
+            transform: scale(0.92) translateY(0);
+            box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
         }
         
         .key .mongolian-vertical {
-            font-size: 20px;
-            max-height: 35px;
+            font-size: 22px;
+            max-height: 40px;
             display: inline-block !important;
             font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif !important;
             transform: rotate(90deg) !important;
             transform-origin: center center;
+            font-weight: 500;
         }
         
         .key-tall {
-            height: 92px;
+            height: 102px;
         }
         
         .key-tall .mongolian-vertical {
-            max-height: 80px;
+            max-height: 90px;
         }
         
         .key-enter {
-            height: 92px;
+            height: 102px;
             background: var(--ai-gradient);
             color: white;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .key-enter:hover {
+            background: var(--ai-gradient);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+        }
+        
+        .key-enter:active {
+            transform: scale(0.92) translateY(0);
         }
         
         .key-enter .mongolian-vertical {
-            max-height: 80px;
+            max-height: 90px;
             color: white;
         }
         
@@ -467,6 +500,7 @@
             transform-origin: center center;
             display: inline-block;
             font-size: 14px;
+            font-weight: 600;
         }
         
         .key-tall .latin-or-chinese {
@@ -478,6 +512,15 @@
             transform: rotate(-90deg);
             color: white;
             display: inline-block;
+            font-weight: 600;
+        }
+        
+        /* 键盘标签 */
+        .keyboard-label {
+            text-align: center;
+            font-size: 11px;
+            color: var(--gray-400);
+            margin-bottom: 4px;
         }
         
         /* 拉丁转写提示 */
@@ -619,10 +662,11 @@
             <button class="send-btn" onclick="sendMessage()">发送</button>
         </div>
         
-        <!-- 蒙古文键盘 -->
+        <!-- 蒙古文键盘 - 迭代优化版 -->
         <div class="mongolian-keyboard" id="mongolian-keyboard">
             <!-- 第 1 列：元音 -->
             <div class="keyboard-column">
+                <div class="keyboard-label">元音</div>
                 <div class="key" onclick="inputChar('ᠠ')"><span class="mongolian-vertical">ᠠ</span></div>
                 <div class="key" onclick="inputChar('ᠡ')"><span class="mongolian-vertical">ᠡ</span></div>
                 <div class="key" onclick="inputChar('ᠢ')"><span class="mongolian-vertical">ᠢ</span></div>
@@ -634,6 +678,7 @@
             
             <!-- 第 2 列：辅音 1 -->
             <div class="keyboard-column">
+                <div class="keyboard-label">辅音</div>
                 <div class="key" onclick="inputChar('ᠨ')"><span class="mongolian-vertical">ᠨ</span></div>
                 <div class="key" onclick="inputChar('ᠪ')"><span class="mongolian-vertical">ᠪ</span></div>
                 <div class="key" onclick="inputChar('ᠫ')"><span class="mongolian-vertical">ᠫ</span></div>
@@ -645,6 +690,7 @@
             
             <!-- 第 3 列：辅音 2 -->
             <div class="keyboard-column">
+                <div class="keyboard-label">辅音</div>
                 <div class="key" onclick="inputChar('ᠰ')"><span class="mongolian-vertical">ᠰ</span></div>
                 <div class="key" onclick="inputChar('ᠱ')"><span class="mongolian-vertical">ᠱ</span></div>
                 <div class="key" onclick="inputChar('ᠲ')"><span class="mongolian-vertical">ᠲ</span></div>
@@ -656,6 +702,7 @@
             
             <!-- 第 4 列：辅音 3 + 功能 -->
             <div class="keyboard-column">
+                <div class="keyboard-label">功能</div>
                 <div class="key" onclick="inputChar('ᠷ')"><span class="mongolian-vertical">ᠷ</span></div>
                 <div class="key" onclick="inputChar('ᠸ')"><span class="mongolian-vertical">ᠸ</span></div>
                 <div class="key" onclick="inputChar('ᠹ')"><span class="mongolian-vertical">ᠹ</span></div>
@@ -667,6 +714,7 @@
             
             <!-- 第 5 列：标点 + 空格 + 发送 -->
             <div class="keyboard-column">
+                <div class="keyboard-label">操作</div>
                 <div class="key" onclick="inputChar('᠂')"><span class="mongolian-vertical">᠂</span></div>
                 <div class="key" onclick="inputChar('᠃')"><span class="mongolian-vertical">᠃</span></div>
                 <div class="key" onclick="inputChar('᠄')"><span class="mongolian-vertical">᠄</span></div>
@@ -680,9 +728,10 @@
             </div>
         </div>
         
-        <!-- 拉丁键盘（隐藏） -->
+        <!-- 拉丁键盘（隐藏）- 迭代优化版 -->
         <div class="mongolian-keyboard" id="latin-keyboard" style="display: none;">
             <div class="keyboard-column">
+                <div class="keyboard-label">元音</div>
                 <div class="key" onclick="inputChar('a')"><span class="mongolian-vertical">a</span></div>
                 <div class="key" onclick="inputChar('e')"><span class="mongolian-vertical">e</span></div>
                 <div class="key" onclick="inputChar('i')"><span class="mongolian-vertical">i</span></div>
@@ -693,6 +742,7 @@
             </div>
             
             <div class="keyboard-column">
+                <div class="keyboard-label">辅音</div>
                 <div class="key" onclick="inputChar('n')"><span class="mongolian-vertical">n</span></div>
                 <div class="key" onclick="inputChar('b')"><span class="mongolian-vertical">b</span></div>
                 <div class="key" onclick="inputChar('p')"><span class="mongolian-vertical">p</span></div>
@@ -703,6 +753,7 @@
             </div>
             
             <div class="keyboard-column">
+                <div class="keyboard-label">辅音</div>
                 <div class="key" onclick="inputChar('s')"><span class="mongolian-vertical">s</span></div>
                 <div class="key" onclick="inputChar('š')"><span class="mongolian-vertical">š</span></div>
                 <div class="key" onclick="inputChar('t')"><span class="mongolian-vertical">t</span></div>
@@ -713,6 +764,7 @@
             </div>
             
             <div class="keyboard-column">
+                <div class="keyboard-label">功能</div>
                 <div class="key" onclick="inputChar('r')"><span class="mongolian-vertical">r</span></div>
                 <div class="key" onclick="inputChar('w')"><span class="mongolian-vertical">w</span></div>
                 <div class="key" onclick="inputChar('f')"><span class="mongolian-vertical">f</span></div>
@@ -723,6 +775,7 @@
             </div>
             
             <div class="keyboard-column">
+                <div class="keyboard-label">操作</div>
                 <div class="key" onclick="inputChar(',')"><span class="mongolian-vertical">,</span></div>
                 <div class="key" onclick="inputChar('.')"><span class="mongolian-vertical">.</span></div>
                 <div class="key" onclick="inputChar('?')"><span class="mongolian-vertical">?</span></div>
