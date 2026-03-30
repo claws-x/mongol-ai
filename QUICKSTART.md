@@ -38,7 +38,7 @@ python3 main.py --text "ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ"
 
 ```bash
 # 蒙古文翻译
-python3 main.py --translate "ᠪᠠᠶᠠᠷᠲᠠᠢ"
+python3 main.py --translate "ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ"
 
 # 中文翻译
 python3 main.py --translate "你好" --from zh --to mn
@@ -63,7 +63,7 @@ python3 main.py --translate "你好" --from zh --to mn
 | 蒙古文 | 中文 | 发音 |
 |--------|------|------|
 | ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠤᠤ | 你好 | sain bain uu |
-| ᠪᠠᠶᠠᠷᠲᠠᠢ | 谢谢 | bayartai |
+| ᠪᠠᠶᠠᠷᠯᠠᠯ᠎ᠠ | 谢谢 | bayartai |
 | ᠮᠡᠨᠳᠡ | 你好 | mende |
 | ᠪᠠᠶᠠᠷ ᠬᠦᠷᠦᠭᠡ | 再见 | bayar khuruuge |
 | ᠪᠢ ᠴᠢᠮᠠᠶᠢ ᠬᠠᠢᠷᠲᠠᠢ | 我爱你 | bi chimayi khairtai |
