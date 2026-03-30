@@ -140,10 +140,6 @@
         
         /* 单个竖排列 */
         .mongolian-column {
-            writing-mode: vertical-lr !important;
-            text-orientation: upright !important;
-            -webkit-writing-mode: vertical-lr !important;
-            -webkit-text-orientation: upright !important;
             font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif !important;
             font-size: 24px;
             line-height: 0.9;
@@ -156,14 +152,9 @@
             justify-content: flex-start;
             margin-top: -10px;
             padding-top: 0;
-            transform: none !important; /* 禁止变形 */
         }
         
         .mongolian-vertical {
-            writing-mode: vertical-lr !important;
-            text-orientation: upright !important;
-            -webkit-writing-mode: vertical-lr !important;
-            -webkit-text-orientation: upright !important;
             font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif !important;
             font-size: 24px;
             line-height: 0.9;
@@ -171,7 +162,8 @@
             margin: 0;
             padding: 0;
             vertical-align: top;
-            transform: none !important; /* 禁止任何变形 */
+            transform: rotate(90deg) !important; /* 向右旋转 90 度 */
+            transform-origin: center center;
         }
         
         /* 内嵌输入法 */
@@ -266,11 +258,8 @@
             max-height: 35px;
             display: inline-block !important;
             font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif !important;
-            writing-mode: vertical-lr !important;
-            text-orientation: upright !important;
-            -webkit-writing-mode: vertical-lr !important;
-            -webkit-text-orientation: upright !important;
-            transform: none !important; /* 禁止变形，保持竖排 */
+            transform: rotate(90deg) !important; /* 向右旋转 90 度 */
+            transform-origin: center center;
         }
         
         /* 中文/英文需要旋转 90 度，蒙古文不需要 */
