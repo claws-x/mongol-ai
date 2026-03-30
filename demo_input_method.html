@@ -132,7 +132,8 @@
             display: flex;
             flex-direction: row;
             gap: 8px;
-            padding: 4px;
+            padding: 0;
+            align-items: flex-start;
         }
         
         /* 单个竖排列 */
@@ -149,6 +150,8 @@
             display: flex;
             flex-direction: column;
             gap: 2px;
+            align-items: flex-start;
+            justify-content: flex-start;
         }
         
         .mongolian-vertical {
@@ -252,6 +255,8 @@
         .key .mongolian-vertical {
             font-size: 20px;
             max-height: 35px;
+            transform: rotate(-90deg);
+            transform-origin: center center;
         }
         
         .key-tall {
@@ -260,6 +265,7 @@
         
         .key-tall .mongolian-vertical {
             max-height: 80px;
+            transform: rotate(-90deg);
         }
         
         .key-enter {
@@ -271,6 +277,7 @@
         .key-enter .mongolian-vertical {
             max-height: 80px;
             color: white;
+            transform: rotate(-90deg);
         }
         
         /* 候选词区域 */
