@@ -209,7 +209,6 @@
             border: 0.5px solid var(--gray-200);
             border-radius: 6px;
             background: white;
-            font-size: 18px;
             cursor: pointer;
             transition: all 0.1s;
             display: flex;
@@ -223,14 +222,27 @@
             transform: scale(0.9);
         }
         
+        .key .mongolian-vertical {
+            font-size: 20px;
+            max-height: 35px;
+        }
+        
         .key-tall {
             height: 92px;
-            font-size: 14px;
+        }
+        
+        .key-tall .mongolian-vertical {
+            max-height: 80px;
         }
         
         .key-enter {
             height: 92px;
             background: var(--primary);
+            color: white;
+        }
+        
+        .key-enter .mongolian-vertical {
+            max-height: 80px;
             color: white;
         }
         
@@ -355,55 +367,55 @@
         <div class="mongolian-keyboard" id="mongolian-keyboard">
             <!-- 第 1 列：元音 -->
             <div class="keyboard-column">
-                <div class="key" onclick="inputChar('ᠠ')">ᠠ</div>
-                <div class="key" onclick="inputChar('ᠡ')">ᠡ</div>
-                <div class="key" onclick="inputChar('ᠢ')">ᠢ</div>
-                <div class="key" onclick="inputChar('ᠣ')">ᠣ</div>
-                <div class="key" onclick="inputChar('ᠤ')">ᠤ</div>
-                <div class="key" onclick="inputChar('ᠥ')">ᠥ</div>
-                <div class="key" onclick="inputChar('ᠦ')">ᠦ</div>
+                <div class="key" onclick="inputChar('ᠠ')"><span class="mongolian-vertical">ᠠ</span></div>
+                <div class="key" onclick="inputChar('ᠡ')"><span class="mongolian-vertical">ᠡ</span></div>
+                <div class="key" onclick="inputChar('ᠢ')"><span class="mongolian-vertical">ᠢ</span></div>
+                <div class="key" onclick="inputChar('ᠣ')"><span class="mongolian-vertical">ᠣ</span></div>
+                <div class="key" onclick="inputChar('ᠤ')"><span class="mongolian-vertical">ᠤ</span></div>
+                <div class="key" onclick="inputChar('ᠥ')"><span class="mongolian-vertical">ᠥ</span></div>
+                <div class="key" onclick="inputChar('ᠦ')"><span class="mongolian-vertical">ᠦ</span></div>
             </div>
             
             <!-- 第 2 列：辅音 1 -->
             <div class="keyboard-column">
-                <div class="key" onclick="inputChar('ᠨ')">ᠨ</div>
-                <div class="key" onclick="inputChar('ᠪ')">ᠪ</div>
-                <div class="key" onclick="inputChar('ᠫ')">ᠫ</div>
-                <div class="key" onclick="inputChar('ᠬ')">ᠬ</div>
-                <div class="key" onclick="inputChar('ᠭ')">ᠭ</div>
-                <div class="key" onclick="inputChar('ᠮ')">ᠮ</div>
-                <div class="key" onclick="inputChar('ᠯ')">ᠯ</div>
+                <div class="key" onclick="inputChar('ᠨ')"><span class="mongolian-vertical">ᠨ</span></div>
+                <div class="key" onclick="inputChar('ᠪ')"><span class="mongolian-vertical">ᠪ</span></div>
+                <div class="key" onclick="inputChar('ᠫ')"><span class="mongolian-vertical">ᠫ</span></div>
+                <div class="key" onclick="inputChar('ᠬ')"><span class="mongolian-vertical">ᠬ</span></div>
+                <div class="key" onclick="inputChar('ᠭ')"><span class="mongolian-vertical">ᠭ</span></div>
+                <div class="key" onclick="inputChar('ᠮ')"><span class="mongolian-vertical">ᠮ</span></div>
+                <div class="key" onclick="inputChar('ᠯ')"><span class="mongolian-vertical">ᠯ</span></div>
             </div>
             
             <!-- 第 3 列：辅音 2 -->
             <div class="keyboard-column">
-                <div class="key" onclick="inputChar('ᠰ')">ᠰ</div>
-                <div class="key" onclick="inputChar('ᠱ')">ᠱ</div>
-                <div class="key" onclick="inputChar('ᠲ')">ᠲ</div>
-                <div class="key" onclick="inputChar('ᠳ')">ᠳ</div>
-                <div class="key" onclick="inputChar('ᠴ')">ᠴ</div>
-                <div class="key" onclick="inputChar('ᠵ')">ᠵ</div>
-                <div class="key" onclick="inputChar('ᠶ')">ᠶ</div>
+                <div class="key" onclick="inputChar('ᠰ')"><span class="mongolian-vertical">ᠰ</span></div>
+                <div class="key" onclick="inputChar('ᠱ')"><span class="mongolian-vertical">ᠱ</span></div>
+                <div class="key" onclick="inputChar('ᠲ')"><span class="mongolian-vertical">ᠲ</span></div>
+                <div class="key" onclick="inputChar('ᠳ')"><span class="mongolian-vertical">ᠳ</span></div>
+                <div class="key" onclick="inputChar('ᠴ')"><span class="mongolian-vertical">ᠴ</span></div>
+                <div class="key" onclick="inputChar('ᠵ')"><span class="mongolian-vertical">ᠵ</span></div>
+                <div class="key" onclick="inputChar('ᠶ')"><span class="mongolian-vertical">ᠶ</span></div>
             </div>
             
             <!-- 第 4 列：辅音 3 + 功能 -->
             <div class="keyboard-column">
-                <div class="key" onclick="inputChar('ᠷ')">ᠷ</div>
-                <div class="key" onclick="inputChar('ᠸ')">ᠸ</div>
-                <div class="key" onclick="inputChar('ᠹ')">ᠹ</div>
-                <div class="key" onclick="inputChar('ᠺ')">ᠺ</div>
-                <div class="key" onclick="inputChar('ᠻ')">ᠻ</div>
-                <div class="key" onclick="inputChar('ᠼ')">ᠼ</div>
-                <div class="key key-tall" onclick="deleteChar()">⌫</div>
+                <div class="key" onclick="inputChar('ᠷ')"><span class="mongolian-vertical">ᠷ</span></div>
+                <div class="key" onclick="inputChar('ᠸ')"><span class="mongolian-vertical">ᠸ</span></div>
+                <div class="key" onclick="inputChar('ᠹ')"><span class="mongolian-vertical">ᠹ</span></div>
+                <div class="key" onclick="inputChar('ᠺ')"><span class="mongolian-vertical">ᠺ</span></div>
+                <div class="key" onclick="inputChar('ᠻ')"><span class="mongolian-vertical">ᠻ</span></div>
+                <div class="key" onclick="inputChar('ᠼ')"><span class="mongolian-vertical">ᠼ</span></div>
+                <div class="key key-tall" onclick="deleteChar()"><span class="mongolian-vertical">⌫</span></div>
             </div>
             
             <!-- 第 5 列：标点 + 空格 + 发送 -->
             <div class="keyboard-column">
-                <div class="key" onclick="inputChar('᠂')">᠂</div>
-                <div class="key" onclick="inputChar('᠃')">᠃</div>
-                <div class="key" onclick="inputChar('᠄')">᠄</div>
-                <div class="key key-tall" onclick="inputChar(' ')">空格</div>
-                <div class="key key-enter" onclick="sendMessage()">发送</div>
+                <div class="key" onclick="inputChar('᠂')"><span class="mongolian-vertical">᠂</span></div>
+                <div class="key" onclick="inputChar('᠃')"><span class="mongolian-vertical">᠃</span></div>
+                <div class="key" onclick="inputChar('᠄')"><span class="mongolian-vertical">᠄</span></div>
+                <div class="key key-tall" onclick="inputChar(' ')"><span class="mongolian-vertical">空格</span></div>
+                <div class="key key-enter" onclick="sendMessage()"><span class="mongolian-vertical">发送</span></div>
             </div>
             
             <!-- 拉丁转写提示 -->
@@ -415,51 +427,51 @@
         <!-- 拉丁键盘（隐藏）- 竖排 -->
         <div class="mongolian-keyboard" id="latin-keyboard" style="display: none;">
             <div class="keyboard-column">
-                <div class="key" onclick="inputChar('a')">a</div>
-                <div class="key" onclick="inputChar('e')">e</div>
-                <div class="key" onclick="inputChar('i')">i</div>
-                <div class="key" onclick="inputChar('o')">o</div>
-                <div class="key" onclick="inputChar('u')">u</div>
-                <div class="key" onclick="inputChar('ü')">ü</div>
-                <div class="key" onclick="inputChar('ö')">ö</div>
+                <div class="key" onclick="inputChar('a')"><span class="mongolian-vertical">a</span></div>
+                <div class="key" onclick="inputChar('e')"><span class="mongolian-vertical">e</span></div>
+                <div class="key" onclick="inputChar('i')"><span class="mongolian-vertical">i</span></div>
+                <div class="key" onclick="inputChar('o')"><span class="mongolian-vertical">o</span></div>
+                <div class="key" onclick="inputChar('u')"><span class="mongolian-vertical">u</span></div>
+                <div class="key" onclick="inputChar('ü')"><span class="mongolian-vertical">ü</span></div>
+                <div class="key" onclick="inputChar('ö')"><span class="mongolian-vertical">ö</span></div>
             </div>
             
             <div class="keyboard-column">
-                <div class="key" onclick="inputChar('n')">n</div>
-                <div class="key" onclick="inputChar('b')">b</div>
-                <div class="key" onclick="inputChar('p')">p</div>
-                <div class="key" onclick="inputChar('q')">q</div>
-                <div class="key" onclick="inputChar('γ')">γ</div>
-                <div class="key" onclick="inputChar('m')">m</div>
-                <div class="key" onclick="inputChar('l')">l</div>
+                <div class="key" onclick="inputChar('n')"><span class="mongolian-vertical">n</span></div>
+                <div class="key" onclick="inputChar('b')"><span class="mongolian-vertical">b</span></div>
+                <div class="key" onclick="inputChar('p')"><span class="mongolian-vertical">p</span></div>
+                <div class="key" onclick="inputChar('q')"><span class="mongolian-vertical">q</span></div>
+                <div class="key" onclick="inputChar('γ')"><span class="mongolian-vertical">γ</span></div>
+                <div class="key" onclick="inputChar('m')"><span class="mongolian-vertical">m</span></div>
+                <div class="key" onclick="inputChar('l')"><span class="mongolian-vertical">l</span></div>
             </div>
             
             <div class="keyboard-column">
-                <div class="key" onclick="inputChar('s')">s</div>
-                <div class="key" onclick="inputChar('š')">š</div>
-                <div class="key" onclick="inputChar('t')">t</div>
-                <div class="key" onclick="inputChar('d')">d</div>
-                <div class="key" onclick="inputChar('č')">č</div>
-                <div class="key" onclick="inputChar('j')">j</div>
-                <div class="key" onclick="inputChar('y')">y</div>
+                <div class="key" onclick="inputChar('s')"><span class="mongolian-vertical">s</span></div>
+                <div class="key" onclick="inputChar('š')"><span class="mongolian-vertical">š</span></div>
+                <div class="key" onclick="inputChar('t')"><span class="mongolian-vertical">t</span></div>
+                <div class="key" onclick="inputChar('d')"><span class="mongolian-vertical">d</span></div>
+                <div class="key" onclick="inputChar('č')"><span class="mongolian-vertical">č</span></div>
+                <div class="key" onclick="inputChar('j')"><span class="mongolian-vertical">j</span></div>
+                <div class="key" onclick="inputChar('y')"><span class="mongolian-vertical">y</span></div>
             </div>
             
             <div class="keyboard-column">
-                <div class="key" onclick="inputChar('r')">r</div>
-                <div class="key" onclick="inputChar('w')">w</div>
-                <div class="key" onclick="inputChar('f')">f</div>
-                <div class="key" onclick="inputChar('k')">k</div>
-                <div class="key" onclick="inputChar('g')">g</div>
-                <div class="key" onclick="inputChar('h')">h</div>
-                <div class="key key-tall" onclick="deleteChar()">⌫</div>
+                <div class="key" onclick="inputChar('r')"><span class="mongolian-vertical">r</span></div>
+                <div class="key" onclick="inputChar('w')"><span class="mongolian-vertical">w</span></div>
+                <div class="key" onclick="inputChar('f')"><span class="mongolian-vertical">f</span></div>
+                <div class="key" onclick="inputChar('k')"><span class="mongolian-vertical">k</span></div>
+                <div class="key" onclick="inputChar('g')"><span class="mongolian-vertical">g</span></div>
+                <div class="key" onclick="inputChar('h')"><span class="mongolian-vertical">h</span></div>
+                <div class="key key-tall" onclick="deleteChar()"><span class="mongolian-vertical">⌫</span></div>
             </div>
             
             <div class="keyboard-column">
-                <div class="key" onclick="inputChar(',')">,</div>
-                <div class="key" onclick="inputChar('.')">.</div>
-                <div class="key" onclick="inputChar('?')">?</div>
-                <div class="key key-tall" onclick="inputChar(' ')">Space</div>
-                <div class="key key-enter" onclick="sendMessage()">Send</div>
+                <div class="key" onclick="inputChar(',')"><span class="mongolian-vertical">,</span></div>
+                <div class="key" onclick="inputChar('.')"><span class="mongolian-vertical">.</span></div>
+                <div class="key" onclick="inputChar('?')"><span class="mongolian-vertical">?</span></div>
+                <div class="key key-tall" onclick="inputChar(' ')"><span class="mongolian-vertical">Space</span></div>
+                <div class="key key-enter" onclick="sendMessage()"><span class="mongolian-vertical">Send</span></div>
             </div>
         </div>
     </div>
