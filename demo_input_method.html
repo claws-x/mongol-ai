@@ -186,28 +186,25 @@
             transform: scale(0.95);
         }
         
-        /* 蒙古文键盘 */
+        /* 蒙古文键盘 - 竖排 */
         .mongolian-keyboard {
             background: white;
             border-radius: 12px;
             padding: 8px;
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-        }
-        
-        .keyboard-row {
             display: flex;
-            gap: 4px;
-            margin-bottom: 4px;
+            gap: 8px;
             justify-content: center;
         }
         
-        .keyboard-row:last-child {
-            margin-bottom: 0;
+        .keyboard-column {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
         }
         
         .key {
-            flex: 1;
-            max-width: 40px;
+            width: 44px;
             height: 44px;
             border: 0.5px solid var(--gray-200);
             border-radius: 6px;
@@ -226,13 +223,15 @@
             transform: scale(0.9);
         }
         
-        .key-wide {
-            max-width: 60px;
+        .key-tall {
+            height: 92px;
             font-size: 14px;
         }
         
-        .key-space {
-            max-width: 200px;
+        .key-enter {
+            height: 92px;
+            background: var(--primary);
+            color: white;
         }
         
         /* 候选词区域 */
@@ -352,10 +351,10 @@
             <button class="send-btn" onclick="sendMessage()">发送</button>
         </div>
         
-        <!-- 蒙古文键盘 -->
+        <!-- 蒙古文键盘 - 竖排 -->
         <div class="mongolian-keyboard" id="mongolian-keyboard">
-            <!-- 第 1 行：元音 -->
-            <div class="keyboard-row">
+            <!-- 第 1 列：元音 -->
+            <div class="keyboard-column">
                 <div class="key" onclick="inputChar('ᠠ')">ᠠ</div>
                 <div class="key" onclick="inputChar('ᠡ')">ᠡ</div>
                 <div class="key" onclick="inputChar('ᠢ')">ᠢ</div>
@@ -365,8 +364,8 @@
                 <div class="key" onclick="inputChar('ᠦ')">ᠦ</div>
             </div>
             
-            <!-- 第 2 行：辅音 1 -->
-            <div class="keyboard-row">
+            <!-- 第 2 列：辅音 1 -->
+            <div class="keyboard-column">
                 <div class="key" onclick="inputChar('ᠨ')">ᠨ</div>
                 <div class="key" onclick="inputChar('ᠪ')">ᠪ</div>
                 <div class="key" onclick="inputChar('ᠫ')">ᠫ</div>
@@ -376,8 +375,8 @@
                 <div class="key" onclick="inputChar('ᠯ')">ᠯ</div>
             </div>
             
-            <!-- 第 3 行：辅音 2 -->
-            <div class="keyboard-row">
+            <!-- 第 3 列：辅音 2 -->
+            <div class="keyboard-column">
                 <div class="key" onclick="inputChar('ᠰ')">ᠰ</div>
                 <div class="key" onclick="inputChar('ᠱ')">ᠱ</div>
                 <div class="key" onclick="inputChar('ᠲ')">ᠲ</div>
@@ -387,24 +386,24 @@
                 <div class="key" onclick="inputChar('ᠶ')">ᠶ</div>
             </div>
             
-            <!-- 第 4 行：辅音 3 + 功能 -->
-            <div class="keyboard-row">
+            <!-- 第 4 列：辅音 3 + 功能 -->
+            <div class="keyboard-column">
                 <div class="key" onclick="inputChar('ᠷ')">ᠷ</div>
                 <div class="key" onclick="inputChar('ᠸ')">ᠸ</div>
                 <div class="key" onclick="inputChar('ᠹ')">ᠹ</div>
                 <div class="key" onclick="inputChar('ᠺ')">ᠺ</div>
                 <div class="key" onclick="inputChar('ᠻ')">ᠻ</div>
                 <div class="key" onclick="inputChar('ᠼ')">ᠼ</div>
-                <div class="key key-wide" onclick="deleteChar()">⌫</div>
+                <div class="key key-tall" onclick="deleteChar()">⌫</div>
             </div>
             
-            <!-- 第 5 行：空格 + 标点 -->
-            <div class="keyboard-row">
+            <!-- 第 5 列：标点 + 空格 + 发送 -->
+            <div class="keyboard-column">
                 <div class="key" onclick="inputChar('᠂')">᠂</div>
                 <div class="key" onclick="inputChar('᠃')">᠃</div>
                 <div class="key" onclick="inputChar('᠄')">᠄</div>
-                <div class="key key-space" onclick="inputChar(' ')">空格</div>
-                <div class="key key-wide" onclick="sendMessage()">发送</div>
+                <div class="key key-tall" onclick="inputChar(' ')">空格</div>
+                <div class="key key-enter" onclick="sendMessage()">发送</div>
             </div>
             
             <!-- 拉丁转写提示 -->
@@ -413,9 +412,9 @@
             </div>
         </div>
         
-        <!-- 拉丁键盘（隐藏） -->
+        <!-- 拉丁键盘（隐藏）- 竖排 -->
         <div class="mongolian-keyboard" id="latin-keyboard" style="display: none;">
-            <div class="keyboard-row">
+            <div class="keyboard-column">
                 <div class="key" onclick="inputChar('a')">a</div>
                 <div class="key" onclick="inputChar('e')">e</div>
                 <div class="key" onclick="inputChar('i')">i</div>
@@ -425,7 +424,7 @@
                 <div class="key" onclick="inputChar('ö')">ö</div>
             </div>
             
-            <div class="keyboard-row">
+            <div class="keyboard-column">
                 <div class="key" onclick="inputChar('n')">n</div>
                 <div class="key" onclick="inputChar('b')">b</div>
                 <div class="key" onclick="inputChar('p')">p</div>
@@ -435,7 +434,7 @@
                 <div class="key" onclick="inputChar('l')">l</div>
             </div>
             
-            <div class="keyboard-row">
+            <div class="keyboard-column">
                 <div class="key" onclick="inputChar('s')">s</div>
                 <div class="key" onclick="inputChar('š')">š</div>
                 <div class="key" onclick="inputChar('t')">t</div>
@@ -445,22 +444,22 @@
                 <div class="key" onclick="inputChar('y')">y</div>
             </div>
             
-            <div class="keyboard-row">
+            <div class="keyboard-column">
                 <div class="key" onclick="inputChar('r')">r</div>
                 <div class="key" onclick="inputChar('w')">w</div>
                 <div class="key" onclick="inputChar('f')">f</div>
                 <div class="key" onclick="inputChar('k')">k</div>
                 <div class="key" onclick="inputChar('g')">g</div>
                 <div class="key" onclick="inputChar('h')">h</div>
-                <div class="key key-wide" onclick="deleteChar()">⌫</div>
+                <div class="key key-tall" onclick="deleteChar()">⌫</div>
             </div>
             
-            <div class="keyboard-row">
+            <div class="keyboard-column">
                 <div class="key" onclick="inputChar(',')">,</div>
                 <div class="key" onclick="inputChar('.')">.</div>
                 <div class="key" onclick="inputChar('?')">?</div>
-                <div class="key key-space" onclick="inputChar(' ')">Space</div>
-                <div class="key key-wide" onclick="sendMessage()">Send</div>
+                <div class="key key-tall" onclick="inputChar(' ')">Space</div>
+                <div class="key key-enter" onclick="sendMessage()">Send</div>
             </div>
         </div>
     </div>
