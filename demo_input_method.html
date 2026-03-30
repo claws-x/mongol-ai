@@ -255,6 +255,10 @@
         .key .mongolian-vertical {
             font-size: 20px;
             max-height: 35px;
+        }
+        
+        /* 中文/英文需要旋转 90 度，蒙古文不需要 */
+        .key .latin-or-chinese {
             transform: rotate(-90deg);
             transform-origin: center center;
         }
@@ -265,6 +269,9 @@
         
         .key-tall .mongolian-vertical {
             max-height: 80px;
+        }
+        
+        .key-tall .latin-or-chinese {
             transform: rotate(-90deg);
         }
         
@@ -277,7 +284,11 @@
         .key-enter .mongolian-vertical {
             max-height: 80px;
             color: white;
+        }
+        
+        .key-enter .latin-or-chinese {
             transform: rotate(-90deg);
+            color: white;
         }
         
         /* 候选词区域 */
@@ -448,8 +459,8 @@
                 <div class="key" onclick="inputChar('᠂')"><span class="mongolian-vertical">᠂</span></div>
                 <div class="key" onclick="inputChar('᠃')"><span class="mongolian-vertical">᠃</span></div>
                 <div class="key" onclick="inputChar('᠄')"><span class="mongolian-vertical">᠄</span></div>
-                <div class="key key-tall" onclick="inputChar(' ')"><span class="mongolian-vertical">空格</span></div>
-                <div class="key key-enter" onclick="sendMessage()"><span class="mongolian-vertical">发送</span></div>
+                <div class="key key-tall" onclick="inputChar(' ')"><span class="latin-or-chinese">空格</span></div>
+                <div class="key key-enter" onclick="sendMessage()"><span class="latin-or-chinese">发送</span></div>
             </div>
             
             <!-- 拉丁转写提示 -->
@@ -504,8 +515,8 @@
                 <div class="key" onclick="inputChar(',')"><span class="mongolian-vertical">,</span></div>
                 <div class="key" onclick="inputChar('.')"><span class="mongolian-vertical">.</span></div>
                 <div class="key" onclick="inputChar('?')"><span class="mongolian-vertical">?</span></div>
-                <div class="key key-tall" onclick="inputChar(' ')"><span class="mongolian-vertical">Space</span></div>
-                <div class="key key-enter" onclick="sendMessage()"><span class="mongolian-vertical">Send</span></div>
+                <div class="key key-tall" onclick="inputChar(' ')"><span class="latin-or-chinese">Space</span></div>
+                <div class="key key-enter" onclick="sendMessage()"><span class="latin-or-chinese">Send</span></div>
             </div>
         </div>
     </div>
