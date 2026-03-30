@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒙古文完整键盘布局 - 45 字符</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .keyboard-container {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 1400px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 42px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .keyboard {
+            display: grid;
+            grid-template-columns: repeat(14, 1fr);
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .key {
+            aspect-ratio: 0.85;
+            background: linear-gradient(180deg, #F8F9FA 0%, #E9ECEF 100%);
+            border: 2px solid #DEE2E6;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .key:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            border-color: #667eea;
+        }
+        
+        .key:hover .key-char {
+            color: white;
+        }
+        
+        .key:hover .key-label {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .key-char {
+            font-size: 32px;
+            font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif;
+            color: #333;
+            margin-bottom: 4px;
+            transition: color 0.2s;
+        }
+        
+        .key-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        
+        .key-category {
+            font-size: 9px;
+            color: #999;
+            margin-top: 2px;
+        }
+        
+        /* 元音字母 - 蓝色 */
+        .key.vowel {
+            background: linear-gradient(180deg, #E3F2FD 0%, #BBDEFB 100%);
+            border-color: #64B5F6;
+        }
+        
+        .key.vowel .key-char {
+            color: #1976D2;
+        }
+        
+        .key.vowel:hover {
+            background: linear-gradient(180deg, #64B5F6 0%, #42A5F5 100%);
+        }
+        
+        /* 辅音字母 - 粉色 */
+        .key.consonant {
+            background: linear-gradient(180deg, #FCE4EC 0%, #F8BBD0 100%);
+            border-color: #F48FB1;
+        }
+        
+        .key.consonant .key-char {
+            color: #C2185B;
+        }
+        
+        .key.consonant:hover {
+            background: linear-gradient(180deg, #F48FB1 0%, #F06292 100%);
+        }
+        
+        /* 特殊辅音 - 绿色 */
+        .key.special {
+            background: linear-gradient(180deg, #E8F5E9 0%, #C8E6C9 100%);
+            border-color: #81C784;
+        }
+        
+        .key.special .key-char {
+            color: #388E3C;
+        }
+        
+        .key.special:hover {
+            background: linear-gradient(180deg, #81C784 0%, #66BB6A 100%);
+        }
+        
+        /* 标点符号 - 黄色 */
+        .key.punctuation {
+            background: linear-gradient(180deg, #FFF9C4 0%, #FFF59D 100%);
+            border-color: #FFF176;
+        }
+        
+        .key.punctuation .key-char {
+            color: #F57F17;
+        }
+        
+        .key.punctuation:hover {
+            background: linear-gradient(180deg, #FFF176 0%, #FFEE58 100%);
+        }
+        
+        /* 数字 - 橙色 */
+        .key.number {
+            background: linear-gradient(180deg, #FFE0B2 0%, #FFCC80 100%);
+            border-color: #FFB74D;
+        }
+        
+        .key.number .key-char {
+            color: #E65100;
+        }
+        
+        .key.number:hover {
+            background: linear-gradient(180deg, #FFB74D 0%, #FFA726 100%);
+        }
+        
+        /* 功能键 - 紫色 */
+        .key.function {
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+            border-color: #667eea;
+        }
+        
+        .key.function .key-char {
+            color: white;
+            font-size: 28px;
+        }
+        
+        .key.function .key-label {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .key-function-wide {
+            grid-column: span 2;
+        }
+        
+        .section-label {
+            grid-column: span 14;
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+            margin: 20px 0 10px 0;
+            padding-left: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #E9ECEF;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .legend-color {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+        }
+        
+        .legend-text {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 1200px) {
+            .keyboard {
+                grid-template-columns: repeat(7, 1fr);
+            }
+            
+            .section-label {
+                grid-column: span 7;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .keyboard {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .section-label {
+                grid-column: span 4;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="keyboard-container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>🎹 蒙古文完整键盘布局</h1>
+            <p>Mongolian Complete Keyboard Layout - 45 Characters</p>
+        </div>
+        
+        <!-- 统计 -->
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">45</div>
+                <div class="stat-label">总字符</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">7</div>
+                <div class="stat-label">元音</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">22</div>
+                <div class="stat-label">辅音</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">3</div>
+                <div class="stat-label">特殊</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">13</div>
+                <div class="stat-label">其他</div>
+            </div>
+        </div>
+        
+        <!-- 键盘 -->
+        <div class="keyboard">
+            <!-- 元音字母 -->
+            <div class="section-label">🔵 元音字母 (Vowels) - U+1820 to U+1826</div>
+            
+            <div class="key vowel">
+                <div class="key-char">ᠠ</div>
+                <div class="key-label">A</div>
+                <div class="key-category">U+1820</div>
+            </div>
+            <div class="key vowel">
+                <div class="key-char">ᠡ</div>
+                <div class="key-label">E</div>
+                <div class="key-category">U+1821</div>
+            </div>
+            <div class="key vowel">
+                <div class="key-char">ᠢ</div>
+                <div class="key-label">I</div>
+                <div class="key-category">U+1822</div>
+            </div>
+            <div class="key vowel">
+                <div class="key-char">ᠣ</div>
+                <div class="key-label">O</div>
+                <div class="key-category">U+1823</div>
+            </div>
+            <div class="key vowel">
+                <div class="key-char">ᠤ</div>
+                <div class="key-label">U</div>
+                <div class="key-category">U+1824</div>
+            </div>
+            <div class="key vowel">
+                <div class="key-char">ᠥ</div>
+                <div class="key-label">Ö</div>
+                <div class="key-category">U+1825</div>
+            </div>
+            <div class="key vowel">
+                <div class="key-char">ᠦ</div>
+                <div class="key-label">Ü</div>
+                <div class="key-category">U+1826</div>
+            </div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            
+            <!-- 辅音字母 1 -->
+            <div class="section-label">🔴 辅音字母 (Consonants) Part 1 - U+1828 to U+182E</div>
+            
+            <div class="key consonant">
+                <div class="key-char">ᠨ</div>
+                <div class="key-label">N</div>
+                <div class="key-category">U+1828</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠪ</div>
+                <div class="key-label">B</div>
+                <div class="key-category">U+1829</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠫ</div>
+                <div class="key-label">P</div>
+                <div class="key-category">U+182A</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠬ</div>
+                <div class="key-label">Q</div>
+                <div class="key-category">U+182B</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠭ</div>
+                <div class="key-label">G</div>
+                <div class="key-category">U+182C</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠮ</div>
+                <div class="key-label">M</div>
+                <div class="key-category">U+182D</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠯ</div>
+                <div class="key-label">L</div>
+                <div class="key-category">U+182E</div>
+            </div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            
+            <!-- 辅音字母 2 -->
+            <div class="section-label">🔴 辅音字母 (Consonants) Part 2 - U+182F to U+1838</div>
+            
+            <div class="key consonant">
+                <div class="key-char">ᠰ</div>
+                <div class="key-label">S</div>
+                <div class="key-category">U+182F</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠱ</div>
+                <div class="key-label">Š</div>
+                <div class="key-category">U+1830</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠲ</div>
+                <div class="key-label">T</div>
+                <div class="key-category">U+1831</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠳ</div>
+                <div class="key-label">D</div>
+                <div class="key-category">U+1832</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠴ</div>
+                <div class="key-label">Č</div>
+                <div class="key-category">U+1833</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠵ</div>
+                <div class="key-label">J</div>
+                <div class="key-category">U+1834</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠶ</div>
+                <div class="key-label">Y</div>
+                <div class="key-category">U+1835</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠷ</div>
+                <div class="key-label">R</div>
+                <div class="key-category">U+1836</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠸ</div>
+                <div class="key-label">W</div>
+                <div class="key-category">U+1837</div>
+            </div>
+            <div class="key consonant">
+                <div class="key-char">ᠹ</div>
+                <div class="key-label">F</div>
+                <div class="key-category">U+1838</div>
+            </div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            
+            <!-- 辅音字母 3 + 特殊 -->
+            <div class="section-label">🟢 外来语 + 特殊辅音 (Loanwords + Special) - U+183A to U+1841</div>
+            
+            <div class="key special">
+                <div class="key-char">ᠺ</div>
+                <div class="key-label">K</div>
+                <div class="key-category">U+183A</div>
+            </div>
+            <div class="key special">
+                <div class="key-char">ᠻ</div>
+                <div class="key-label">KHA</div>
+                <div class="key-category">U+183B</div>
+            </div>
+            <div class="key special">
+                <div class="key-char">ᠼ</div>
+                <div class="key-label">TSA</div>
+                <div class="key-category">U+183C</div>
+            </div>
+            <div class="key special">
+                <div class="key-char">ᠽ</div>
+                <div class="key-label">ZA</div>
+                <div class="key-category">U+183D</div>
+            </div>
+            <div class="key special">
+                <div class="key-char">ᠾ</div>
+                <div class="key-label">HAA</div>
+                <div class="key-category">U+183E</div>
+            </div>
+            <div class="key special">
+                <div class="key-char">ᠿ</div>
+                <div class="key-label">ZRA</div>
+                <div class="key-category">U+183F</div>
+            </div>
+            <div class="key special">
+                <div class="key-char">ᡀ</div>
+                <div class="key-label">LH</div>
+                <div class="key-category">U+1840</div>
+            </div>
+            <div class="key special">
+                <div class="key-char">ᡁ</div>
+                <div class="key-label">ZHI</div>
+                <div class="key-category">U+1841</div>
+            </div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            
+            <!-- 标点符号 -->
+            <div class="section-label">🟡 标点符号 (Punctuation) - U+1802 to U+1804</div>
+            
+            <div class="key punctuation">
+                <div class="key-char">᠂</div>
+                <div class="key-label">逗号</div>
+                <div class="key-category">U+1802</div>
+            </div>
+            <div class="key punctuation">
+                <div class="key-char">᠃</div>
+                <div class="key-label">句号</div>
+                <div class="key-category">U+1803</div>
+            </div>
+            <div class="key punctuation">
+                <div class="key-char">᠄</div>
+                <div class="key-label">冒号</div>
+                <div class="key-category">U+1804</div>
+            </div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            
+            <!-- 数字 -->
+            <div class="section-label">🟠 蒙古文数字 (Digits) - U+1810 to U+1819</div>
+            
+            <div class="key number">
+                <div class="key-char">᠐</div>
+                <div class="key-label">0</div>
+                <div class="key-category">U+1810</div>
+            </div>
+            <div class="key number">
+                <div class="key-char">᠑</div>
+                <div class="key-label">1</div>
+                <div class="key-category">U+1811</div>
+            </div>
+            <div class="key number">
+                <div class="key-char">᠒</div>
+                <div class="key-label">2</div>
+                <div class="key-category">U+1812</div>
+            </div>
+            <div class="key number">
+                <div class="key-char">᠓</div>
+                <div class="key-label">3</div>
+                <div class="key-category">U+1813</div>
+            </div>
+            <div class="key number">
+                <div class="key-char">᠔</div>
+                <div class="key-label">4</div>
+                <div class="key-category">U+1814</div>
+            </div>
+            <div class="key number">
+                <div class="key-char">᠕</div>
+                <div class="key-label">5</div>
+                <div class="key-category">U+1815</div>
+            </div>
+            <div class="key number">
+                <div class="key-char">᠖</div>
+                <div class="key-label">6</div>
+                <div class="key-category">U+1816</div>
+            </div>
+            <div class="key number">
+                <div class="key-char">᠗</div>
+                <div class="key-label">7</div>
+                <div class="key-category">U+1817</div>
+            </div>
+            <div class="key number">
+                <div class="key-char">᠘</div>
+                <div class="key-label">8</div>
+                <div class="key-category">U+1818</div>
+            </div>
+            <div class="key number">
+                <div class="key-char">᠙</div>
+                <div class="key-label">9</div>
+                <div class="key-category">U+1819</div>
+            </div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            
+            <!-- 功能键 -->
+            <div class="section-label">🟣 功能键 (Function Keys)</div>
+            
+            <div class="key function key-function-wide">
+                <div class="key-char">⌫</div>
+                <div class="key-label">删除</div>
+            </div>
+            <div class="key function key-function-wide">
+                <div class="key-char">⇥</div>
+                <div class="key-label">Tab</div>
+            </div>
+            <div class="key function" style="grid-column: span 4;">
+                <div class="key-char">␣</div>
+                <div class="key-label">空格 Space</div>
+            </div>
+            <div class="key function key-function-wide">
+                <div class="key-char">↵</div>
+                <div class="key-label">发送</div>
+            </div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+            <div class="key" style="visibility: hidden;"></div>
+        </div>
+        
+        <!-- 图例 -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #64B5F6, #42A5F5);"></div>
+                <div class="legend-text"><strong>元音字母</strong> - 7 个字符</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #F48FB1, #F06292);"></div>
+                <div class="legend-text"><strong>辅音字母</strong> - 17 个字符</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #81C784, #66BB6A);"></div>
+                <div class="legend-text"><strong>特殊辅音</strong> - 8 个字符</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #FFF176, #FFEE58);"></div>
+                <div class="legend-text"><strong>标点符号</strong> - 3 个字符</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: linear-gradient(135deg, #FFB74D, #FFA726);"></div>
+                <div class="legend-text"><strong>蒙古文数字</strong> - 10 个字符</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
