@@ -1,0 +1,65 @@
+{
+  "greetings": [
+    {"mn": "ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ", "zh": "你好", "pinyin": "sain bain uu"},
+    {"mn": "ᠮᠡᠨᠳᠡ", "zh": "你好", "pinyin": "mende"},
+    {"mn": "ᠤᠳᠠᠨ ᠮᠡᠨᠳᠡ", "zh": "早上好", "pinyin": "udan mende"},
+    {"mn": "ᠦᠳᠡᠰᠡ ᠮᠡᠨᠳᠡ", "zh": "下午好", "pinyin": "üdese mende"},
+    {"mn": "ᠣᠷᠣᠢ ᠮᠡᠨᠳᠡ", "zh": "晚上好", "pinyin": "oroi mende"},
+    {"mn": "ᠰᠠᠶᠢᠨ ᠦᠳᠡᠬᠡ", "zh": "晚安", "pinyin": "sain udehe"},
+    {"mn": "ᠪᠠᠶᠠᠷᠲᠠᠢ", "zh": "谢谢", "pinyin": "bayartai"},
+    {"mn": "ᠪᠠᠶᠠᠷ ᠬᠦᠷᠦᠭᠡ", "zh": "再见", "pinyin": "bayar khuruuge"},
+    {"mn": "ᠪᠢᠶᠡ ᠪᠠᠶᠢᠨ᠎ᠠ", "zh": "再见", "pinyin": "biye bainna"},
+    {"mn": "ᠤᠴᠢᠷᠠᠯᠴᠢᠶ᠎ᠡ", "zh": "再见", "pinyin": "uchirchiye"}
+  ],
+  "questions": [
+    {"mn": "ᠲᠠ ᠶᠠᠮᠠᠷ ᠪᠠᠶᠢᠨᠠ", "zh": "你怎么样", "pinyin": "ta yamar bainna"},
+    {"mn": "ᠲᠠ ᠰᠠᠶᠢᠨ ᠤᠤ", "zh": "你好吗", "pinyin": "ta sain uu"},
+    {"mn": "ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠭ᠎ᠠ ᠤᠤ", "zh": "有什么可以帮您", "pinyin": "tand tusulalga baig-a uu"},
+    {"mn": "ᠲᠠ ᠬᠡᠨ ᠪᠡᠨ", "zh": "你是谁", "pinyin": "ta ken ben"},
+    {"mn": "ᠲᠠ ᠬᠠᠭᠠᠨ᠎ᠠ ᠶᠠᠪᠤᠨ᠎ᠠ", "zh": "你去哪里", "pinyin": "ta kagana yabuna"},
+    {"mn": "ᠲᠠ ᠶᠠᠮᠠᠷ ᠬᠢᠵᠦ ᠪᠠᠶᠢᠨᠠ", "zh": "你在做什么", "pinyin": "ta yamar khijü bainna"},
+    {"mn": "ᠲᠠ ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ ᠮᠡᠳᠡᠬᠦ ᠤᠤ", "zh": "你会说蒙古语吗", "pinyin": "ta monggol kele medkü üü"},
+    {"mn": "ᠲᠠ ᠶᠠᠮᠠᠷ ᠨᠡᠷᠡᠲᠡᠢ", "zh": "你叫什么名字", "pinyin": "ta yamar nerelei"}
+  ],
+  "responses": [
+    {"mn": "ᠪᠢ ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ", "zh": "我很好", "pinyin": "bi sain bainna"},
+    {"mn": "ᠪᠢ ᠮᠣᠩᠭᠣᠯ AI ᠲᠡᠭᠦᠰᠯᠡᠭᠴᠢ ᠪᠠᠶᠢᠨ᠎ᠠ", "zh": "我是蒙古 AI 助手", "pinyin": "bi monggol AI tegüslegchi bainna"},
+    {"mn": "ᠮᠢᠨᠦ ᠨᠡᠷᠡ AI ᠭᠡᠵᠦ ᠨᠡᠷᠡᠲᠡᠢ", "zh": "我的名字叫 AI", "pinyin": "minü nere AI geju nerelei"},
+    {"mn": "ᠮᠡᠳᠡᠭᠡ ᠪᠠᠶᠢᠨ᠎ᠠ", "zh": "我知道", "pinyin": "medege bainna"},
+    {"mn": "ᠮᠡᠳᠡᠬᠦᠭᠦᠢ", "zh": "我不知道", "pinyin": "medkügui"},
+    {"mn": "ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠭ᠎ᠠ ᠤᠤ", "zh": "需要帮助吗", "pinyin": "tusulalga baig-a uu"},
+    {"mn": "ᠮᠢᠨᠦ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠤᠭᠰᠠᠨᠳᠠ ᠪᠠᠶᠠᠷᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠨ᠎ᠠ", "zh": "很高兴能帮助到你", "pinyin": "minü tusulalga bolugsan-da bayarlaga bainna"},
+    {"mn": "ᠤᠴᠢᠷᠠᠯᠴᠢᠶ᠎ᠡ", "zh": "再见", "pinyin": "uchirchiye"},
+    {"mn": "ᠳᠠᠷᠤᠢ ᠤᠳᠠ ᠤᠴᠢᠷᠠᠯᠴᠢᠶ᠎ᠡ", "zh": "下次再见", "pinyin": "darui uda uchirchiye"},
+    {"mn": "ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠭᠠᠷᠠᠢ", "zh": "祝你愉快", "pinyin": "sain baigarai"}
+  ],
+  "culture": [
+    {"mn": "ᠮᠣᠩᠭᠣᠯ ᠤᠯᠤᠰ", "zh": "蒙古国", "pinyin": "monggol ulus"},
+    {"mn": "ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ", "zh": "蒙古语", "pinyin": "monggol kele"},
+    {"mn": "ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ", "zh": "蒙古文", "pinyin": "monggol bičig"},
+    {"mn": "ᠮᠣᠩᠭᠣᠯ ᠤᠨᠳᠦᠰᠦᠲᠡᠨ", "zh": "蒙古族", "pinyin": "monggol ündüsüten"},
+    {"mn": "ᠮᠣᠩᠭᠣᠯ ᠭᠡᠷ", "zh": "蒙古包", "pinyin": "monggol ger"},
+    {"mn": "ᠮᠣᠷᠢ", "zh": "马", "pinyin": "mori"},
+    {"mn": "ᠬᠣᠨᠢ", "zh": "羊", "pinyin": "qoni"},
+    {"mn": "ᠲᠡᠭᠡᠭᠡᠰᠦ", "zh": "骆驼", "pinyin": "tegesü"},
+    {"mn": "ᠨᠠᠳᠠᠮ", "zh": "那达慕", "pinyin": "nadam"},
+    {"mn": "ᠪᠥᠬᠡ", "zh": "摔跤", "pinyin": "böke"},
+    {"mn": "ᠮᠣᠷᠢᠨ ᠲᠣᠯᠣᠭᠠᠢ ᠬᠣᠭᠤᠷ", "zh": "马头琴", "pinyin": "morin toloγai qoγor"},
+    {"mn": "ᠤᠷᠲᠤ ᠳᠤᠤ", "zh": "长调", "pinyin": "urtu duu"},
+    {"mn": "ᠬᠥᠮᠡᠢ", "zh": "呼麦", "pinyin": "kömei"},
+    {"mn": "ᠴᠢᠨᠭᠢᠰ ᠬᠠᠭᠠᠨ", "zh": "成吉思汗", "pinyin": "čingis qaγan"},
+    {"mn": "ᠮᠣᠩᠭᠣᠯ ᠲᠠᠯ᠎ᠠ", "zh": "蒙古高原", "pinyin": "monggol tal-a"}
+  ],
+  "daily": [
+    {"mn": "ᠡᠨᠡᠭᠡᠳᠡᠷ ᠤᠶᠠᠨ ᠭᠠᠵᠠᠷ ᠬᠡᠷᠬᠡᠨ", "zh": "今天天气怎么样", "pinyin": "enegerü üyan gajar kerken"},
+    {"mn": "ᠡᠨᠡᠭᠡᠳᠡᠷ ᠨᠠᠷ ᠪᠠᠶᠢᠨ᠎ᠠ", "zh": "今天晴天", "pinyin": "enegerü nar bainna"},
+    {"mn": "ᠡᠨᠡᠭᠡᠳᠡᠷ ᠪᠣᠷᠣᠭᠠᠨ ᠣᠷᠤᠨ᠎ᠠ", "zh": "今天下雨", "pinyin": "enegerü borogan oruna"},
+    {"mn": "ᠡᠨᠡᠭᠡᠳᠡᠷ ᠬᠦᠢᠲᠡᠨ", "zh": "今天冷", "pinyin": "enegerü küiten"},
+    {"mn": "ᠡᠨᠡᠭᠡᠳᠡᠷ ᠬᠠᠯᠤᠨ", "zh": "今天热", "pinyin": "enegerü halun"},
+    {"mn": "ᠲᠠ ᠶᠠᠮᠠᠷ ᠢᠳᠡᠭᠡ ᠢᠳᠡᠪᠡ", "zh": "你吃什么", "pinyin": "ta yamar idege idebe"},
+    {"mn": "ᠪᠢ ᠪᠤᠰᠤ ᠮᠠᠬᠠᠨ ᠢᠳᠡᠪᠡ", "zh": "我吃羊肉", "pinyin": "bi busu makan idebe"},
+    {"mn": "ᠲᠠ ᠬᠠᠭᠠᠨ᠎ᠠ ᠶᠠᠪᠤᠨ᠎ᠠ", "zh": "你去哪里", "pinyin": "ta kagana yabuna"},
+    {"mn": "ᠪᠢ ᠭᠡᠷ ᠲᠡᠭᠡ ᠶᠠᠪᠤᠨ᠎ᠠ", "zh": "我回家", "pinyin": "bi ger tege yabuna"},
+    {"mn": "ᠲᠠ ᠰᠠᠶᠢᠨ ᠠᠮᠠᠷ᠎ᠠ ᠤᠤ", "zh": "你休息好吗", "pinyin": "ta sain amar-a uu"}
+  ]
+}
