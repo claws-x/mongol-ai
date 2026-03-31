@@ -1,0 +1,97 @@
+{
+  "university": {
+    "name": "内蒙古大学",
+    "english": "Inner Mongolia University",
+    "abbr": "IMU",
+    "founded": "1957 年",
+    "location": "内蒙古呼和浩特市",
+    "type": "211 工程重点建设大学",
+    "motto": "求真务实"
+  },
+  "statistics": {
+    "area": "2232.77 亩",
+    "students": "28749 人",
+    "faculty": "1990 人",
+    "undergraduate_programs": "83 个",
+    "doctoral_programs": "13 个",
+    "key_disciplines": "2+1 个国家重点学科",
+    "first_class_programs": "33 个国家一流本科专业",
+    "first_class_courses": "16 门国家级一流本科课程",
+    "library_books": "362.73 万册",
+    "postdoc_stations": "9 个博士后科研流动站"
+  },
+  "news": [
+    {
+      "title": "新学期第一会！擘宏图 定目标 埋头干",
+      "date": "2026-03-12",
+      "summary": "2026 年春季学期工作会议召开，校党委书记成涛、校长武利民出席会议并讲话。"
+    },
+    {
+      "title": "历史性突破！首登 Nature Water",
+      "date": "2026-03-23",
+      "summary": "内蒙古大学研究成果首次发表在 Nature Water 期刊上。"
+    },
+    {
+      "title": "媒体聚焦｜内蒙古大学构建'全合一'精准育种体系",
+      "date": "2026-03-30",
+      "summary": "为种业自主可控提供重要科技支撑。"
+    }
+  ],
+  "mongolian_phrases": [
+    {
+      "category": "学校相关",
+      "phrases": [
+        {"mn": "ᠢᠮᠤ ᠰᠤᠷᠭᠠᠭᠤᠯᠢ", "zh": "内蒙古大学", "pinyin": "IMU surγaγuli"},
+        {"mn": "ᠰᠤᠷᠭᠠᠭᠤᠯᠢ ᠰᠤᠷᠭᠠᠭᠤᠯᠢ", "zh": "学校", "pinyin": "surγaγuli"},
+        {"mn": "ᠰᠤᠷᠭᠠᠭᠴᠢ", "zh": "学生", "pinyin": "surγaγči"},
+        {"mn": "ᠪᠠᠭᠰᠢ", "zh": "老师", "pinyin": "baγši"},
+        {"mn": "ᠨᠣᠮ", "zh": "书", "pinyin": "nom"},
+        {"mn": "ᠪᠢᠴᠢᠭ", "zh": "文字/书", "pinyin": "bičig"},
+        {"mn": "ᠰᠤᠷᠤᠬᠤ", "zh": "学习", "pinyin": "suruqu"},
+        {"mn": "ᠪᠠᠭᠰᠢᠯᠠᠬᠤ", "zh": "教学", "pinyin": "baγšilaqu"},
+        {"mn": "ᠰᠤᠷᠭᠠᠨ ᠬᠦᠮᠦᠵᠢᠯ", "zh": "学习研究", "pinyin": "surγan kümüjil"},
+        {"mn": "ᠰᠤᠷᠭᠠᠭᠤᠯᠢ ᠰᠤᠷᠭᠠᠭᠤᠯᠢ", "zh": "学校", "pinyin": "surγaγuli"}
+      ]
+    },
+    {
+      "category": "学术相关",
+      "phrases": [
+        {"mn": "ᠰᠤᠷᠭᠠᠨ ᠪᠢᠴᠢᠭ", "zh": "论文", "pinyin": "surγan bičig"},
+        {"mn": "ᠰᠤᠷᠭᠠᠨ ᠬᠦᠮᠦᠵᠢᠯ", "zh": "研究", "pinyin": "surγan kümüjil"},
+        {"mn": "ᠰᠤᠷᠭᠠᠨ ᠲᠡᠮᠳᠡᠭᠯᠡᠯ", "zh": "研究成果", "pinyin": "surγan temdeglel"},
+        {"mn": "ᠰᠤᠷᠭᠠᠨ ᠰᠠᠭᠤᠷᠢ", "zh": "学术", "pinyin": "surγan saγuri"},
+        {"mn": "ᠰᠤᠷᠭᠠᠨ ᠬᠦᠮᠦᠨ", "zh": "学者", "pinyin": "surγan kümün"},
+        {"mn": "ᠰᠤᠷᠭᠠᠨ ᠪᠠᠭᠰᠢ", "zh": "教授", "pinyin": "surγan baγši"},
+        {"mn": "ᠰᠤᠷᠭᠠᠨ ᠰᠤᠷᠭᠠᠭᠤᠯᠢ", "zh": "学院", "pinyin": "surγan surγaγuli"},
+        {"mn": "ᠰᠤᠷᠭᠠᠨ ᠬᠦᠷᠢᠶ᠎ᠡ", "zh": "学术会议", "pinyin": "surγan küriye"},
+        {"mn": "ᠰᠤᠷᠭᠠᠨ ᠰᠤᠷᠭᠠᠨ", "zh": "学术", "pinyin": "surγan surγan"},
+        {"mn": "ᠰᠤᠷᠭᠠᠨ ᠪᠢᠴᠢᠭ ᠪᠢᠴᠢᠭ", "zh": "学术论文", "pinyin": "surγan bičig bičig"}
+      ]
+    },
+    {
+      "category": "日常对话",
+      "phrases": [
+        {"mn": "ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ", "zh": "你好", "pinyin": "sain bain-a uu"},
+        {"mn": "ᠮᠡᠨᠳᠡ", "zh": "你好", "pinyin": "mende"},
+        {"mn": "ᠪᠠᠶᠠᠷᠲᠠᠢ", "zh": "谢谢", "pinyin": "bayartai"},
+        {"mn": "ᠪᠠᠶᠠᠷ ᠬᠦᠷᠦᠭᠡ", "zh": "再见", "pinyin": "bayar kürüge"},
+        {"mn": "ᠲᠠ ᠶᠠᠮᠠᠷ ᠪᠠᠶᠢᠨᠠ", "zh": "你怎么样", "pinyin": "ta yamar bain-a"},
+        {"mn": "ᠪᠢ ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ", "zh": "我很好", "pinyin": "bi sain bain-a"},
+        {"mn": "ᠲᠠ ᠬᠡᠨ ᠪᠡᠨ", "zh": "你是谁", "pinyin": "ta ken ben"},
+        {"mn": "ᠪᠢ ᠰᠤᠷᠭᠠᠭᠴᠢ ᠪᠡᠨ", "zh": "我是学生", "pinyin": "bi surγaγči ben"},
+        {"mn": "ᠪᠢ ᠪᠠᠭᠰᠢ ᠪᠡᠨ", "zh": "我是老师", "pinyin": "bi baγši ben"},
+        {"mn": "ᠲᠠ ᠬᠠᠭᠠᠨ᠎ᠠ ᠶᠠᠪᠤᠨ᠎ᠠ", "zh": "你去哪里", "pinyin": "ta qaγana yabuna"}
+      ]
+    }
+  ],
+  "departments": [
+    {"mn": "ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ ᠪᠢᠴᠢᠭ ᠰᠤᠷᠭᠠᠭᠤᠯᠢ", "zh": "蒙古学学院", "english": "School of Mongolian Studies"},
+    {"mn": "ᠬᠡᠯᠡ ᠪᠢᠴᠢᠭ ᠰᠤᠷᠭᠠᠭᠤᠯᠢ", "zh": "文学院", "english": "School of Literature"},
+    {"mn": "ᠲᠦᠬᠡ ᠰᠤᠷᠭᠠᠭᠤᠯᠢ", "zh": "历史学院", "english": "School of History"},
+    {"mn": "ᠬᠤᠯᠪᠣᠭᠠᠨ ᠰᠤᠷᠭᠠᠭᠤᠯᠢ", "zh": "交通学院", "english": "School of Transportation"},
+    {"mn": "ᠬᠤᠶᠢ ᠰᠤᠷᠭᠠᠭᠤᠯᠢ", "zh": "法学院", "english": "School of Law"},
+    {"mn": "ᠡᠴᠦᠰ ᠰᠤᠷᠭᠠᠭᠤᠯᠢ", "zh": "经济学院", "english": "School of Economics"},
+    {"mn": "ᠨᠣᠮ ᠰᠤᠷᠭᠠᠭᠤᠯᠢ", "zh": "图书馆", "english": "Library"},
+    {"mn": "ᠰᠤᠷᠭᠠᠭᠤᠯᠢ ᠰᠤᠷᠭᠠᠭᠤᠯᠢ", "zh": "研究生院", "english": "Graduate School"}
+  ]
+}
