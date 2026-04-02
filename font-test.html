@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒙古文字体测试</title>
+    
+    <!-- 预加载字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .font-test-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .font-test-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .font-name {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            padding: 8px 12px;
+            background: #f0f0f0;
+            border-radius: 6px;
+            display: inline-block;
+        }
+        
+        .test-row {
+            display: flex;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .test-card {
+            flex: 1;
+            min-width: 200px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            background: #fafafa;
+        }
+        
+        .test-label {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .mongolian-text {
+            font-size: 24px;
+            line-height: 1.8;
+            /* 竖排样式 */
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            display: inline-block;
+            min-height: 200px;
+        }
+        
+        /* 字体栈测试 */
+        .font-stack-1 {
+            font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
+        }
+        
+        .font-stack-2 {
+            font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif;
+        }
+        
+        .font-stack-3 {
+            font-family: 'Microsoft Mongolian Baiti', 'Mongolian Baiti', sans-serif;
+        }
+        
+        .font-stack-4 {
+            font-family: 'Mongol Usug', 'Noto Sans Mongolian', sans-serif;
+        }
+        
+        /* 特殊测试 */
+        .test-fvs {
+            /* 变体选择符测试 */
+        }
+        
+        .test-ligature {
+            /* 连字测试 */
+        }
+        
+        .test-shape {
+            /* 词首/词中/词尾测试 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐎 蒙古文字体测试</h1>
+            <p>Traditional Mongolian Font Test Suite</p>
+        </div>
+        
+        <!-- 字体栈测试 -->
+        <div class="font-test-section">
+            <h2>1️⃣ 字体栈测试 (Font Stack Test)</h2>
+            
+            <div class="test-row">
+                <div class="test-card">
+                    <div class="font-name">Noto Sans Mongolian (Google Fonts)</div>
+                    <div class="test-label">元音测试</div>
+                    <div class="mongolian-text font-stack-1">
+                        ᠠ ᠡ ᠢ ᠣ ᠤ ᠥ ᠦ
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="font-name">Mongolian Baiti (Windows)</div>
+                    <div class="test-label">元音测试</div>
+                    <div class="mongolian-text font-stack-2">
+                        ᠠ ᠡ ᠢ ᠣ ᠤ ᠥ ᠦ
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="font-name">Microsoft Mongolian Baiti</div>
+                    <div class="test-label">元音测试</div>
+                    <div class="mongolian-text font-stack-3">
+                        ᠠ ᠡ ᠢ ᠣ ᠤ ᠥ ᠦ
+                    </div>
+                </div>
+            </div>
+            
+            <div class="test-row">
+                <div class="test-card">
+                    <div class="font-name">Noto Sans Mongolian</div>
+                    <div class="test-label">辅音测试</div>
+                    <div class="mongolian-text font-stack-1">
+                        ᠨ ᠪ ᠫ ᠬ ᠭ ᠮ ᠯ ᠰ ᠱ ᠲ ᠳ ᠴ ᠵ ᠶ ᠷ
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="font-name">Mongolian Baiti</div>
+                    <div class="test-label">辅音测试</div>
+                    <div class="mongolian-text font-stack-2">
+                        ᠨ ᠪ ᠫ ᠬ ᠭ ᠮ ᠯ ᠰ ᠱ ᠲ ᠳ ᠴ ᠵ ᠶ ᠷ
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="font-name">Microsoft Mongolian Baiti</div>
+                    <div class="test-label">辅音测试</div>
+                    <div class="mongolian-text font-stack-3">
+                        ᠨ ᠪ ᠫ ᠬ ᠭ ᠮ ᠯ ᠰ ᠱ ᠲ ᠳ ᠴ ᠵ ᠶ ᠷ
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 变形测试 -->
+        <div class="font-test-section">
+            <h2>2️⃣ 词形变化测试 (Shape Variation Test)</h2>
+            
+            <div class="test-row">
+                <div class="test-card">
+                    <div class="font-name">Noto Sans Mongolian</div>
+                    <div class="test-label">词首/词中/词尾 (G 字母)</div>
+                    <div class="mongolian-text font-stack-1 test-shape">
+                        词首：ᠭᠡ<br>
+                        词中：ᠠᠭᠠ<br>
+                        词尾：ᠠᠭ
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="font-name">Mongolian Baiti</div>
+                    <div class="test-label">词首/词中/词尾 (G 字母)</div>
+                    <div class="mongolian-text font-stack-2 test-shape">
+                        词首：ᠭᠡ<br>
+                        词中：ᠠᠭᠠ<br>
+                        词尾：ᠠᠭ
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="font-name">Microsoft Mongolian Baiti</div>
+                    <div class="test-label">词首/词中/词尾 (G 字母)</div>
+                    <div class="mongolian-text font-stack-3 test-shape">
+                        词首：ᠭᠡ<br>
+                        词中：ᠠᠭᠠ<br>
+                        词尾：ᠠᠭ
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 变体选择符测试 -->
+        <div class="font-test-section">
+            <h2>3️⃣ 变体选择符测试 (Variation Selector Test)</h2>
+            
+            <div class="test-row">
+                <div class="test-card">
+                    <div class="font-name">Noto Sans Mongolian</div>
+                    <div class="test-label">FVS1/FVS2/FVS3</div>
+                    <div class="mongolian-text font-stack-1 test-fvs">
+                        基础：ᠠ<br>
+                        FVS1: ᠠ᠋<br>
+                        FVS2: ᠠ᠌<br>
+                        FVS3: ᠠ᠍
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="font-name">Mongolian Baiti</div>
+                    <div class="test-label">FVS1/FVS2/FVS3</div>
+                    <div class="mongolian-text font-stack-2 test-fvs">
+                        基础：ᠠ<br>
+                        FVS1: ᠠ᠋<br>
+                        FVS2: ᠠ᠌<br>
+                        FVS3: ᠠ᠍
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="font-name">Microsoft Mongolian Baiti</div>
+                    <div class="test-label">FVS1/FVS2/FVS3</div>
+                    <div class="mongolian-text font-stack-3 test-fvs">
+                        基础：ᠠ<br>
+                        FVS1: ᠠ᠋<br>
+                        FVS2: ᠠ᠌<br>
+                        FVS3: ᠠ᠍
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 完整单词测试 -->
+        <div class="font-test-section">
+            <h2>4️⃣ 完整单词测试 (Full Word Test)</h2>
+            
+            <div class="test-row">
+                <div class="test-card">
+                    <div class="font-name">Noto Sans Mongolian</div>
+                    <div class="test-label">常用词</div>
+                    <div class="mongolian-text font-stack-1">
+                        ᠮᠣᠩᠭᠣᠯ (蒙古)<br>
+                        ᠪᠢᠴᠢᠭ (文字)<br>
+                        ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠠ (你好)<br>
+                        ᠪᠠᠶᠠᠷᠲᠠᠢ (谢谢)
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="font-name">Mongolian Baiti</div>
+                    <div class="test-label">常用词</div>
+                    <div class="mongolian-text font-stack-2">
+                        ᠮᠣᠩᠭᠣᠯ (蒙古)<br>
+                        ᠪᠢᠴᠢᠭ (文字)<br>
+                        ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠠ (你好)<br>
+                        ᠪᠠᠶᠠᠷᠲᠠᠢ (谢谢)
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="font-name">Microsoft Mongolian Baiti</div>
+                    <div class="test-label">常用词</div>
+                    <div class="mongolian-text font-stack-3">
+                        ᠮᠣᠩᠭᠣᠯ (蒙古)<br>
+                        ᠪᠢᠴᠢᠭ (文字)<br>
+                        ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨᠠ (你好)<br>
+                        ᠪᠠᠶᠠᠷᠲᠠᠢ (谢谢)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

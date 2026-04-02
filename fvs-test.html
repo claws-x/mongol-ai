@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒙古文变体选择符 (FVS) 测试</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .test-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .test-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .test-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            background: #fafafa;
+        }
+        
+        .test-card.pass {
+            border-color: #34C759;
+            background: rgba(52, 199, 89, 0.05);
+        }
+        
+        .test-card.fail {
+            border-color: #FF3B30;
+            background: rgba(255, 59, 48, 0.05);
+        }
+        
+        .test-card.warning {
+            border-color: #FF9500;
+            background: rgba(255, 149, 0, 0.05);
+        }
+        
+        .test-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 15px;
+            display: flex;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .status-badge {
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+        
+        .status-pass {
+            background: #34C759;
+            color: white;
+        }
+        
+        .status-fail {
+            background: #FF3B30;
+            color: white;
+        }
+        
+        .status-warning {
+            background: #FF9500;
+            color: white;
+        }
+        
+        .mongolian-vertical {
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
+            font-size: 28px;
+            line-height: 2;
+            display: inline-block;
+            min-height: 300px;
+        }
+        
+        .unicode-code {
+            font-size: 11px;
+            color: #999;
+            font-family: 'Courier New', monospace;
+            margin-top: 10px;
+            display: block;
+        }
+        
+        .result-note {
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐎 蒙古文变体选择符 (FVS) 测试</h1>
+            <p>Traditional Mongolian Variation Selector Test Suite</p>
+            <p style="margin-top: 10px; opacity: 0.9;">测试日期：2026-04-01</p>
+        </div>
+        
+        <!-- FVS1 测试 -->
+        <div class="test-section">
+            <h2>1️⃣ FVS1 (Free Variation Selector 1) 测试</h2>
+            <div class="test-grid">
+                <div class="test-card pass">
+                    <div class="test-label">
+                        字母 A + FVS1
+                        <span class="status-badge status-pass">预期显示</span>
+                    </div>
+                    <div class="mongolian-vertical">
+                        基础形：ᠠ<br>
+                        FVS1: ᠠ᠋
+                    </div>
+                    <span class="unicode-code">U+1820 U+180B</span>
+                    <div class="result-note">
+                        ✅ FVS1 应该显示不同的字形变体
+                    </div>
+                </div>
+                
+                <div class="test-card pass">
+                    <div class="test-label">
+                        字母 E + FVS1
+                        <span class="status-badge status-pass">预期显示</span>
+                    </div>
+                    <div class="mongolian-vertical">
+                        基础形：ᠡ<br>
+                        FVS1: ᠡ᠋
+                    </div>
+                    <span class="unicode-code">U+1821 U+180B</span>
+                    <div class="result-note">
+                        ✅ FVS1 应用于 E 字母
+                    </div>
+                </div>
+                
+                <div class="test-card warning">
+                    <div class="test-label">
+                        字母 N + FVS1
+                        <span class="status-badge status-warning">部分支持</span>
+                    </div>
+                    <div class="mongolian-vertical">
+                        基础形：ᠨ<br>
+                        FVS1: ᠨ᠋
+                    </div>
+                    <span class="unicode-code">U+1828 U+180B</span>
+                    <div class="result-note">
+                        ⚠️ 某些字体可能不支持 N+FVS1
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FVS2 测试 -->
+        <div class="test-section">
+            <h2>2️⃣ FVS2 (Free Variation Selector 2) 测试</h2>
+            <div class="test-grid">
+                <div class="test-card pass">
+                    <div class="test-label">
+                        字母 A + FVS2
+                        <span class="status-badge status-pass">预期显示</span>
+                    </div>
+                    <div class="mongolian-vertical">
+                        基础形：ᠠ<br>
+                        FVS2: ᠠ᠌
+                    </div>
+                    <span class="unicode-code">U+1820 U+180C</span>
+                    <div class="result-note">
+                        ✅ FVS2 应该显示第二种变体
+                    </div>
+                </div>
+                
+                <div class="test-card pass">
+                    <div class="test-label">
+                        字母 O + FVS2
+                        <span class="status-badge status-pass">预期显示</span>
+                    </div>
+                    <div class="mongolian-vertical">
+                        基础形：ᠣ<br>
+                        FVS2: ᠣ᠌
+                    </div>
+                    <span class="unicode-code">U+1823 U+180C</span>
+                    <div class="result-note">
+                        ✅ FVS2 应用于 O 字母
+                    </div>
+                </div>
+                
+                <div class="test-card warning">
+                    <div class="test-label">
+                        字母 G + FVS2
+                        <span class="status-badge status-warning">部分支持</span>
+                    </div>
+                    <div class="mongolian-vertical">
+                        基础形：ᠭ<br>
+                        FVS2: ᠭ᠌
+                    </div>
+                    <span class="unicode-code">U+182D U+180C</span>
+                    <div class="result-note">
+                        ⚠️ G+FVS2 支持因字体而异
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FVS3 测试 -->
+        <div class="test-section">
+            <h2>3️⃣ FVS3 (Free Variation Selector 3) 测试</h2>
+            <div class="test-grid">
+                <div class="test-card pass">
+                    <div class="test-label">
+                        字母 A + FVS3
+                        <span class="status-badge status-pass">预期显示</span>
+                    </div>
+                    <div class="mongolian-vertical">
+                        基础形：ᠠ<br>
+                        FVS3: ᠠ᠍
+                    </div>
+                    <span class="unicode-code">U+1820 U+180D</span>
+                    <div class="result-note">
+                        ✅ FVS3 应该显示第三种变体
+                    </div>
+                </div>
+                
+                <div class="test-card warning">
+                    <div class="test-label">
+                        字母 U + FVS3
+                        <span class="status-badge status-warning">有限支持</span>
+                    </div>
+                    <div class="mongolian-vertical">
+                        基础形：ᠤ<br>
+                        FVS3: ᠤ᠍
+                    </div>
+                    <span class="unicode-code">U+1824 U+180D</span>
+                    <div class="result-note">
+                        ⚠️ FVS3 支持最有限
+                    </div>
+                </div>
+                
+                <div class="test-card warning">
+                    <div class="test-label">
+                        字母 S + FVS3
+                        <span class="status-badge status-warning">有限支持</span>
+                    </div>
+                    <div class="mongolian-vertical">
+                        基础形：ᠰ<br>
+                        FVS3: ᠰ᠍
+                    </div>
+                    <span class="unicode-code">U+1830 U+180D</span>
+                    <div class="result-note">
+                        ⚠️ 多数浏览器不支持
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- MVS 测试 -->
+        <div class="test-section">
+            <h2>4️⃣ MVS (Mongolian Vowel Separator) 测试</h2>
+            <div class="test-grid">
+                <div class="test-card warning">
+                    <div class="test-label">
+                        MVS 基础测试
+                        <span class="status-badge status-warning">部分支持</span>
+                    </div>
+                    <div class="mongolian-vertical">
+                        无 MVS: ᠴᠢᠭ<br>
+                        有 MVS: ᠴᠢ᠎ᠭ
+                    </div>
+                    <span class="unicode-code">U+1834 U+1832 U+180E U+182D</span>
+                    <div class="result-note">
+                        ⚠️ MVS (U+180E) 用于分隔元音，防止错误连字
+                    </div>
+                </div>
+                
+                <div class="test-card warning">
+                    <div class="test-label">
+                        MVS 应用测试
+                        <span class="status-badge status-warning">部分支持</span>
+                    </div>
+                    <div class="mongolian-vertical">
+                        正常：ᠡᠳᠡ<br>
+                        MVS: ᠡᠳ᠎ᠡ
+                    </div>
+                    <span class="unicode-code">U+1821 U+1833 U+180E U+1821</span>
+                    <div class="result-note">
+                        ⚠️ MVS 在某些字体中不可见但影响渲染
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 综合测试 -->
+        <div class="test-section">
+            <h2>5️⃣ 综合变体测试</h2>
+            <div class="test-grid">
+                <div class="test-card">
+                    <div class="test-label">
+                        同一字母的所有变体
+                        <span class="status-badge status-pass">对比测试</span>
+                    </div>
+                    <div class="mongolian-vertical">
+                        A 基础：ᠠ<br>
+                        A+FVS1: ᠠ᠋<br>
+                        A+FVS2: ᠠ᠌<br>
+                        A+FVS3: ᠠ᠍
+                    </div>
+                    <span class="unicode-code">U+1820 + FVS1/2/3</span>
+                    <div class="result-note">
+                        📊 对比所有变体的显示差异
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <div class="test-label">
+                        实际单词中的 FVS
+                        <span class="status-badge status-warning">高级测试</span>
+                    </div>
+                    <div class="mongolian-vertical">
+                        ᠮᠣᠩᠭᠣᠯ (蒙古)<br>
+                        ᠮᠣᠩᠭᠣᠯ᠋ (带 FVS1)<br>
+                        ᠮᠣᠩᠭᠣᠯ᠌ (带 FVS2)
+                    </div>
+                    <span class="unicode-code">复杂词例</span>
+                    <div class="result-note">
+                        📚 测试 FVS 在实际单词中的应用
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 结果总结 -->
+        <div class="test-section">
+            <h2>📊 测试结果总结</h2>
+            <div style="padding: 20px; background: #f8f9fa; border-radius: 8px;">
+                <h3 style="margin-bottom: 15px;">支持度评级</h3>
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background: #667eea; color: white;">
+                            <th style="padding: 12px; text-align: left;">变体选择符</th>
+                            <th style="padding: 12px;">Unicode</th>
+                            <th style="padding: 12px;">支持度</th>
+                            <th style="padding: 12px;">评级</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #e0e0e0;">
+                            <td style="padding: 12px;">FVS1</td>
+                            <td style="padding: 12px;">U+180B</td>
+                            <td style="padding: 12px;">广泛支持</td>
+                            <td style="padding: 12px;"><span class="status-badge status-pass">✅ 优秀</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0e0e0;">
+                            <td style="padding: 12px;">FVS2</td>
+                            <td style="padding: 12px;">U+180C</td>
+                            <td style="padding: 12px;">部分支持</td>
+                            <td style="padding: 12px;"><span class="status-badge status-warning">⚠️ 良好</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e0e0e0;">
+                            <td style="padding: 12px;">FVS3</td>
+                            <td style="padding: 12px;">U+180D</td>
+                            <td style="padding: 12px;">有限支持</td>
+                            <td style="padding: 12px;"><span class="status-badge status-warning">⚠️ 一般</span></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px;">MVS</td>
+                            <td style="padding: 12px;">U+180E</td>
+                            <td style="padding: 12px;">部分支持</td>
+                            <td style="padding: 12px;"><span class="status-badge status-warning">⚠️ 良好</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3 style="margin: 25px 0 15px;">测试结论</h3>
+                <ul style="line-height: 2; color: #555;">
+                    <li>✅ <strong>FVS1</strong> 支持最好，推荐优先使用</li>
+                    <li>⚠️ <strong>FVS2</strong> 支持度中等，需要测试验证</li>
+                    <li>⚠️ <strong>FVS3</strong> 支持度有限，谨慎使用</li>
+                    <li>⚠️ <strong>MVS</strong> 在部分字体中有效，需要实际测试</li>
+                    <li>📝 建议使用 Noto Sans Mongolian 获得最佳 FVS 支持</li>
+                    <li>📝 在不同浏览器中测试 FVS 渲染效果</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

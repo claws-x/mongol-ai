@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>蒙古文 AI 助手 v5.0 - 智能对话</title>
+    <!-- RULE-001: 引入蒙古文竖排 CSS -->
+    <link rel="stylesheet" href="mongolian-vertical.css">
     <style>
         * {
             margin: 0;
@@ -79,6 +81,22 @@
         
         .message {
             display: flex;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
             gap: 12px;
             margin-bottom: 20px;
             animation: slideIn 0.3s ease;
@@ -104,6 +122,22 @@
             height: 44px;
             border-radius: 50%;
             display: flex;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
             align-items: center;
             justify-content: center;
             font-size: 22px;
@@ -134,6 +168,56 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
+        /* 蒙古文竖排显示 */
+        .mongolian-vertical {
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -moz-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -ms-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            font-family: 'Mongolian Baiti', 'Noto Sans Mongolian', sans-serif !important;
+            display: inline-block !important;
+            transform: rotate(90deg) !important;
+            transform-origin: center center !important;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
         .message-time {
             font-size: 11px;
             color: #999;
@@ -154,6 +238,22 @@
         
         .input-stats {
             display: flex;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
             justify-content: space-between;
             margin-bottom: 10px;
             font-size: 12px;
@@ -180,6 +280,22 @@
         
         .input-tools {
             display: flex;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
             gap: 10px;
             margin-top: 15px;
         }
@@ -220,12 +336,44 @@
             margin-bottom: 10px;
             font-weight: 600;
             display: flex;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
             align-items: center;
             gap: 6px;
         }
         
         .suggestion-phrases {
             display: flex;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
             gap: 8px;
             flex-wrap: wrap;
         }
@@ -256,6 +404,22 @@
         
         .keyboard-tabs {
             display: flex;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
             gap: 10px;
             margin-bottom: 15px;
             flex-wrap: wrap;
@@ -292,6 +456,22 @@
         
         .keyboard-row {
             display: flex;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
             gap: 6px;
             margin-bottom: 6px;
             flex-wrap: wrap;
@@ -308,7 +488,40 @@
             cursor: pointer;
             transition: all 0.15s;
             display: flex;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
             flex-direction: column;
+            /* ✅ RULE-001: 蒙古文必须竖排 */
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
             align-items: center;
             justify-content: center;
             font-size: 20px;
@@ -370,6 +583,22 @@
         
         .typing-indicator.active {
             display: flex;
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
         }
         
         .typing-dot {
@@ -492,13 +721,13 @@
                 <div class="keyboard-section" id="keyboard-vowels">
                     <div class="section-label">元音 Vowels</div>
                     <div class="keyboard-row">
-                        <div class="key" onclick="inputChar('ᠠ')"><span>ᠠ</span><span class="key-label">A</span></div>
-                        <div class="key" onclick="inputChar('ᠡ')"><span>ᠡ</span><span class="key-label">E</span></div>
-                        <div class="key" onclick="inputChar('ᠢ')"><span>ᠢ</span><span class="key-label">I</span></div>
-                        <div class="key" onclick="inputChar('ᠣ')"><span>ᠣ</span><span class="key-label">O</span></div>
-                        <div class="key" onclick="inputChar('ᠤ')"><span>ᠤ</span><span class="key-label">U</span></div>
-                        <div class="key" onclick="inputChar('ᠥ')"><span>ᠥ</span><span class="key-label">Ö</span></div>
-                        <div class="key" onclick="inputChar('ᠦ')"><span>ᠦ</span><span class="key-label">Ü</span></div>
+                        <div class="key" onclick="inputChar('ᠠ')"><span class="key-char">ᠠ</span><span class="key-label">A</span></div>
+                        <div class="key" onclick="inputChar('ᠡ')"><span class="key-char">ᠡ</span><span class="key-label">E</span></div>
+                        <div class="key" onclick="inputChar('ᠢ')"><span class="key-char">ᠢ</span><span class="key-label">I</span></div>
+                        <div class="key" onclick="inputChar('ᠣ')"><span class="key-char">ᠣ</span><span class="key-label">O</span></div>
+                        <div class="key" onclick="inputChar('ᠤ')"><span class="key-char">ᠤ</span><span class="key-label">U</span></div>
+                        <div class="key" onclick="inputChar('ᠥ')"><span class="key-char">ᠥ</span><span class="key-label">Ö</span></div>
+                        <div class="key" onclick="inputChar('ᠦ')"><span class="key-char">ᠦ</span><span class="key-label">Ü</span></div>
                     </div>
                 </div>
                 
@@ -506,13 +735,13 @@
                 <div class="keyboard-section" id="keyboard-consonants1" style="display: none;">
                     <div class="section-label">辅音 Consonants 1</div>
                     <div class="keyboard-row">
-                        <div class="key" onclick="inputChar('ᠨ')"><span>ᠨ</span><span class="key-label">N</span></div>
-                        <div class="key" onclick="inputChar('ᠪ')"><span>ᠪ</span><span class="key-label">B</span></div>
-                        <div class="key" onclick="inputChar('ᠫ')"><span>ᠫ</span><span class="key-label">P</span></div>
-                        <div class="key" onclick="inputChar('ᠬ')"><span>ᠬ</span><span class="key-label">Q</span></div>
-                        <div class="key" onclick="inputChar('ᠭ')"><span>ᠭ</span><span class="key-label">G</span></div>
-                        <div class="key" onclick="inputChar('ᠮ')"><span>ᠮ</span><span class="key-label">M</span></div>
-                        <div class="key" onclick="inputChar('ᠯ')"><span>ᠯ</span><span class="key-label">L</span></div>
+                        <div class="key" onclick="inputChar('ᠨ')"><span class="key-char">ᠨ</span><span class="key-label">N</span></div>
+                        <div class="key" onclick="inputChar('ᠪ')"><span class="key-char">ᠪ</span><span class="key-label">B</span></div>
+                        <div class="key" onclick="inputChar('ᠫ')"><span class="key-char">ᠫ</span><span class="key-label">P</span></div>
+                        <div class="key" onclick="inputChar('ᠬ')"><span class="key-char">ᠬ</span><span class="key-label">Q</span></div>
+                        <div class="key" onclick="inputChar('ᠭ')"><span class="key-char">ᠭ</span><span class="key-label">G</span></div>
+                        <div class="key" onclick="inputChar('ᠮ')"><span class="key-char">ᠮ</span><span class="key-label">M</span></div>
+                        <div class="key" onclick="inputChar('ᠯ')"><span class="key-char">ᠯ</span><span class="key-label">L</span></div>
                     </div>
                 </div>
                 
@@ -520,13 +749,13 @@
                 <div class="keyboard-section" id="keyboard-consonants2" style="display: none;">
                     <div class="section-label">辅音 Consonants 2</div>
                     <div class="keyboard-row">
-                        <div class="key" onclick="inputChar('ᠰ')"><span>ᠰ</span><span class="key-label">S</span></div>
-                        <div class="key" onclick="inputChar('ᠱ')"><span>ᠱ</span><span class="key-label">Š</span></div>
-                        <div class="key" onclick="inputChar('ᠲ')"><span>ᠲ</span><span class="key-label">T</span></div>
-                        <div class="key" onclick="inputChar('ᠳ')"><span>ᠳ</span><span class="key-label">D</span></div>
-                        <div class="key" onclick="inputChar('ᠴ')"><span>ᠴ</span><span class="key-label">Č</span></div>
-                        <div class="key" onclick="inputChar('ᠵ')"><span>ᠵ</span><span class="key-label">J</span></div>
-                        <div class="key" onclick="inputChar('ᠶ')"><span>ᠶ</span><span class="key-label">Y</span></div>
+                        <div class="key" onclick="inputChar('ᠰ')"><span class="key-char">ᠰ</span><span class="key-label">S</span></div>
+                        <div class="key" onclick="inputChar('ᠱ')"><span class="key-char">ᠱ</span><span class="key-label">Š</span></div>
+                        <div class="key" onclick="inputChar('ᠲ')"><span class="key-char">ᠲ</span><span class="key-label">T</span></div>
+                        <div class="key" onclick="inputChar('ᠳ')"><span class="key-char">ᠳ</span><span class="key-label">D</span></div>
+                        <div class="key" onclick="inputChar('ᠴ')"><span class="key-char">ᠴ</span><span class="key-label">Č</span></div>
+                        <div class="key" onclick="inputChar('ᠵ')"><span class="key-char">ᠵ</span><span class="key-label">J</span></div>
+                        <div class="key" onclick="inputChar('ᠶ')"><span class="key-char">ᠶ</span><span class="key-label">Y</span></div>
                     </div>
                 </div>
                 
@@ -534,13 +763,13 @@
                 <div class="keyboard-section" id="keyboard-consonants3" style="display: none;">
                     <div class="section-label">辅音 Consonants 3</div>
                     <div class="keyboard-row">
-                        <div class="key" onclick="inputChar('ᠷ')"><span>ᠷ</span><span class="key-label">R</span></div>
-                        <div class="key" onclick="inputChar('ᠸ')"><span>ᠸ</span><span class="key-label">W</span></div>
-                        <div class="key" onclick="inputChar('ᠹ')"><span>ᠹ</span><span class="key-label">F</span></div>
-                        <div class="key" onclick="inputChar('ᠺ')"><span>ᠺ</span><span class="key-label">K</span></div>
-                        <div class="key" onclick="inputChar('ᠻ')"><span>ᠻ</span><span class="key-label">KHA</span></div>
-                        <div class="key" onclick="inputChar('ᠼ')"><span>ᠼ</span><span class="key-label">TSA</span></div>
-                        <div class="key" onclick="inputChar('ᠽ')"><span>ᠽ</span><span class="key-label">ZA</span></div>
+                        <div class="key" onclick="inputChar('ᠷ')"><span class="key-char">ᠷ</span><span class="key-label">R</span></div>
+                        <div class="key" onclick="inputChar('ᠸ')"><span class="key-char">ᠸ</span><span class="key-label">W</span></div>
+                        <div class="key" onclick="inputChar('ᠹ')"><span class="key-char">ᠹ</span><span class="key-label">F</span></div>
+                        <div class="key" onclick="inputChar('ᠺ')"><span class="key-char">ᠺ</span><span class="key-label">K</span></div>
+                        <div class="key" onclick="inputChar('ᠻ')"><span class="key-char">ᠻ</span><span class="key-label">KHA</span></div>
+                        <div class="key" onclick="inputChar('ᠼ')"><span class="key-char">ᠼ</span><span class="key-label">TSA</span></div>
+                        <div class="key" onclick="inputChar('ᠽ')"><span class="key-char">ᠽ</span><span class="key-label">ZA</span></div>
                     </div>
                 </div>
                 
@@ -722,10 +951,15 @@
             
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${role}`;
+            
+            // 检测是否包含蒙古文
+            const hasMongolian = /[\u1800-\u18AF]/.test(text);
+            const contentClass = hasMongolian ? 'mongolian-vertical' : 'message-content';
+            
             messageDiv.innerHTML = `
                 <div class="avatar">${role === 'user' ? '👤' : '🤖'}</div>
                 <div>
-                    <div class="message-content">
+                    <div class="${contentClass}">
                         <div>${text}</div>
                         <div class="message-time">${getCurrentTime()}</div>
                     </div>

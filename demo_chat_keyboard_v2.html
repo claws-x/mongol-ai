@@ -280,6 +280,11 @@
             transition: all 0.15s;
             display: flex;
             flex-direction: column;
+            /* ✅ RULE-001: 蒙古文必须竖排 */
+            writing-mode: vertical-lr !important;
+            text-orientation: upright !important;
+            -webkit-writing-mode: vertical-lr !important;
+            -webkit-text-orientation: upright !important;
             align-items: center;
             justify-content: center;
             box-shadow: 0 1px 3px rgba(0,0,0,0.08);
@@ -315,6 +320,11 @@
         .key-wrapper {
             display: flex;
             flex-direction: column;
+            /* ✅ RULE-001: 蒙古文必须竖排 */
+            writing-mode: vertical-lr !important;
+            text-orientation: upright !important;
+            -webkit-writing-mode: vertical-lr !important;
+            -webkit-text-orientation: upright !important;
             align-items: center;
             justify-content: center;
             z-index: 1;

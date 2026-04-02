@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>传统蒙古文 AI 助手 - 竖排显示</title>
+    <!-- RULE-001: 引入蒙古文竖排 CSS -->
+    <link rel="stylesheet" href="mongolian-vertical.css">
     <style>
         * {
             margin: 0;
@@ -58,6 +60,10 @@
         
         .chat-row {
             display: flex;
+            writing-mode: vertical-lr !important;
+            text-orientation: upright !important;
+            -webkit-writing-mode: vertical-lr !important;
+            -webkit-text-orientation: upright !important;
             gap: 30px;
             margin-bottom: 30px;
             padding-bottom: 30px;

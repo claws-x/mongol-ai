@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>蒙古文完整键盘布局 - 45 字符</title>
+    <!-- RULE-001: 引入蒙古文竖排 CSS -->
+    <link rel="stylesheet" href="mongolian-vertical.css">
     <style>
         * {
             margin: 0;
@@ -61,6 +63,23 @@
             border-radius: 12px;
             display: flex;
             flex-direction: column;
+            /* ✅ RULE-001: 蒙古文必须竖排 */
+            writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-writing-mode: vertical-lr !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
+            -webkit-text-orientation: upright !important;
+            transform: rotate(90deg) !important;
+            -webkit-transform: rotate(90deg) !important;
+            -ms-transform: rotate(90deg) !important;
             align-items: center;
             justify-content: center;
             transition: all 0.2s;
