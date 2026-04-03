@@ -15,7 +15,7 @@ body { font-family: sans-serif; background: linear-gradient(135deg, #667eea, #76
 .chat-column { flex: 1; display: flex; flex-direction: column; overflow-y: auto; gap: 12px; padding: 10px; }
 .chat-column.ai { align-items: flex-start; }
 .chat-column.user { align-items: flex-end; }
-.column-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 10px; }
+.column-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 10px; flex-shrink: 0; }
 .column-avatar { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.15); margin-bottom: 8px; }
 .column-label { font-size: 12px; color: #666; }
 .message { margin: 0; max-width: 100%; }
