@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>蒙古文 AI 助手 v5.0 - 智能对话</title>
+    <title>蒙古文 AI 助手 - 智能对话</title>
+    <link rel="stylesheet" href="../mongolian-vertical.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -31,10 +32,10 @@
             text-align: center;
         }
         
-        .header h1 { font-size: 28px; margin-bottom: 5px; }
-        .header p { font-size: 14px; opacity: 0.9; }
+        .header h1 { font-size: 24px; margin-bottom: 8px; }
+        .header p { font-size: 13px; opacity: 0.9; }
         
-        .status-indicator {
+        .status {
             display: inline-flex;
             align-items: center;
             gap: 6px;
@@ -56,7 +57,7 @@
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         
         .chat-area {
-            height: 500px;
+            height: 450px;
             overflow-y: auto;
             padding: 20px;
             background: #f8f9fa;
@@ -65,7 +66,7 @@
         .message {
             display: flex;
             gap: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             animation: slideIn 0.3s ease;
         }
         
@@ -77,13 +78,13 @@
         .message.user { flex-direction: row-reverse; }
         
         .avatar {
-            width: 44px;
-            height: 44px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 22px;
+            font-size: 20px;
             flex-shrink: 0;
             background: white;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -91,10 +92,10 @@
         
         .message-content {
             max-width: 70%;
-            padding: 15px 18px;
-            border-radius: 18px;
-            font-size: 18px;
-            line-height: 1.6;
+            padding: 12px 16px;
+            border-radius: 16px;
+            font-size: 16px;
+            line-height: 1.5;
         }
         
         .message.user .message-content {
@@ -110,27 +111,17 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
-        /* ✅ 蒙古文竖排 - 只应用于 .mn 类 */
-        .mn {
-            writing-mode: vertical-lr;
-            text-orientation: upright;
-            font-family: 'Noto Sans Mongolian', 'Microsoft Baiti', sans-serif;
-            display: inline-block;
-            max-height: 300px;
-            overflow-y: auto;
-        }
-        
         .message-time {
             font-size: 11px;
             color: #999;
-            margin-top: 5px;
+            margin-top: 4px;
             text-align: right;
         }
         
         .message.user .message-time { color: rgba(255,255,255,0.7); }
         
         .input-area {
-            padding: 20px;
+            padding: 16px;
             background: white;
             border-top: 1px solid #e0e0e0;
         }
@@ -138,22 +129,20 @@
         .input-stats {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 10px;
-            font-size: 12px;
+            margin-bottom: 8px;
+            font-size: 11px;
             color: #666;
         }
         
         .mongolian-textarea {
             width: 100%;
-            min-height: 100px;
+            min-height: 80px;
             border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 15px;
-            font-size: 22px;
-            font-family: 'Noto Sans Mongolian', 'Microsoft Baiti', sans-serif;
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 18px;
             resize: vertical;
             transition: border-color 0.2s;
-            line-height: 1.8;
         }
         
         .mongolian-textarea:focus {
@@ -163,8 +152,8 @@
         
         .input-tools {
             display: flex;
-            gap: 10px;
-            margin-top: 15px;
+            gap: 8px;
+            margin-top: 12px;
         }
         
         .tool-btn {
@@ -173,7 +162,7 @@
             border: none;
             border-radius: 8px;
             background: #f0f0f0;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
@@ -187,32 +176,31 @@
         }
         
         .suggestions {
-            margin-top: 15px;
-            padding: 12px;
+            margin-top: 12px;
+            padding: 10px;
             background: linear-gradient(135deg, rgba(102,126,234,0.05) 0%, rgba(118,75,162,0.05) 100%);
-            border-radius: 10px;
+            border-radius: 8px;
         }
         
         .suggestions-label {
-            font-size: 12px;
+            font-size: 11px;
             color: #666;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: 600;
         }
         
         .suggestion-phrases {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
         }
         
         .suggestion-phrase {
-            padding: 6px 12px;
+            padding: 6px 10px;
             background: white;
             border: 1px solid #e0e0e0;
-            border-radius: 16px;
-            font-size: 16px;
-            font-family: 'Noto Sans Mongolian', 'Microsoft Baiti', sans-serif;
+            border-radius: 14px;
+            font-size: 14px;
             cursor: pointer;
             transition: all 0.2s;
         }
@@ -220,29 +208,29 @@
         .suggestion-phrase:hover { background: #f0f0f0; border-color: #667eea; }
         
         .keyboard {
-            margin-top: 20px;
+            margin-top: 16px;
             background: #f8f9fa;
-            border-radius: 12px;
-            padding: 15px;
+            border-radius: 10px;
+            padding: 12px;
         }
         
         .keyboard-tabs {
             display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
+            gap: 8px;
+            margin-bottom: 12px;
             flex-wrap: wrap;
         }
         
         .keyboard-tab {
-            padding: 8px 16px;
+            padding: 6px 12px;
             border: none;
-            border-radius: 20px;
+            border-radius: 16px;
             background: white;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
         }
         
         .keyboard-tab.active {
@@ -250,30 +238,30 @@
             color: white;
         }
         
-        .keyboard-section { margin-bottom: 15px; }
+        .keyboard-section { margin-bottom: 12px; }
         
         .section-label {
-            font-size: 12px;
+            font-size: 11px;
             color: #666;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 600;
             text-transform: uppercase;
         }
         
         .keyboard-row {
             display: flex;
-            gap: 6px;
-            margin-bottom: 6px;
+            gap: 4px;
+            margin-bottom: 4px;
             flex-wrap: wrap;
         }
         
         .key {
             flex: 1;
-            min-width: 40px;
-            max-width: 50px;
-            height: 44px;
+            min-width: 36px;
+            max-width: 44px;
+            height: 40px;
             border: 1px solid #ddd;
-            border-radius: 6px;
+            border-radius: 5px;
             background: white;
             cursor: pointer;
             transition: all 0.15s;
@@ -281,8 +269,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            font-family: 'Noto Sans Mongolian', 'Microsoft Baiti', sans-serif;
+            font-size: 18px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
         
@@ -294,11 +281,11 @@
             transform: translateY(0);
         }
         
-        .key-label { font-size: 9px; color: #999; margin-top: 2px; }
+        .key-label { font-size: 8px; color: #999; margin-top: 1px; }
         .key:active .key-label { color: rgba(255,255,255,0.8); }
         
-        .key-wide { max-width: 80px; }
-        .key-space { max-width: 150px; }
+        .key-wide { max-width: 70px; }
+        .key-space { max-width: 120px; }
         
         .key-function {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -310,20 +297,20 @@
         .typing-indicator {
             display: none;
             gap: 4px;
-            padding: 15px 18px;
+            padding: 12px 16px;
             background: white;
-            border-radius: 18px;
+            border-radius: 16px;
             width: fit-content;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            margin-left: 56px;
+            margin-bottom: 16px;
+            margin-left: 52px;
         }
         
         .typing-indicator.active { display: flex; }
         
         .typing-dot {
-            width: 8px;
-            height: 8px;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
             background: #999;
             animation: typingBounce 1.4s infinite;
@@ -334,24 +321,24 @@
         
         @keyframes typingBounce {
             0%, 60%, 100% { transform: translateY(0); }
-            30% { transform: translateY(-8px); }
+            30% { transform: translateY(-6px); }
         }
         
         @media (max-width: 600px) {
             .container { border-radius: 12px; }
-            .chat-area { height: 400px; }
-            .message-content { max-width: 80%; font-size: 16px; }
-            .key { min-width: 35px; max-width: 45px; height: 40px; font-size: 18px; }
-            .key-space { max-width: 120px; }
+            .chat-area { height: 380px; }
+            .message-content { max-width: 80%; font-size: 14px; }
+            .key { min-width: 32px; max-width: 40px; height: 36px; font-size: 16px; }
+            .key-space { max-width: 100px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🤖 蒙古文 AI 助手 v5.0</h1>
+            <h1>🤖 蒙古文 AI 助手</h1>
             <p>Mongolian AI Assistant - Intelligent Chat</p>
-            <div class="status-indicator">
+            <div class="status">
                 <div class="status-dot"></div>
                 <span>AI 在线</span>
             </div>
@@ -362,7 +349,7 @@
                 <div class="avatar">🤖</div>
                 <div>
                     <div class="message-content">
-                        <div class="mn">ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ？ᠪᠢ ᠮᠣᠩᠭᠣᠯ AI ᠲᠡᠭᠦᠰᠯᠡᠭᠴᠢ ᠪᠠᠶᠢᠨ᠎ᠠ᠃ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠭ᠎ᠠ ᠤᠤ？</div>
+                        <div class="mn">ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ？ᠪᠢ ᠮᠣᠩᠭᠣᠯ AI ᠲᠡᠭᠦᠰᠯᠡᠭᠴᠢ ᠪᠠᠶᠢᠨ᠎ᠠ᠃</div>
                         <div class="message-time">刚刚</div>
                     </div>
                 </div>
@@ -398,233 +385,16 @@
             <div class="keyboard">
                 <div class="keyboard-tabs">
                     <button class="keyboard-tab active" onclick="showKeyboard('vowels')">元音</button>
-                    <button class="keyboard-tab" onclick="showKeyboard('consonants1')">辅音 1</button>
-                    <button class="keyboard-tab" onclick="showKeyboard('consonants2')">辅音 2</button>
-                    <button class="keyboard-tab" onclick="showKeyboard('consonants3')">辅音 3</button>
-                    <button class="keyboard-tab" onclick="showKeyboard('functions')">功能</button>
+                    <button class="keyboard-tab" onclick="showKeyboard('cons1')">辅音 1</button>
+                    <button class="keyboard-tab" onclick="showKeyboard('cons2')">辅音 2</button>
+                    <button class="keyboard-tab" onclick="showKeyboard('cons3')">辅音 3</button>
+                    <button class="keyboard-tab" onclick="showKeyboard('func')">功能</button>
                 </div>
                 
-                <div class="keyboard-section" id="keyboard-vowels">
+                <div class="keyboard-section" id="kb-vowels">
                     <div class="section-label">元音 Vowels</div>
                     <div class="keyboard-row">
-                        <div class="key" onclick="inputChar('ᠠ')"><span>ᠠ</span><span class="key-label">A</span></div>
-                        <div class="key" onclick="inputChar('ᠡ')"><span>ᠡ</span><span class="key-label">E</span></div>
-                        <div class="key" onclick="inputChar('ᠢ')"><span>ᠢ</span><span class="key-label">I</span></div>
-                        <div class="key" onclick="inputChar('ᠣ')"><span>ᠣ</span><span class="key-label">O</span></div>
-                        <div class="key" onclick="inputChar('ᠤ')"><span>ᠤ</span><span class="key-label">U</span></div>
-                        <div class="key" onclick="inputChar('ᠥ')"><span>ᠥ</span><span class="key-label">Ö</span></div>
-                        <div class="key" onclick="inputChar('ᠦ')"><span>ᠦ</span><span class="key-label">Ü</span></div>
-                    </div>
-                </div>
-                
-                <div class="keyboard-section" id="keyboard-consonants1" style="display:none">
-                    <div class="section-label">辅音 Consonants 1</div>
-                    <div class="keyboard-row">
-                        <div class="key" onclick="inputChar('ᠨ')"><span>ᠨ</span><span class="key-label">N</span></div>
-                        <div class="key" onclick="inputChar('ᠪ')"><span>ᠪ</span><span class="key-label">B</span></div>
-                        <div class="key" onclick="inputChar('ᠫ')"><span>ᠫ</span><span class="key-label">P</span></div>
-                        <div class="key" onclick="inputChar('ᠬ')"><span>ᠬ</span><span class="key-label">Q</span></div>
-                        <div class="key" onclick="inputChar('ᠭ')"><span>ᠭ</span><span class="key-label">G</span></div>
-                        <div class="key" onclick="inputChar('ᠮ')"><span>ᠮ</span><span class="key-label">M</span></div>
-                        <div class="key" onclick="inputChar('ᠯ')"><span>ᠯ</span><span class="key-label">L</span></div>
-                    </div>
-                </div>
-                
-                <div class="keyboard-section" id="keyboard-consonants2" style="display:none">
-                    <div class="section-label">辅音 Consonants 2</div>
-                    <div class="keyboard-row">
-                        <div class="key" onclick="inputChar('ᠰ')"><span>ᠰ</span><span class="key-label">S</span></div>
-                        <div class="key" onclick="inputChar('ᠱ')"><span>ᠱ</span><span class="key-label">Š</span></div>
-                        <div class="key" onclick="inputChar('ᠲ')"><span>ᠲ</span><span class="key-label">T</span></div>
-                        <div class="key" onclick="inputChar('ᠳ')"><span>ᠳ</span><span class="key-label">D</span></div>
-                        <div class="key" onclick="inputChar('ᠴ')"><span>ᠴ</span><span class="key-label">Č</span></div>
-                        <div class="key" onclick="inputChar('ᠵ')"><span>ᠵ</span><span class="key-label">J</span></div>
-                        <div class="key" onclick="inputChar('ᠶ')"><span>ᠶ</span><span class="key-label">Y</span></div>
-                    </div>
-                </div>
-                
-                <div class="keyboard-section" id="keyboard-consonants3" style="display:none">
-                    <div class="section-label">辅音 Consonants 3</div>
-                    <div class="keyboard-row">
-                        <div class="key" onclick="inputChar('ᠷ')"><span>ᠷ</span><span class="key-label">R</span></div>
-                        <div class="key" onclick="inputChar('ᠸ')"><span>ᠸ</span><span class="key-label">W</span></div>
-                        <div class="key" onclick="inputChar('ᠹ')"><span>ᠹ</span><span class="key-label">F</span></div>
-                        <div class="key" onclick="inputChar('ᠺ')"><span>ᠺ</span><span class="key-label">K</span></div>
-                        <div class="key" onclick="inputChar('ᠻ')"><span>ᠻ</span><span class="key-label">KHA</span></div>
-                        <div class="key" onclick="inputChar('ᠼ')"><span>ᠼ</span><span class="key-label">TSA</span></div>
-                        <div class="key" onclick="inputChar('ᠽ')"><span>ᠽ</span><span class="key-label">ZA</span></div>
-                    </div>
-                </div>
-                
-                <div class="keyboard-section" id="keyboard-functions" style="display:none">
-                    <div class="section-label">功能 Function</div>
-                    <div class="keyboard-row">
-                        <div class="key" onclick="inputChar('ᠾ')"><span>ᠾ</span><span class="key-label">HAA</span></div>
-                        <div class="key" onclick="inputChar('ᠿ')"><span>ᠿ</span><span class="key-label">ZRA</span></div>
-                        <div class="key" onclick="inputChar('ᡀ')"><span>ᡀ</span><span class="key-label">LH</span></div>
-                        <div class="key" onclick="inputChar('ᡁ')"><span>ᡁ</span><span class="key-label">ZHI</span></div>
-                        <div class="key" onclick="inputChar('᠂')"><span>᠂</span><span class="key-label">,</span></div>
-                        <div class="key" onclick="inputChar('᠃')"><span>᠃</span><span class="key-label">.</span></div>
-                        <div class="key key-wide key-function" onclick="deleteChar()">⌫</div>
-                    </div>
-                    <div class="keyboard-row">
-                        <div class="key key-space" onclick="inputChar(' ')">␣</div>
-                        <div class="key key-function" onclick="sendMessage()">↵</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        const commonPhrases = [
-            {mn: 'ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ ᠤᠤ', zh: '你好'},
-            {mn: 'ᠮᠡᠨᠳᠡ', zh: '你好'},
-            {mn: 'ᠪᠠᠶᠠᠷᠲᠠᠢ', zh: '谢谢'},
-            {mn: 'ᠪᠠᠶᠠᠷ ᠬᠦᠷᠦᠭᠡ', zh: '再见'},
-            {mn: 'ᠲᠠ ᠶᠠᠮᠠᠷ ᠪᠠᠶᠢᠨᠠ', zh: '你怎么样'},
-            {mn: 'ᠪᠢ ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ', zh: '我很好'},
-            {mn: 'ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ', zh: '蒙古语'},
-            {mn: 'ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ', zh: '蒙古文'}
-        ];
-        
-        const aiResponses = {
-            'ᠰᠠᠶᠢᠨ': ['ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ！ᠲᠠ ᠶᠠᠮᠠᠷ ᠪᠠᠶᠢᠨᠠ？', 'ᠮᠡᠳᠡᠭᠡ ᠪᠠᠶᠢᠨ᠎ᠠ！ᠪᠢ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠨᠠ᠃'],
-            'ᠪᠠᠶᠠᠷᠲᠠᠢ': ['ᠪᠠᠶᠠᠷᠲᠠᠢ！ᠮᠢᠨᠦ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠤᠭᠰᠠᠨᠳᠠ ᠪᠠᠶᠠᠷᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠨ᠎ᠠ᠃'],
-            'ᠮᠡᠨᠳᠡ': ['ᠮᠡᠨᠳᠡ！ᠲᠠ ᠶᠠᠮᠠᠷ ᠪᠠᠶᠢᠨᠠ？'],
-            'default': ['ᠮᠡᠳᠡᠭᠡ ᠪᠠᠶᠢᠨ᠎ᠠ！ᠪᠢ ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠨᠠ᠃', 'ᠰᠠᠶᠢᠨ ᠠᠰᠤᠭᠤᠯᠲᠠ！']
-        };
-        
-        let chatHistory = [];
-        
-        function showSuggestions() {
-            const shuffled = commonPhrases.sort(() => 0.5 - Math.random());
-            const selected = shuffled.slice(0, 4);
-            document.getElementById('suggestions').innerHTML = selected.map(p => 
-                `<div class="suggestion-phrase" onclick="insertPhrase('${p.mn}')" title="${p.zh}">${p.mn}</div>`
-            ).join('');
-        }
-        
-        function showKeyboard(type) {
-            document.querySelectorAll('.keyboard-section').forEach(k => k.style.display = 'none');
-            document.querySelectorAll('.keyboard-tab').forEach(t => t.classList.remove('active'));
-            document.getElementById(`keyboard-${type}`).style.display = 'block';
-            event.target.classList.add('active');
-        }
-        
-        function inputChar(char) {
-            const input = document.getElementById('mongolian-input');
-            input.value += char;
-            input.focus();
-            updateStats();
-        }
-        
-        function insertPhrase(phrase) {
-            const input = document.getElementById('mongolian-input');
-            if (input.value.length > 0) input.value += ' ';
-            input.value += phrase;
-            input.focus();
-            updateStats();
-        }
-        
-        function deleteChar() {
-            const input = document.getElementById('mongolian-input');
-            input.value = input.value.slice(0, -1);
-            input.focus();
-            updateStats();
-        }
-        
-        function clearInput() {
-            document.getElementById('mongolian-input').value = '';
-            updateStats();
-        }
-        
-        function copyText() {
-            const input = document.getElementById('mongolian-input');
-            input.select();
-            document.execCommand('copy');
-            alert('✅ 已复制');
-        }
-        
-        async function pasteText() {
-            try {
-                const text = await navigator.clipboard.readText();
-                const input = document.getElementById('mongolian-input');
-                input.value += text;
-                input.focus();
-                updateStats();
-            } catch (err) { alert('❌ 无法访问剪贴板'); }
-        }
-        
-        function updateStats() {
-            const input = document.getElementById('mongolian-input');
-            const text = input.value;
-            document.getElementById('char-count').textContent = `${text.length} 字符`;
-            document.getElementById('word-count').textContent = `${text.split(/\s+/).filter(w => w.length > 0).length} 词`;
-        }
-        
-        function getAIResponse(userInput) {
-            for (const [keyword, responses] of Object.entries(aiResponses)) {
-                if (userInput.includes(keyword) && keyword !== 'default') {
-                    return responses[Math.floor(Math.random() * responses.length)];
-                }
-            }
-            return aiResponses['default'][Math.floor(Math.random() * aiResponses['default'].length)];
-        }
-        
-        function getCurrentTime() {
-            const now = new Date();
-            return `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
-        }
-        
-        function addMessage(role, text) {
-            const chatArea = document.getElementById('chat-area');
-            const typingIndicator = document.getElementById('typing-indicator');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${role}`;
-            messageDiv.innerHTML = `
-                <div class="avatar">${role === 'user' ? '👤' : '🤖'}</div>
-                <div>
-                    <div class="message-content">
-                        <div class="mn">${text}</div>
-                        <div class="message-time">${getCurrentTime()}</div>
-                    </div>
-                </div>
-            `;
-            chatArea.insertBefore(messageDiv, typingIndicator);
-            chatArea.scrollTop = chatArea.scrollHeight;
-            chatHistory.push({ role, text, time: getCurrentTime() });
-        }
-        
-        function sendMessage() {
-            const input = document.getElementById('mongolian-input');
-            const text = input.value.trim();
-            if (!text) return;
-            
-            addMessage('user', text);
-            input.value = '';
-            updateStats();
-            
-            const typingIndicator = document.getElementById('typing-indicator');
-            typingIndicator.classList.add('active');
-            document.getElementById('chat-area').scrollTop = document.getElementById('chat-area').scrollHeight;
-            
-            setTimeout(() => {
-                typingIndicator.classList.remove('active');
-                addMessage('ai', getAIResponse(text));
-            }, 1000 + Math.random() * 1000);
-        }
-        
-        document.getElementById('mongolian-input').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                sendMessage();
-            }
-        });
-        
-        showSuggestions();
-        setInterval(showSuggestions, 30000);
-        showKeyboard('vowels');
-    </script>
-</body>
-</html>
+                        <div class="key mn-key" onclick="inputChar('ᠠ')"><span>ᠠ</span><span class="key-label">A</span></div>
+                        <div class="key mn-key" onclick="inputChar('ᠡ')"><span>ᠡ</span><span class="key-label">E</span></div>
+                        <div class="key mn-key" onclick="inputChar('ᠢ')"><span>ᠢ</span><span class="key-label">I</span></div>
+                        <div class="key mn-key" onclick="inputChar('ᠣ')"><span>ᠣ</span><span class="key-label">O</span></div>
