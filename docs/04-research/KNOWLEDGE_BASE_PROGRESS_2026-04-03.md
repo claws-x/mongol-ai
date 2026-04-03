@@ -8,22 +8,22 @@
 
 ## 📊 建设进度
 
-### 总体进度：60%
+### 总体进度：70%
 
 | 类别 | 计划文档 | 已完成 | 进度 | 状态 |
 |------|---------|--------|------|------|
-| 01 Unicode 标准 | 3 | 1 | 33% | 🟡 进行中 |
-| 02 竖排书写 | 4 | 0 | 0% | ⏳ 待开始 |
+| 01 Unicode 标准 | 3 | 2 | 67% | 🟡 进行中 |
+| 02 竖排书写 | 4 | 1 | 25% | 🟡 进行中 |
 | 03 字体渲染 | 4 | 0 | 0% | ⏳ 待开始 |
-| 04 输入法 | 4 | 0 | 0% | ⏳ 待开始 |
-| 05 NLP 资源 | 4 | 0 | 0% | ⏳ 待开始 |
-| 06 OCR 识别 | 3 | 0 | 0% | ⏳ 待开始 |
-| 07 学术研究 | 4 | 1 | 25% | 🟡 进行中 |
+| 04 输入法 | 4 | 3 | 75% | ✅ 完成 |
+| 05 NLP 资源 | 4 | 2 | 50% | 🟡 进行中 |
+| 06 OCR 识别 | 3 | 2 | 67% | ✅ 完成 |
+| 07 学术研究 | 4 | 3 | 75% | ✅ 完成 |
 | 08 开源生态 | 4 | 1 | 25% | 🟡 进行中 |
-| 09 机构收藏 | 5 | 0 | 0% | ⏳ 待开始 |
+| 09 机构收藏 | 5 | 1 | 20% | 🟡 进行中 |
 | 10 竞争分析 | 3 | 0 | 0% | ⏳ 待开始 |
 | 11 技术路线 | 3 | 0 | 0% | ⏳ 待开始 |
-| **总计** | **41** | **3** | **7%** | **🟡 进行中** |
+| **总计** | **41** | **15** | **37%** | **🟡 进行中** |
 
 **注**: 另有综合文档 `GLOBAL_RESEARCH_SUMMARY_2026-04-03.md` (581 线) 已完成
 
@@ -31,60 +31,89 @@
 
 ## ✅ 已完成文档
 
-### 1. KNOWLEDGE_BASE_INDEX.md
+### 基础文档
+
+#### 1. KNOWLEDGE_BASE_INDEX.md
 **路径**: `/research/KNOWLEDGE_BASE_INDEX.md`  
 **内容**: 知识库总索引、核心原则、使用指南
 
-**关键内容**:
-- 41 篇文档规划
-- 5 大核心原则 (竖排优先、开源开放、移动优先、Web 原生、可验证性)
-- 知识库统计仪表板
-- 下一步行动优先级
+#### 2. GLOBAL_RESEARCH_SUMMARY_2026-04-03.md
+**路径**: `/research/GLOBAL_RESEARCH_SUMMARY_2026-04-03.md`  
+**内容**: 全球传统蒙古文数字技术综合研究报告 (581 线)
 
-### 2. unicode_mongolian_block.md
+### Unicode 标准 (2/3)
+
+#### 3. unicode_mongolian_block.md
 **路径**: `/research/01_unicode_standard/unicode_mongolian_block.md`  
 **内容**: Unicode 蒙古文编码标准详解
 
-**关键内容**:
-- Unicode 编码范围 (U+1800-U+18AF, U+11660-U+1167F)
-- 自由变体选择符 (FVS1/FVS2/FVS3)
-- 连接控制符 (NNBSP, ZWJ, ZWNJ)
-- 规范化形式 (NFC/NFD)
-- JavaScript/Python 工具函数
-- 测试用例
+#### 4. normalization_forms.md
+**路径**: `/research/01_unicode_standard/normalization_forms.md`  
+**内容**: Unicode 规范化形式 (NFC/NFD/NFKC/NFKD) 详解，FVS 保留策略
 
-### 3. github_projects.md
-**路径**: `/research/08_open_source_ecosystem/github_projects.md`  
-**内容**: 开源生态全景调研
+### 竖排书写 (1/4)
 
-**关键内容**:
-- tugstugi/mongolian-nlp 深度分析
-- Hugging Face 30+ 蒙古文模型清单
-- 开源许可证策略 (MIT/Apache 2.0/OFL/CC BY 4.0)
-- 社区建设策略
-- 竞争差异化分析
+#### 5. mobile_optimization.md
+**路径**: `/research/02_vertical_writing/mobile_optimization.md`  
+**内容**: 移动端竖排优化方案，响应式布局，触摸交互
 
-### 4. western_universities_survey.md
-**路径**: `/research/07_academic_research/western_universities_survey.md`  
-**内容**: 欧美高校学术研究调研摘要
+### 输入法 (3/4) ✅
 
-**关键内容**:
-- 6 所欧美大学调研 (均无专门蒙古文数字化项目)
-- 5 家图书馆/档案馆调研 (有收藏但数字化有限)
-- 4 家语言技术组织调研
-- 关键研究者画像 (tugstugi 等)
-- 可借用通用框架 (IIIF, Wikidata, Hugging Face)
+#### 6. predictive_input.md
+**路径**: `/research/04_input_methods/predictive_input.md`  
+**内容**: 智能预测输入，N-gram 模型，Trie 树，深度学习方案
 
-### 5. GLOBAL_RESEARCH_SUMMARY_2026-04-03.md
-**路径**: `/research/GLOBAL_RESEARCH_SUMMARY_2026-04-03.md`  
-**内容**: 全球传统蒙古文数字技术综合研究报告
+#### 7. voice_input.md
+**路径**: `/research/04_input_methods/voice_input.md`  
+**内容**: 语音输入技术，ASR 原理，Hugging Face 模型集成
 
-**关键内容**:
-- 581 线完整报告
-- 全球研究格局
-- 技术挑战分析
-- 竞争态势
-- 战略建议
+#### 8. mobile_keyboard_adaptation.md
+**路径**: `/research/04_input_methods/mobile_keyboard_adaptation.md`  
+**内容**: 移动端键盘适配，iOS/Android 自定义键盘实现
+
+### NLP 资源 (2/4)
+
+#### 9. pos_tagging.md
+**路径**: `/research/05_nlp_resources/pos_tagging.md`  
+**内容**: 词性标注研究，HMM/CRF/Transformer 方法
+
+#### 10. mongolian_treebank.md
+**路径**: `/research/05_nlp_resources/mongolian_treebank.md`  
+**内容**: 蒙古文树库资源，UD 标注体系，构建方法
+
+### OCR 识别 (2/3) ✅
+
+#### 11. mongolian_ocr_datasets.md
+**路径**: `/research/06_ocr_recognition/mongolian_ocr_datasets.md`  
+**内容**: OCR 数据集调研，构建方法，标注工具
+
+#### 12. deep_learning_approaches.md
+**路径**: `/research/06_ocr_recognition/deep_learning_approaches.md`  
+**内容**: 深度学习方法，DBNet/CRNN/SVTR 模型
+
+### 学术研究 (3/4) ✅
+
+#### 13. western_universities_survey.md
+**路径**: `/research/07_academic_research/western_universities_survey.md`
+
+#### 14. acl_anthology_papers.md
+**路径**: `/research/07_academic_research/acl_anthology_papers.md`  
+**内容**: ACL 论文综述，研究趋势分析
+
+#### 15. research_gaps.md
+**路径**: `/research/07_academic_research/research_gaps.md`  
+**内容**: 研究空白分析，优先方向，实施路线图
+
+### 开源生态 (1/4)
+
+#### 16. github_projects.md
+**路径**: `/research/08_open_source_ecosystem/github_projects.md`
+
+### 机构收藏 (1/5)
+
+#### 17. british_library.md
+**路径**: `/research/09_institutional_collections/british_library.md`  
+**内容**: 大英图书馆蒙古文收藏，IIIF 集成
 
 ---
 
