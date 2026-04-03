@@ -18,11 +18,11 @@ body { font-family: sans-serif; background: linear-gradient(135deg, #667eea, #76
 .column-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 0; padding: 8px 0; flex-shrink: 0; border-bottom: 1px solid #e0e0e0; width: 100%; }
 .column-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; background: white; box-shadow: 0 2px 6px rgba(0,0,0,0.12); margin-bottom: 4px; }
 .column-label { font-size: 11px; color: #666; font-weight: bold; }
-.message { margin: 8px 0; max-width: 100%; display: flex; }
-.message.ai { justify-content: flex-start; }
+.message { margin: 0; max-width: 100%; display: flex; }
+.message.ai { justify-content: flex-start; margin-top: 8px; }
 .message.user { flex-direction: row-reverse; justify-content: flex-end; }
-.message-content { padding: 12px; border-radius: 16px; font-size: 16px; max-width: 100%; }
-.message.user .message-content { background: transparent; color: #1e40af; padding-right: 12px; }
+.message-content { padding: 0; border-radius: 0; font-size: 16px; max-width: 100%; }
+.message.user .message-content { background: transparent; color: #1e40af; padding-right: 0; }
 .message.ai .message-content { background: transparent; color: #333; padding-left: 0; }
 
 /* ✅ 蒙古文竖排 - Transform 旋转 90 度 */
@@ -38,7 +38,7 @@ body { font-family: sans-serif; background: linear-gradient(135deg, #667eea, #76
     max-width: 300px !important;
 }
 .message.ai .mn {
-    margin-left: 0 !important;
+    margin: 0 !important;
 }
 .message.user .mn {
     margin-left: 10px !important;
