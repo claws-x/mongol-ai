@@ -1,74 +1,28 @@
 /*
- * Mongolian Vertical Text CSS - v3.0 (Clean Version)
+ * Mongolian Vertical Text CSS - v4.0 (Transform 方案)
  * 
- * 核心原则:
- * 1. 只用 .mn 类标记蒙古文
- * 2. 中文保持横排，不受影响
- * 3. 不用 !important 除非绝对必要
- * 4. 简单、清晰、可维护
- * 
- * 使用方法:
- * <span class="mn">ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ</span>  ← 蒙古文竖排
- * <span>中文文本</span>              ← 中文横排
+ * 核心原理：使用 transform 旋转 90 度
+ * 这是最可靠的方法，兼容所有浏览器
  */
 
-/* ============================================
-   蒙古文竖排类 - 唯一入口
-   ============================================ */
 .mn {
-    writing-mode: vertical-lr !important;
-    text-orientation: upright !important;
-    -webkit-writing-mode: vertical-lr !important;
-    -webkit-text-orientation: upright !important;
-    
-    font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
     display: inline-block;
+    transform: rotate(90deg);
+    transform-origin: center;
+    font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
     line-height: 1.6;
-    min-width: 30px;
+    white-space: nowrap;
 }
 
-/* ============================================
-   蒙古文输入框
-   ============================================ */
-.mn-input {
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    -webkit-writing-mode: vertical-lr;
-    -webkit-text-orientation: upright;
-    
-    font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
-    font-size: 20px;
-    line-height: 1.8;
-    direction: ltr;
-}
-
-/* ============================================
-   蒙古文键盘按键
-   ============================================ */
 .mn-key {
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    -webkit-writing-mode: vertical-lr;
-    -webkit-text-orientation: upright;
-    
-    font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
 }
 
-/* ============================================
-   响应式
-   ============================================ */
-@media (max-width: 768px) {
-    .mn { font-size: 18px; }
-    .mn-input { font-size: 18px; }
-    .mn-key { font-size: 16px; }
-}
-
-@media (max-width: 480px) {
-    .mn { font-size: 16px; }
-    .mn-input { font-size: 16px; }
-    .mn-key { font-size: 14px; }
+.mn-key > span:first-child {
+    transform: rotate(90deg);
+    display: block;
 }
