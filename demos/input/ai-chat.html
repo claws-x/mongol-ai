@@ -190,7 +190,7 @@ function send() {
     setTimeout(() => {
         const ai = document.createElement('div');
         ai.className = 'message ai';
-        ai.innerHTML = '<div class="avatar">🤖</div><div class="message-content">' + getResponse(text) + '</div>';
+        ai.innerHTML = '<div class="avatar">🤖</div><div class="message-content"><div class="mn">' + getResponse(text) + '</div></div>';
         chat.appendChild(ai);
         chat.scrollTop = chat.scrollHeight;
     }, 800);
