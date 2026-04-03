@@ -98,6 +98,17 @@
             line-height: 1.5;
         }
         
+        /* 蒙古文竖排 - 内联样式确保工作 */
+        .mn {
+            writing-mode: vertical-lr !important;
+            text-orientation: upright !important;
+            -webkit-writing-mode: vertical-lr !important;
+            -webkit-text-orientation: upright !important;
+            font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif !important;
+            display: inline-block !important;
+            line-height: 1.6 !important;
+        }
+        
         .message.user .message-content {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -293,6 +304,15 @@
         }
         
         .key-function .key-label { color: rgba(255,255,255,0.9); }
+        
+        /* 键盘按键蒙古文竖排 */
+        .mn-key {
+            writing-mode: vertical-lr !important;
+            text-orientation: upright !important;
+            -webkit-writing-mode: vertical-lr !important;
+            -webkit-text-orientation: upright !important;
+            font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif !important;
+        }
         
         .typing-indicator {
             display: none;
