@@ -16,7 +16,8 @@ Mongolian Language Tokenizer
 
 import re
 import json
-from typing import List, Dict, Tuple
+from pathlib import Path
+from typing import List, Dict, Tuple, Optional
 from collections import defaultdict
 
 
@@ -62,8 +63,9 @@ class MongolianTokenizer:
         
     def _load_dictionary(self) -> Dict:
         """加载蒙古文词典"""
+        dictionary_path = Path(__file__).resolve().parents[1] / 'data' / 'mongolian_dictionary.json'
         try:
-            with open('data/mongolian_dictionary.json', 'r', encoding='utf-8') as f:
+            with dictionary_path.open('r', encoding='utf-8') as f:
                 return json.load(f)
         except FileNotFoundError:
             # 返回基础词典

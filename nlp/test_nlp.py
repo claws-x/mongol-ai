@@ -5,12 +5,9 @@
 Mongolian NLP Toolkit Test
 """
 
-import sys
-sys.path.insert(0, '..')
-
-from mongolian_tokenizer import MongolianTokenizer
-from mongolian_pos_tagger import MongolianPOSTagger
-from mongolian_parser import MongolianParser
+from .mongolian_tokenizer import MongolianTokenizer
+from .mongolian_pos_tagger import MongolianPOSTagger
+from .mongolian_parser import MongolianParser
 
 
 def test_full_pipeline():

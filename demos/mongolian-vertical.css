@@ -1,28 +1,30 @@
 /*
- * Mongolian Vertical Text CSS - v4.0 (Transform 方案)
- * 
- * 核心原理：使用 transform 旋转 90 度
- * 这是最可靠的方法，兼容所有浏览器
+ * Phase 0 canonical vertical-text baseline.
+ * Traditional Mongolian runs top-to-bottom with columns progressing left-to-right.
+ * Rotation is intentionally not used because it breaks layout, selection and input.
  */
 
-.mn {
-    display: inline-block;
-    transform: rotate(90deg);
-    transform-origin: center;
-    font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
+:where(.mn, .mongolian-text, .mongolian-vertical, .mongolian-message, [lang="mn"]) {
+    font-family: "Noto Sans Mongolian", "Mongolian Baiti", sans-serif;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+:where(.mongolian-text, .mongolian-vertical, .mongolian-message) {
     line-height: 1.6;
-    white-space: nowrap;
+    overflow: auto;
 }
 
 .mn-key {
     display: flex;
-    flex-direction: column;
+    min-width: 44px;
+    min-height: 44px;
     align-items: center;
     justify-content: center;
-    font-family: 'Noto Sans Mongolian', 'Mongolian Baiti', sans-serif;
+    font-family: "Noto Sans Mongolian", "Mongolian Baiti", sans-serif;
 }
 
-.mn-key > span:first-child {
-    transform: rotate(90deg);
-    display: block;
+.mn-key > :first-child {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
 }

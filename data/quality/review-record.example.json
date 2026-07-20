@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "target_id": "stdvar-001",
+  "reviewer": {
+    "id": "reviewer-pseudonym",
+    "role": "encoding_reviewer",
+    "public_attribution_consent": false
+  },
+  "scope": {
+    "language_or_standard": "to_be_specified",
+    "region_or_register": "to_be_specified",
+    "font_name": "to_be_specified",
+    "font_version": "to_be_specified",
+    "browser_engine": "to_be_specified",
+    "operating_system": "to_be_specified"
+  },
+  "decision": "needs_resolution",
+  "notes": [],
+  "sources": [],
+  "evidence_paths": [],
+  "reviewed_at": "YYYY-MM-DDTHH:MM:SSZ"
+}

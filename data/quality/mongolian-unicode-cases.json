@@ -1,0 +1,3150 @@
+{
+  "schema_version": "1.0",
+  "unicode_version": "17.0.0",
+  "status": "encoding_baseline_only",
+  "generated_from": {
+    "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+    "sha256": "f55100b2fb11d3d75a37b8c1ab752192dbd1c4b12328c5ec6b38e3807c0ca597",
+    "retrieved_for_project": "2026-07-20"
+  },
+  "caveats": [
+    "Unicode 17 warns that Mongolian standardized variants are not yet fully synchronized with current practice in UTN #57.",
+    "Encoding verification does not prove font rendering or linguistic correctness.",
+    "Glyph rendering and linguistic usage remain pending expert review."
+  ],
+  "case_count": 112,
+  "cases": [
+    {
+      "id": "stdvar-001",
+      "category": "standardized_variation_sequence",
+      "text": "ᠠ᠋",
+      "codepoints": [
+        "U+1820",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER A",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "isolate",
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER A"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 226
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-002",
+      "category": "standardized_variation_sequence",
+      "text": "ᠠ᠌",
+      "codepoints": [
+        "U+1820",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER A",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER A"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 227
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-003",
+      "category": "standardized_variation_sequence",
+      "text": "ᠡ᠋",
+      "codepoints": [
+        "U+1821",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER E",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER E"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 228
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-004",
+      "category": "standardized_variation_sequence",
+      "text": "ᠢ᠋",
+      "codepoints": [
+        "U+1822",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER I",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER I"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 229
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-005",
+      "category": "standardized_variation_sequence",
+      "text": "ᠣ᠋",
+      "codepoints": [
+        "U+1823",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER O",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER O"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 230
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-006",
+      "category": "standardized_variation_sequence",
+      "text": "ᠤ᠋",
+      "codepoints": [
+        "U+1824",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER U",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER U"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 231
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-007",
+      "category": "standardized_variation_sequence",
+      "text": "ᠥ᠋",
+      "codepoints": [
+        "U+1825",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER OE",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER OE"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 232
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-008",
+      "category": "standardized_variation_sequence",
+      "text": "ᠥ᠌",
+      "codepoints": [
+        "U+1825",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER OE",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER OE"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 233
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-009",
+      "category": "standardized_variation_sequence",
+      "text": "ᠦ᠋",
+      "codepoints": [
+        "U+1826",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER UE",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "isolate",
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER UE"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 234
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-010",
+      "category": "standardized_variation_sequence",
+      "text": "ᠦ᠌",
+      "codepoints": [
+        "U+1826",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER UE",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER UE"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 235
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-011",
+      "category": "standardized_variation_sequence",
+      "text": "ᠨ᠋",
+      "codepoints": [
+        "U+1828",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER NA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER NA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 236
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-012",
+      "category": "standardized_variation_sequence",
+      "text": "ᠨ᠌",
+      "codepoints": [
+        "U+1828",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER NA",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER NA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 237
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-013",
+      "category": "standardized_variation_sequence",
+      "text": "ᠨ᠍",
+      "codepoints": [
+        "U+1828",
+        "U+180D"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER NA",
+        "MONGOLIAN FREE VARIATION SELECTOR THREE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "fourth form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER NA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 238
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-014",
+      "category": "standardized_variation_sequence",
+      "text": "ᠪ᠋",
+      "codepoints": [
+        "U+182A",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER BA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER BA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 239
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-015",
+      "category": "standardized_variation_sequence",
+      "text": "ᠬ᠋",
+      "codepoints": [
+        "U+182C",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER QA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "isolate",
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER QA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 240
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-016",
+      "category": "standardized_variation_sequence",
+      "text": "ᠬ᠌",
+      "codepoints": [
+        "U+182C",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER QA",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER QA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 241
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-017",
+      "category": "standardized_variation_sequence",
+      "text": "ᠬ᠍",
+      "codepoints": [
+        "U+182C",
+        "U+180D"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER QA",
+        "MONGOLIAN FREE VARIATION SELECTOR THREE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "fourth form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER QA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 242
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-018",
+      "category": "standardized_variation_sequence",
+      "text": "ᠭ᠋",
+      "codepoints": [
+        "U+182D",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER GA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER GA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 243
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-019",
+      "category": "standardized_variation_sequence",
+      "text": "ᠭ᠌",
+      "codepoints": [
+        "U+182D",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER GA",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER GA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 244
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-020",
+      "category": "standardized_variation_sequence",
+      "text": "ᠭ᠍",
+      "codepoints": [
+        "U+182D",
+        "U+180D"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER GA",
+        "MONGOLIAN FREE VARIATION SELECTOR THREE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "fourth form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER GA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 245
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-021",
+      "category": "standardized_variation_sequence",
+      "text": "ᠰ᠋",
+      "codepoints": [
+        "U+1830",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER SA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER SA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 246
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-022",
+      "category": "standardized_variation_sequence",
+      "text": "ᠰ᠌",
+      "codepoints": [
+        "U+1830",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER SA",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER SA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 247
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-023",
+      "category": "standardized_variation_sequence",
+      "text": "ᠲ᠋",
+      "codepoints": [
+        "U+1832",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER TA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 248
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-024",
+      "category": "standardized_variation_sequence",
+      "text": "ᠳ᠋",
+      "codepoints": [
+        "U+1833",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER DA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER DA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 249
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-025",
+      "category": "standardized_variation_sequence",
+      "text": "ᠵ᠋",
+      "codepoints": [
+        "U+1835",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER JA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER JA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 250
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-026",
+      "category": "standardized_variation_sequence",
+      "text": "ᠶ᠋",
+      "codepoints": [
+        "U+1836",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER YA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER YA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 251
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-027",
+      "category": "standardized_variation_sequence",
+      "text": "ᠶ᠌",
+      "codepoints": [
+        "U+1836",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER YA",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER YA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 252
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-028",
+      "category": "standardized_variation_sequence",
+      "text": "ᠸ᠋",
+      "codepoints": [
+        "U+1838",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER WA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER WA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 253
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-029",
+      "category": "standardized_variation_sequence",
+      "text": "ᡄ᠋",
+      "codepoints": [
+        "U+1844",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER TODO E",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO E"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 254
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-030",
+      "category": "standardized_variation_sequence",
+      "text": "ᡅ᠋",
+      "codepoints": [
+        "U+1845",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER TODO I",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO I"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 255
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-031",
+      "category": "standardized_variation_sequence",
+      "text": "ᡆ᠋",
+      "codepoints": [
+        "U+1846",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER TODO O",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO O"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 256
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-032",
+      "category": "standardized_variation_sequence",
+      "text": "ᡇ᠋",
+      "codepoints": [
+        "U+1847",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER TODO U",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "isolate",
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO U"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 257
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-033",
+      "category": "standardized_variation_sequence",
+      "text": "ᡇ᠌",
+      "codepoints": [
+        "U+1847",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER TODO U",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO U"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 258
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-034",
+      "category": "standardized_variation_sequence",
+      "text": "ᡈ᠋",
+      "codepoints": [
+        "U+1848",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER TODO OE",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO OE"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 259
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-035",
+      "category": "standardized_variation_sequence",
+      "text": "ᡉ᠋",
+      "codepoints": [
+        "U+1849",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER TODO UE",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "isolate",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO UE"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 260
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-036",
+      "category": "standardized_variation_sequence",
+      "text": "ᡍ᠋",
+      "codepoints": [
+        "U+184D",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER TODO QA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO QA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 261
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-037",
+      "category": "standardized_variation_sequence",
+      "text": "ᡎ᠋",
+      "codepoints": [
+        "U+184E",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER TODO GA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO GA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 262
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-038",
+      "category": "standardized_variation_sequence",
+      "text": "ᡝ᠋",
+      "codepoints": [
+        "U+185D",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER SIBE E",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE E"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 263
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-039",
+      "category": "standardized_variation_sequence",
+      "text": "ᡞ᠋",
+      "codepoints": [
+        "U+185E",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER SIBE I",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE I"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 264
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-040",
+      "category": "standardized_variation_sequence",
+      "text": "ᡞ᠌",
+      "codepoints": [
+        "U+185E",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER SIBE I",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE I"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 265
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-041",
+      "category": "standardized_variation_sequence",
+      "text": "ᡠ᠋",
+      "codepoints": [
+        "U+1860",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER SIBE UE",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE UE"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 266
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-042",
+      "category": "standardized_variation_sequence",
+      "text": "ᡣ᠋",
+      "codepoints": [
+        "U+1863",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER SIBE KA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE KA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 267
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-043",
+      "category": "standardized_variation_sequence",
+      "text": "ᡨ᠋",
+      "codepoints": [
+        "U+1868",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER SIBE TA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE TA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 268
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-044",
+      "category": "standardized_variation_sequence",
+      "text": "ᡨ᠌",
+      "codepoints": [
+        "U+1868",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER SIBE TA",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE TA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 269
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-045",
+      "category": "standardized_variation_sequence",
+      "text": "ᡩ᠋",
+      "codepoints": [
+        "U+1869",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER SIBE DA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE DA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 270
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-046",
+      "category": "standardized_variation_sequence",
+      "text": "ᡯ᠋",
+      "codepoints": [
+        "U+186F",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER SIBE ZA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE ZA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 271
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-047",
+      "category": "standardized_variation_sequence",
+      "text": "ᡳ᠋",
+      "codepoints": [
+        "U+1873",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER MANCHU I",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU I"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 272
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-048",
+      "category": "standardized_variation_sequence",
+      "text": "ᡳ᠌",
+      "codepoints": [
+        "U+1873",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER MANCHU I",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU I"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 273
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-049",
+      "category": "standardized_variation_sequence",
+      "text": "ᡳ᠍",
+      "codepoints": [
+        "U+1873",
+        "U+180D"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER MANCHU I",
+        "MONGOLIAN FREE VARIATION SELECTOR THREE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "fourth form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU I"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 274
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-050",
+      "category": "standardized_variation_sequence",
+      "text": "ᡴ᠋",
+      "codepoints": [
+        "U+1874",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER MANCHU KA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU KA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 275
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-051",
+      "category": "standardized_variation_sequence",
+      "text": "ᡴ᠌",
+      "codepoints": [
+        "U+1874",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER MANCHU KA",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU KA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 276
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-052",
+      "category": "standardized_variation_sequence",
+      "text": "ᡴ᠍",
+      "codepoints": [
+        "U+1874",
+        "U+180D"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER MANCHU KA",
+        "MONGOLIAN FREE VARIATION SELECTOR THREE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "fourth form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU KA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 277
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-053",
+      "category": "standardized_variation_sequence",
+      "text": "ᡶ᠋",
+      "codepoints": [
+        "U+1876",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER MANCHU FA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU FA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 278
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-054",
+      "category": "standardized_variation_sequence",
+      "text": "ᢀ᠋",
+      "codepoints": [
+        "U+1880",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER ALI GALI ANUSVARA ONE",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [],
+        "base_character": "MONGOLIAN LETTER ALI GALI ANUSVARA ONE"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 279
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-055",
+      "category": "standardized_variation_sequence",
+      "text": "ᢁ᠋",
+      "codepoints": [
+        "U+1881",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER ALI GALI VISARGA ONE",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [],
+        "base_character": "MONGOLIAN LETTER ALI GALI VISARGA ONE"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 280
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-056",
+      "category": "standardized_variation_sequence",
+      "text": "ᢇ᠋",
+      "codepoints": [
+        "U+1887",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER ALI GALI A",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "isolate",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER ALI GALI A"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 281
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-057",
+      "category": "standardized_variation_sequence",
+      "text": "ᢇ᠌",
+      "codepoints": [
+        "U+1887",
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER ALI GALI A",
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER ALI GALI A"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 282
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-058",
+      "category": "standardized_variation_sequence",
+      "text": "ᢇ᠍",
+      "codepoints": [
+        "U+1887",
+        "U+180D"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER ALI GALI A",
+        "MONGOLIAN FREE VARIATION SELECTOR THREE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "fourth form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER ALI GALI A"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 283
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-059",
+      "category": "standardized_variation_sequence",
+      "text": "ᢈ᠋",
+      "codepoints": [
+        "U+1888",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER ALI GALI I",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER ALI GALI I"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 284
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "stdvar-060",
+      "category": "standardized_variation_sequence",
+      "text": "ᢊ᠋",
+      "codepoints": [
+        "U+188A",
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER ALI GALI NGA",
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER ALI GALI NGA"
+      },
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 285
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-001",
+      "category": "base_character",
+      "text": "ᠠ",
+      "codepoints": [
+        "U+1820"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER A"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-002",
+      "category": "base_character",
+      "text": "ᠡ",
+      "codepoints": [
+        "U+1821"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER E"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-003",
+      "category": "base_character",
+      "text": "ᠢ",
+      "codepoints": [
+        "U+1822"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER I"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-004",
+      "category": "base_character",
+      "text": "ᠣ",
+      "codepoints": [
+        "U+1823"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER O"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-005",
+      "category": "base_character",
+      "text": "ᠤ",
+      "codepoints": [
+        "U+1824"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER U"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-006",
+      "category": "base_character",
+      "text": "ᠥ",
+      "codepoints": [
+        "U+1825"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER OE"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-007",
+      "category": "base_character",
+      "text": "ᠦ",
+      "codepoints": [
+        "U+1826"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER UE"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-008",
+      "category": "base_character",
+      "text": "ᠧ",
+      "codepoints": [
+        "U+1827"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER EE"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-009",
+      "category": "base_character",
+      "text": "ᠨ",
+      "codepoints": [
+        "U+1828"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER NA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-010",
+      "category": "base_character",
+      "text": "ᠩ",
+      "codepoints": [
+        "U+1829"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER ANG"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-011",
+      "category": "base_character",
+      "text": "ᠪ",
+      "codepoints": [
+        "U+182A"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER BA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-012",
+      "category": "base_character",
+      "text": "ᠫ",
+      "codepoints": [
+        "U+182B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER PA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-013",
+      "category": "base_character",
+      "text": "ᠬ",
+      "codepoints": [
+        "U+182C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER QA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-014",
+      "category": "base_character",
+      "text": "ᠭ",
+      "codepoints": [
+        "U+182D"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER GA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-015",
+      "category": "base_character",
+      "text": "ᠮ",
+      "codepoints": [
+        "U+182E"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER MA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-016",
+      "category": "base_character",
+      "text": "ᠯ",
+      "codepoints": [
+        "U+182F"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER LA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-017",
+      "category": "base_character",
+      "text": "ᠰ",
+      "codepoints": [
+        "U+1830"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER SA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-018",
+      "category": "base_character",
+      "text": "ᠱ",
+      "codepoints": [
+        "U+1831"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER SHA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-019",
+      "category": "base_character",
+      "text": "ᠲ",
+      "codepoints": [
+        "U+1832"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER TA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-020",
+      "category": "base_character",
+      "text": "ᠳ",
+      "codepoints": [
+        "U+1833"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER DA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-021",
+      "category": "base_character",
+      "text": "ᠴ",
+      "codepoints": [
+        "U+1834"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER CHA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-022",
+      "category": "base_character",
+      "text": "ᠵ",
+      "codepoints": [
+        "U+1835"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER JA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-023",
+      "category": "base_character",
+      "text": "ᠶ",
+      "codepoints": [
+        "U+1836"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER YA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-024",
+      "category": "base_character",
+      "text": "ᠷ",
+      "codepoints": [
+        "U+1837"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER RA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-025",
+      "category": "base_character",
+      "text": "ᠸ",
+      "codepoints": [
+        "U+1838"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER WA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-026",
+      "category": "base_character",
+      "text": "ᠹ",
+      "codepoints": [
+        "U+1839"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER FA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-027",
+      "category": "base_character",
+      "text": "ᠺ",
+      "codepoints": [
+        "U+183A"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER KA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-028",
+      "category": "base_character",
+      "text": "ᠻ",
+      "codepoints": [
+        "U+183B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER KHA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-029",
+      "category": "base_character",
+      "text": "ᠼ",
+      "codepoints": [
+        "U+183C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER TSA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-030",
+      "category": "base_character",
+      "text": "ᠽ",
+      "codepoints": [
+        "U+183D"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER ZA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-031",
+      "category": "base_character",
+      "text": "ᠾ",
+      "codepoints": [
+        "U+183E"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER HAA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-032",
+      "category": "base_character",
+      "text": "ᠿ",
+      "codepoints": [
+        "U+183F"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER ZRA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-033",
+      "category": "base_character",
+      "text": "ᡀ",
+      "codepoints": [
+        "U+1840"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER LHA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-034",
+      "category": "base_character",
+      "text": "ᡁ",
+      "codepoints": [
+        "U+1841"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER ZHI"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "base-035",
+      "category": "base_character",
+      "text": "ᡂ",
+      "codepoints": [
+        "U+1842"
+      ],
+      "unicode_names": [
+        "MONGOLIAN LETTER CHI"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "punct-001",
+      "category": "punctuation_or_mark",
+      "text": "᠀",
+      "codepoints": [
+        "U+1800"
+      ],
+      "unicode_names": [
+        "MONGOLIAN BIRGA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_punctuation_or_mark"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "punct-002",
+      "category": "punctuation_or_mark",
+      "text": "᠁",
+      "codepoints": [
+        "U+1801"
+      ],
+      "unicode_names": [
+        "MONGOLIAN ELLIPSIS"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_punctuation_or_mark"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "punct-003",
+      "category": "punctuation_or_mark",
+      "text": "᠂",
+      "codepoints": [
+        "U+1802"
+      ],
+      "unicode_names": [
+        "MONGOLIAN COMMA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_punctuation_or_mark"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "punct-004",
+      "category": "punctuation_or_mark",
+      "text": "᠃",
+      "codepoints": [
+        "U+1803"
+      ],
+      "unicode_names": [
+        "MONGOLIAN FULL STOP"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_punctuation_or_mark"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "punct-005",
+      "category": "punctuation_or_mark",
+      "text": "᠄",
+      "codepoints": [
+        "U+1804"
+      ],
+      "unicode_names": [
+        "MONGOLIAN COLON"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_punctuation_or_mark"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "punct-006",
+      "category": "punctuation_or_mark",
+      "text": "᠅",
+      "codepoints": [
+        "U+1805"
+      ],
+      "unicode_names": [
+        "MONGOLIAN FOUR DOTS"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_punctuation_or_mark"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "punct-007",
+      "category": "punctuation_or_mark",
+      "text": "᠆",
+      "codepoints": [
+        "U+1806"
+      ],
+      "unicode_names": [
+        "MONGOLIAN TODO SOFT HYPHEN"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_punctuation_or_mark"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "punct-008",
+      "category": "punctuation_or_mark",
+      "text": "᠇",
+      "codepoints": [
+        "U+1807"
+      ],
+      "unicode_names": [
+        "MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_punctuation_or_mark"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "punct-009",
+      "category": "punctuation_or_mark",
+      "text": "᠈",
+      "codepoints": [
+        "U+1808"
+      ],
+      "unicode_names": [
+        "MONGOLIAN MANCHU COMMA"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_punctuation_or_mark"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "punct-010",
+      "category": "punctuation_or_mark",
+      "text": "᠉",
+      "codepoints": [
+        "U+1809"
+      ],
+      "unicode_names": [
+        "MONGOLIAN MANCHU FULL STOP"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_punctuation_or_mark"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "punct-011",
+      "category": "punctuation_or_mark",
+      "text": "᠊",
+      "codepoints": [
+        "U+180A"
+      ],
+      "unicode_names": [
+        "MONGOLIAN NIRUGU"
+      ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_punctuation_or_mark"
+      },
+      "source": {
+        "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
+        "section": "Mongolian Unicode block chart"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "control-001",
+      "category": "format_control",
+      "text": "᠋",
+      "codepoints": [
+        "U+180B"
+      ],
+      "unicode_names": [
+        "MONGOLIAN FREE VARIATION SELECTOR ONE"
+      ],
+      "expected": {
+        "encoding_status": "assigned_format_control",
+        "short_name": "FVS1",
+        "standalone_behavior": "standalone variation selector is ignored"
+      },
+      "source": {
+        "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/",
+        "section": "Section 13.5 Mongolian"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "control-002",
+      "category": "format_control",
+      "text": "᠌",
+      "codepoints": [
+        "U+180C"
+      ],
+      "unicode_names": [
+        "MONGOLIAN FREE VARIATION SELECTOR TWO"
+      ],
+      "expected": {
+        "encoding_status": "assigned_format_control",
+        "short_name": "FVS2",
+        "standalone_behavior": "standalone variation selector is ignored"
+      },
+      "source": {
+        "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/",
+        "section": "Section 13.5 Mongolian"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "control-003",
+      "category": "format_control",
+      "text": "᠍",
+      "codepoints": [
+        "U+180D"
+      ],
+      "unicode_names": [
+        "MONGOLIAN FREE VARIATION SELECTOR THREE"
+      ],
+      "expected": {
+        "encoding_status": "assigned_format_control",
+        "short_name": "FVS3",
+        "standalone_behavior": "standalone variation selector is ignored"
+      },
+      "source": {
+        "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/",
+        "section": "Section 13.5 Mongolian"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "control-004",
+      "category": "format_control",
+      "text": "᠏",
+      "codepoints": [
+        "U+180F"
+      ],
+      "unicode_names": [
+        "UNASSIGNED"
+      ],
+      "expected": {
+        "encoding_status": "assigned_format_control",
+        "short_name": "FVS4",
+        "standalone_behavior": "standalone variation selector is ignored"
+      },
+      "source": {
+        "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/",
+        "section": "Section 13.5 Mongolian"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "control-005",
+      "category": "format_control",
+      "text": "᠎",
+      "codepoints": [
+        "U+180E"
+      ],
+      "unicode_names": [
+        "MONGOLIAN VOWEL SEPARATOR"
+      ],
+      "expected": {
+        "encoding_status": "assigned_format_control",
+        "short_name": "MVS",
+        "standalone_behavior": "format control requires contextual review"
+      },
+      "source": {
+        "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/",
+        "section": "Section 13.5 Mongolian"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    },
+    {
+      "id": "control-006",
+      "category": "format_control",
+      "text": " ",
+      "codepoints": [
+        "U+202F"
+      ],
+      "unicode_names": [
+        "NARROW NO-BREAK SPACE"
+      ],
+      "expected": {
+        "encoding_status": "assigned_format_control",
+        "short_name": "NNBSP",
+        "standalone_behavior": "suffix separator requires contextual review"
+      },
+      "source": {
+        "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/",
+        "section": "Section 13.5 Mongolian"
+      },
+      "review": {
+        "encoding": "verified_official",
+        "glyph_rendering": "pending_cross_browser_and_expert_review",
+        "linguistic_usage": "pending_native_speaker_review"
+      }
+    }
+  ]
+}

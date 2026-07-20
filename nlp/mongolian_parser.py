@@ -35,6 +35,7 @@ class PosTag(Enum):
 
 class DepRel(Enum):
     """依存关系标签"""
+    UNK = 'unk'
     ROOT = 'root'  # 根节点
     SUBJ = 'subj'  # 主语
     OBJ = 'obj'  # 宾语

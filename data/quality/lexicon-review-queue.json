@@ -1,0 +1,3999 @@
+{
+  "schema_version": "1.0",
+  "status": "expert_review_required",
+  "generated_from": "data/vocabulary.json",
+  "entry_count": 115,
+  "review_policy": "docs/05-project/LANGUAGE_REVIEW_WORKFLOW.md",
+  "entries": [
+    {
+      "id": "word-001",
+      "kind": "word",
+      "form": "ᠮᠣᠩᠭᠣᠯ",
+      "codepoints": [
+        "U+182E",
+        "U+1823",
+        "U+1829",
+        "U+182D",
+        "U+1823",
+        "U+182F"
+      ],
+      "current_chinese_gloss": "蒙古",
+      "current_transliteration": "monggol",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-002",
+      "kind": "word",
+      "form": "ᠪᠢᠴᠢᠭ",
+      "codepoints": [
+        "U+182A",
+        "U+1822",
+        "U+1834",
+        "U+1822",
+        "U+182D"
+      ],
+      "current_chinese_gloss": "文字/书",
+      "current_transliteration": "bičig",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-003",
+      "kind": "word",
+      "form": "ᠬᠡᠯᠡ",
+      "codepoints": [
+        "U+182C",
+        "U+1821",
+        "U+182F",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "语言",
+      "current_transliteration": "kele",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-004",
+      "kind": "word",
+      "form": "ᠰᠠᠶᠢᠨ",
+      "codepoints": [
+        "U+1830",
+        "U+1820",
+        "U+1836",
+        "U+1822",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "好",
+      "current_transliteration": "sayin",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-005",
+      "kind": "word",
+      "form": "ᠪᠠᠶᠠᠷᠲᠠᠢ",
+      "codepoints": [
+        "U+182A",
+        "U+1820",
+        "U+1836",
+        "U+1820",
+        "U+1837",
+        "U+1832",
+        "U+1820",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "谢谢",
+      "current_transliteration": "bayartai",
+      "quality_flags": [
+        "duplicate_form_in_legacy_source"
+      ],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-006",
+      "kind": "word",
+      "form": "ᠪᠠᠶᠢᠨ᠎ᠤᠤ",
+      "codepoints": [
+        "U+182A",
+        "U+1820",
+        "U+1836",
+        "U+1822",
+        "U+1828",
+        "U+180E",
+        "U+1824",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "在吗/你好",
+      "current_transliteration": "bainuu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-007",
+      "kind": "word",
+      "form": "ᠮᠡᠨᠳᠡ",
+      "codepoints": [
+        "U+182E",
+        "U+1821",
+        "U+1828",
+        "U+1833",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "你好",
+      "current_transliteration": "mende",
+      "quality_flags": [
+        "duplicate_form_in_legacy_source"
+      ],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-008",
+      "kind": "word",
+      "form": "ᠲᠠ",
+      "codepoints": [
+        "U+1832",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "您",
+      "current_transliteration": "ta",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-009",
+      "kind": "word",
+      "form": "ᠪᠢ",
+      "codepoints": [
+        "U+182A",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "我",
+      "current_transliteration": "bi",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-010",
+      "kind": "word",
+      "form": "ᠡᠴᠢ",
+      "codepoints": [
+        "U+1821",
+        "U+1834",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "父亲",
+      "current_transliteration": "eči",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-011",
+      "kind": "word",
+      "form": "ᠡᠬᠡ",
+      "codepoints": [
+        "U+1821",
+        "U+182C",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "母亲",
+      "current_transliteration": "eke",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-012",
+      "kind": "word",
+      "form": "ᠭᠡᠷ",
+      "codepoints": [
+        "U+182D",
+        "U+1821",
+        "U+1837"
+      ],
+      "current_chinese_gloss": "家/蒙古包",
+      "current_transliteration": "ger",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-013",
+      "kind": "word",
+      "form": "ᠮᠣᠷᠢ",
+      "codepoints": [
+        "U+182E",
+        "U+1823",
+        "U+1837",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "马",
+      "current_transliteration": "mori",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-014",
+      "kind": "word",
+      "form": "ᠬᠣᠨᠢ",
+      "codepoints": [
+        "U+182C",
+        "U+1823",
+        "U+1828",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "羊",
+      "current_transliteration": "qoni",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-015",
+      "kind": "word",
+      "form": "ᠲᠡᠭᠡᠭᠡᠰᠦ",
+      "codepoints": [
+        "U+1832",
+        "U+1821",
+        "U+182D",
+        "U+1821",
+        "U+182D",
+        "U+1821",
+        "U+1830",
+        "U+1826"
+      ],
+      "current_chinese_gloss": "车",
+      "current_transliteration": "tegesü",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-016",
+      "kind": "word",
+      "form": "ᠤᠳᠠ",
+      "codepoints": [
+        "U+1824",
+        "U+1833",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "水",
+      "current_transliteration": "uda",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-017",
+      "kind": "word",
+      "form": "ᠢᠳᠡᠭᠡ",
+      "codepoints": [
+        "U+1822",
+        "U+1833",
+        "U+1821",
+        "U+182D",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "食物",
+      "current_transliteration": "idege",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-018",
+      "kind": "word",
+      "form": "ᠠᠵᠢᠯ",
+      "codepoints": [
+        "U+1820",
+        "U+1835",
+        "U+1822",
+        "U+182F"
+      ],
+      "current_chinese_gloss": "工作",
+      "current_transliteration": "ajil",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-019",
+      "kind": "word",
+      "form": "ᠨᠤᠲᠤᠭ",
+      "codepoints": [
+        "U+1828",
+        "U+1824",
+        "U+1832",
+        "U+1824",
+        "U+182D"
+      ],
+      "current_chinese_gloss": "地方/国家",
+      "current_transliteration": "nutug",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-020",
+      "kind": "word",
+      "form": "ᠡᠷᠲᠡ",
+      "codepoints": [
+        "U+1821",
+        "U+1837",
+        "U+1832",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "古代/传统",
+      "current_transliteration": "erte",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-021",
+      "kind": "word",
+      "form": "ᠵᠣᠬᠢᠶᠠᠯ",
+      "codepoints": [
+        "U+1835",
+        "U+1823",
+        "U+182C",
+        "U+1822",
+        "U+1836",
+        "U+1820",
+        "U+182F"
+      ],
+      "current_chinese_gloss": "生活",
+      "current_transliteration": "joqiyal",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-022",
+      "kind": "word",
+      "form": "ᠴᠢᠨᠭᠢᠰ",
+      "codepoints": [
+        "U+1834",
+        "U+1822",
+        "U+1828",
+        "U+182D",
+        "U+1822",
+        "U+1830"
+      ],
+      "current_chinese_gloss": "成吉思",
+      "current_transliteration": "čingis",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-023",
+      "kind": "word",
+      "form": "ᠬᠠᠭᠠᠨ",
+      "codepoints": [
+        "U+182C",
+        "U+1820",
+        "U+182D",
+        "U+1820",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "汗/可汗",
+      "current_transliteration": "qaγan",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-024",
+      "kind": "word",
+      "form": "ᠤᠯᠤᠰ",
+      "codepoints": [
+        "U+1824",
+        "U+182F",
+        "U+1824",
+        "U+1830"
+      ],
+      "current_chinese_gloss": "国家",
+      "current_transliteration": "ulus",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-025",
+      "kind": "word",
+      "form": "ᠬᠦᠮᠦᠨ",
+      "codepoints": [
+        "U+182C",
+        "U+1826",
+        "U+182E",
+        "U+1826",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "人",
+      "current_transliteration": "kümün",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-026",
+      "kind": "word",
+      "form": "ᠭᠡᠷᠡᠯ",
+      "codepoints": [
+        "U+182D",
+        "U+1821",
+        "U+1837",
+        "U+1821",
+        "U+182F"
+      ],
+      "current_chinese_gloss": "家/家庭",
+      "current_transliteration": "gerel",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-027",
+      "kind": "word",
+      "form": "ᠨᠠᠶᠢᠷ",
+      "codepoints": [
+        "U+1828",
+        "U+1820",
+        "U+1836",
+        "U+1822",
+        "U+1837"
+      ],
+      "current_chinese_gloss": "朋友",
+      "current_transliteration": "nayir",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-028",
+      "kind": "word",
+      "form": "ᠡᠵᠡᠨ",
+      "codepoints": [
+        "U+1821",
+        "U+1835",
+        "U+1821",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "主人",
+      "current_transliteration": "ejen",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-029",
+      "kind": "word",
+      "form": "ᠠᠯᠲᠠᠨ",
+      "codepoints": [
+        "U+1820",
+        "U+182F",
+        "U+1832",
+        "U+1820",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "金子",
+      "current_transliteration": "altan",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-030",
+      "kind": "word",
+      "form": "ᠮᠥᠩᠬᠡ",
+      "codepoints": [
+        "U+182E",
+        "U+1825",
+        "U+1829",
+        "U+182C",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "永恒",
+      "current_transliteration": "mönke",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-031",
+      "kind": "word",
+      "form": "ᠲᠡᠩᠷᠢ",
+      "codepoints": [
+        "U+1832",
+        "U+1821",
+        "U+1829",
+        "U+1837",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "天/腾格里",
+      "current_transliteration": "tengri",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-032",
+      "kind": "word",
+      "form": "ᠭᠠᠵᠠᠷ",
+      "codepoints": [
+        "U+182D",
+        "U+1820",
+        "U+1835",
+        "U+1820",
+        "U+1837"
+      ],
+      "current_chinese_gloss": "土地/地方",
+      "current_transliteration": "gajar",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-033",
+      "kind": "word",
+      "form": "ᠤᠶᠠᠨ",
+      "codepoints": [
+        "U+1824",
+        "U+1836",
+        "U+1820",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "森林",
+      "current_transliteration": "uyan",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-034",
+      "kind": "word",
+      "form": "ᠮᠣᠳᠤ",
+      "codepoints": [
+        "U+182E",
+        "U+1823",
+        "U+1833",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "树/木头",
+      "current_transliteration": "modu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-035",
+      "kind": "word",
+      "form": "ᠴᠢᠬᠤᠯᠠ",
+      "codepoints": [
+        "U+1834",
+        "U+1822",
+        "U+182C",
+        "U+1824",
+        "U+182F",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "石头",
+      "current_transliteration": "čiqula",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-036",
+      "kind": "word",
+      "form": "ᠰᠠᠷ᠎ᠠ",
+      "codepoints": [
+        "U+1830",
+        "U+1820",
+        "U+1837",
+        "U+180E",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "月亮",
+      "current_transliteration": "sara",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-037",
+      "kind": "word",
+      "form": "ᠨᠠᠷ",
+      "codepoints": [
+        "U+1828",
+        "U+1820",
+        "U+1837"
+      ],
+      "current_chinese_gloss": "太阳",
+      "current_transliteration": "nar",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-038",
+      "kind": "word",
+      "form": "ᠣᠳᠤᠨ",
+      "codepoints": [
+        "U+1823",
+        "U+1833",
+        "U+1824",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "星星",
+      "current_transliteration": "odun",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-039",
+      "kind": "word",
+      "form": "ᠰᠠᠯᠬᠢ",
+      "codepoints": [
+        "U+1830",
+        "U+1820",
+        "U+182F",
+        "U+182C",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "风",
+      "current_transliteration": "salqi",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-040",
+      "kind": "word",
+      "form": "ᠪᠣᠷᠣᠭᠠᠨ",
+      "codepoints": [
+        "U+182A",
+        "U+1823",
+        "U+1837",
+        "U+1823",
+        "U+182D",
+        "U+1820",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "雨",
+      "current_transliteration": "borogan",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-041",
+      "kind": "word",
+      "form": "ᠴᠠᠭ",
+      "codepoints": [
+        "U+1834",
+        "U+1820",
+        "U+182D"
+      ],
+      "current_chinese_gloss": "时间",
+      "current_transliteration": "čaγ",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-042",
+      "kind": "word",
+      "form": "ᠡᠳᠦᠷ",
+      "codepoints": [
+        "U+1821",
+        "U+1833",
+        "U+1826",
+        "U+1837"
+      ],
+      "current_chinese_gloss": "天/日子",
+      "current_transliteration": "edür",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-043",
+      "kind": "word",
+      "form": "ᠰᠢᠨ᠎ᠡ",
+      "codepoints": [
+        "U+1830",
+        "U+1822",
+        "U+1828",
+        "U+180E",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "新的",
+      "current_transliteration": "sin-e",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-044",
+      "kind": "word",
+      "form": "ᠬᠤᠭᠤᠴᠠ",
+      "codepoints": [
+        "U+182C",
+        "U+1824",
+        "U+182D",
+        "U+1824",
+        "U+1834",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "旧的",
+      "current_transliteration": "quγača",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-045",
+      "kind": "word",
+      "form": "ᠶᠡᠬᠡ",
+      "codepoints": [
+        "U+1836",
+        "U+1821",
+        "U+182C",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "大的",
+      "current_transliteration": "yeke",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-046",
+      "kind": "word",
+      "form": "ᠪᠠᠭ᠎ᠠ",
+      "codepoints": [
+        "U+182A",
+        "U+1820",
+        "U+182D",
+        "U+180E",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "小的",
+      "current_transliteration": "baγa",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-047",
+      "kind": "word",
+      "form": "ᠤᠷᠢᠳ",
+      "codepoints": [
+        "U+1824",
+        "U+1837",
+        "U+1822",
+        "U+1833"
+      ],
+      "current_chinese_gloss": "艺术",
+      "current_transliteration": "urid",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-048",
+      "kind": "word",
+      "form": "ᠳᠤᠤ",
+      "codepoints": [
+        "U+1833",
+        "U+1824",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "歌曲",
+      "current_transliteration": "duu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-049",
+      "kind": "word",
+      "form": "ᠪᠦᠬᠦ",
+      "codepoints": [
+        "U+182A",
+        "U+1826",
+        "U+182C",
+        "U+1826"
+      ],
+      "current_chinese_gloss": "舞蹈",
+      "current_transliteration": "bükü",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-050",
+      "kind": "word",
+      "form": "ᠨᠢᠭᠡ",
+      "codepoints": [
+        "U+1828",
+        "U+1822",
+        "U+182D",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "一",
+      "current_transliteration": "nige",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-051",
+      "kind": "word",
+      "form": "ᠬᠣᠶᠠᠷ",
+      "codepoints": [
+        "U+182C",
+        "U+1823",
+        "U+1836",
+        "U+1820",
+        "U+1837"
+      ],
+      "current_chinese_gloss": "二",
+      "current_transliteration": "qoyar",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-052",
+      "kind": "word",
+      "form": "ᠭᠤᠷᠪᠠ",
+      "codepoints": [
+        "U+182D",
+        "U+1824",
+        "U+1837",
+        "U+182A",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "三",
+      "current_transliteration": "γurba",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-053",
+      "kind": "word",
+      "form": "ᠳᠥᠷᠪᠡ",
+      "codepoints": [
+        "U+1833",
+        "U+1825",
+        "U+1837",
+        "U+182A",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "四",
+      "current_transliteration": "dörbe",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-054",
+      "kind": "word",
+      "form": "ᠲᠠᠪᠤ",
+      "codepoints": [
+        "U+1832",
+        "U+1820",
+        "U+182A",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "五",
+      "current_transliteration": "tabu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-055",
+      "kind": "word",
+      "form": "ᠵᠢᠷᠭᠤᠭᠠ",
+      "codepoints": [
+        "U+1835",
+        "U+1822",
+        "U+1837",
+        "U+182D",
+        "U+1824",
+        "U+182D",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "六",
+      "current_transliteration": "jirγuγa",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-056",
+      "kind": "word",
+      "form": "ᠳᠣᠯᠣ",
+      "codepoints": [
+        "U+1833",
+        "U+1823",
+        "U+182F",
+        "U+1823"
+      ],
+      "current_chinese_gloss": "七",
+      "current_transliteration": "dolu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-057",
+      "kind": "word",
+      "form": "ᠨᠠᠢᠮᠠ",
+      "codepoints": [
+        "U+1828",
+        "U+1820",
+        "U+1822",
+        "U+182E",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "八",
+      "current_transliteration": "naima",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-058",
+      "kind": "word",
+      "form": "ᠶᠢᠰᠦᠨ",
+      "codepoints": [
+        "U+1836",
+        "U+1822",
+        "U+1830",
+        "U+1826",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "九",
+      "current_transliteration": "yisün",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-059",
+      "kind": "word",
+      "form": "ᠠᠷᠪᠠ",
+      "codepoints": [
+        "U+1820",
+        "U+1837",
+        "U+182A",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "十",
+      "current_transliteration": "arba",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-060",
+      "kind": "word",
+      "form": "ᠵᠠᠰᠠᠭ",
+      "codepoints": [
+        "U+1835",
+        "U+1820",
+        "U+1830",
+        "U+1820",
+        "U+182D"
+      ],
+      "current_chinese_gloss": "政府/统治",
+      "current_transliteration": "jasaγ",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-061",
+      "kind": "word",
+      "form": "ᠬᠤᠯᠪᠣᠭᠠᠨ",
+      "codepoints": [
+        "U+182C",
+        "U+1824",
+        "U+182F",
+        "U+182A",
+        "U+1823",
+        "U+182D",
+        "U+1820",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "联系",
+      "current_transliteration": "qolboγan",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-062",
+      "kind": "word",
+      "form": "ᠮᠡᠳᠡᠭᠡ",
+      "codepoints": [
+        "U+182E",
+        "U+1821",
+        "U+1833",
+        "U+1821",
+        "U+182D",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "信息/知识",
+      "current_transliteration": "medege",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-063",
+      "kind": "word",
+      "form": "ᠰᠤᠷᠭᠠᠭᠤᠯᠢ",
+      "codepoints": [
+        "U+1830",
+        "U+1824",
+        "U+1837",
+        "U+182D",
+        "U+1820",
+        "U+182D",
+        "U+1824",
+        "U+182F",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "学校",
+      "current_transliteration": "surγaγuli",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-064",
+      "kind": "word",
+      "form": "ᠨᠣᠮ",
+      "codepoints": [
+        "U+1828",
+        "U+1823",
+        "U+182E"
+      ],
+      "current_chinese_gloss": "名字",
+      "current_transliteration": "nom",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-065",
+      "kind": "word",
+      "form": "ᠪᠢᠴᠢᠬᠦ",
+      "codepoints": [
+        "U+182A",
+        "U+1822",
+        "U+1834",
+        "U+1822",
+        "U+182C",
+        "U+1826"
+      ],
+      "current_chinese_gloss": "写",
+      "current_transliteration": "bičikü",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-066",
+      "kind": "word",
+      "form": "ᠤᠨᠰᠢᠬᠤ",
+      "codepoints": [
+        "U+1824",
+        "U+1828",
+        "U+1830",
+        "U+1822",
+        "U+182C",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "读",
+      "current_transliteration": "unsiqu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-067",
+      "kind": "word",
+      "form": "ᠶᠠᠷᠢᠶ᠎ᠠ",
+      "codepoints": [
+        "U+1836",
+        "U+1820",
+        "U+1837",
+        "U+1822",
+        "U+1836",
+        "U+180E",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "说",
+      "current_transliteration": "yariya",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-068",
+      "kind": "word",
+      "form": "ᠰᠤᠨᠢᠬᠤ",
+      "codepoints": [
+        "U+1830",
+        "U+1824",
+        "U+1828",
+        "U+1822",
+        "U+182C",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "听",
+      "current_transliteration": "suniqu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-069",
+      "kind": "word",
+      "form": "ᠦᠵᠡᠬᠦ",
+      "codepoints": [
+        "U+1826",
+        "U+1835",
+        "U+1821",
+        "U+182C",
+        "U+1826"
+      ],
+      "current_chinese_gloss": "看",
+      "current_transliteration": "üjekü",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-070",
+      "kind": "word",
+      "form": "ᠶᠠᠪᠤᠬᠤ",
+      "codepoints": [
+        "U+1836",
+        "U+1820",
+        "U+182A",
+        "U+1824",
+        "U+182C",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "走",
+      "current_transliteration": "yabuqu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-071",
+      "kind": "word",
+      "form": "ᠢᠷᠡᠬᠦ",
+      "codepoints": [
+        "U+1822",
+        "U+1837",
+        "U+1821",
+        "U+182C",
+        "U+1826"
+      ],
+      "current_chinese_gloss": "来",
+      "current_transliteration": "irekü",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-072",
+      "kind": "word",
+      "form": "ᠣᠭᠲᠠᠬᠤ",
+      "codepoints": [
+        "U+1823",
+        "U+182D",
+        "U+1832",
+        "U+1820",
+        "U+182C",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "给",
+      "current_transliteration": "oγtaqu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-073",
+      "kind": "word",
+      "form": "ᠠᠪᠬᠤ",
+      "codepoints": [
+        "U+1820",
+        "U+182A",
+        "U+182C",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "拿/取",
+      "current_transliteration": "abqu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-074",
+      "kind": "word",
+      "form": "ᠬᠢᠬᠦ",
+      "codepoints": [
+        "U+182C",
+        "U+1822",
+        "U+182C",
+        "U+1826"
+      ],
+      "current_chinese_gloss": "做",
+      "current_transliteration": "kikü",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-075",
+      "kind": "word",
+      "form": "ᠪᠣᠯᠬᠤ",
+      "codepoints": [
+        "U+182A",
+        "U+1823",
+        "U+182F",
+        "U+182C",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "成为",
+      "current_transliteration": "bolqu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-076",
+      "kind": "word",
+      "form": "ᠮᠦ",
+      "codepoints": [
+        "U+182E",
+        "U+1826"
+      ],
+      "current_chinese_gloss": "吗 (疑问词)",
+      "current_transliteration": "mü",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-077",
+      "kind": "word",
+      "form": "ᠦᠭᠡᠢ",
+      "codepoints": [
+        "U+1826",
+        "U+182D",
+        "U+1821",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "没有",
+      "current_transliteration": "ügei",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-078",
+      "kind": "word",
+      "form": "ᠪᠠᠶᠢᠨ᠎ᠠ",
+      "codepoints": [
+        "U+182A",
+        "U+1820",
+        "U+1836",
+        "U+1822",
+        "U+1828",
+        "U+180E",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "有/在",
+      "current_transliteration": "baina",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-079",
+      "kind": "word",
+      "form": "ᠲᠡᠭᠡ",
+      "codepoints": [
+        "U+1832",
+        "U+1821",
+        "U+182D",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "那",
+      "current_transliteration": "tege",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-080",
+      "kind": "word",
+      "form": "ᠡᠨᠡ",
+      "codepoints": [
+        "U+1821",
+        "U+1828",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "这",
+      "current_transliteration": "ene",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-081",
+      "kind": "word",
+      "form": "ᠬᠡᠨ",
+      "codepoints": [
+        "U+182C",
+        "U+1821",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "谁",
+      "current_transliteration": "ken",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-082",
+      "kind": "word",
+      "form": "ᠶᠠᠮᠠᠷ",
+      "codepoints": [
+        "U+1836",
+        "U+1820",
+        "U+182E",
+        "U+1820",
+        "U+1837"
+      ],
+      "current_chinese_gloss": "什么",
+      "current_transliteration": "yamar",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-083",
+      "kind": "word",
+      "form": "ᠬᠠᠭᠠᠨ᠎ᠠ",
+      "codepoints": [
+        "U+182C",
+        "U+1820",
+        "U+182D",
+        "U+1820",
+        "U+1828",
+        "U+180E",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "哪里",
+      "current_transliteration": "qaγana",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-084",
+      "kind": "word",
+      "form": "ᠬᠡᠵᠢᠶ᠎ᠡ",
+      "codepoints": [
+        "U+182C",
+        "U+1821",
+        "U+1835",
+        "U+1822",
+        "U+1836",
+        "U+180E",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "何时",
+      "current_transliteration": "kejiye",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-085",
+      "kind": "word",
+      "form": "ᠶᠠᠭᠤ",
+      "codepoints": [
+        "U+1836",
+        "U+1820",
+        "U+182D",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "怎么",
+      "current_transliteration": "yaγu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-086",
+      "kind": "word",
+      "form": "ᠤᠴᠢᠷᠠᠯᠲᠠᠢ",
+      "codepoints": [
+        "U+1824",
+        "U+1834",
+        "U+1822",
+        "U+1837",
+        "U+1820",
+        "U+182F",
+        "U+1832",
+        "U+1820",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "抱歉",
+      "current_transliteration": "učiraltaï",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-087",
+      "kind": "word",
+      "form": "ᠪᠣᠯᠨᠠ",
+      "codepoints": [
+        "U+182A",
+        "U+1823",
+        "U+182F",
+        "U+1828",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "可以",
+      "current_transliteration": "bolna",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-088",
+      "kind": "word",
+      "form": "ᠪᠣᠯᠬᠤᠭᠦᠢ",
+      "codepoints": [
+        "U+182A",
+        "U+1823",
+        "U+182F",
+        "U+182C",
+        "U+1824",
+        "U+182D",
+        "U+1826",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "不行",
+      "current_transliteration": "bolquγüi",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-089",
+      "kind": "word",
+      "form": "ᠮᠠᠨᠳᠤ",
+      "codepoints": [
+        "U+182E",
+        "U+1820",
+        "U+1828",
+        "U+1833",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "请",
+      "current_transliteration": "mandu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-090",
+      "kind": "word",
+      "form": "ᠡᠮᠴᠢ",
+      "codepoints": [
+        "U+1821",
+        "U+182E",
+        "U+1834",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "医生",
+      "current_transliteration": "emči",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-091",
+      "kind": "word",
+      "form": "ᠪᠠᠶᠢᠭ᠎ᠠ",
+      "codepoints": [
+        "U+182A",
+        "U+1820",
+        "U+1836",
+        "U+1822",
+        "U+182D",
+        "U+180E",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "是",
+      "current_transliteration": "baig-a",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-092",
+      "kind": "word",
+      "form": "ᠳᠠᠷᠤᠢ",
+      "codepoints": [
+        "U+1833",
+        "U+1820",
+        "U+1837",
+        "U+1824",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "下/下次",
+      "current_transliteration": "darui",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-093",
+      "kind": "word",
+      "form": "ᠤᠴᠢᠷᠠᠯᠴᠢᠶ᠎ᠠ",
+      "codepoints": [
+        "U+1824",
+        "U+1834",
+        "U+1822",
+        "U+1837",
+        "U+1820",
+        "U+182F",
+        "U+1834",
+        "U+1822",
+        "U+1836",
+        "U+180E",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "再见 (正式)",
+      "current_transliteration": "učiralčiye",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-094",
+      "kind": "word",
+      "form": "ᠬᠦᠷᠦᠭᠡ",
+      "codepoints": [
+        "U+182C",
+        "U+1826",
+        "U+1837",
+        "U+1826",
+        "U+182D",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "来 (命令式)",
+      "current_transliteration": "kürüge",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-095",
+      "kind": "word",
+      "form": "ᠬᠠᠢᠷᠲᠠᠢ",
+      "codepoints": [
+        "U+182C",
+        "U+1820",
+        "U+1822",
+        "U+1837",
+        "U+1832",
+        "U+1820",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "爱",
+      "current_transliteration": "qairtai",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-096",
+      "kind": "word",
+      "form": "ᠴᠢᠮᠠᠶᠢ",
+      "codepoints": [
+        "U+1834",
+        "U+1822",
+        "U+182E",
+        "U+1820",
+        "U+1836",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "你 (宾格)",
+      "current_transliteration": "čimayi",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-097",
+      "kind": "word",
+      "form": "ᠨᠠᠳᠠᠮ",
+      "codepoints": [
+        "U+1828",
+        "U+1820",
+        "U+1833",
+        "U+1820",
+        "U+182E"
+      ],
+      "current_chinese_gloss": "那达慕大会",
+      "current_transliteration": "nadam",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-098",
+      "kind": "word",
+      "form": "ᠪᠥᠬᠡ",
+      "codepoints": [
+        "U+182A",
+        "U+1825",
+        "U+182C",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "摔跤",
+      "current_transliteration": "böke",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "word-099",
+      "kind": "word",
+      "form": "ᠮᠣᠷᠢᠨ ᠲᠣᠯᠣᠭᠠᠢ ᠬᠣᠭᠤᠷ",
+      "codepoints": [
+        "U+182E",
+        "U+1823",
+        "U+1837",
+        "U+1822",
+        "U+1828",
+        "U+0020",
+        "U+1832",
+        "U+1823",
+        "U+182F",
+        "U+1823",
+        "U+182D",
+        "U+1820",
+        "U+1822",
+        "U+0020",
+        "U+182C",
+        "U+1823",
+        "U+182D",
+        "U+1824",
+        "U+1837"
+      ],
+      "current_chinese_gloss": "马头琴",
+      "current_transliteration": "morin toloγai qoγor",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-001",
+      "kind": "phrase",
+      "form": "ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠤᠤ",
+      "codepoints": [
+        "U+1830",
+        "U+1820",
+        "U+1836",
+        "U+1822",
+        "U+1828",
+        "U+0020",
+        "U+182A",
+        "U+1820",
+        "U+1836",
+        "U+1822",
+        "U+1828",
+        "U+180E",
+        "U+1824",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "你好",
+      "current_transliteration": "sain bain uu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-002",
+      "kind": "phrase",
+      "form": "ᠪᠠᠶᠠᠷᠲᠠᠢ",
+      "codepoints": [
+        "U+182A",
+        "U+1820",
+        "U+1836",
+        "U+1820",
+        "U+1837",
+        "U+1832",
+        "U+1820",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "谢谢",
+      "current_transliteration": "bayartai",
+      "quality_flags": [
+        "duplicate_form_in_legacy_source"
+      ],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-003",
+      "kind": "phrase",
+      "form": "ᠮᠡᠨᠳᠡ",
+      "codepoints": [
+        "U+182E",
+        "U+1821",
+        "U+1828",
+        "U+1833",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "你好 (正式)",
+      "current_transliteration": "mende",
+      "quality_flags": [
+        "duplicate_form_in_legacy_source"
+      ],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-004",
+      "kind": "phrase",
+      "form": "ᠪᠠᠶᠠᠷ ᠬᠦᠷᠦᠭᠡ",
+      "codepoints": [
+        "U+182A",
+        "U+1820",
+        "U+1836",
+        "U+1820",
+        "U+1837",
+        "U+0020",
+        "U+182C",
+        "U+1826",
+        "U+1837",
+        "U+1826",
+        "U+182D",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "再见",
+      "current_transliteration": "bayar kürüge",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-005",
+      "kind": "phrase",
+      "form": "ᠪᠢ ᠴᠢᠮᠠᠶᠢ ᠬᠠᠢᠷᠲᠠᠢ",
+      "codepoints": [
+        "U+182A",
+        "U+1822",
+        "U+0020",
+        "U+1834",
+        "U+1822",
+        "U+182E",
+        "U+1820",
+        "U+1836",
+        "U+1822",
+        "U+0020",
+        "U+182C",
+        "U+1820",
+        "U+1822",
+        "U+1837",
+        "U+1832",
+        "U+1820",
+        "U+1822"
+      ],
+      "current_chinese_gloss": "我爱你",
+      "current_transliteration": "bi čimayi qairtai",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-006",
+      "kind": "phrase",
+      "form": "ᠰᠠᠶᠢᠨ ᠦᠳᠡᠬᠡ",
+      "codepoints": [
+        "U+1830",
+        "U+1820",
+        "U+1836",
+        "U+1822",
+        "U+1828",
+        "U+0020",
+        "U+1826",
+        "U+1833",
+        "U+1821",
+        "U+182C",
+        "U+1821"
+      ],
+      "current_chinese_gloss": "晚安",
+      "current_transliteration": "sain üdehe",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-007",
+      "kind": "phrase",
+      "form": "ᠲᠠ ᠰᠠᠶᠢᠨ ᠤᠤ",
+      "codepoints": [
+        "U+1832",
+        "U+1820",
+        "U+0020",
+        "U+1830",
+        "U+1820",
+        "U+1836",
+        "U+1822",
+        "U+1828",
+        "U+0020",
+        "U+1824",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "你好吗",
+      "current_transliteration": "ta sain uu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-008",
+      "kind": "phrase",
+      "form": "ᠪᠢ ᠰᠠᠶᠢᠨ",
+      "codepoints": [
+        "U+182A",
+        "U+1822",
+        "U+0020",
+        "U+1830",
+        "U+1820",
+        "U+1836",
+        "U+1822",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "我很好",
+      "current_transliteration": "bi sain",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-009",
+      "kind": "phrase",
+      "form": "ᠲᠠᠨᠳ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠭ᠎ᠠ ᠤᠤ",
+      "codepoints": [
+        "U+1832",
+        "U+1820",
+        "U+1828",
+        "U+1833",
+        "U+0020",
+        "U+1832",
+        "U+1824",
+        "U+1830",
+        "U+1820",
+        "U+182F",
+        "U+1820",
+        "U+182D",
+        "U+180E",
+        "U+1820",
+        "U+0020",
+        "U+182A",
+        "U+1820",
+        "U+1836",
+        "U+1822",
+        "U+182D",
+        "U+180E",
+        "U+1820",
+        "U+0020",
+        "U+1824",
+        "U+1824"
+      ],
+      "current_chinese_gloss": "有什么可以帮您",
+      "current_transliteration": "tand tusalaγa baig-a uu",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-010",
+      "kind": "phrase",
+      "form": "ᠮᠢᠨᠦ ᠲᠤᠰᠠᠯᠠᠭ᠎ᠠ ᠪᠣᠯᠤᠭᠰᠠᠨᠳᠠ ᠪᠠᠶᠠᠷᠯᠠᠭ᠎ᠠ ᠪᠠᠶᠢᠨ᠎ᠠ",
+      "codepoints": [
+        "U+182E",
+        "U+1822",
+        "U+1828",
+        "U+1826",
+        "U+0020",
+        "U+1832",
+        "U+1824",
+        "U+1830",
+        "U+1820",
+        "U+182F",
+        "U+1820",
+        "U+182D",
+        "U+180E",
+        "U+1820",
+        "U+0020",
+        "U+182A",
+        "U+1823",
+        "U+182F",
+        "U+1824",
+        "U+182D",
+        "U+1830",
+        "U+1820",
+        "U+1828",
+        "U+1833",
+        "U+1820",
+        "U+0020",
+        "U+182A",
+        "U+1820",
+        "U+1836",
+        "U+1820",
+        "U+1837",
+        "U+182F",
+        "U+1820",
+        "U+182D",
+        "U+180E",
+        "U+1820",
+        "U+0020",
+        "U+182A",
+        "U+1820",
+        "U+1836",
+        "U+1822",
+        "U+1828",
+        "U+180E",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "很高兴能帮助您",
+      "current_transliteration": "minü tusalaγa boluγsan-da bayarlaγa байна",
+      "quality_flags": [
+        "transliteration_contains_cyrillic"
+      ],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-011",
+      "kind": "phrase",
+      "form": "ᠲᠠ ᠬᠡᠨ ᠪᠡᠨ",
+      "codepoints": [
+        "U+1832",
+        "U+1820",
+        "U+0020",
+        "U+182C",
+        "U+1821",
+        "U+1828",
+        "U+0020",
+        "U+182A",
+        "U+1821",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "您是谁",
+      "current_transliteration": "ta ken ben",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-012",
+      "kind": "phrase",
+      "form": "ᠪᠢ ᠮᠣᠩᠭᠣᠯ ᠬᠦᠮᠦᠨ",
+      "codepoints": [
+        "U+182A",
+        "U+1822",
+        "U+0020",
+        "U+182E",
+        "U+1823",
+        "U+1829",
+        "U+182D",
+        "U+1823",
+        "U+182F",
+        "U+0020",
+        "U+182C",
+        "U+1826",
+        "U+182E",
+        "U+1826",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "我是蒙古人",
+      "current_transliteration": "bi monggol kümün",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-013",
+      "kind": "phrase",
+      "form": "ᠲᠠ ᠬᠠᠭᠠᠨ᠎ᠠ ᠶᠠᠪᠤᠨ᠎ᠠ",
+      "codepoints": [
+        "U+1832",
+        "U+1820",
+        "U+0020",
+        "U+182C",
+        "U+1820",
+        "U+182D",
+        "U+1820",
+        "U+1828",
+        "U+180E",
+        "U+1820",
+        "U+0020",
+        "U+1836",
+        "U+1820",
+        "U+182A",
+        "U+1824",
+        "U+1828",
+        "U+180E",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "您去哪里",
+      "current_transliteration": "ta qaγana yabuna",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-014",
+      "kind": "phrase",
+      "form": "ᠪᠢ ᠭᠡᠷ ᠲᠡᠭᠡ ᠶᠠᠪᠤᠨ᠎ᠠ",
+      "codepoints": [
+        "U+182A",
+        "U+1822",
+        "U+0020",
+        "U+182D",
+        "U+1821",
+        "U+1837",
+        "U+0020",
+        "U+1832",
+        "U+1821",
+        "U+182D",
+        "U+1821",
+        "U+0020",
+        "U+1836",
+        "U+1820",
+        "U+182A",
+        "U+1824",
+        "U+1828",
+        "U+180E",
+        "U+1820"
+      ],
+      "current_chinese_gloss": "我回家",
+      "current_transliteration": "bi ger tege yabuna",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-015",
+      "kind": "phrase",
+      "form": "ᠡᠨᠡ ᠶᠠᠮᠠᠷ ᠪᠡᠨ",
+      "codepoints": [
+        "U+1821",
+        "U+1828",
+        "U+1821",
+        "U+0020",
+        "U+1836",
+        "U+1820",
+        "U+182E",
+        "U+1820",
+        "U+1837",
+        "U+0020",
+        "U+182A",
+        "U+1821",
+        "U+1828"
+      ],
+      "current_chinese_gloss": "这是什么",
+      "current_transliteration": "ene yamar ben",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    },
+    {
+      "id": "phrase-016",
+      "kind": "phrase",
+      "form": "ᠡᠨᠡ ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ",
+      "codepoints": [
+        "U+1821",
+        "U+1828",
+        "U+1821",
+        "U+0020",
+        "U+182E",
+        "U+1823",
+        "U+1829",
+        "U+182D",
+        "U+1823",
+        "U+182F",
+        "U+0020",
+        "U+182A",
+        "U+1822",
+        "U+1834",
+        "U+1822",
+        "U+182D"
+      ],
+      "current_chinese_gloss": "这是蒙古文",
+      "current_transliteration": "ene monggol bičig",
+      "quality_flags": [],
+      "provenance": {
+        "source_file": "data/vocabulary.json",
+        "source_version": "1.1.0",
+        "source_created": "2026-03-29",
+        "origin": "legacy_seed_data",
+        "author_or_institution": null,
+        "publication": null,
+        "url": null,
+        "license": null
+      },
+      "review": {
+        "status": "unreviewed",
+        "reviewed_by": [],
+        "reviewed_at": null,
+        "dialect_or_standard": null,
+        "decision": null,
+        "notes": []
+      }
+    }
+  ]
+}
