@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="传统蒙古文输入、竖排预览与基础文本实验工具。">
     <title>Mongol AI · 传统蒙古文写作实验台</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="core/mongolian_layout_engine.css">
+    <script src="core/mongolian_layout_engine.js" defer></script>
     <style>
         :root {
             color-scheme: light;
@@ -113,10 +112,7 @@
             background: var(--soft);
             border: 1px solid var(--line);
             border-radius: var(--radius);
-            font-family: "Noto Sans Mongolian", "Mongolian Baiti", sans-serif;
             font-size: 26px;
-            writing-mode: vertical-lr;
-            text-orientation: upright;
         }
 
         section { margin-top: 56px; }
@@ -188,7 +184,7 @@
                     </p>
                     <a class="primary-action" data-primary-action="true" href="demos/input/ai-chat.html">进入 Alpha 体验</a>
                 </div>
-                <div class="hero-script" lang="mn" aria-label="传统蒙古文示例">
+                <div class="hero-script" lang="mn-Mong" data-mongol-vertical aria-label="传统蒙古文示例">
                     ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ ᠢᠶᠡᠨ ᠳᠢᠭᠢᠲᠠᠯ ᠦᠶ᠎ᠡ ᠳᠦ ᠠᠰᠢᠭᠯᠠᠶ᠎ᠠ
                 </div>
             </section>

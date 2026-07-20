@@ -6,13 +6,32 @@ This matrix defines the remaining Phase 0 visual and interaction checks. Blank r
 
 | ID | Engine | Browser | Operating system | Viewport | Status |
 |---|---|---|---|---|---|
-| BLINK-DESKTOP | Blink | Chrome stable | macOS | 1280 × 720 | pending |
-| WEBKIT-DESKTOP | WebKit | Safari stable | macOS | 1280 × 720 | pending |
-| GECKO-DESKTOP | Gecko | Firefox stable | macOS | 1280 × 720 | pending |
+| BLINK-DESKTOP | Blink | Codex in-app browser | macOS 26.5.2 | 1280 × 720 | vertical engine gates passed 2026-07-20 |
+| WEBKIT-DESKTOP | WebKit | Safari 26.5.2 | macOS 26.5.2 | desktop window | vertical engine gates passed 2026-07-20 |
+| GECKO-DESKTOP | Gecko | Firefox stable | macOS | 1280 × 720 | blocked: Firefox is not installed |
 | WEBKIT-MOBILE | WebKit | iOS Safari | iPhone-class | 390 × 844 | pending |
 | BLINK-MOBILE | Blink | Android Chrome | Android phone-class | 390 × 844 | pending |
 
 Record exact browser, engine and OS versions when a run begins.
+
+## Focused Vertical Engine 2.0 validation — 2026-07-20
+
+The Blink and WebKit desktop runs both reported `mode=native` and
+`status=ready`. The following blocking engine checks passed in both available
+engines:
+
+- the self-hosted Noto Sans Mongolian v3.002 font loaded;
+- a continuous Mongolian word rendered as a connected top-to-bottom run;
+- a forced second column advanced to the right;
+- the official textarea and dynamically inserted messages used the same mode;
+- the formal page contained no full-run `upright` or rotation transform.
+
+Blink additionally passed long-message wrapping and deletion of a base letter
+plus FVS1 as one grapheme. Safari visual evidence confirmed the connected
+vertical run and displayed the runtime badge `Mongol AI Engine · 原生竖排`.
+
+These focused passes do not convert the untested mobile or Gecko rows into
+passes, and they do not replace native-language glyph review.
 
 ## Required checks
 

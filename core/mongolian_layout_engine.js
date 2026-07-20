@@ -1,255 +1,229 @@
 /**
- * MongolianLayoutEngine - 传统蒙古文竖排布局引擎
- * 
- * 这是 OpenClaw Mongolian AI Team 自主研发的算法
- * 不依赖任何第三方库，纯原生 JavaScript 实现
- * 
- * @version 1.0.0
- * @author OpenClaw Mongolian AI Team
- * @date 2026-03-30
+ * Mongol AI Vertical Engine
+ *
+ * A capability-tested wrapper around the browser's native shaping engine.
+ * It never splits Mongolian words into characters and never rotates the DOM.
  */
+(function (global) {
+    "use strict";
 
-class MongolianLayoutEngine {
-    constructor(options = {}) {
-        this.options = {
-            fontSize: options.fontSize || 40,
-            lineHeight: options.lineHeight || 2.2,
-            letterSpacing: options.letterSpacing || 3,
-            maxColumnHeight: options.maxColumnHeight || 400,
-            fontFamily: options.fontFamily || "'Mongolian Usug', 'Mongolian Baiti', sans-serif"
-        };
-        
-        this.browserInfo = this.detectBrowser();
-        this.cssStrategy = this.getOptimalCSSStrategy();
-    }
-    
-    /**
-     * 检测浏览器类型和版本
-     * 自主研发的浏览器检测算法
-     */
-    detectBrowser() {
-        const ua = navigator.userAgent;
-        
-        return {
-            isWebKit: /WebKit/.test(ua) && !/Chrome/.test(ua),
-            isChrome: /Chrome/.test(ua),
-            isFirefox: /Firefox/.test(ua),
-            isSafari: /Safari/.test(ua) && !/Chrome/.test(ua),
-            version: this.extractVersion(ua)
-        };
-    }
-    
-    extractVersion(ua) {
-        const match = ua.match(/(Chrome|Firefox|Safari)\/([\d.]+)/);
-        return match ? match[2] : 'unknown';
-    }
-    
-    /**
-     * 获取最优 CSS 策略
-     * 基于浏览器类型自动选择最佳渲染方案
-     */
-    getOptimalCSSStrategy() {
-        if (this.browserInfo.isWebKit || this.browserInfo.isSafari) {
-            return {
-                'writing-mode': 'vertical-lr',
-                'text-orientation': 'sideways',
-                'font-feature-settings': '"mong"'
+    const DEFAULT_SAMPLE = "ᠮᠣᠩᠭᠣᠯ";
+    const MONGOLIAN_LETTER = /[\u1820-\u18AA]/u;
+    const FVS = /[\u180B-\u180D\u180F]/u;
+
+    class MongolVerticalEngine {
+        constructor(options = {}) {
+            this.options = {
+                selector: options.selector || "[data-mongol-vertical]",
+                fontFamily: options.fontFamily || "Mongol AI Noto",
+                fontTimeout: options.fontTimeout || 5000,
             };
-        } else if (this.browserInfo.isFirefox) {
-            return {
-                'writing-mode': 'vertical-lr',
-                'text-orientation': 'mixed'
-            };
-        } else {
-            // Chrome/Blink
-            return {
-                'writing-mode': 'vertical-lr',
-                'text-orientation': 'upright'
-            };
+            this.mode = "pending";
+            this.fontReady = false;
+            this.measurements = null;
+            this.observer = null;
         }
-    }
-    
-    /**
-     * 分析蒙古文文本
-     * 识别词边界、字符位置等
-     */
-    analyzeText(text) {
-        const words = text.split(/\s+/);
-        const analysis = {
-            totalChars: text.length,
-            totalWords: words.length,
-            words: words.map(word => this.analyzeWord(word))
-        };
-        
-        return analysis;
-    }
-    
-    /**
-     * 分析单词
-     * 识别词首、词中、词尾字符
-     */
-    analyzeWord(word) {
-        return {
-            text: word,
-            length: word.length,
-            firstChar: word[0],
-            lastChar: word[word.length - 1],
-            hasMongolian: /[\u1800-\u18AF]/.test(word)
-        };
-    }
-    
-    /**
-     * 计算布局
-     * 根据容器宽度计算列数和每列内容
-     */
-    calculateLayout(text, containerWidth) {
-        const charWidth = this.options.fontSize * 0.6;
-        const charsPerColumn = Math.floor(containerWidth / charWidth);
-        const columns = [];
-        
-        let currentColumn = [];
-        let currentLength = 0;
-        
-        for (const char of text) {
-            if (char === '\n' || currentLength >= charsPerColumn) {
-                columns.push(currentColumn.join(''));
-                currentColumn = [];
-                currentLength = 0;
-                
-                if (char === '\n') continue;
+
+        async start() {
+            document.documentElement.dataset.mongolEngineStatus = "pending";
+            this.fontReady = await this.loadFont();
+            const result = this.detectRenderingMode();
+            this.mode = result.mode;
+            this.measurements = result.measurements;
+
+            document.documentElement.dataset.mongolEngineMode = this.mode;
+            document.documentElement.dataset.mongolEngineStatus =
+                this.mode === "unavailable" ? "degraded" : "ready";
+
+            this.upgrade(document);
+            this.observe();
+
+            const report = this.getReport();
+            document.dispatchEvent(new CustomEvent("mongolai:vertical-ready", { detail: report }));
+            return report;
+        }
+
+        async loadFont() {
+            if (!document.fonts || typeof document.fonts.load !== "function") return false;
+
+            const load = document.fonts
+                .load(`32px "${this.options.fontFamily}"`, DEFAULT_SAMPLE)
+                .then((faces) => faces.length > 0)
+                .catch(() => false);
+            const timeout = new Promise((resolve) => {
+                global.setTimeout(() => resolve(false), this.options.fontTimeout);
+            });
+            return Promise.race([load, timeout]);
+        }
+
+        detectRenderingMode() {
+            if (!global.CSS || !CSS.supports("writing-mode", "vertical-lr")) {
+                return { mode: "unavailable", measurements: null };
             }
-            
-            currentColumn.push(char);
-            currentLength++;
+
+            const mixed = this.probe("mixed");
+            if (mixed.passes) return { mode: "native", measurements: mixed };
+
+            if (CSS.supports("text-orientation", "sideways")) {
+                const sideways = this.probe("sideways");
+                if (sideways.passes) return { mode: "compat", measurements: sideways };
+            }
+
+            return { mode: "unavailable", measurements: mixed };
         }
-        
-        if (currentColumn.length > 0) {
-            columns.push(currentColumn.join(''));
+
+        probe(orientation) {
+            const host = document.createElement("div");
+            host.setAttribute("aria-hidden", "true");
+            Object.assign(host.style, {
+                position: "fixed",
+                inset: "auto auto 100vh 100vw",
+                visibility: "hidden",
+                pointerEvents: "none",
+                contain: "strict",
+            });
+
+            const makeSample = (writingMode, textOrientation) => {
+                const node = document.createElement("span");
+                node.lang = "mn-Mong";
+                node.textContent = DEFAULT_SAMPLE;
+                Object.assign(node.style, {
+                    display: "inline-block",
+                    whiteSpace: "nowrap",
+                    fontFamily: `"${this.options.fontFamily}", "Mongolian Baiti", sans-serif`,
+                    fontSize: "32px",
+                    lineHeight: "1.2",
+                    letterSpacing: "normal",
+                    writingMode,
+                    textOrientation,
+                });
+                host.appendChild(node);
+                return node;
+            };
+
+            const horizontal = makeSample("horizontal-tb", "mixed");
+            const vertical = makeSample("vertical-lr", orientation);
+            const upright = makeSample("vertical-lr", "upright");
+
+            const flow = document.createElement("div");
+            Object.assign(flow.style, {
+                display: "inline-block",
+                writingMode: "vertical-lr",
+                textOrientation: orientation,
+                fontFamily: `"${this.options.fontFamily}", "Mongolian Baiti", sans-serif`,
+                fontSize: "24px",
+                lineHeight: "1.2",
+            });
+            const first = document.createElement("span");
+            const second = document.createElement("span");
+            first.textContent = DEFAULT_SAMPLE;
+            second.textContent = DEFAULT_SAMPLE;
+            flow.append(first, document.createElement("br"), second);
+            host.appendChild(flow);
+            document.body.appendChild(host);
+
+            const horizontalRect = horizontal.getBoundingClientRect();
+            const verticalRect = vertical.getBoundingClientRect();
+            const uprightRect = upright.getBoundingClientRect();
+            const firstRect = first.getBoundingClientRect();
+            const secondRect = second.getBoundingClientRect();
+
+            const axisDelta = Math.abs(verticalRect.height - horizontalRect.width) /
+                Math.max(horizontalRect.width, 1);
+            const preservesRun = axisDelta < 0.45 && verticalRect.height < uprightRect.height * 0.9;
+            const flowsLeftToRight = secondRect.left > firstRect.left;
+
+            host.remove();
+            return {
+                orientation,
+                passes: preservesRun && flowsLeftToRight,
+                preservesRun,
+                flowsLeftToRight,
+                axisDelta: Number(axisDelta.toFixed(3)),
+                horizontalWidth: Number(horizontalRect.width.toFixed(2)),
+                verticalHeight: Number(verticalRect.height.toFixed(2)),
+                uprightHeight: Number(uprightRect.height.toFixed(2)),
+                columnAdvance: Number((secondRect.left - firstRect.left).toFixed(2)),
+            };
         }
-        
-        return {
-            columns,
-            charsPerColumn,
-            totalColumns: columns.length
-        };
-    }
-    
-    /**
-     * 生成 CSS 样式
-     * 应用最优策略
-     */
-    generateCSS() {
-        const baseStyles = {
-            'font-family': this.options.fontFamily,
-            'font-size': `${this.options.fontSize}px`,
-            'line-height': this.options.lineHeight,
-            'letter-spacing': `${this.options.letterSpacing}px`,
-            'padding': '20px',
-            'max-height': `${this.options.maxColumnHeight}px`,
-            'overflow-y': 'auto'
-        };
-        
-        return {
-            ...baseStyles,
-            ...this.cssStrategy
-        };
-    }
-    
-    /**
-     * 应用样式到元素
-     */
-    applyStyles(element) {
-        const styles = this.generateCSS();
-        
-        for (const [property, value] of Object.entries(styles)) {
-            element.style[property] = value;
+
+        upgrade(root = document) {
+            const elements = [];
+            if (root.nodeType === Node.ELEMENT_NODE && root.matches(this.options.selector)) {
+                elements.push(root);
+            }
+            elements.push(...root.querySelectorAll(this.options.selector));
+
+            for (const element of elements) {
+                if (!element.lang || element.lang === "mn") element.lang = "mn-Mong";
+                element.dataset.mongolEngineMode = this.mode;
+                element.dataset.mongolEngineReady = "true";
+            }
+            return elements.length;
         }
-    }
-    
-    /**
-     * 渲染蒙古文文本
-     * 主入口函数
-     */
-    render(text, container) {
-        // 1. 分析文本
-        const analysis = this.analyzeText(text);
-        
-        // 2. 计算布局
-        const layout = this.calculateLayout(text, container.offsetWidth);
-        
-        // 3. 创建渲染容器
-        const renderContainer = document.createElement('div');
-        renderContainer.className = 'mongolian-vertical';
-        
-        // 4. 应用样式
-        this.applyStyles(renderContainer);
-        
-        // 5. 设置内容
-        renderContainer.textContent = text;
-        
-        // 6. 添加到容器
-        container.appendChild(renderContainer);
-        
-        return {
-            element: renderContainer,
-            analysis,
-            layout
-        };
-    }
-    
-    /**
-     * 性能优化：懒加载长文本
-     */
-    lazyLoadLongText(text, container, chunkSize = 100) {
-        const chunks = [];
-        for (let i = 0; i < text.length; i += chunkSize) {
-            chunks.push(text.slice(i, i + chunkSize));
+
+        observe() {
+            if (!global.MutationObserver || this.observer) return;
+            this.observer = new MutationObserver((records) => {
+                for (const record of records) {
+                    for (const node of record.addedNodes) {
+                        if (node.nodeType === Node.ELEMENT_NODE) this.upgrade(node);
+                    }
+                }
+            });
+            this.observer.observe(document.body, { childList: true, subtree: true });
         }
-        
-        const renderContainer = document.createElement('div');
-        renderContainer.className = 'mongolian-vertical';
-        this.applyStyles(renderContainer);
-        
-        let currentChunk = 0;
-        
-        const loadNextChunk = () => {
-            if (currentChunk < chunks.length) {
-                const span = document.createElement('span');
-                span.textContent = chunks[currentChunk];
-                renderContainer.appendChild(span);
-                currentChunk++;
-                
-                // 使用 requestIdleCallback 优化性能
-                if (typeof requestIdleCallback === 'function') {
-                    requestIdleCallback(loadNextChunk);
-                } else {
-                    setTimeout(loadNextChunk, 0);
+
+        validateText(text) {
+            const codePoints = Array.from(text);
+            const orphanVariationSelectors = [];
+            for (let index = 0; index < codePoints.length; index += 1) {
+                if (!FVS.test(codePoints[index])) continue;
+                if (index === 0 || !MONGOLIAN_LETTER.test(codePoints[index - 1])) {
+                    orphanVariationSelectors.push(index);
                 }
             }
-        };
-        
-        loadNextChunk();
-        container.appendChild(renderContainer);
-        
-        return renderContainer;
-    }
-    
-    /**
-     * 获取引擎信息
-     */
-    getInfo() {
-        return {
-            name: 'MongolianLayoutEngine',
-            version: '1.0.0',
-            author: 'OpenClaw Mongolian AI Team',
-            browser: this.browserInfo,
-            strategy: this.cssStrategy,
-            options: this.options
-        };
-    }
-}
+            return {
+                valid: orphanVariationSelectors.length === 0 && !text.includes("�"),
+                orphanVariationSelectors,
+                containsMongolian: /[\u1800-\u18AF]/u.test(text),
+                containsMvs: text.includes("\u180E"),
+                containsNnbsp: text.includes("\u202F"),
+                codePointLength: codePoints.length,
+            };
+        }
 
-// 导出模块
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = MongolianLayoutEngine;
-}
+        render(element, text) {
+            element.setAttribute("data-mongol-vertical", "");
+            element.textContent = text;
+            this.upgrade(element);
+            return { element, validation: this.validateText(text), mode: this.mode };
+        }
+
+        getReport() {
+            return {
+                name: "Mongol AI Vertical Engine",
+                version: "2.0.0",
+                mode: this.mode,
+                fontReady: this.fontReady,
+                measurements: this.measurements,
+            };
+        }
+    }
+
+    const engine = new MongolVerticalEngine();
+    global.MongolAI = global.MongolAI || {};
+    global.MongolAI.VerticalEngine = MongolVerticalEngine;
+    global.MongolAI.vertical = engine;
+
+    const boot = () => engine.start().catch((error) => {
+        document.documentElement.dataset.mongolEngineStatus = "degraded";
+        global.console.error("Mongol AI Vertical Engine failed to start", error);
+    });
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", boot, { once: true });
+    } else {
+        boot();
+    }
+})(window);

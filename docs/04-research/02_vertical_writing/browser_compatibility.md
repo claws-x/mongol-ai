@@ -1,5 +1,11 @@
 # 浏览器兼容性测试
 
+> **历史报告，不能作为当前兼容性结论。** 其中把整段蒙古文设置为
+> `text-orientation: upright` 的建议已通过可视化对照证伪；它会显示逐字
+> 横躺、断开的字形。当前基线是能力探测后的 `vertical-lr + mixed`，失败
+> 时才使用 `sideways`。见
+> [`MONGOL_VERTICAL_ENGINE.md`](../../02-architecture/MONGOL_VERTICAL_ENGINE.md)。
+
 **文档版本**: 1.0  
 **创建日期**: 2026-04-03  
 **最后更新**: 2026-04-03  

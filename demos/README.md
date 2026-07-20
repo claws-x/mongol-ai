@@ -1,5 +1,9 @@
 # Labs 目录
 
+> `vertical/`、旧键盘页面及旧测试页保留为历史实验，其中可能包含已经
+> 证伪的 `text-orientation: upright` 或旋转方案。它们不得作为正式实现；
+> 正式竖排入口统一使用 `core/mongolian_layout_engine.*`。
+
 除 `input/ai-chat.html` 外，本目录中的页面均为历史实验，不代表当前正式产品能力或质量承诺。
 
 ## 正式 Alpha

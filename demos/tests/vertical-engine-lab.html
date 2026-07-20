@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mongol AI 竖排渲染对照实验</title>
+    <link rel="stylesheet" href="../../core/mongolian_layout_engine.css">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 24px;
+            color: #172033;
+            background: #f5f7fb;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+        h1 { margin: 0 0 8px; }
+        p { color: #5e687a; }
+        .cases {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .case {
+            min-width: 0;
+            padding: 16px;
+            background: white;
+            border: 1px solid #dfe4ec;
+            border-radius: 16px;
+        }
+        .case h2 { margin: 0 0 4px; font-size: 16px; }
+        .case code { color: #3157c8; font-size: 12px; }
+        .sample {
+            width: 100%;
+            height: 380px;
+            margin-top: 14px;
+            overflow: auto;
+            padding: 16px;
+            color: #172033;
+            background: #f8faff;
+            border: 1px solid #dfe4ec;
+            border-radius: 10px;
+            font-family: "Mongol AI Noto", "Noto Sans Mongolian", "Mongolian Baiti", sans-serif;
+            font-size: 28px;
+            line-height: 1.65;
+        }
+        .horizontal { writing-mode: horizontal-tb; }
+        .upright { writing-mode: vertical-lr; text-orientation: upright; }
+        .mixed { writing-mode: vertical-lr; text-orientation: mixed; }
+        .sideways { writing-mode: vertical-lr; text-orientation: sideways; }
+        @media (max-width: 900px) { .cases { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 560px) { .cases { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <h1>蒙古文竖排渲染对照</h1>
+    <p>同一字体、同一文本，仅改变 writing-mode / text-orientation。</p>
+    <div class="cases">
+        <section class="case">
+            <h2>横排基线</h2>
+            <code>horizontal-tb</code>
+            <div class="sample horizontal" lang="mn-Mong">ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ ᠪᠣᠯ ᠮᠣᠩᠭᠣᠯ ᠦᠨᠳᠦᠰᠦᠲᠡᠨ ᠦ ᠤᠯᠠᠮᠵᠢᠯᠠᠯᠲᠤ ᠪᠢᠴᠢᠭ ᠮᠥᠨ᠃</div>
+        </section>
+        <section class="case">
+            <h2>现有错误方案</h2>
+            <code>vertical-lr + upright</code>
+            <div class="sample upright" lang="mn-Mong">ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ ᠪᠣᠯ ᠮᠣᠩᠭᠣᠯ ᠦᠨᠳᠦᠰᠦᠲᠡᠨ ᠦ ᠤᠯᠠᠮᠵᠢᠯᠠᠯᠲᠤ ᠪᠢᠴᠢᠭ ᠮᠥᠨ᠃</div>
+        </section>
+        <section class="case">
+            <h2>标准原生方案</h2>
+            <code>vertical-lr + mixed</code>
+            <div class="sample mixed" lang="mn-Mong">ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ ᠪᠣᠯ ᠮᠣᠩᠭᠣᠯ ᠦᠨᠳᠦᠰᠦᠲᠡᠨ ᠦ ᠤᠯᠠᠮᠵᠢᠯᠠᠯᠲᠤ ᠪᠢᠴᠢᠭ ᠮᠥᠨ᠃</div>
+        </section>
+        <section class="case">
+            <h2>兼容回退方案</h2>
+            <code>vertical-lr + sideways</code>
+            <div class="sample sideways" lang="mn-Mong">ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ ᠪᠣᠯ ᠮᠣᠩᠭᠣᠯ ᠦᠨᠳᠦᠰᠦᠲᠡᠨ ᠦ ᠤᠯᠠᠮᠵᠢᠯᠠᠯᠲᠤ ᠪᠢᠴᠢᠭ ᠮᠥᠨ᠃</div>
+        </section>
+    </div>
+</body>
+</html>

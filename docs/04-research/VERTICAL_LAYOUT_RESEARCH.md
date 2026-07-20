@@ -1,5 +1,11 @@
 # 传统蒙古文竖排显示算法研究
 
+> **历史研究记录，已被替代。** 本文所述 v1 引擎使用 UA 嗅探、Chrome
+> `text-orientation: upright`、手工字符分列和非零 `letter-spacing`，实际会
+> 破坏蒙古文连续塑形。正式实现与决策见
+> [`MONGOL_VERTICAL_ENGINE.md`](../02-architecture/MONGOL_VERTICAL_ENGINE.md)。
+> 本文仅保留用于说明错误路线，不得复制到正式页面。
+
 ## 一、问题定义
 
 **核心问题**：如何在 Web 浏览器中正确显示传统蒙古文竖排文本？

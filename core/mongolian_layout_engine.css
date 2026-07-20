@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "Mongol AI Noto";
+    src: url("../assets/fonts/NotoSansMongolian-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+:where([data-mongol-vertical]) {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-family: "Mongol AI Noto", "Noto Sans Mongolian", "Mongolian Baiti", sans-serif;
+    font-synthesis: none;
+    font-kerning: normal;
+    font-feature-settings: normal;
+    font-variant-ligatures: common-ligatures contextual;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    unicode-bidi: isolate;
+}
+
+html[data-mongol-engine-mode="compat"] :where([data-mongol-vertical]) {
+    text-orientation: sideways;
+}
+
+html[data-mongol-engine-mode="unavailable"] :where([data-mongol-vertical]) {
+    writing-mode: horizontal-tb;
+}
+
+:where([data-mongol-vertical])[data-mongol-engine-ready="true"] {
+    --mongol-engine-ready: 1;
+}

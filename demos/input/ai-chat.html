@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="传统蒙古文输入、竖排预览与基础响应 Alpha。">
     <title>传统蒙古文写作实验台 · Alpha</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mongolian&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../core/mongolian_layout_engine.css">
+    <script src="../../core/mongolian_layout_engine.js" defer></script>
     <style>
         :root {
             color-scheme: light;
@@ -53,6 +52,21 @@
 
         .back-link { color: var(--brand-dark); font-weight: 700; }
         .phase { color: var(--muted); font-size: 14px; }
+        .engine-state {
+            display: inline-flex;
+            min-height: 28px;
+            align-items: center;
+            padding: 0 10px;
+            color: #475269;
+            background: #edf1f8;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        html[data-mongol-engine-status="ready"] .engine-state {
+            color: #176b49;
+            background: #e7f6ef;
+        }
 
         .heading {
             padding: 28px;
@@ -129,11 +143,8 @@
             max-height: 440px;
             overflow: auto;
             color: var(--ink);
-            font-family: "Noto Sans Mongolian", "Mongolian Baiti", sans-serif;
             font-size: 22px;
             line-height: 1.65;
-            writing-mode: vertical-lr;
-            text-orientation: upright;
         }
 
         .field-label { display: block; margin-bottom: 8px; font-weight: 700; }
@@ -147,11 +158,8 @@
             background: white;
             border: 2px solid var(--line);
             border-radius: 12px;
-            font-family: "Noto Sans Mongolian", "Mongolian Baiti", sans-serif;
             font-size: 22px;
             line-height: 1.6;
-            writing-mode: vertical-lr;
-            text-orientation: upright;
         }
 
         .mongolian-textarea:focus { border-color: var(--brand); outline: 3px solid #d8e0ff; }
@@ -203,10 +211,7 @@
 
         .key:hover { background: var(--soft); }
         .key-char {
-            font-family: "Noto Sans Mongolian", "Mongolian Baiti", sans-serif;
             font-size: 20px;
-            writing-mode: vertical-lr;
-            text-orientation: upright;
         }
         .key-label { color: var(--muted); font-size: 10px; }
 
@@ -230,7 +235,10 @@
     <main class="shell">
         <div class="topbar">
             <a class="back-link" href="../../index.html">返回项目首页</a>
-            <span class="phase">Phase 0 · Alpha</span>
+            <div>
+                <span class="engine-state" id="engine-state" aria-live="polite">竖排引擎自检中</span>
+                <span class="phase">Phase 0 · Alpha</span>
+            </div>
         </div>
 
         <header class="heading">
@@ -252,7 +260,7 @@
             <section class="panel" aria-labelledby="composer-title">
                 <h2 id="composer-title">输入区</h2>
                 <label class="field-label" for="input">传统蒙古文</label>
-                <textarea class="mongolian-textarea" id="input" lang="mn" placeholder="ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ..." aria-describedby="input-help"></textarea>
+                <textarea class="mongolian-textarea" id="input" lang="mn-Mong" data-mongol-vertical placeholder="ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ..." aria-describedby="input-help"></textarea>
                 <p id="input-help" class="phase">Enter 发送，Shift + Enter 换行。</p>
 
                 <div class="input-tools">
@@ -272,48 +280,48 @@
 
                     <div id="panel-vowels" role="tabpanel" aria-labelledby="tab-vowels" data-key-panel="vowels">
                         <div class="keyboard-row">
-                            <button class="key" type="button" data-char="ᠠ" aria-label="输入蒙古文字母 A"><span class="key-char" lang="mn">ᠠ</span><span class="key-label">A</span></button>
-                            <button class="key" type="button" data-char="ᠡ" aria-label="输入蒙古文字母 E"><span class="key-char" lang="mn">ᠡ</span><span class="key-label">E</span></button>
-                            <button class="key" type="button" data-char="ᠢ" aria-label="输入蒙古文字母 I"><span class="key-char" lang="mn">ᠢ</span><span class="key-label">I</span></button>
-                            <button class="key" type="button" data-char="ᠣ" aria-label="输入蒙古文字母 O"><span class="key-char" lang="mn">ᠣ</span><span class="key-label">O</span></button>
-                            <button class="key" type="button" data-char="ᠤ" aria-label="输入蒙古文字母 U"><span class="key-char" lang="mn">ᠤ</span><span class="key-label">U</span></button>
-                            <button class="key" type="button" data-char="ᠥ" aria-label="输入蒙古文字母 Ö"><span class="key-char" lang="mn">ᠥ</span><span class="key-label">Ö</span></button>
-                            <button class="key" type="button" data-char="ᠦ" aria-label="输入蒙古文字母 Ü"><span class="key-char" lang="mn">ᠦ</span><span class="key-label">Ü</span></button>
+                            <button class="key" type="button" data-char="ᠠ" aria-label="输入蒙古文字母 A"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠠ</span><span class="key-label">A</span></button>
+                            <button class="key" type="button" data-char="ᠡ" aria-label="输入蒙古文字母 E"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠡ</span><span class="key-label">E</span></button>
+                            <button class="key" type="button" data-char="ᠢ" aria-label="输入蒙古文字母 I"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠢ</span><span class="key-label">I</span></button>
+                            <button class="key" type="button" data-char="ᠣ" aria-label="输入蒙古文字母 O"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠣ</span><span class="key-label">O</span></button>
+                            <button class="key" type="button" data-char="ᠤ" aria-label="输入蒙古文字母 U"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠤ</span><span class="key-label">U</span></button>
+                            <button class="key" type="button" data-char="ᠥ" aria-label="输入蒙古文字母 Ö"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠥ</span><span class="key-label">Ö</span></button>
+                            <button class="key" type="button" data-char="ᠦ" aria-label="输入蒙古文字母 Ü"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠦ</span><span class="key-label">Ü</span></button>
                         </div>
                     </div>
 
                     <div id="panel-consonants-1" role="tabpanel" aria-labelledby="tab-consonants-1" data-key-panel="consonants-1" hidden>
                         <div class="keyboard-row">
-                            <button class="key" type="button" data-char="ᠨ" aria-label="输入蒙古文字母 N"><span class="key-char" lang="mn">ᠨ</span><span class="key-label">N</span></button>
-                            <button class="key" type="button" data-char="ᠪ" aria-label="输入蒙古文字母 B"><span class="key-char" lang="mn">ᠪ</span><span class="key-label">B</span></button>
-                            <button class="key" type="button" data-char="ᠫ" aria-label="输入蒙古文字母 P"><span class="key-char" lang="mn">ᠫ</span><span class="key-label">P</span></button>
-                            <button class="key" type="button" data-char="ᠬ" aria-label="输入蒙古文字母 Q"><span class="key-char" lang="mn">ᠬ</span><span class="key-label">Q</span></button>
-                            <button class="key" type="button" data-char="ᠭ" aria-label="输入蒙古文字母 G"><span class="key-char" lang="mn">ᠭ</span><span class="key-label">G</span></button>
-                            <button class="key" type="button" data-char="ᠮ" aria-label="输入蒙古文字母 M"><span class="key-char" lang="mn">ᠮ</span><span class="key-label">M</span></button>
-                            <button class="key" type="button" data-char="ᠯ" aria-label="输入蒙古文字母 L"><span class="key-char" lang="mn">ᠯ</span><span class="key-label">L</span></button>
+                            <button class="key" type="button" data-char="ᠨ" aria-label="输入蒙古文字母 N"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠨ</span><span class="key-label">N</span></button>
+                            <button class="key" type="button" data-char="ᠪ" aria-label="输入蒙古文字母 B"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠪ</span><span class="key-label">B</span></button>
+                            <button class="key" type="button" data-char="ᠫ" aria-label="输入蒙古文字母 P"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠫ</span><span class="key-label">P</span></button>
+                            <button class="key" type="button" data-char="ᠬ" aria-label="输入蒙古文字母 Q"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠬ</span><span class="key-label">Q</span></button>
+                            <button class="key" type="button" data-char="ᠭ" aria-label="输入蒙古文字母 G"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠭ</span><span class="key-label">G</span></button>
+                            <button class="key" type="button" data-char="ᠮ" aria-label="输入蒙古文字母 M"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠮ</span><span class="key-label">M</span></button>
+                            <button class="key" type="button" data-char="ᠯ" aria-label="输入蒙古文字母 L"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠯ</span><span class="key-label">L</span></button>
                         </div>
                     </div>
 
                     <div id="panel-consonants-2" role="tabpanel" aria-labelledby="tab-consonants-2" data-key-panel="consonants-2" hidden>
                         <div class="keyboard-row">
-                            <button class="key" type="button" data-char="ᠰ" aria-label="输入蒙古文字母 S"><span class="key-char" lang="mn">ᠰ</span><span class="key-label">S</span></button>
-                            <button class="key" type="button" data-char="ᠱ" aria-label="输入蒙古文字母 Š"><span class="key-char" lang="mn">ᠱ</span><span class="key-label">Š</span></button>
-                            <button class="key" type="button" data-char="ᠲ" aria-label="输入蒙古文字母 T"><span class="key-char" lang="mn">ᠲ</span><span class="key-label">T</span></button>
-                            <button class="key" type="button" data-char="ᠳ" aria-label="输入蒙古文字母 D"><span class="key-char" lang="mn">ᠳ</span><span class="key-label">D</span></button>
-                            <button class="key" type="button" data-char="ᠴ" aria-label="输入蒙古文字母 Č"><span class="key-char" lang="mn">ᠴ</span><span class="key-label">Č</span></button>
-                            <button class="key" type="button" data-char="ᠵ" aria-label="输入蒙古文字母 J"><span class="key-char" lang="mn">ᠵ</span><span class="key-label">J</span></button>
-                            <button class="key" type="button" data-char="ᠶ" aria-label="输入蒙古文字母 Y"><span class="key-char" lang="mn">ᠶ</span><span class="key-label">Y</span></button>
+                            <button class="key" type="button" data-char="ᠰ" aria-label="输入蒙古文字母 S"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠰ</span><span class="key-label">S</span></button>
+                            <button class="key" type="button" data-char="ᠱ" aria-label="输入蒙古文字母 Š"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠱ</span><span class="key-label">Š</span></button>
+                            <button class="key" type="button" data-char="ᠲ" aria-label="输入蒙古文字母 T"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠲ</span><span class="key-label">T</span></button>
+                            <button class="key" type="button" data-char="ᠳ" aria-label="输入蒙古文字母 D"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠳ</span><span class="key-label">D</span></button>
+                            <button class="key" type="button" data-char="ᠴ" aria-label="输入蒙古文字母 Č"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠴ</span><span class="key-label">Č</span></button>
+                            <button class="key" type="button" data-char="ᠵ" aria-label="输入蒙古文字母 J"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠵ</span><span class="key-label">J</span></button>
+                            <button class="key" type="button" data-char="ᠶ" aria-label="输入蒙古文字母 Y"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠶ</span><span class="key-label">Y</span></button>
                         </div>
                     </div>
 
                     <div id="panel-more" role="tabpanel" aria-labelledby="tab-more" data-key-panel="more" hidden>
                         <div class="keyboard-row">
-                            <button class="key" type="button" data-char="ᠷ" aria-label="输入蒙古文字母 R"><span class="key-char" lang="mn">ᠷ</span><span class="key-label">R</span></button>
-                            <button class="key" type="button" data-char="ᠸ" aria-label="输入蒙古文字母 W"><span class="key-char" lang="mn">ᠸ</span><span class="key-label">W</span></button>
-                            <button class="key" type="button" data-char="ᠹ" aria-label="输入蒙古文字母 F"><span class="key-char" lang="mn">ᠹ</span><span class="key-label">F</span></button>
+                            <button class="key" type="button" data-char="ᠷ" aria-label="输入蒙古文字母 R"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠷ</span><span class="key-label">R</span></button>
+                            <button class="key" type="button" data-char="ᠸ" aria-label="输入蒙古文字母 W"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠸ</span><span class="key-label">W</span></button>
+                            <button class="key" type="button" data-char="ᠹ" aria-label="输入蒙古文字母 F"><span class="key-char" lang="mn-Mong" data-mongol-vertical>ᠹ</span><span class="key-label">F</span></button>
                             <button class="key" type="button" data-char=" " aria-label="输入空格"><span aria-hidden="true">空格</span></button>
-                            <button class="key" type="button" data-char="᠂" aria-label="输入蒙古文逗号"><span class="key-char" lang="mn">᠂</span><span class="key-label">逗号</span></button>
-                            <button class="key" type="button" data-char="᠃" aria-label="输入蒙古文句号"><span class="key-char" lang="mn">᠃</span><span class="key-label">句号</span></button>
+                            <button class="key" type="button" data-char="᠂" aria-label="输入蒙古文逗号"><span class="key-char" lang="mn-Mong" data-mongol-vertical>᠂</span><span class="key-label">逗号</span></button>
+                            <button class="key" type="button" data-char="᠃" aria-label="输入蒙古文句号"><span class="key-char" lang="mn-Mong" data-mongol-vertical>᠃</span><span class="key-label">句号</span></button>
                         </div>
                     </div>
                 </div>
@@ -344,7 +352,19 @@
             if (start !== end) {
                 input.setRangeText('', start, end, 'end');
             } else if (start > 0) {
-                input.setRangeText('', start - 1, start, 'end');
+                const prefix = input.value.slice(0, start);
+                let boundary = 0;
+                if (typeof Intl.Segmenter === 'function') {
+                    const segments = new Intl.Segmenter('mn', { granularity: 'grapheme' }).segment(prefix);
+                    for (const segment of segments) boundary = segment.index;
+                } else {
+                    const previous = Array.from(prefix).pop() || '';
+                    boundary = start - previous.length;
+                    if (/[\u180B-\u180D\u180F]/u.test(previous) && boundary > 0) {
+                        boundary -= (Array.from(input.value.slice(0, boundary)).pop() || '').length;
+                    }
+                }
+                input.setRangeText('', boundary, start, 'end');
             }
             input.focus();
         }
@@ -360,7 +380,8 @@
 
             const content = document.createElement('div');
             content.className = 'mongolian-text';
-            content.lang = 'mn';
+            content.lang = 'mn-Mong';
+            content.setAttribute('data-mongol-vertical', '');
             content.textContent = text;
 
             message.append(label, content);
@@ -417,6 +438,13 @@
                 event.preventDefault();
                 send();
             }
+        });
+
+        document.addEventListener('mongolai:vertical-ready', (event) => {
+            const state = document.getElementById('engine-state');
+            const { mode, fontReady } = event.detail;
+            const modeLabel = mode === 'native' ? '原生竖排' : mode === 'compat' ? '兼容竖排' : '降级显示';
+            state.textContent = `Mongol AI Engine · ${modeLabel}${fontReady ? '' : ' · 字体回退'}`;
         });
     </script>
 </body>

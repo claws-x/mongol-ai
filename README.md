@@ -15,7 +15,8 @@
 ## 当前已验证能力
 
 - 传统蒙古文物理键盘与虚拟键盘输入
-- 基于 CSS `writing-mode: vertical-lr` 的原生竖排布局
+- Mongol AI Vertical Engine 2.0：以 `vertical-lr + mixed` 为主路径，运行时验证连写方向和左→右换列
+- 仓库内固定 Noto Sans Mongolian v3.002 字体，不依赖 Google Fonts 或操作系统字体
 - 基础文本检测、提取、统计和简化转写
 - 规则分词、词性标注和句法分析原型可导入运行
 - Python 自动化测试和正式页面契约测试
@@ -51,7 +52,7 @@ PYTHONPYCACHEPREFIX=/tmp/mongol-ai-pycache python3 -m unittest discover -v
 ## 项目结构
 
 ```text
-core/       文本、输入与规则响应原型
+core/       竖排渲染引擎、文本、输入与规则响应原型
 nlp/        分词、词性标注与句法分析原型
 data/       小规模实验词汇和短语
 demos/      正式 Alpha 与历史 Labs
@@ -68,6 +69,9 @@ tests/      Phase 0 自动化回归测试
 3. 用户输入必须作为文本处理，不注入 HTML。
 4. 核心流程必须可通过键盘操作，并提供可理解的标签和状态。
 5. 历史演示与正式产品能力必须明确分开。
+
+竖排引擎的能力探测、兼容回退和 Unicode 契约见
+[`MONGOL_VERTICAL_ENGINE.md`](docs/02-architecture/MONGOL_VERTICAL_ENGINE.md)。
 
 ## 贡献
 

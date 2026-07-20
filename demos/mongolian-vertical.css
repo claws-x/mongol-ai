@@ -5,9 +5,10 @@
  */
 
 :where(.mn, .mongolian-text, .mongolian-vertical, .mongolian-message, [lang="mn"]) {
-    font-family: "Noto Sans Mongolian", "Mongolian Baiti", sans-serif;
+    font-family: "Mongol AI Noto", "Noto Sans Mongolian", "Mongolian Baiti", sans-serif;
     writing-mode: vertical-lr;
-    text-orientation: upright;
+    text-orientation: mixed;
+    letter-spacing: normal;
 }
 
 :where(.mongolian-text, .mongolian-vertical, .mongolian-message) {
@@ -26,5 +27,5 @@
 
 .mn-key > :first-child {
     writing-mode: vertical-lr;
-    text-orientation: upright;
+    text-orientation: mixed;
 }
