@@ -36,6 +36,24 @@ class ProductContractTests(unittest.TestCase):
         license_text = (ROOT / "assets/fonts/OFL.txt").read_text(encoding="utf-8")
         self.assertIn("SIL OPEN FONT LICENSE Version 1.1", license_text)
 
+    def test_workspace_exposes_phase_one_document_actions(self):
+        html = (ROOT / "demos/input/ai-chat.html").read_text(encoding="utf-8")
+        script = (ROOT / "demos/input/ai-chat.js").read_text(encoding="utf-8")
+        self.assertIn('id="live-preview"', html)
+        self.assertIn('id="copy-button"', html)
+        self.assertIn('id="download-button"', html)
+        self.assertIn("localStorage.setItem", script)
+        self.assertIn("text/plain;charset=utf-8", script)
+
+    def test_workspace_exposes_phase_two_encoding_diagnostics(self):
+        html = (ROOT / "demos/input/ai-chat.html").read_text(encoding="utf-8")
+        inspector = (ROOT / "core/mongolian_text_inspector.js").read_text(encoding="utf-8")
+        self.assertIn('id="diagnostic-list"', html)
+        self.assertIn("orphan-fvs", inspector)
+        self.assertIn("replacement-character", inspector)
+        self.assertIn("matchedCases", inspector)
+        self.assertNotIn("navigator.userAgent", inspector)
+
     def test_rendering_lab_keeps_the_failed_upright_control_visible(self):
         lab = (ROOT / "demos/tests/vertical-engine-lab.html").read_text(encoding="utf-8")
         self.assertIn("现有错误方案", lab)
@@ -44,8 +62,9 @@ class ProductContractTests(unittest.TestCase):
 
     def test_official_experience_does_not_inject_user_html(self):
         html = (ROOT / "demos/input/ai-chat.html").read_text(encoding="utf-8")
-        self.assertNotIn("innerHTML", html)
-        self.assertIn("textContent", html)
+        script = (ROOT / "demos/input/ai-chat.js").read_text(encoding="utf-8")
+        self.assertNotIn("innerHTML", html + script)
+        self.assertIn("textContent", script)
 
     def test_official_experience_uses_semantic_keyboard_controls(self):
         html = (ROOT / "demos/input/ai-chat.html").read_text(encoding="utf-8")

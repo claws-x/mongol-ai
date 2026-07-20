@@ -1,6 +1,7 @@
 # Phase 0：可信产品基线
 
-**状态**：进行中  
+**状态**：工程基线完成；设备与专家验证进行中
+
 **产品版本**：v5.2.0 Phase 0 baseline  
 **事实源优先级**：本文件、根 README、自动化测试结果
 
@@ -81,7 +82,7 @@ Mongol AI 当前是传统蒙古文输入、竖排预览和语言技术研究原�
 - `audit-screenshots/phase0-03-core-flow-mobile.jpg`：390 × 844 移动端布局基线。
 - `data/quality/mongolian-unicode-cases.json`：112 条 Unicode 17.0 编码基线。
 - `data/quality/lexicon-review-queue.json`：115 条历史词汇与短语审核队列。
-- 自动化测试：16 项。
+- 自动化测试：以 CI 当前结果为准；本轮发布前本地基线为 23 项。
 - 浏览器控制台：正式首页与核心流程未发现 error/warn。
 
 截图来自当前环境的应用内浏览器，只证明该次运行结果，不等同于 Safari、Chrome、Firefox 全量兼容性结论。

@@ -171,16 +171,16 @@
     <div class="shell">
         <header>
             <div class="brand">Mongol AI</div>
-            <div class="phase">Phase 0 · Alpha</div>
+            <div class="phase">Phase 0–2 · Alpha</div>
         </header>
 
         <main>
             <section class="hero" aria-labelledby="hero-title">
                 <div>
-                    <div class="eyebrow">研究原型，正在建立可信基线</div>
+                    <div class="eyebrow">可信竖排引擎上的本地优先工作台</div>
                     <h1 id="hero-title">更可靠地输入和预览传统蒙古文</h1>
                     <p class="lead">
-                        当前 Alpha 提供虚拟键盘、原生竖排显示和基础对话实验。它不是成熟的大模型产品，文字正确性仍在持续验证。
+                        当前 Alpha 提供输入、实时原生竖排预览、本地草稿、复制导出和 Unicode 编码诊断。它不是成熟的大模型产品，文字正确性仍在持续验证。
                     </p>
                     <a class="primary-action" data-primary-action="true" href="demos/input/ai-chat.html">进入 Alpha 体验</a>
                 </div>
@@ -195,15 +195,15 @@
                 <div class="grid">
                     <article class="card">
                         <h3>传统蒙古文输入</h3>
-                        <p>通过物理键盘或语义化虚拟键盘输入字符，支持清空、退格和发送。</p>
+                        <p>通过物理键盘或语义化虚拟键盘输入字符，草稿仅保存在当前浏览器。</p>
                     </article>
                     <article class="card">
                         <h3>原生竖排预览</h3>
-                        <p>正式体验使用 CSS writing-mode，不再通过旋转模拟竖排。</p>
+                        <p>Vertical Engine 2.0 使用原生竖排连写，并按从左到右换列。</p>
                     </article>
                     <article class="card">
-                        <h3>基础响应实验</h3>
-                        <p>目前仅为关键词回复，用于验证界面流程，不代表大模型能力。</p>
+                        <h3>Unicode 编码诊断</h3>
+                        <p>识别 FVS 等格式控制符和异常码位，不修改用户原文，也不冒充语言学判断。</p>
                     </article>
                 </div>
             </section>
@@ -212,12 +212,12 @@
                 <h2 id="baseline-title">可信基线</h2>
                 <div class="baseline">
                     <div>
-                        <h3>Phase 0 正在完成</h3>
+                        <h3>Phase 0 工程基线完成</h3>
                         <ul>
-                            <li>自动化回归测试与持续集成</li>
-                            <li>Unicode 与 FVS 标准语料</li>
-                            <li>跨浏览器视觉验证</li>
-                            <li>母语者和文字专家审核</li>
+                            <li>自动化回归测试与持续集成已落地</li>
+                            <li>112 条 Unicode 17.0 编码基线已落库</li>
+                            <li>Blink 与 WebKit 桌面竖排已验证</li>
+                            <li>Firefox、移动设备及专家审核仍待完成</li>
                         </ul>
                     </div>
                     <div>
@@ -230,7 +230,7 @@
         </main>
 
         <footer>
-            开源研究原型 · v5.2.0 Phase 0 baseline · <a href="https://github.com/claws-x/mongol-ai">GitHub</a>
+            开源研究原型 · Phase 0–2 Alpha · <a href="https://github.com/claws-x/mongol-ai">GitHub</a>
         </footer>
     </div>
 </body>

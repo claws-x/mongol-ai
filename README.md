@@ -2,15 +2,15 @@
 
 传统蒙古文输入、竖排预览与语言技术研究项目。
 
-> 当前状态：**Phase 0 / Alpha 研究原型**。项目尚未完成母语专家审核、完整跨浏览器验证或生产级准确率评估。
+> 当前状态：**Phase 0 工程基线完成，Phase 1/2 基础能力可体验**。项目尚未完成母语专家审核、完整跨浏览器验证或生产级准确率评估。
 
 ## 正式体验
 
 当前唯一正式入口是 [`index.html`](index.html)，核心体验位于：
 
-- [`demos/input/ai-chat.html`](demos/input/ai-chat.html) — 传统蒙古文写作与规则响应 Alpha
+- [`demos/input/ai-chat.html`](demos/input/ai-chat.html) — 本地优先写作工作台与 Unicode 诊断 Alpha
 
-页面中的响应由本地关键词规则生成，不是大模型。其他演示统一归入 [Labs](demos/README.md)，只用于研究和回归参考。
+工作台提供实时竖排预览、浏览器本地草稿、复制、UTF-8 文本导出和编码级诊断。页面中的响应仍由本地关键词规则生成，不是大模型。其他演示统一归入 [Labs](demos/README.md)，只用于研究和回归参考。
 
 ## 当前已验证能力
 
@@ -21,6 +21,8 @@
 - 规则分词、词性标注和句法分析原型可导入运行
 - Python 自动化测试和正式页面契约测试
 - 112 条可追溯到 Unicode 17.0 官方资料的编码基线
+- 不改写原文的 FVS、MVS、NNBSP、ZWJ、ZWNJ 编码诊断
+- 实时竖排预览、浏览器本地草稿、原文复制与 UTF-8 文本导出
 - 115 条等待母语专家和来源审核的历史词汇/短语队列
 
 ## 尚未证明的能力
@@ -62,7 +64,10 @@ tests/      Phase 0 自动化回归测试
 
 质量语料和审核流程见 [`data/quality/`](data/quality/) 与 [`LANGUAGE_REVIEW_WORKFLOW.md`](docs/05-project/LANGUAGE_REVIEW_WORKFLOW.md)。
 
-## Phase 0 质量原则
+## 产品路线与质量原则
+
+Phase 0–2 的已交付能力、退出条件和明确边界见
+[`PRODUCT_ROADMAP.md`](docs/05-project/PRODUCT_ROADMAP.md)。
 
 1. 对外声明必须有可复现测试或专家审核证据。
 2. 正式体验必须使用原生竖排，不通过旋转模拟。

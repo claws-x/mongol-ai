@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="传统蒙古文输入、竖排预览与基础响应 Alpha。">
-    <title>传统蒙古文写作实验台 · Alpha</title>
+    <meta name="description" content="传统蒙古文本地写作、竖排预览与 Unicode 诊断 Alpha。">
+    <title>传统蒙古文写作工作台 · Alpha</title>
     <link rel="stylesheet" href="../../core/mongolian_layout_engine.css">
     <script src="../../core/mongolian_layout_engine.js" defer></script>
+    <script src="../../core/mongolian_text_inspector.js" defer></script>
+    <script src="ai-chat.js" defer></script>
     <style>
         :root {
             color-scheme: light;
@@ -103,10 +105,69 @@
 
         .panel h2 { margin: 0 0 14px; font-size: 19px; }
 
+        .preview-stage {
+            height: 300px;
+            overflow: auto;
+            padding: 16px;
+            background: #f8faff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+        }
+
+        .live-preview {
+            min-width: 100%;
+            height: 100%;
+            color: var(--ink);
+            font-size: 25px;
+            line-height: 1.7;
+        }
+
+        .live-preview[data-empty="true"] { color: #8a93a3; }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .metric {
+            padding: 10px;
+            background: var(--soft);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .metric strong { display: block; font-size: 19px; }
+        .metric span { color: var(--muted); font-size: 11px; }
+
+        .diagnostics {
+            margin-top: 16px;
+            padding: 14px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+        }
+
+        .diagnostics-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .diagnostics-header h2 { margin-bottom: 8px; }
+        .diagnostics-header span { color: var(--muted); font-size: 11px; }
+        .diagnostic-list { margin: 0; padding-left: 20px; color: var(--muted); font-size: 13px; }
+        .diagnostic-list li + li { margin-top: 5px; }
+        .diagnostic-list [data-level="error"] { color: #a33636; }
+        .diagnostic-list [data-level="warning"] { color: #8a5b00; }
+        .diagnostic-list [data-level="success"] { color: #176b49; }
+        .secondary-title { margin-top: 22px !important; }
+
         .conversation {
             display: flex;
-            min-height: 390px;
-            max-height: 560px;
+            min-height: 240px;
+            max-height: 420px;
             gap: 14px;
             overflow-x: auto;
             padding: 16px;
@@ -171,6 +232,15 @@
             margin-top: 12px;
         }
 
+        .document-tools {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .draft-state { margin: 8px 0 0; color: var(--muted); font-size: 12px; }
+
         .tool-btn {
             min-height: 44px;
             border: 1px solid var(--line);
@@ -228,6 +298,8 @@
             .input-tools { grid-template-columns: 1fr 1fr; }
             .tool-btn.primary { grid-column: 1 / -1; }
             .key { width: 44px; min-height: 48px; }
+            .metrics { grid-template-columns: 1fr 1fr; }
+            .preview-stage { height: 260px; }
         }
     </style>
 </head>
@@ -237,21 +309,41 @@
             <a class="back-link" href="../../index.html">返回项目首页</a>
             <div>
                 <span class="engine-state" id="engine-state" aria-live="polite">竖排引擎自检中</span>
-                <span class="phase">Phase 0 · Alpha</span>
+                <span class="phase">Phase 0–2 · Alpha</span>
             </div>
         </div>
 
         <header class="heading">
             <h1>传统蒙古文写作与响应实验</h1>
-            <p>输入蒙古文，验证原生竖排布局和基础交互。</p>
+            <p>输入蒙古文，实时竖排预览并检查 Unicode 编码结构。</p>
             <div class="notice" role="note">
                 当前回复由本地关键词规则生成，不是大模型；文字与释义尚未完成母语专家审核，请勿用于正式出版或高风险场景。
             </div>
         </header>
 
         <div class="workspace">
-            <section class="panel" aria-labelledby="conversation-title">
-                <h2 id="conversation-title">实验记录</h2>
+            <section class="panel" aria-labelledby="preview-title">
+                <h2 id="preview-title">实时竖排预览</h2>
+                <div class="preview-stage">
+                    <div class="live-preview" id="live-preview" lang="mn-Mong" data-mongol-vertical data-empty="true">ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ</div>
+                </div>
+
+                <div class="metrics" aria-label="文本统计">
+                    <div class="metric"><strong data-metric="codePoints">0</strong><span>码位</span></div>
+                    <div class="metric"><strong data-metric="words">0</strong><span>词组</span></div>
+                    <div class="metric"><strong data-metric="mongolian">0</strong><span>蒙古文字符</span></div>
+                    <div class="metric"><strong data-metric="controls">0</strong><span>格式控制符</span></div>
+                </div>
+
+                <section class="diagnostics" aria-labelledby="diagnostics-title">
+                    <div class="diagnostics-header">
+                        <h2 id="diagnostics-title">Unicode 诊断</h2>
+                        <span id="corpus-state">正在加载编码基线</span>
+                    </div>
+                    <ul class="diagnostic-list" id="diagnostic-list" aria-live="polite"></ul>
+                </section>
+
+                <h2 class="secondary-title" id="conversation-title">规则实验记录</h2>
                 <div class="conversation" id="conversation" aria-live="polite" aria-relevant="additions">
                     <p class="empty-state" id="empty-state">输入一段蒙古文后发送，记录会按从左到右的竖排列展示。</p>
                 </div>
@@ -268,6 +360,11 @@
                     <button class="tool-btn" id="delete-button" type="button">退格</button>
                     <button class="tool-btn primary" id="send-button" type="button">发送到实验记录</button>
                 </div>
+                <div class="document-tools">
+                    <button class="tool-btn" id="copy-button" type="button">复制 Unicode 文本</button>
+                    <button class="tool-btn" id="download-button" type="button">导出 UTF-8 文本</button>
+                </div>
+                <p class="draft-state" id="draft-state">草稿仅保存在此浏览器</p>
 
                 <div class="keyboard" aria-labelledby="keyboard-title">
                     <h2 id="keyboard-title">虚拟键盘</h2>
@@ -329,123 +426,5 @@
         </div>
     </main>
 
-    <script>
-        const input = document.getElementById('input');
-        const conversation = document.getElementById('conversation');
-        const emptyState = document.getElementById('empty-state');
-        const responses = new Map([
-            ['ᠰᠠᠶᠢᠨ', ['ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ᠃', 'ᠮᠡᠨᠳᠡ᠃']],
-            ['ᠪᠠᠶᠠᠷᠲᠠᠢ', ['ᠪᠠᠶᠠᠷᠲᠠᠢ᠃']]
-        ]);
-        const fallbackResponse = 'ᠡᠨᠡ ᠪᠣᠯ ᠳᠦᠷᠢᠮ ᠳᠦ ᠰᠠᠭᠤᠷᠢᠯᠠᠭᠰᠠᠨ ᠲᠤᠷᠰᠢᠯᠲᠠ ᠪᠣᠯᠣᠨ᠎ᠠ᠃';
-
-        function insertAtCursor(value) {
-            const start = input.selectionStart;
-            const end = input.selectionEnd;
-            input.setRangeText(value, start, end, 'end');
-            input.focus();
-        }
-
-        function deletePreviousCharacter() {
-            const start = input.selectionStart;
-            const end = input.selectionEnd;
-            if (start !== end) {
-                input.setRangeText('', start, end, 'end');
-            } else if (start > 0) {
-                const prefix = input.value.slice(0, start);
-                let boundary = 0;
-                if (typeof Intl.Segmenter === 'function') {
-                    const segments = new Intl.Segmenter('mn', { granularity: 'grapheme' }).segment(prefix);
-                    for (const segment of segments) boundary = segment.index;
-                } else {
-                    const previous = Array.from(prefix).pop() || '';
-                    boundary = start - previous.length;
-                    if (/[\u180B-\u180D\u180F]/u.test(previous) && boundary > 0) {
-                        boundary -= (Array.from(input.value.slice(0, boundary)).pop() || '').length;
-                    }
-                }
-                input.setRangeText('', boundary, start, 'end');
-            }
-            input.focus();
-        }
-
-        function createMessage(speaker, text) {
-            const message = document.createElement('article');
-            message.className = 'message';
-            message.dataset.speaker = speaker;
-
-            const label = document.createElement('div');
-            label.className = 'message-label';
-            label.textContent = speaker === 'user' ? '你的输入' : '规则响应';
-
-            const content = document.createElement('div');
-            content.className = 'mongolian-text';
-            content.lang = 'mn-Mong';
-            content.setAttribute('data-mongol-vertical', '');
-            content.textContent = text;
-
-            message.append(label, content);
-            return message;
-        }
-
-        function getResponse(text) {
-            for (const [keyword, choices] of responses.entries()) {
-                if (text.includes(keyword)) {
-                    return choices[Math.floor(Math.random() * choices.length)];
-                }
-            }
-            return fallbackResponse;
-        }
-
-        function send() {
-            const text = input.value.trim();
-            if (!text) {
-                input.focus();
-                return;
-            }
-
-            emptyState?.remove();
-            conversation.append(createMessage('user', text));
-            conversation.append(createMessage('assistant', getResponse(text)));
-            input.value = '';
-            input.focus();
-            conversation.scrollLeft = conversation.scrollWidth;
-        }
-
-        document.querySelectorAll('[data-char]').forEach((button) => {
-            button.addEventListener('click', () => insertAtCursor(button.dataset.char));
-        });
-
-        document.querySelectorAll('[data-group]').forEach((tab) => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('[data-group]').forEach((item) => {
-                    item.setAttribute('aria-selected', String(item === tab));
-                });
-                document.querySelectorAll('[data-key-panel]').forEach((panel) => {
-                    panel.hidden = panel.dataset.keyPanel !== tab.dataset.group;
-                });
-            });
-        });
-
-        document.getElementById('clear-button').addEventListener('click', () => {
-            input.value = '';
-            input.focus();
-        });
-        document.getElementById('delete-button').addEventListener('click', deletePreviousCharacter);
-        document.getElementById('send-button').addEventListener('click', send);
-        input.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter' && !event.shiftKey) {
-                event.preventDefault();
-                send();
-            }
-        });
-
-        document.addEventListener('mongolai:vertical-ready', (event) => {
-            const state = document.getElementById('engine-state');
-            const { mode, fontReady } = event.detail;
-            const modeLabel = mode === 'native' ? '原生竖排' : mode === 'compat' ? '兼容竖排' : '降级显示';
-            state.textContent = `Mongol AI Engine · ${modeLabel}${fontReady ? '' : ' · 字体回退'}`;
-        });
-    </script>
 </body>
 </html>

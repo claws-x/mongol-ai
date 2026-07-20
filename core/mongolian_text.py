@@ -106,8 +106,10 @@ class MongolianTextProcessor:
         Returns:
             str: 规范化后的文本
         """
-        # 移除多余空白
-        text = re.sub(r'\s+', ' ', text.strip())
+        # 只折叠普通排版空白。U+202F NNBSP 是蒙古文后缀边界的一部分，
+        # 不能像普通空格一样被替换或移除。
+        collapsible_whitespace = r'[\u0009-\u000D\u0020]+'
+        text = re.sub(collapsible_whitespace, ' ', text.strip(' \t\r\n\f\v'))
         
         # 统一标点符号
         for code, char in self.MONGOLIAN_PUNCTUATION.items():

@@ -16,6 +16,14 @@ class MongolianTextProcessorTests(unittest.TestCase):
         text = "  ᠰᠠᠶᠢᠨ   ᠪᠠᠶᠢᠨ᠎ᠠ  "
         self.assertEqual(self.processor.normalize(text), "ᠰᠠᠶᠢᠨ ᠪᠠᠶᠢᠨ᠎ᠠ")
 
+    def test_normalize_preserves_mongolian_format_controls(self):
+        text = "ᠭ᠋ᠠᠯ ᠨ᠎ᠠ ᠳᠤᠷᠠᠰᠤᠯ\u202fᠤᠨ"
+        normalized = self.processor.normalize(text)
+        self.assertEqual(normalized, text)
+        self.assertIn("\u180B", normalized)
+        self.assertIn("\u180E", normalized)
+        self.assertIn("\u202F", normalized)
+
     def test_character_counts_are_stable(self):
         stats = self.processor.count_characters("ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ")
         self.assertEqual(stats["words"], 2)
