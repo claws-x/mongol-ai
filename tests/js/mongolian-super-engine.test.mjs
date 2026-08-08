@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { test } from "node:test";
 import * as hb from "harfbuzzjs";
-import { LosslessMongolianDocument, PROFILES, LOCKED_FONT_SHA256 } from "../../core/mongolian_super_engine.mjs";
+import { LosslessMongolianDocument, MongolianSuperEngine, PROFILES, LOCKED_FONT_SHA256 } from "../../core/mongolian_super_engine.mjs";
 
 test("lossless documents preserve controls and spaces exactly", () => {
     const input = "ᠪᠠᠶᠢᠨ\u180Eᠤ\u202Fᠤ";
@@ -70,4 +70,18 @@ test("captured user sample has an exact non-linguistic renderer fingerprint", ()
     assert.deepEqual(sample.glyph_ids, [58, 176, 964, 128, 163, 26, 129]);
     assert.equal(sample.review.linguistic_correctness, "unreviewed");
     assert.equal(sample.review.input_method, "not_yet_confirmed");
+});
+
+test("session reference fonts shape locally and expose glyph trace attributes", async () => {
+    const fontBytes = fs.readFileSync(new URL("../../assets/fonts/NotoSansMongolian-Regular.ttf", import.meta.url));
+    const engine = new MongolianSuperEngine({ expectedFontHash: null });
+    const report = await engine.initFromFontBytes(fontBytes, { expectedHash: null, overrides: [] });
+    assert.equal(report.ready, true);
+    assert.equal(report.fontLocked, false);
+    const result = engine.shape(engine.createDocument("ᠦᠷᠭᠥᠯᠵᠢᠯ", "unicode-national"));
+    assert.equal(result.status, "shaped");
+    const svg = engine.renderSvg(result);
+    assert.match(svg, /data-glyph-index="0"/);
+    assert.match(svg, /data-glyph-id="\d+"/);
+    assert.match(svg, /data-cluster="\d+"/);
 });

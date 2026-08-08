@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claws-x.github.io/mongol-ai/data/quality/s1-evidence-bundle.schema.json",
+  "title": "Mongol AI Phase S1 evidence bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "task_id", "status", "inputs", "rendering", "annotations", "review", "reference", "audit"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "task_id": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["captured", "machine_verified", "linguist_verified", "approved", "rejected"] },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unicode_national", "onon_mn", "onon_mk", "onon_mw", "menksoft_raw"],
+      "properties": {
+        "unicode_national": { "type": "string" },
+        "onon_mn": { "type": "string" },
+        "onon_mk": { "type": "string" },
+        "onon_mw": { "type": "string" },
+        "menksoft_raw": { "type": "string" }
+      }
+    },
+    "rendering": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["native", "locked", "reference_font"],
+      "properties": {
+        "native": { "type": "object" },
+        "locked": { "type": "object" },
+        "reference_font": { "type": "object" }
+      }
+    },
+    "annotations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "glyph_index", "glyph_id", "cluster", "issue_type", "note", "created_at"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "glyph_index": { "type": "integer", "minimum": 0 },
+          "glyph_id": { "type": "integer", "minimum": 0 },
+          "cluster": { "type": "integer", "minimum": 0 },
+          "issue_type": { "enum": ["wrong_shape", "wrong_joining", "wrong_variant", "spacing", "missing_glyph", "other"] },
+          "note": { "type": "string", "minLength": 1 },
+          "created_at": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reviewer", "role", "decision", "notes"],
+      "properties": {
+        "reviewer": { "type": "string" },
+        "role": { "enum": ["collector", "encoding_reviewer", "native_speaker", "font_engineer", "publisher"] },
+        "decision": { "enum": ["needs_resolution", "correct", "incorrect", "not_applicable"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["image_data_url", "image_name", "font_name", "font_sha256", "ime_version", "font_version", "notes", "onon_not_applicable"],
+      "properties": {
+        "image_data_url": { "type": ["string", "null"] },
+        "image_name": { "type": ["string", "null"] },
+        "font_name": { "type": ["string", "null"] },
+        "font_sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+        "ime_version": { "type": "string" },
+        "font_version": { "type": "string" },
+        "notes": { "type": "string" },
+        "onon_not_applicable": { "type": "boolean" }
+      }
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["created_at", "updated_at", "history"],
+      "properties": {
+        "created_at": { "type": "string" },
+        "updated_at": { "type": "string" },
+        "history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["at", "from", "to", "reviewer"],
+            "properties": {
+              "at": { "type": "string", "format": "date-time" },
+              "from": { "enum": ["captured", "machine_verified", "linguist_verified", "approved", "rejected"] },
+              "to": { "enum": ["captured", "machine_verified", "linguist_verified", "approved", "rejected"] },
+              "reviewer": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    }
+  }
+}

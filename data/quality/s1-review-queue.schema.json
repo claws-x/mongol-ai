@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claws-x.github.io/mongol-ai/data/quality/s1-review-queue.schema.json",
+  "title": "Mongol AI Phase S1 review queue",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "source", "summary", "tasks"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "generated_at": { "type": "string", "format": "date" },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url", "unicode_version"],
+      "properties": {
+        "name": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "unicode_version": { "type": "string" }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["task_count", "approved_count", "linguist_verified_count"],
+      "properties": {
+        "task_count": { "type": "integer", "minimum": 1 },
+        "approved_count": { "type": "integer", "minimum": 0 },
+        "linguist_verified_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "minItems": 100,
+      "items": { "$ref": "#/$defs/task" }
+    }
+  },
+  "$defs": {
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "status", "priority", "category", "text", "code_points", "source", "requirements"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^s1-" },
+        "status": { "enum": ["captured", "machine_verified", "linguist_verified", "approved", "rejected"] },
+        "priority": { "enum": ["P0", "P1", "P2"] },
+        "category": { "type": "string" },
+        "text": { "type": "string", "minLength": 1 },
+        "code_points": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^U\\+[0-9A-F]{4,6}$" } },
+        "unicode_names": { "type": "array", "items": { "type": "string" } },
+        "source": { "type": "object" },
+        "requirements": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    }
+  }
+}

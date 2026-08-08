@@ -117,6 +117,7 @@ export class MongolianSuperEngine {
     constructor(options = {}) {
         this.fontUrl = options.fontUrl ? new URL(options.fontUrl, location.href) : FONT_URL;
         this.overridesUrl = options.overridesUrl ? new URL(options.overridesUrl, location.href) : OVERRIDES_URL;
+        this.expectedFontHash = options.expectedFontHash === undefined ? LOCKED_FONT_SHA256 : options.expectedFontHash;
         this.fontHash = null;
         this.font = null;
         this.face = null;
@@ -131,13 +132,24 @@ export class MongolianSuperEngine {
         if (!fontResponse.ok) throw new Error(`Font request failed: ${fontResponse.status}`);
         if (!overrideResponse.ok) throw new Error(`Override request failed: ${overrideResponse.status}`);
         const fontBytes = await fontResponse.arrayBuffer();
-        this.fontHash = await sha256(fontBytes);
-        if (this.fontHash !== LOCKED_FONT_SHA256) {
+        const overridePayload = await overrideResponse.json();
+        return this.initFromFontBytes(fontBytes, {
+            expectedHash: this.expectedFontHash,
+            overrides: overridePayload.overrides || [],
+        });
+    }
+
+    async initFromFontBytes(fontBytes, options = {}) {
+        const bytes = fontBytes instanceof ArrayBuffer ? fontBytes : fontBytes.buffer.slice(
+            fontBytes.byteOffset, fontBytes.byteOffset + fontBytes.byteLength
+        );
+        this.fontHash = await sha256(bytes);
+        const expectedHash = options.expectedHash === undefined ? null : options.expectedHash;
+        if (expectedHash && this.fontHash !== expectedHash) {
             throw new Error(`Font integrity mismatch: ${this.fontHash}`);
         }
-        const overridePayload = await overrideResponse.json();
-        this.overrides = (overridePayload.overrides || []).filter((item) => item.status === "approved");
-        const blob = new hb.Blob(fontBytes);
+        this.overrides = (options.overrides || []).filter((item) => item.status === "approved");
+        const blob = new hb.Blob(bytes);
         this.face = new hb.Face(blob);
         this.font = new hb.Font(this.face);
         this.ready = true;
@@ -151,8 +163,8 @@ export class MongolianSuperEngine {
             ready: this.ready,
             harfbuzz: hb.versionString(),
             fontSha256: this.fontHash,
-            expectedFontSha256: LOCKED_FONT_SHA256,
-            fontLocked: this.fontHash === LOCKED_FONT_SHA256,
+            expectedFontSha256: this.expectedFontHash,
+            fontLocked: Boolean(this.expectedFontHash && this.fontHash === this.expectedFontHash),
             approvedOverrides: this.overrides.length,
         };
     }
@@ -230,10 +242,10 @@ export class MongolianSuperEngine {
         const width = Math.ceil((ascender - descender) * scale + padding * 2);
         const height = Math.ceil(Math.max(advance * scale, fontSize) + padding * 2);
         let penX = 0;
-        const paths = shapeResult.glyphs.map((glyph) => {
+        const paths = shapeResult.glyphs.map((glyph, index) => {
             const transform = `translate(${penX + glyph.xOffset} ${glyph.yOffset})`;
             penX += glyph.xAdvance;
-            return `<path d="${glyph.path}" transform="${transform}"/>`;
+            return `<path d="${glyph.path}" transform="${transform}" data-glyph-index="${index}" data-glyph-id="${glyph.id}" data-cluster="${glyph.cluster}"/>`;
         }).join("");
         const groupTransform = `translate(${padding - descender * scale} ${padding}) rotate(90) scale(${scale} ${-scale})`;
         return `<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" data-engine="mongol-ai-${ENGINE_VERSION}" data-font-sha256="${this.fontHash}"><g transform="${groupTransform}" fill="currentColor">${paths}</g></svg>`;
