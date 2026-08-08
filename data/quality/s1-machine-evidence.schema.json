@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claws-x.github.io/mongol-ai/data/quality/s1-machine-evidence.schema.json",
+  "title": "Mongol AI Phase S1 machine evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "evaluator", "scope", "runtime", "summary", "results"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "generated_at": { "type": "string", "format": "date" },
+    "evaluator": { "type": "string" },
+    "scope": { "type": "string" },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["harfbuzz", "font_sha256", "font_locked", "production_default_ignorables_preserved", "control_artifacts_suppressed_from_svg"],
+      "properties": {
+        "harfbuzz": { "type": "string" },
+        "font_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "font_locked": { "const": true },
+        "production_default_ignorables_preserved": { "const": false },
+        "control_artifacts_suppressed_from_svg": { "const": true }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["task_count", "by_verdict"],
+      "properties": {
+        "task_count": { "const": 100 },
+        "by_verdict": { "type": "object" }
+      }
+    },
+    "results": {
+      "type": "array",
+      "minItems": 100,
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "required": ["task_id", "category", "method", "scope", "probes", "score", "verdict"],
+        "properties": {
+          "task_id": { "type": "string", "pattern": "^s1-" },
+          "category": { "type": "string" },
+          "method": { "type": "string" },
+          "scope": { "type": "string" },
+          "probes": { "type": "array", "minItems": 1 },
+          "score": { "type": "number", "minimum": 0, "maximum": 1 },
+          "verdict": { "enum": ["machine_aligned", "machine_covered", "machine_conflict", "needs_context", "needs_resolution"] }
+        }
+      }
+    }
+  }
+}

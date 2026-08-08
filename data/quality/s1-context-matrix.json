@@ -1,0 +1,5629 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-08",
+  "method": {
+    "description": "Each standardized sequence is compared with its selector-free default in four ZWJ-controlled joining contexts.",
+    "assertion": "Visible glyph response changes in the shaping contexts listed by Unicode; other contexts are diagnostic only.",
+    "boundary": "A matching response proves contextual selector behavior, not linguistic or calligraphic correctness."
+  },
+  "summary": {
+    "probe_count": 234,
+    "task_count": 60,
+    "context_count": 4,
+    "normative_target_count": 93
+  },
+  "probes": [
+    {
+      "id": "s1-stdvar-001-isolate",
+      "task_id": "s1-stdvar-001",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᠠ᠋",
+      "target_code_points": [
+        "U+1820",
+        "U+180B"
+      ],
+      "default_text": "ᠠ",
+      "default_code_points": [
+        "U+1820"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 226
+      }
+    },
+    {
+      "id": "s1-stdvar-001-initial",
+      "task_id": "s1-stdvar-001",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠠ᠋‍",
+      "target_code_points": [
+        "U+1820",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠠ‍",
+      "default_code_points": [
+        "U+1820",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 226
+      }
+    },
+    {
+      "id": "s1-stdvar-001-medial",
+      "task_id": "s1-stdvar-001",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠠ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1820",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠠ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1820",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 226
+      }
+    },
+    {
+      "id": "s1-stdvar-001-final",
+      "task_id": "s1-stdvar-001",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠠ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1820",
+        "U+180B"
+      ],
+      "default_text": "‍ᠠ",
+      "default_code_points": [
+        "U+200D",
+        "U+1820"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 226
+      }
+    },
+    {
+      "id": "s1-stdvar-002-isolate",
+      "task_id": "s1-stdvar-002",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠠ᠌",
+      "target_code_points": [
+        "U+1820",
+        "U+180C"
+      ],
+      "default_text": "ᠠ",
+      "default_code_points": [
+        "U+1820"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 227
+      }
+    },
+    {
+      "id": "s1-stdvar-002-initial",
+      "task_id": "s1-stdvar-002",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠠ᠌‍",
+      "target_code_points": [
+        "U+1820",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᠠ‍",
+      "default_code_points": [
+        "U+1820",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 227
+      }
+    },
+    {
+      "id": "s1-stdvar-002-medial",
+      "task_id": "s1-stdvar-002",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠠ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1820",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᠠ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1820",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 227
+      }
+    },
+    {
+      "id": "s1-stdvar-002-final",
+      "task_id": "s1-stdvar-002",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠠ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+1820",
+        "U+180C"
+      ],
+      "default_text": "‍ᠠ",
+      "default_code_points": [
+        "U+200D",
+        "U+1820"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 227
+      }
+    },
+    {
+      "id": "s1-stdvar-003-isolate",
+      "task_id": "s1-stdvar-003",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠡ᠋",
+      "target_code_points": [
+        "U+1821",
+        "U+180B"
+      ],
+      "default_text": "ᠡ",
+      "default_code_points": [
+        "U+1821"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 228
+      }
+    },
+    {
+      "id": "s1-stdvar-003-initial",
+      "task_id": "s1-stdvar-003",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᠡ᠋‍",
+      "target_code_points": [
+        "U+1821",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠡ‍",
+      "default_code_points": [
+        "U+1821",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 228
+      }
+    },
+    {
+      "id": "s1-stdvar-003-medial",
+      "task_id": "s1-stdvar-003",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠡ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1821",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠡ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1821",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 228
+      }
+    },
+    {
+      "id": "s1-stdvar-003-final",
+      "task_id": "s1-stdvar-003",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠡ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1821",
+        "U+180B"
+      ],
+      "default_text": "‍ᠡ",
+      "default_code_points": [
+        "U+200D",
+        "U+1821"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 228
+      }
+    },
+    {
+      "id": "s1-stdvar-004-isolate",
+      "task_id": "s1-stdvar-004",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠢ᠋",
+      "target_code_points": [
+        "U+1822",
+        "U+180B"
+      ],
+      "default_text": "ᠢ",
+      "default_code_points": [
+        "U+1822"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 229
+      }
+    },
+    {
+      "id": "s1-stdvar-004-initial",
+      "task_id": "s1-stdvar-004",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠢ᠋‍",
+      "target_code_points": [
+        "U+1822",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠢ‍",
+      "default_code_points": [
+        "U+1822",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 229
+      }
+    },
+    {
+      "id": "s1-stdvar-004-medial",
+      "task_id": "s1-stdvar-004",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠢ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1822",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠢ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1822",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 229
+      }
+    },
+    {
+      "id": "s1-stdvar-004-final",
+      "task_id": "s1-stdvar-004",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠢ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1822",
+        "U+180B"
+      ],
+      "default_text": "‍ᠢ",
+      "default_code_points": [
+        "U+200D",
+        "U+1822"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 229
+      }
+    },
+    {
+      "id": "s1-stdvar-005-isolate",
+      "task_id": "s1-stdvar-005",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠣ᠋",
+      "target_code_points": [
+        "U+1823",
+        "U+180B"
+      ],
+      "default_text": "ᠣ",
+      "default_code_points": [
+        "U+1823"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 230
+      }
+    },
+    {
+      "id": "s1-stdvar-005-initial",
+      "task_id": "s1-stdvar-005",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠣ᠋‍",
+      "target_code_points": [
+        "U+1823",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠣ‍",
+      "default_code_points": [
+        "U+1823",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 230
+      }
+    },
+    {
+      "id": "s1-stdvar-005-medial",
+      "task_id": "s1-stdvar-005",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠣ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1823",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠣ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1823",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 230
+      }
+    },
+    {
+      "id": "s1-stdvar-005-final",
+      "task_id": "s1-stdvar-005",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠣ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1823",
+        "U+180B"
+      ],
+      "default_text": "‍ᠣ",
+      "default_code_points": [
+        "U+200D",
+        "U+1823"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 230
+      }
+    },
+    {
+      "id": "s1-stdvar-006-isolate",
+      "task_id": "s1-stdvar-006",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠤ᠋",
+      "target_code_points": [
+        "U+1824",
+        "U+180B"
+      ],
+      "default_text": "ᠤ",
+      "default_code_points": [
+        "U+1824"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 231
+      }
+    },
+    {
+      "id": "s1-stdvar-006-initial",
+      "task_id": "s1-stdvar-006",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠤ᠋‍",
+      "target_code_points": [
+        "U+1824",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠤ‍",
+      "default_code_points": [
+        "U+1824",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 231
+      }
+    },
+    {
+      "id": "s1-stdvar-006-medial",
+      "task_id": "s1-stdvar-006",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠤ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1824",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠤ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1824",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 231
+      }
+    },
+    {
+      "id": "s1-stdvar-006-final",
+      "task_id": "s1-stdvar-006",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠤ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1824",
+        "U+180B"
+      ],
+      "default_text": "‍ᠤ",
+      "default_code_points": [
+        "U+200D",
+        "U+1824"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 231
+      }
+    },
+    {
+      "id": "s1-stdvar-007-isolate",
+      "task_id": "s1-stdvar-007",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠥ᠋",
+      "target_code_points": [
+        "U+1825",
+        "U+180B"
+      ],
+      "default_text": "ᠥ",
+      "default_code_points": [
+        "U+1825"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 232
+      }
+    },
+    {
+      "id": "s1-stdvar-007-initial",
+      "task_id": "s1-stdvar-007",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠥ᠋‍",
+      "target_code_points": [
+        "U+1825",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠥ‍",
+      "default_code_points": [
+        "U+1825",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 232
+      }
+    },
+    {
+      "id": "s1-stdvar-007-medial",
+      "task_id": "s1-stdvar-007",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠥ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1825",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠥ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1825",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 232
+      }
+    },
+    {
+      "id": "s1-stdvar-007-final",
+      "task_id": "s1-stdvar-007",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠥ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1825",
+        "U+180B"
+      ],
+      "default_text": "‍ᠥ",
+      "default_code_points": [
+        "U+200D",
+        "U+1825"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 232
+      }
+    },
+    {
+      "id": "s1-stdvar-008-isolate",
+      "task_id": "s1-stdvar-008",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠥ᠌",
+      "target_code_points": [
+        "U+1825",
+        "U+180C"
+      ],
+      "default_text": "ᠥ",
+      "default_code_points": [
+        "U+1825"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 233
+      }
+    },
+    {
+      "id": "s1-stdvar-008-initial",
+      "task_id": "s1-stdvar-008",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠥ᠌‍",
+      "target_code_points": [
+        "U+1825",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᠥ‍",
+      "default_code_points": [
+        "U+1825",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 233
+      }
+    },
+    {
+      "id": "s1-stdvar-008-medial",
+      "task_id": "s1-stdvar-008",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠥ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1825",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᠥ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1825",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 233
+      }
+    },
+    {
+      "id": "s1-stdvar-008-final",
+      "task_id": "s1-stdvar-008",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠥ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+1825",
+        "U+180C"
+      ],
+      "default_text": "‍ᠥ",
+      "default_code_points": [
+        "U+200D",
+        "U+1825"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 233
+      }
+    },
+    {
+      "id": "s1-stdvar-009-isolate",
+      "task_id": "s1-stdvar-009",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᠦ᠋",
+      "target_code_points": [
+        "U+1826",
+        "U+180B"
+      ],
+      "default_text": "ᠦ",
+      "default_code_points": [
+        "U+1826"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 234
+      }
+    },
+    {
+      "id": "s1-stdvar-009-initial",
+      "task_id": "s1-stdvar-009",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠦ᠋‍",
+      "target_code_points": [
+        "U+1826",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠦ‍",
+      "default_code_points": [
+        "U+1826",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 234
+      }
+    },
+    {
+      "id": "s1-stdvar-009-medial",
+      "task_id": "s1-stdvar-009",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠦ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1826",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠦ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1826",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 234
+      }
+    },
+    {
+      "id": "s1-stdvar-009-final",
+      "task_id": "s1-stdvar-009",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠦ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1826",
+        "U+180B"
+      ],
+      "default_text": "‍ᠦ",
+      "default_code_points": [
+        "U+200D",
+        "U+1826"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 234
+      }
+    },
+    {
+      "id": "s1-stdvar-010-isolate",
+      "task_id": "s1-stdvar-010",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠦ᠌",
+      "target_code_points": [
+        "U+1826",
+        "U+180C"
+      ],
+      "default_text": "ᠦ",
+      "default_code_points": [
+        "U+1826"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 235
+      }
+    },
+    {
+      "id": "s1-stdvar-010-initial",
+      "task_id": "s1-stdvar-010",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠦ᠌‍",
+      "target_code_points": [
+        "U+1826",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᠦ‍",
+      "default_code_points": [
+        "U+1826",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 235
+      }
+    },
+    {
+      "id": "s1-stdvar-010-medial",
+      "task_id": "s1-stdvar-010",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠦ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1826",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᠦ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1826",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 235
+      }
+    },
+    {
+      "id": "s1-stdvar-010-final",
+      "task_id": "s1-stdvar-010",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠦ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+1826",
+        "U+180C"
+      ],
+      "default_text": "‍ᠦ",
+      "default_code_points": [
+        "U+200D",
+        "U+1826"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 235
+      }
+    },
+    {
+      "id": "s1-stdvar-011-isolate",
+      "task_id": "s1-stdvar-011",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠨ᠋",
+      "target_code_points": [
+        "U+1828",
+        "U+180B"
+      ],
+      "default_text": "ᠨ",
+      "default_code_points": [
+        "U+1828"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 236
+      }
+    },
+    {
+      "id": "s1-stdvar-011-initial",
+      "task_id": "s1-stdvar-011",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᠨ᠋‍",
+      "target_code_points": [
+        "U+1828",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠨ‍",
+      "default_code_points": [
+        "U+1828",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 236
+      }
+    },
+    {
+      "id": "s1-stdvar-011-medial",
+      "task_id": "s1-stdvar-011",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠨ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1828",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠨ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1828",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 236
+      }
+    },
+    {
+      "id": "s1-stdvar-011-final",
+      "task_id": "s1-stdvar-011",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠨ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1828",
+        "U+180B"
+      ],
+      "default_text": "‍ᠨ",
+      "default_code_points": [
+        "U+200D",
+        "U+1828"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 236
+      }
+    },
+    {
+      "id": "s1-stdvar-012-isolate",
+      "task_id": "s1-stdvar-012",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠨ᠌",
+      "target_code_points": [
+        "U+1828",
+        "U+180C"
+      ],
+      "default_text": "ᠨ",
+      "default_code_points": [
+        "U+1828"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 237
+      }
+    },
+    {
+      "id": "s1-stdvar-012-initial",
+      "task_id": "s1-stdvar-012",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠨ᠌‍",
+      "target_code_points": [
+        "U+1828",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᠨ‍",
+      "default_code_points": [
+        "U+1828",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 237
+      }
+    },
+    {
+      "id": "s1-stdvar-012-medial",
+      "task_id": "s1-stdvar-012",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠨ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1828",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᠨ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1828",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 237
+      }
+    },
+    {
+      "id": "s1-stdvar-012-final",
+      "task_id": "s1-stdvar-012",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠨ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+1828",
+        "U+180C"
+      ],
+      "default_text": "‍ᠨ",
+      "default_code_points": [
+        "U+200D",
+        "U+1828"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 237
+      }
+    },
+    {
+      "id": "s1-stdvar-013-isolate",
+      "task_id": "s1-stdvar-013",
+      "context": "isolate",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠨ᠍",
+      "target_code_points": [
+        "U+1828",
+        "U+180D"
+      ],
+      "default_text": "ᠨ",
+      "default_code_points": [
+        "U+1828"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 238
+      }
+    },
+    {
+      "id": "s1-stdvar-013-initial",
+      "task_id": "s1-stdvar-013",
+      "context": "initial",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠨ᠍‍",
+      "target_code_points": [
+        "U+1828",
+        "U+180D",
+        "U+200D"
+      ],
+      "default_text": "ᠨ‍",
+      "default_code_points": [
+        "U+1828",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 238
+      }
+    },
+    {
+      "id": "s1-stdvar-013-medial",
+      "task_id": "s1-stdvar-013",
+      "context": "medial",
+      "desired_appearance": "fourth form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠨ᠍‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1828",
+        "U+180D",
+        "U+200D"
+      ],
+      "default_text": "‍ᠨ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1828",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 238
+      }
+    },
+    {
+      "id": "s1-stdvar-013-final",
+      "task_id": "s1-stdvar-013",
+      "context": "final",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠨ᠍",
+      "target_code_points": [
+        "U+200D",
+        "U+1828",
+        "U+180D"
+      ],
+      "default_text": "‍ᠨ",
+      "default_code_points": [
+        "U+200D",
+        "U+1828"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 238
+      }
+    },
+    {
+      "id": "s1-stdvar-014-isolate",
+      "task_id": "s1-stdvar-014",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠪ᠋",
+      "target_code_points": [
+        "U+182A",
+        "U+180B"
+      ],
+      "default_text": "ᠪ",
+      "default_code_points": [
+        "U+182A"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 239
+      }
+    },
+    {
+      "id": "s1-stdvar-014-initial",
+      "task_id": "s1-stdvar-014",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠪ᠋‍",
+      "target_code_points": [
+        "U+182A",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠪ‍",
+      "default_code_points": [
+        "U+182A",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 239
+      }
+    },
+    {
+      "id": "s1-stdvar-014-medial",
+      "task_id": "s1-stdvar-014",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠪ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+182A",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠪ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+182A",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 239
+      }
+    },
+    {
+      "id": "s1-stdvar-014-final",
+      "task_id": "s1-stdvar-014",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠪ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+182A",
+        "U+180B"
+      ],
+      "default_text": "‍ᠪ",
+      "default_code_points": [
+        "U+200D",
+        "U+182A"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 239
+      }
+    },
+    {
+      "id": "s1-stdvar-015-isolate",
+      "task_id": "s1-stdvar-015",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᠬ᠋",
+      "target_code_points": [
+        "U+182C",
+        "U+180B"
+      ],
+      "default_text": "ᠬ",
+      "default_code_points": [
+        "U+182C"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 240
+      }
+    },
+    {
+      "id": "s1-stdvar-015-initial",
+      "task_id": "s1-stdvar-015",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᠬ᠋‍",
+      "target_code_points": [
+        "U+182C",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠬ‍",
+      "default_code_points": [
+        "U+182C",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 240
+      }
+    },
+    {
+      "id": "s1-stdvar-015-medial",
+      "task_id": "s1-stdvar-015",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠬ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+182C",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠬ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+182C",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 240
+      }
+    },
+    {
+      "id": "s1-stdvar-015-final",
+      "task_id": "s1-stdvar-015",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠬ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+182C",
+        "U+180B"
+      ],
+      "default_text": "‍ᠬ",
+      "default_code_points": [
+        "U+200D",
+        "U+182C"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 240
+      }
+    },
+    {
+      "id": "s1-stdvar-016-isolate",
+      "task_id": "s1-stdvar-016",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠬ᠌",
+      "target_code_points": [
+        "U+182C",
+        "U+180C"
+      ],
+      "default_text": "ᠬ",
+      "default_code_points": [
+        "U+182C"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 241
+      }
+    },
+    {
+      "id": "s1-stdvar-016-initial",
+      "task_id": "s1-stdvar-016",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠬ᠌‍",
+      "target_code_points": [
+        "U+182C",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᠬ‍",
+      "default_code_points": [
+        "U+182C",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 241
+      }
+    },
+    {
+      "id": "s1-stdvar-016-medial",
+      "task_id": "s1-stdvar-016",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠬ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+182C",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᠬ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+182C",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 241
+      }
+    },
+    {
+      "id": "s1-stdvar-016-final",
+      "task_id": "s1-stdvar-016",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠬ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+182C",
+        "U+180C"
+      ],
+      "default_text": "‍ᠬ",
+      "default_code_points": [
+        "U+200D",
+        "U+182C"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 241
+      }
+    },
+    {
+      "id": "s1-stdvar-017-isolate",
+      "task_id": "s1-stdvar-017",
+      "context": "isolate",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠬ᠍",
+      "target_code_points": [
+        "U+182C",
+        "U+180D"
+      ],
+      "default_text": "ᠬ",
+      "default_code_points": [
+        "U+182C"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 242
+      }
+    },
+    {
+      "id": "s1-stdvar-017-initial",
+      "task_id": "s1-stdvar-017",
+      "context": "initial",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠬ᠍‍",
+      "target_code_points": [
+        "U+182C",
+        "U+180D",
+        "U+200D"
+      ],
+      "default_text": "ᠬ‍",
+      "default_code_points": [
+        "U+182C",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 242
+      }
+    },
+    {
+      "id": "s1-stdvar-017-medial",
+      "task_id": "s1-stdvar-017",
+      "context": "medial",
+      "desired_appearance": "fourth form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠬ᠍‍",
+      "target_code_points": [
+        "U+200D",
+        "U+182C",
+        "U+180D",
+        "U+200D"
+      ],
+      "default_text": "‍ᠬ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+182C",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 242
+      }
+    },
+    {
+      "id": "s1-stdvar-017-final",
+      "task_id": "s1-stdvar-017",
+      "context": "final",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠬ᠍",
+      "target_code_points": [
+        "U+200D",
+        "U+182C",
+        "U+180D"
+      ],
+      "default_text": "‍ᠬ",
+      "default_code_points": [
+        "U+200D",
+        "U+182C"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 242
+      }
+    },
+    {
+      "id": "s1-stdvar-018-isolate",
+      "task_id": "s1-stdvar-018",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠭ᠋",
+      "target_code_points": [
+        "U+182D",
+        "U+180B"
+      ],
+      "default_text": "ᠭ",
+      "default_code_points": [
+        "U+182D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 243
+      }
+    },
+    {
+      "id": "s1-stdvar-018-initial",
+      "task_id": "s1-stdvar-018",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᠭ᠋‍",
+      "target_code_points": [
+        "U+182D",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠭ‍",
+      "default_code_points": [
+        "U+182D",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 243
+      }
+    },
+    {
+      "id": "s1-stdvar-018-medial",
+      "task_id": "s1-stdvar-018",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠭ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+182D",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠭ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+182D",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 243
+      }
+    },
+    {
+      "id": "s1-stdvar-018-final",
+      "task_id": "s1-stdvar-018",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠭ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+182D",
+        "U+180B"
+      ],
+      "default_text": "‍ᠭ",
+      "default_code_points": [
+        "U+200D",
+        "U+182D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 243
+      }
+    },
+    {
+      "id": "s1-stdvar-019-isolate",
+      "task_id": "s1-stdvar-019",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠭ᠌",
+      "target_code_points": [
+        "U+182D",
+        "U+180C"
+      ],
+      "default_text": "ᠭ",
+      "default_code_points": [
+        "U+182D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 244
+      }
+    },
+    {
+      "id": "s1-stdvar-019-initial",
+      "task_id": "s1-stdvar-019",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠭ᠌‍",
+      "target_code_points": [
+        "U+182D",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᠭ‍",
+      "default_code_points": [
+        "U+182D",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 244
+      }
+    },
+    {
+      "id": "s1-stdvar-019-medial",
+      "task_id": "s1-stdvar-019",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠭ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+182D",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᠭ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+182D",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 244
+      }
+    },
+    {
+      "id": "s1-stdvar-019-final",
+      "task_id": "s1-stdvar-019",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠭ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+182D",
+        "U+180C"
+      ],
+      "default_text": "‍ᠭ",
+      "default_code_points": [
+        "U+200D",
+        "U+182D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 244
+      }
+    },
+    {
+      "id": "s1-stdvar-020-isolate",
+      "task_id": "s1-stdvar-020",
+      "context": "isolate",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠭ᠍",
+      "target_code_points": [
+        "U+182D",
+        "U+180D"
+      ],
+      "default_text": "ᠭ",
+      "default_code_points": [
+        "U+182D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 245
+      }
+    },
+    {
+      "id": "s1-stdvar-020-initial",
+      "task_id": "s1-stdvar-020",
+      "context": "initial",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠭ᠍‍",
+      "target_code_points": [
+        "U+182D",
+        "U+180D",
+        "U+200D"
+      ],
+      "default_text": "ᠭ‍",
+      "default_code_points": [
+        "U+182D",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 245
+      }
+    },
+    {
+      "id": "s1-stdvar-020-medial",
+      "task_id": "s1-stdvar-020",
+      "context": "medial",
+      "desired_appearance": "fourth form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠭ᠍‍",
+      "target_code_points": [
+        "U+200D",
+        "U+182D",
+        "U+180D",
+        "U+200D"
+      ],
+      "default_text": "‍ᠭ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+182D",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 245
+      }
+    },
+    {
+      "id": "s1-stdvar-020-final",
+      "task_id": "s1-stdvar-020",
+      "context": "final",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠭ᠍",
+      "target_code_points": [
+        "U+200D",
+        "U+182D",
+        "U+180D"
+      ],
+      "default_text": "‍ᠭ",
+      "default_code_points": [
+        "U+200D",
+        "U+182D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 245
+      }
+    },
+    {
+      "id": "s1-stdvar-021-isolate",
+      "task_id": "s1-stdvar-021",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠰ᠋",
+      "target_code_points": [
+        "U+1830",
+        "U+180B"
+      ],
+      "default_text": "ᠰ",
+      "default_code_points": [
+        "U+1830"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 246
+      }
+    },
+    {
+      "id": "s1-stdvar-021-initial",
+      "task_id": "s1-stdvar-021",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠰ᠋‍",
+      "target_code_points": [
+        "U+1830",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠰ‍",
+      "default_code_points": [
+        "U+1830",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 246
+      }
+    },
+    {
+      "id": "s1-stdvar-021-medial",
+      "task_id": "s1-stdvar-021",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠰ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1830",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠰ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1830",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 246
+      }
+    },
+    {
+      "id": "s1-stdvar-021-final",
+      "task_id": "s1-stdvar-021",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠰ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1830",
+        "U+180B"
+      ],
+      "default_text": "‍ᠰ",
+      "default_code_points": [
+        "U+200D",
+        "U+1830"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 246
+      }
+    },
+    {
+      "id": "s1-stdvar-022-isolate",
+      "task_id": "s1-stdvar-022",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠰ᠌",
+      "target_code_points": [
+        "U+1830",
+        "U+180C"
+      ],
+      "default_text": "ᠰ",
+      "default_code_points": [
+        "U+1830"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 247
+      }
+    },
+    {
+      "id": "s1-stdvar-022-initial",
+      "task_id": "s1-stdvar-022",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠰ᠌‍",
+      "target_code_points": [
+        "U+1830",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᠰ‍",
+      "default_code_points": [
+        "U+1830",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 247
+      }
+    },
+    {
+      "id": "s1-stdvar-022-medial",
+      "task_id": "s1-stdvar-022",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠰ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1830",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᠰ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1830",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 247
+      }
+    },
+    {
+      "id": "s1-stdvar-022-final",
+      "task_id": "s1-stdvar-022",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠰ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+1830",
+        "U+180C"
+      ],
+      "default_text": "‍ᠰ",
+      "default_code_points": [
+        "U+200D",
+        "U+1830"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 247
+      }
+    },
+    {
+      "id": "s1-stdvar-023-isolate",
+      "task_id": "s1-stdvar-023",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠲ᠋",
+      "target_code_points": [
+        "U+1832",
+        "U+180B"
+      ],
+      "default_text": "ᠲ",
+      "default_code_points": [
+        "U+1832"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 248
+      }
+    },
+    {
+      "id": "s1-stdvar-023-initial",
+      "task_id": "s1-stdvar-023",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠲ᠋‍",
+      "target_code_points": [
+        "U+1832",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠲ‍",
+      "default_code_points": [
+        "U+1832",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 248
+      }
+    },
+    {
+      "id": "s1-stdvar-023-medial",
+      "task_id": "s1-stdvar-023",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠲ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1832",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠲ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1832",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 248
+      }
+    },
+    {
+      "id": "s1-stdvar-023-final",
+      "task_id": "s1-stdvar-023",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠲ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1832",
+        "U+180B"
+      ],
+      "default_text": "‍ᠲ",
+      "default_code_points": [
+        "U+200D",
+        "U+1832"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 248
+      }
+    },
+    {
+      "id": "s1-stdvar-024-isolate",
+      "task_id": "s1-stdvar-024",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠳ᠋",
+      "target_code_points": [
+        "U+1833",
+        "U+180B"
+      ],
+      "default_text": "ᠳ",
+      "default_code_points": [
+        "U+1833"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 249
+      }
+    },
+    {
+      "id": "s1-stdvar-024-initial",
+      "task_id": "s1-stdvar-024",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᠳ᠋‍",
+      "target_code_points": [
+        "U+1833",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠳ‍",
+      "default_code_points": [
+        "U+1833",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 249
+      }
+    },
+    {
+      "id": "s1-stdvar-024-medial",
+      "task_id": "s1-stdvar-024",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠳ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1833",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠳ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1833",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 249
+      }
+    },
+    {
+      "id": "s1-stdvar-024-final",
+      "task_id": "s1-stdvar-024",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠳ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1833",
+        "U+180B"
+      ],
+      "default_text": "‍ᠳ",
+      "default_code_points": [
+        "U+200D",
+        "U+1833"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 249
+      }
+    },
+    {
+      "id": "s1-stdvar-025-isolate",
+      "task_id": "s1-stdvar-025",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠵ᠋",
+      "target_code_points": [
+        "U+1835",
+        "U+180B"
+      ],
+      "default_text": "ᠵ",
+      "default_code_points": [
+        "U+1835"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 250
+      }
+    },
+    {
+      "id": "s1-stdvar-025-initial",
+      "task_id": "s1-stdvar-025",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠵ᠋‍",
+      "target_code_points": [
+        "U+1835",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠵ‍",
+      "default_code_points": [
+        "U+1835",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 250
+      }
+    },
+    {
+      "id": "s1-stdvar-025-medial",
+      "task_id": "s1-stdvar-025",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠵ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1835",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠵ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1835",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 250
+      }
+    },
+    {
+      "id": "s1-stdvar-025-final",
+      "task_id": "s1-stdvar-025",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠵ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1835",
+        "U+180B"
+      ],
+      "default_text": "‍ᠵ",
+      "default_code_points": [
+        "U+200D",
+        "U+1835"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 250
+      }
+    },
+    {
+      "id": "s1-stdvar-026-isolate",
+      "task_id": "s1-stdvar-026",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠶ᠋",
+      "target_code_points": [
+        "U+1836",
+        "U+180B"
+      ],
+      "default_text": "ᠶ",
+      "default_code_points": [
+        "U+1836"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 251
+      }
+    },
+    {
+      "id": "s1-stdvar-026-initial",
+      "task_id": "s1-stdvar-026",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᠶ᠋‍",
+      "target_code_points": [
+        "U+1836",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠶ‍",
+      "default_code_points": [
+        "U+1836",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 251
+      }
+    },
+    {
+      "id": "s1-stdvar-026-medial",
+      "task_id": "s1-stdvar-026",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠶ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1836",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠶ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1836",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 251
+      }
+    },
+    {
+      "id": "s1-stdvar-026-final",
+      "task_id": "s1-stdvar-026",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠶ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1836",
+        "U+180B"
+      ],
+      "default_text": "‍ᠶ",
+      "default_code_points": [
+        "U+200D",
+        "U+1836"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 251
+      }
+    },
+    {
+      "id": "s1-stdvar-027-isolate",
+      "task_id": "s1-stdvar-027",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠶ᠌",
+      "target_code_points": [
+        "U+1836",
+        "U+180C"
+      ],
+      "default_text": "ᠶ",
+      "default_code_points": [
+        "U+1836"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 252
+      }
+    },
+    {
+      "id": "s1-stdvar-027-initial",
+      "task_id": "s1-stdvar-027",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠶ᠌‍",
+      "target_code_points": [
+        "U+1836",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᠶ‍",
+      "default_code_points": [
+        "U+1836",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 252
+      }
+    },
+    {
+      "id": "s1-stdvar-027-medial",
+      "task_id": "s1-stdvar-027",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠶ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1836",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᠶ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1836",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 252
+      }
+    },
+    {
+      "id": "s1-stdvar-027-final",
+      "task_id": "s1-stdvar-027",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠶ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+1836",
+        "U+180C"
+      ],
+      "default_text": "‍ᠶ",
+      "default_code_points": [
+        "U+200D",
+        "U+1836"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 252
+      }
+    },
+    {
+      "id": "s1-stdvar-028-isolate",
+      "task_id": "s1-stdvar-028",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠸ᠋",
+      "target_code_points": [
+        "U+1838",
+        "U+180B"
+      ],
+      "default_text": "ᠸ",
+      "default_code_points": [
+        "U+1838"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 253
+      }
+    },
+    {
+      "id": "s1-stdvar-028-initial",
+      "task_id": "s1-stdvar-028",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᠸ᠋‍",
+      "target_code_points": [
+        "U+1838",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᠸ‍",
+      "default_code_points": [
+        "U+1838",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 253
+      }
+    },
+    {
+      "id": "s1-stdvar-028-medial",
+      "task_id": "s1-stdvar-028",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᠸ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1838",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᠸ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1838",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 253
+      }
+    },
+    {
+      "id": "s1-stdvar-028-final",
+      "task_id": "s1-stdvar-028",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᠸ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1838",
+        "U+180B"
+      ],
+      "default_text": "‍ᠸ",
+      "default_code_points": [
+        "U+200D",
+        "U+1838"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 253
+      }
+    },
+    {
+      "id": "s1-stdvar-029-isolate",
+      "task_id": "s1-stdvar-029",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡄ᠋",
+      "target_code_points": [
+        "U+1844",
+        "U+180B"
+      ],
+      "default_text": "ᡄ",
+      "default_code_points": [
+        "U+1844"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 254
+      }
+    },
+    {
+      "id": "s1-stdvar-029-initial",
+      "task_id": "s1-stdvar-029",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡄ᠋‍",
+      "target_code_points": [
+        "U+1844",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡄ‍",
+      "default_code_points": [
+        "U+1844",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 254
+      }
+    },
+    {
+      "id": "s1-stdvar-029-medial",
+      "task_id": "s1-stdvar-029",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡄ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1844",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡄ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1844",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 254
+      }
+    },
+    {
+      "id": "s1-stdvar-029-final",
+      "task_id": "s1-stdvar-029",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡄ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1844",
+        "U+180B"
+      ],
+      "default_text": "‍ᡄ",
+      "default_code_points": [
+        "U+200D",
+        "U+1844"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 254
+      }
+    },
+    {
+      "id": "s1-stdvar-030-isolate",
+      "task_id": "s1-stdvar-030",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡅ᠋",
+      "target_code_points": [
+        "U+1845",
+        "U+180B"
+      ],
+      "default_text": "ᡅ",
+      "default_code_points": [
+        "U+1845"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 255
+      }
+    },
+    {
+      "id": "s1-stdvar-030-initial",
+      "task_id": "s1-stdvar-030",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡅ᠋‍",
+      "target_code_points": [
+        "U+1845",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡅ‍",
+      "default_code_points": [
+        "U+1845",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 255
+      }
+    },
+    {
+      "id": "s1-stdvar-030-medial",
+      "task_id": "s1-stdvar-030",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡅ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1845",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡅ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1845",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 255
+      }
+    },
+    {
+      "id": "s1-stdvar-030-final",
+      "task_id": "s1-stdvar-030",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡅ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1845",
+        "U+180B"
+      ],
+      "default_text": "‍ᡅ",
+      "default_code_points": [
+        "U+200D",
+        "U+1845"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 255
+      }
+    },
+    {
+      "id": "s1-stdvar-031-isolate",
+      "task_id": "s1-stdvar-031",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡆ᠋",
+      "target_code_points": [
+        "U+1846",
+        "U+180B"
+      ],
+      "default_text": "ᡆ",
+      "default_code_points": [
+        "U+1846"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 256
+      }
+    },
+    {
+      "id": "s1-stdvar-031-initial",
+      "task_id": "s1-stdvar-031",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡆ᠋‍",
+      "target_code_points": [
+        "U+1846",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡆ‍",
+      "default_code_points": [
+        "U+1846",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 256
+      }
+    },
+    {
+      "id": "s1-stdvar-031-medial",
+      "task_id": "s1-stdvar-031",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡆ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1846",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡆ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1846",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 256
+      }
+    },
+    {
+      "id": "s1-stdvar-031-final",
+      "task_id": "s1-stdvar-031",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡆ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1846",
+        "U+180B"
+      ],
+      "default_text": "‍ᡆ",
+      "default_code_points": [
+        "U+200D",
+        "U+1846"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 256
+      }
+    },
+    {
+      "id": "s1-stdvar-032-isolate",
+      "task_id": "s1-stdvar-032",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᡇ᠋",
+      "target_code_points": [
+        "U+1847",
+        "U+180B"
+      ],
+      "default_text": "ᡇ",
+      "default_code_points": [
+        "U+1847"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 257
+      }
+    },
+    {
+      "id": "s1-stdvar-032-initial",
+      "task_id": "s1-stdvar-032",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡇ᠋‍",
+      "target_code_points": [
+        "U+1847",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡇ‍",
+      "default_code_points": [
+        "U+1847",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 257
+      }
+    },
+    {
+      "id": "s1-stdvar-032-medial",
+      "task_id": "s1-stdvar-032",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡇ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1847",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡇ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1847",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 257
+      }
+    },
+    {
+      "id": "s1-stdvar-032-final",
+      "task_id": "s1-stdvar-032",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡇ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1847",
+        "U+180B"
+      ],
+      "default_text": "‍ᡇ",
+      "default_code_points": [
+        "U+200D",
+        "U+1847"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 257
+      }
+    },
+    {
+      "id": "s1-stdvar-033-isolate",
+      "task_id": "s1-stdvar-033",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡇ᠌",
+      "target_code_points": [
+        "U+1847",
+        "U+180C"
+      ],
+      "default_text": "ᡇ",
+      "default_code_points": [
+        "U+1847"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 258
+      }
+    },
+    {
+      "id": "s1-stdvar-033-initial",
+      "task_id": "s1-stdvar-033",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡇ᠌‍",
+      "target_code_points": [
+        "U+1847",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᡇ‍",
+      "default_code_points": [
+        "U+1847",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 258
+      }
+    },
+    {
+      "id": "s1-stdvar-033-medial",
+      "task_id": "s1-stdvar-033",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡇ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1847",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᡇ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1847",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 258
+      }
+    },
+    {
+      "id": "s1-stdvar-033-final",
+      "task_id": "s1-stdvar-033",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡇ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+1847",
+        "U+180C"
+      ],
+      "default_text": "‍ᡇ",
+      "default_code_points": [
+        "U+200D",
+        "U+1847"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 258
+      }
+    },
+    {
+      "id": "s1-stdvar-034-isolate",
+      "task_id": "s1-stdvar-034",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡈ᠋",
+      "target_code_points": [
+        "U+1848",
+        "U+180B"
+      ],
+      "default_text": "ᡈ",
+      "default_code_points": [
+        "U+1848"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 259
+      }
+    },
+    {
+      "id": "s1-stdvar-034-initial",
+      "task_id": "s1-stdvar-034",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡈ᠋‍",
+      "target_code_points": [
+        "U+1848",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡈ‍",
+      "default_code_points": [
+        "U+1848",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 259
+      }
+    },
+    {
+      "id": "s1-stdvar-034-medial",
+      "task_id": "s1-stdvar-034",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡈ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1848",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡈ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1848",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 259
+      }
+    },
+    {
+      "id": "s1-stdvar-034-final",
+      "task_id": "s1-stdvar-034",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡈ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1848",
+        "U+180B"
+      ],
+      "default_text": "‍ᡈ",
+      "default_code_points": [
+        "U+200D",
+        "U+1848"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 259
+      }
+    },
+    {
+      "id": "s1-stdvar-035-isolate",
+      "task_id": "s1-stdvar-035",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᡉ᠋",
+      "target_code_points": [
+        "U+1849",
+        "U+180B"
+      ],
+      "default_text": "ᡉ",
+      "default_code_points": [
+        "U+1849"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 260
+      }
+    },
+    {
+      "id": "s1-stdvar-035-initial",
+      "task_id": "s1-stdvar-035",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡉ᠋‍",
+      "target_code_points": [
+        "U+1849",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡉ‍",
+      "default_code_points": [
+        "U+1849",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 260
+      }
+    },
+    {
+      "id": "s1-stdvar-035-medial",
+      "task_id": "s1-stdvar-035",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡉ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1849",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡉ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1849",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 260
+      }
+    },
+    {
+      "id": "s1-stdvar-035-final",
+      "task_id": "s1-stdvar-035",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡉ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1849",
+        "U+180B"
+      ],
+      "default_text": "‍ᡉ",
+      "default_code_points": [
+        "U+200D",
+        "U+1849"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 260
+      }
+    },
+    {
+      "id": "s1-stdvar-036-isolate",
+      "task_id": "s1-stdvar-036",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡍ᠋",
+      "target_code_points": [
+        "U+184D",
+        "U+180B"
+      ],
+      "default_text": "ᡍ",
+      "default_code_points": [
+        "U+184D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 261
+      }
+    },
+    {
+      "id": "s1-stdvar-036-initial",
+      "task_id": "s1-stdvar-036",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᡍ᠋‍",
+      "target_code_points": [
+        "U+184D",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡍ‍",
+      "default_code_points": [
+        "U+184D",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 261
+      }
+    },
+    {
+      "id": "s1-stdvar-036-medial",
+      "task_id": "s1-stdvar-036",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡍ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+184D",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡍ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+184D",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 261
+      }
+    },
+    {
+      "id": "s1-stdvar-036-final",
+      "task_id": "s1-stdvar-036",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡍ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+184D",
+        "U+180B"
+      ],
+      "default_text": "‍ᡍ",
+      "default_code_points": [
+        "U+200D",
+        "U+184D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 261
+      }
+    },
+    {
+      "id": "s1-stdvar-037-isolate",
+      "task_id": "s1-stdvar-037",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡎ᠋",
+      "target_code_points": [
+        "U+184E",
+        "U+180B"
+      ],
+      "default_text": "ᡎ",
+      "default_code_points": [
+        "U+184E"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 262
+      }
+    },
+    {
+      "id": "s1-stdvar-037-initial",
+      "task_id": "s1-stdvar-037",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡎ᠋‍",
+      "target_code_points": [
+        "U+184E",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡎ‍",
+      "default_code_points": [
+        "U+184E",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 262
+      }
+    },
+    {
+      "id": "s1-stdvar-037-medial",
+      "task_id": "s1-stdvar-037",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡎ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+184E",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡎ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+184E",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 262
+      }
+    },
+    {
+      "id": "s1-stdvar-037-final",
+      "task_id": "s1-stdvar-037",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡎ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+184E",
+        "U+180B"
+      ],
+      "default_text": "‍ᡎ",
+      "default_code_points": [
+        "U+200D",
+        "U+184E"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 262
+      }
+    },
+    {
+      "id": "s1-stdvar-038-isolate",
+      "task_id": "s1-stdvar-038",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡝ᠋",
+      "target_code_points": [
+        "U+185D",
+        "U+180B"
+      ],
+      "default_text": "ᡝ",
+      "default_code_points": [
+        "U+185D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 263
+      }
+    },
+    {
+      "id": "s1-stdvar-038-initial",
+      "task_id": "s1-stdvar-038",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡝ᠋‍",
+      "target_code_points": [
+        "U+185D",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡝ‍",
+      "default_code_points": [
+        "U+185D",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 263
+      }
+    },
+    {
+      "id": "s1-stdvar-038-medial",
+      "task_id": "s1-stdvar-038",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡝ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+185D",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡝ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+185D",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 263
+      }
+    },
+    {
+      "id": "s1-stdvar-038-final",
+      "task_id": "s1-stdvar-038",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡝ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+185D",
+        "U+180B"
+      ],
+      "default_text": "‍ᡝ",
+      "default_code_points": [
+        "U+200D",
+        "U+185D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 263
+      }
+    },
+    {
+      "id": "s1-stdvar-039-isolate",
+      "task_id": "s1-stdvar-039",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡞ᠋",
+      "target_code_points": [
+        "U+185E",
+        "U+180B"
+      ],
+      "default_text": "ᡞ",
+      "default_code_points": [
+        "U+185E"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 264
+      }
+    },
+    {
+      "id": "s1-stdvar-039-initial",
+      "task_id": "s1-stdvar-039",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡞ᠋‍",
+      "target_code_points": [
+        "U+185E",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡞ‍",
+      "default_code_points": [
+        "U+185E",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 264
+      }
+    },
+    {
+      "id": "s1-stdvar-039-medial",
+      "task_id": "s1-stdvar-039",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡞ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+185E",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡞ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+185E",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 264
+      }
+    },
+    {
+      "id": "s1-stdvar-039-final",
+      "task_id": "s1-stdvar-039",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡞ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+185E",
+        "U+180B"
+      ],
+      "default_text": "‍ᡞ",
+      "default_code_points": [
+        "U+200D",
+        "U+185E"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 264
+      }
+    },
+    {
+      "id": "s1-stdvar-040-isolate",
+      "task_id": "s1-stdvar-040",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡞ᠌",
+      "target_code_points": [
+        "U+185E",
+        "U+180C"
+      ],
+      "default_text": "ᡞ",
+      "default_code_points": [
+        "U+185E"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 265
+      }
+    },
+    {
+      "id": "s1-stdvar-040-initial",
+      "task_id": "s1-stdvar-040",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡞ᠌‍",
+      "target_code_points": [
+        "U+185E",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᡞ‍",
+      "default_code_points": [
+        "U+185E",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 265
+      }
+    },
+    {
+      "id": "s1-stdvar-040-medial",
+      "task_id": "s1-stdvar-040",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡞ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+185E",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᡞ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+185E",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 265
+      }
+    },
+    {
+      "id": "s1-stdvar-040-final",
+      "task_id": "s1-stdvar-040",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡞ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+185E",
+        "U+180C"
+      ],
+      "default_text": "‍ᡞ",
+      "default_code_points": [
+        "U+200D",
+        "U+185E"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 265
+      }
+    },
+    {
+      "id": "s1-stdvar-041-isolate",
+      "task_id": "s1-stdvar-041",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡠ᠋",
+      "target_code_points": [
+        "U+1860",
+        "U+180B"
+      ],
+      "default_text": "ᡠ",
+      "default_code_points": [
+        "U+1860"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 266
+      }
+    },
+    {
+      "id": "s1-stdvar-041-initial",
+      "task_id": "s1-stdvar-041",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡠ᠋‍",
+      "target_code_points": [
+        "U+1860",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡠ‍",
+      "default_code_points": [
+        "U+1860",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 266
+      }
+    },
+    {
+      "id": "s1-stdvar-041-medial",
+      "task_id": "s1-stdvar-041",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡠ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1860",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡠ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1860",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 266
+      }
+    },
+    {
+      "id": "s1-stdvar-041-final",
+      "task_id": "s1-stdvar-041",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡠ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1860",
+        "U+180B"
+      ],
+      "default_text": "‍ᡠ",
+      "default_code_points": [
+        "U+200D",
+        "U+1860"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 266
+      }
+    },
+    {
+      "id": "s1-stdvar-042-isolate",
+      "task_id": "s1-stdvar-042",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡣ᠋",
+      "target_code_points": [
+        "U+1863",
+        "U+180B"
+      ],
+      "default_text": "ᡣ",
+      "default_code_points": [
+        "U+1863"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 267
+      }
+    },
+    {
+      "id": "s1-stdvar-042-initial",
+      "task_id": "s1-stdvar-042",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡣ᠋‍",
+      "target_code_points": [
+        "U+1863",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡣ‍",
+      "default_code_points": [
+        "U+1863",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 267
+      }
+    },
+    {
+      "id": "s1-stdvar-042-medial",
+      "task_id": "s1-stdvar-042",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡣ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1863",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡣ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1863",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 267
+      }
+    },
+    {
+      "id": "s1-stdvar-042-final",
+      "task_id": "s1-stdvar-042",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡣ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1863",
+        "U+180B"
+      ],
+      "default_text": "‍ᡣ",
+      "default_code_points": [
+        "U+200D",
+        "U+1863"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 267
+      }
+    },
+    {
+      "id": "s1-stdvar-043-isolate",
+      "task_id": "s1-stdvar-043",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡨ᠋",
+      "target_code_points": [
+        "U+1868",
+        "U+180B"
+      ],
+      "default_text": "ᡨ",
+      "default_code_points": [
+        "U+1868"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 268
+      }
+    },
+    {
+      "id": "s1-stdvar-043-initial",
+      "task_id": "s1-stdvar-043",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᡨ᠋‍",
+      "target_code_points": [
+        "U+1868",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡨ‍",
+      "default_code_points": [
+        "U+1868",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 268
+      }
+    },
+    {
+      "id": "s1-stdvar-043-medial",
+      "task_id": "s1-stdvar-043",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡨ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1868",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡨ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1868",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 268
+      }
+    },
+    {
+      "id": "s1-stdvar-043-final",
+      "task_id": "s1-stdvar-043",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡨ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1868",
+        "U+180B"
+      ],
+      "default_text": "‍ᡨ",
+      "default_code_points": [
+        "U+200D",
+        "U+1868"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 268
+      }
+    },
+    {
+      "id": "s1-stdvar-044-isolate",
+      "task_id": "s1-stdvar-044",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡨ᠌",
+      "target_code_points": [
+        "U+1868",
+        "U+180C"
+      ],
+      "default_text": "ᡨ",
+      "default_code_points": [
+        "U+1868"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 269
+      }
+    },
+    {
+      "id": "s1-stdvar-044-initial",
+      "task_id": "s1-stdvar-044",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡨ᠌‍",
+      "target_code_points": [
+        "U+1868",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᡨ‍",
+      "default_code_points": [
+        "U+1868",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 269
+      }
+    },
+    {
+      "id": "s1-stdvar-044-medial",
+      "task_id": "s1-stdvar-044",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡨ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1868",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᡨ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1868",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 269
+      }
+    },
+    {
+      "id": "s1-stdvar-044-final",
+      "task_id": "s1-stdvar-044",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡨ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+1868",
+        "U+180C"
+      ],
+      "default_text": "‍ᡨ",
+      "default_code_points": [
+        "U+200D",
+        "U+1868"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 269
+      }
+    },
+    {
+      "id": "s1-stdvar-045-isolate",
+      "task_id": "s1-stdvar-045",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡩ᠋",
+      "target_code_points": [
+        "U+1869",
+        "U+180B"
+      ],
+      "default_text": "ᡩ",
+      "default_code_points": [
+        "U+1869"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 270
+      }
+    },
+    {
+      "id": "s1-stdvar-045-initial",
+      "task_id": "s1-stdvar-045",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᡩ᠋‍",
+      "target_code_points": [
+        "U+1869",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡩ‍",
+      "default_code_points": [
+        "U+1869",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 270
+      }
+    },
+    {
+      "id": "s1-stdvar-045-medial",
+      "task_id": "s1-stdvar-045",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡩ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1869",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡩ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1869",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 270
+      }
+    },
+    {
+      "id": "s1-stdvar-045-final",
+      "task_id": "s1-stdvar-045",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡩ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1869",
+        "U+180B"
+      ],
+      "default_text": "‍ᡩ",
+      "default_code_points": [
+        "U+200D",
+        "U+1869"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 270
+      }
+    },
+    {
+      "id": "s1-stdvar-046-isolate",
+      "task_id": "s1-stdvar-046",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡯ᠋",
+      "target_code_points": [
+        "U+186F",
+        "U+180B"
+      ],
+      "default_text": "ᡯ",
+      "default_code_points": [
+        "U+186F"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 271
+      }
+    },
+    {
+      "id": "s1-stdvar-046-initial",
+      "task_id": "s1-stdvar-046",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᡯ᠋‍",
+      "target_code_points": [
+        "U+186F",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡯ‍",
+      "default_code_points": [
+        "U+186F",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 271
+      }
+    },
+    {
+      "id": "s1-stdvar-046-medial",
+      "task_id": "s1-stdvar-046",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡯ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+186F",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡯ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+186F",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 271
+      }
+    },
+    {
+      "id": "s1-stdvar-046-final",
+      "task_id": "s1-stdvar-046",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡯ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+186F",
+        "U+180B"
+      ],
+      "default_text": "‍ᡯ",
+      "default_code_points": [
+        "U+200D",
+        "U+186F"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 271
+      }
+    },
+    {
+      "id": "s1-stdvar-047-isolate",
+      "task_id": "s1-stdvar-047",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡳ᠋",
+      "target_code_points": [
+        "U+1873",
+        "U+180B"
+      ],
+      "default_text": "ᡳ",
+      "default_code_points": [
+        "U+1873"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 272
+      }
+    },
+    {
+      "id": "s1-stdvar-047-initial",
+      "task_id": "s1-stdvar-047",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡳ᠋‍",
+      "target_code_points": [
+        "U+1873",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡳ‍",
+      "default_code_points": [
+        "U+1873",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 272
+      }
+    },
+    {
+      "id": "s1-stdvar-047-medial",
+      "task_id": "s1-stdvar-047",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡳ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1873",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡳ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1873",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 272
+      }
+    },
+    {
+      "id": "s1-stdvar-047-final",
+      "task_id": "s1-stdvar-047",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡳ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1873",
+        "U+180B"
+      ],
+      "default_text": "‍ᡳ",
+      "default_code_points": [
+        "U+200D",
+        "U+1873"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 272
+      }
+    },
+    {
+      "id": "s1-stdvar-048-isolate",
+      "task_id": "s1-stdvar-048",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡳ᠌",
+      "target_code_points": [
+        "U+1873",
+        "U+180C"
+      ],
+      "default_text": "ᡳ",
+      "default_code_points": [
+        "U+1873"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 273
+      }
+    },
+    {
+      "id": "s1-stdvar-048-initial",
+      "task_id": "s1-stdvar-048",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡳ᠌‍",
+      "target_code_points": [
+        "U+1873",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᡳ‍",
+      "default_code_points": [
+        "U+1873",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 273
+      }
+    },
+    {
+      "id": "s1-stdvar-048-medial",
+      "task_id": "s1-stdvar-048",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡳ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1873",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᡳ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1873",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 273
+      }
+    },
+    {
+      "id": "s1-stdvar-048-final",
+      "task_id": "s1-stdvar-048",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡳ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+1873",
+        "U+180C"
+      ],
+      "default_text": "‍ᡳ",
+      "default_code_points": [
+        "U+200D",
+        "U+1873"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 273
+      }
+    },
+    {
+      "id": "s1-stdvar-049-isolate",
+      "task_id": "s1-stdvar-049",
+      "context": "isolate",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡳ᠍",
+      "target_code_points": [
+        "U+1873",
+        "U+180D"
+      ],
+      "default_text": "ᡳ",
+      "default_code_points": [
+        "U+1873"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 274
+      }
+    },
+    {
+      "id": "s1-stdvar-049-initial",
+      "task_id": "s1-stdvar-049",
+      "context": "initial",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡳ᠍‍",
+      "target_code_points": [
+        "U+1873",
+        "U+180D",
+        "U+200D"
+      ],
+      "default_text": "ᡳ‍",
+      "default_code_points": [
+        "U+1873",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 274
+      }
+    },
+    {
+      "id": "s1-stdvar-049-medial",
+      "task_id": "s1-stdvar-049",
+      "context": "medial",
+      "desired_appearance": "fourth form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡳ᠍‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1873",
+        "U+180D",
+        "U+200D"
+      ],
+      "default_text": "‍ᡳ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1873",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 274
+      }
+    },
+    {
+      "id": "s1-stdvar-049-final",
+      "task_id": "s1-stdvar-049",
+      "context": "final",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡳ᠍",
+      "target_code_points": [
+        "U+200D",
+        "U+1873",
+        "U+180D"
+      ],
+      "default_text": "‍ᡳ",
+      "default_code_points": [
+        "U+200D",
+        "U+1873"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 274
+      }
+    },
+    {
+      "id": "s1-stdvar-050-isolate",
+      "task_id": "s1-stdvar-050",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡴ᠋",
+      "target_code_points": [
+        "U+1874",
+        "U+180B"
+      ],
+      "default_text": "ᡴ",
+      "default_code_points": [
+        "U+1874"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 275
+      }
+    },
+    {
+      "id": "s1-stdvar-050-initial",
+      "task_id": "s1-stdvar-050",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡴ᠋‍",
+      "target_code_points": [
+        "U+1874",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡴ‍",
+      "default_code_points": [
+        "U+1874",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 275
+      }
+    },
+    {
+      "id": "s1-stdvar-050-medial",
+      "task_id": "s1-stdvar-050",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡴ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1874",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡴ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1874",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 275
+      }
+    },
+    {
+      "id": "s1-stdvar-050-final",
+      "task_id": "s1-stdvar-050",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡴ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1874",
+        "U+180B"
+      ],
+      "default_text": "‍ᡴ",
+      "default_code_points": [
+        "U+200D",
+        "U+1874"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 275
+      }
+    },
+    {
+      "id": "s1-stdvar-051-isolate",
+      "task_id": "s1-stdvar-051",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡴ᠌",
+      "target_code_points": [
+        "U+1874",
+        "U+180C"
+      ],
+      "default_text": "ᡴ",
+      "default_code_points": [
+        "U+1874"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 276
+      }
+    },
+    {
+      "id": "s1-stdvar-051-initial",
+      "task_id": "s1-stdvar-051",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡴ᠌‍",
+      "target_code_points": [
+        "U+1874",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᡴ‍",
+      "default_code_points": [
+        "U+1874",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 276
+      }
+    },
+    {
+      "id": "s1-stdvar-051-medial",
+      "task_id": "s1-stdvar-051",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡴ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1874",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᡴ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1874",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 276
+      }
+    },
+    {
+      "id": "s1-stdvar-051-final",
+      "task_id": "s1-stdvar-051",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡴ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+1874",
+        "U+180C"
+      ],
+      "default_text": "‍ᡴ",
+      "default_code_points": [
+        "U+200D",
+        "U+1874"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 276
+      }
+    },
+    {
+      "id": "s1-stdvar-052-isolate",
+      "task_id": "s1-stdvar-052",
+      "context": "isolate",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡴ᠍",
+      "target_code_points": [
+        "U+1874",
+        "U+180D"
+      ],
+      "default_text": "ᡴ",
+      "default_code_points": [
+        "U+1874"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 277
+      }
+    },
+    {
+      "id": "s1-stdvar-052-initial",
+      "task_id": "s1-stdvar-052",
+      "context": "initial",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡴ᠍‍",
+      "target_code_points": [
+        "U+1874",
+        "U+180D",
+        "U+200D"
+      ],
+      "default_text": "ᡴ‍",
+      "default_code_points": [
+        "U+1874",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 277
+      }
+    },
+    {
+      "id": "s1-stdvar-052-medial",
+      "task_id": "s1-stdvar-052",
+      "context": "medial",
+      "desired_appearance": "fourth form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡴ᠍‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1874",
+        "U+180D",
+        "U+200D"
+      ],
+      "default_text": "‍ᡴ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1874",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 277
+      }
+    },
+    {
+      "id": "s1-stdvar-052-final",
+      "task_id": "s1-stdvar-052",
+      "context": "final",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡴ᠍",
+      "target_code_points": [
+        "U+200D",
+        "U+1874",
+        "U+180D"
+      ],
+      "default_text": "‍ᡴ",
+      "default_code_points": [
+        "U+200D",
+        "U+1874"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 277
+      }
+    },
+    {
+      "id": "s1-stdvar-053-isolate",
+      "task_id": "s1-stdvar-053",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᡶ᠋",
+      "target_code_points": [
+        "U+1876",
+        "U+180B"
+      ],
+      "default_text": "ᡶ",
+      "default_code_points": [
+        "U+1876"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 278
+      }
+    },
+    {
+      "id": "s1-stdvar-053-initial",
+      "task_id": "s1-stdvar-053",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᡶ᠋‍",
+      "target_code_points": [
+        "U+1876",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᡶ‍",
+      "default_code_points": [
+        "U+1876",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 278
+      }
+    },
+    {
+      "id": "s1-stdvar-053-medial",
+      "task_id": "s1-stdvar-053",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᡶ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1876",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᡶ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1876",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 278
+      }
+    },
+    {
+      "id": "s1-stdvar-053-final",
+      "task_id": "s1-stdvar-053",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᡶ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1876",
+        "U+180B"
+      ],
+      "default_text": "‍ᡶ",
+      "default_code_points": [
+        "U+200D",
+        "U+1876"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 278
+      }
+    },
+    {
+      "id": "s1-stdvar-054-context_independent",
+      "task_id": "s1-stdvar-054",
+      "context": "context_independent",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᢀ᠋",
+      "target_code_points": [
+        "U+1880",
+        "U+180B"
+      ],
+      "default_text": "ᢀ",
+      "default_code_points": [
+        "U+1880"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 279
+      }
+    },
+    {
+      "id": "s1-stdvar-055-context_independent",
+      "task_id": "s1-stdvar-055",
+      "context": "context_independent",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᢁ᠋",
+      "target_code_points": [
+        "U+1881",
+        "U+180B"
+      ],
+      "default_text": "ᢁ",
+      "default_code_points": [
+        "U+1881"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 280
+      }
+    },
+    {
+      "id": "s1-stdvar-056-isolate",
+      "task_id": "s1-stdvar-056",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᢇ᠋",
+      "target_code_points": [
+        "U+1887",
+        "U+180B"
+      ],
+      "default_text": "ᢇ",
+      "default_code_points": [
+        "U+1887"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 281
+      }
+    },
+    {
+      "id": "s1-stdvar-056-initial",
+      "task_id": "s1-stdvar-056",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᢇ᠋‍",
+      "target_code_points": [
+        "U+1887",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᢇ‍",
+      "default_code_points": [
+        "U+1887",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 281
+      }
+    },
+    {
+      "id": "s1-stdvar-056-medial",
+      "task_id": "s1-stdvar-056",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᢇ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1887",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᢇ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1887",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 281
+      }
+    },
+    {
+      "id": "s1-stdvar-056-final",
+      "task_id": "s1-stdvar-056",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᢇ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1887",
+        "U+180B"
+      ],
+      "default_text": "‍ᢇ",
+      "default_code_points": [
+        "U+200D",
+        "U+1887"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 281
+      }
+    },
+    {
+      "id": "s1-stdvar-057-isolate",
+      "task_id": "s1-stdvar-057",
+      "context": "isolate",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᢇ᠌",
+      "target_code_points": [
+        "U+1887",
+        "U+180C"
+      ],
+      "default_text": "ᢇ",
+      "default_code_points": [
+        "U+1887"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 282
+      }
+    },
+    {
+      "id": "s1-stdvar-057-initial",
+      "task_id": "s1-stdvar-057",
+      "context": "initial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᢇ᠌‍",
+      "target_code_points": [
+        "U+1887",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "ᢇ‍",
+      "default_code_points": [
+        "U+1887",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 282
+      }
+    },
+    {
+      "id": "s1-stdvar-057-medial",
+      "task_id": "s1-stdvar-057",
+      "context": "medial",
+      "desired_appearance": "third form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᢇ᠌‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1887",
+        "U+180C",
+        "U+200D"
+      ],
+      "default_text": "‍ᢇ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1887",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 282
+      }
+    },
+    {
+      "id": "s1-stdvar-057-final",
+      "task_id": "s1-stdvar-057",
+      "context": "final",
+      "desired_appearance": "third form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᢇ᠌",
+      "target_code_points": [
+        "U+200D",
+        "U+1887",
+        "U+180C"
+      ],
+      "default_text": "‍ᢇ",
+      "default_code_points": [
+        "U+200D",
+        "U+1887"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 282
+      }
+    },
+    {
+      "id": "s1-stdvar-058-isolate",
+      "task_id": "s1-stdvar-058",
+      "context": "isolate",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᢇ᠍",
+      "target_code_points": [
+        "U+1887",
+        "U+180D"
+      ],
+      "default_text": "ᢇ",
+      "default_code_points": [
+        "U+1887"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 283
+      }
+    },
+    {
+      "id": "s1-stdvar-058-initial",
+      "task_id": "s1-stdvar-058",
+      "context": "initial",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᢇ᠍‍",
+      "target_code_points": [
+        "U+1887",
+        "U+180D",
+        "U+200D"
+      ],
+      "default_text": "ᢇ‍",
+      "default_code_points": [
+        "U+1887",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 283
+      }
+    },
+    {
+      "id": "s1-stdvar-058-medial",
+      "task_id": "s1-stdvar-058",
+      "context": "medial",
+      "desired_appearance": "fourth form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᢇ᠍‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1887",
+        "U+180D",
+        "U+200D"
+      ],
+      "default_text": "‍ᢇ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1887",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 283
+      }
+    },
+    {
+      "id": "s1-stdvar-058-final",
+      "task_id": "s1-stdvar-058",
+      "context": "final",
+      "desired_appearance": "fourth form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᢇ᠍",
+      "target_code_points": [
+        "U+200D",
+        "U+1887",
+        "U+180D"
+      ],
+      "default_text": "‍ᢇ",
+      "default_code_points": [
+        "U+200D",
+        "U+1887"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 283
+      }
+    },
+    {
+      "id": "s1-stdvar-059-isolate",
+      "task_id": "s1-stdvar-059",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᢈ᠋",
+      "target_code_points": [
+        "U+1888",
+        "U+180B"
+      ],
+      "default_text": "ᢈ",
+      "default_code_points": [
+        "U+1888"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 284
+      }
+    },
+    {
+      "id": "s1-stdvar-059-initial",
+      "task_id": "s1-stdvar-059",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᢈ᠋‍",
+      "target_code_points": [
+        "U+1888",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᢈ‍",
+      "default_code_points": [
+        "U+1888",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 284
+      }
+    },
+    {
+      "id": "s1-stdvar-059-medial",
+      "task_id": "s1-stdvar-059",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᢈ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+1888",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᢈ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+1888",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 284
+      }
+    },
+    {
+      "id": "s1-stdvar-059-final",
+      "task_id": "s1-stdvar-059",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᢈ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+1888",
+        "U+180B"
+      ],
+      "default_text": "‍ᢈ",
+      "default_code_points": [
+        "U+200D",
+        "U+1888"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 284
+      }
+    },
+    {
+      "id": "s1-stdvar-060-isolate",
+      "task_id": "s1-stdvar-060",
+      "context": "isolate",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "ᢊ᠋",
+      "target_code_points": [
+        "U+188A",
+        "U+180B"
+      ],
+      "default_text": "ᢊ",
+      "default_code_points": [
+        "U+188A"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 285
+      }
+    },
+    {
+      "id": "s1-stdvar-060-initial",
+      "task_id": "s1-stdvar-060",
+      "context": "initial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "ᢊ᠋‍",
+      "target_code_points": [
+        "U+188A",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "ᢊ‍",
+      "default_code_points": [
+        "U+188A",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 285
+      }
+    },
+    {
+      "id": "s1-stdvar-060-medial",
+      "task_id": "s1-stdvar-060",
+      "context": "medial",
+      "desired_appearance": "second form",
+      "expectation_class": "normative_target",
+      "target_text": "‍ᢊ᠋‍",
+      "target_code_points": [
+        "U+200D",
+        "U+188A",
+        "U+180B",
+        "U+200D"
+      ],
+      "default_text": "‍ᢊ‍",
+      "default_code_points": [
+        "U+200D",
+        "U+188A",
+        "U+200D"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 285
+      }
+    },
+    {
+      "id": "s1-stdvar-060-final",
+      "task_id": "s1-stdvar-060",
+      "context": "final",
+      "desired_appearance": "second form",
+      "expectation_class": "outside_declared_context",
+      "target_text": "‍ᢊ᠋",
+      "target_code_points": [
+        "U+200D",
+        "U+188A",
+        "U+180B"
+      ],
+      "default_text": "‍ᢊ",
+      "default_code_points": [
+        "U+200D",
+        "U+188A"
+      ],
+      "context_method": "ZWJ-controlled joining context",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 285
+      }
+    }
+  ]
+}

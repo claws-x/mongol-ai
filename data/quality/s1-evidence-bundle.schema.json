@@ -28,7 +28,8 @@
       "properties": {
         "native": { "type": "object" },
         "locked": { "type": "object" },
-        "reference_font": { "type": "object" }
+        "reference_font": { "type": "object" },
+        "machine_evidence": { "type": "object" }
       }
     },
     "annotations": {

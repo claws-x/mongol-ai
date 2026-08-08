@@ -26,6 +26,16 @@
         "MONGOLIAN LETTER A",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "isolate",
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER A"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -53,6 +63,14 @@
         "MONGOLIAN LETTER A",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER A"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -80,6 +98,15 @@
         "MONGOLIAN LETTER E",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER E"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -107,6 +134,14 @@
         "MONGOLIAN LETTER I",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER I"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -134,6 +169,15 @@
         "MONGOLIAN LETTER O",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER O"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -161,6 +205,14 @@
         "MONGOLIAN LETTER U",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER U"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -188,6 +240,15 @@
         "MONGOLIAN LETTER OE",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER OE"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -215,6 +276,14 @@
         "MONGOLIAN LETTER OE",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER OE"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -242,6 +311,16 @@
         "MONGOLIAN LETTER UE",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "isolate",
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER UE"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -269,6 +348,14 @@
         "MONGOLIAN LETTER UE",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER UE"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -296,6 +383,15 @@
         "MONGOLIAN LETTER NA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER NA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -323,6 +419,14 @@
         "MONGOLIAN LETTER NA",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER NA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -350,6 +454,14 @@
         "MONGOLIAN LETTER NA",
         "MONGOLIAN FREE VARIATION SELECTOR THREE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "fourth form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER NA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -377,6 +489,14 @@
         "MONGOLIAN LETTER BA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER BA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -404,6 +524,16 @@
         "MONGOLIAN LETTER QA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "isolate",
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER QA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -431,6 +561,14 @@
         "MONGOLIAN LETTER QA",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER QA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -458,6 +596,14 @@
         "MONGOLIAN LETTER QA",
         "MONGOLIAN FREE VARIATION SELECTOR THREE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "fourth form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER QA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -485,6 +631,16 @@
         "MONGOLIAN LETTER GA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER GA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -512,6 +668,14 @@
         "MONGOLIAN LETTER GA",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER GA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -539,6 +703,14 @@
         "MONGOLIAN LETTER GA",
         "MONGOLIAN FREE VARIATION SELECTOR THREE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "fourth form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER GA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -566,6 +738,14 @@
         "MONGOLIAN LETTER SA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER SA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -593,6 +773,14 @@
         "MONGOLIAN LETTER SA",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER SA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -620,6 +808,14 @@
         "MONGOLIAN LETTER TA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -647,6 +843,16 @@
         "MONGOLIAN LETTER DA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER DA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -674,6 +880,14 @@
         "MONGOLIAN LETTER JA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER JA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -701,6 +915,15 @@
         "MONGOLIAN LETTER YA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER YA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -728,6 +951,14 @@
         "MONGOLIAN LETTER YA",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER YA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -755,6 +986,14 @@
         "MONGOLIAN LETTER WA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER WA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -782,6 +1021,14 @@
         "MONGOLIAN LETTER TODO E",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO E"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -809,6 +1056,14 @@
         "MONGOLIAN LETTER TODO I",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO I"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -836,6 +1091,14 @@
         "MONGOLIAN LETTER TODO O",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO O"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -863,6 +1126,16 @@
         "MONGOLIAN LETTER TODO U",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "isolate",
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO U"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -890,6 +1163,14 @@
         "MONGOLIAN LETTER TODO U",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO U"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -917,6 +1198,14 @@
         "MONGOLIAN LETTER TODO OE",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO OE"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -944,6 +1233,15 @@
         "MONGOLIAN LETTER TODO UE",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "isolate",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO UE"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -971,6 +1269,15 @@
         "MONGOLIAN LETTER TODO QA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO QA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -998,6 +1305,14 @@
         "MONGOLIAN LETTER TODO GA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER TODO GA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1025,6 +1340,15 @@
         "MONGOLIAN LETTER SIBE E",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE E"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1052,6 +1376,15 @@
         "MONGOLIAN LETTER SIBE I",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE I"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1079,6 +1412,15 @@
         "MONGOLIAN LETTER SIBE I",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE I"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1106,6 +1448,15 @@
         "MONGOLIAN LETTER SIBE UE",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE UE"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1133,6 +1484,14 @@
         "MONGOLIAN LETTER SIBE KA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE KA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1160,6 +1519,15 @@
         "MONGOLIAN LETTER SIBE TA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE TA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1187,6 +1555,14 @@
         "MONGOLIAN LETTER SIBE TA",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE TA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1214,6 +1590,15 @@
         "MONGOLIAN LETTER SIBE DA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE DA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1241,6 +1626,15 @@
         "MONGOLIAN LETTER SIBE ZA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER SIBE ZA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1268,6 +1662,15 @@
         "MONGOLIAN LETTER MANCHU I",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU I"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1295,6 +1698,15 @@
         "MONGOLIAN LETTER MANCHU I",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU I"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1322,6 +1734,14 @@
         "MONGOLIAN LETTER MANCHU I",
         "MONGOLIAN FREE VARIATION SELECTOR THREE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "fourth form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU I"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1349,6 +1769,15 @@
         "MONGOLIAN LETTER MANCHU KA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU KA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1376,6 +1805,15 @@
         "MONGOLIAN LETTER MANCHU KA",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "medial",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU KA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1403,6 +1841,14 @@
         "MONGOLIAN LETTER MANCHU KA",
         "MONGOLIAN FREE VARIATION SELECTOR THREE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "fourth form",
+        "shaping_contexts": [
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU KA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1430,6 +1876,15 @@
         "MONGOLIAN LETTER MANCHU FA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER MANCHU FA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1457,6 +1912,12 @@
         "MONGOLIAN LETTER ALI GALI ANUSVARA ONE",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [],
+        "base_character": "MONGOLIAN LETTER ALI GALI ANUSVARA ONE"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1484,6 +1945,12 @@
         "MONGOLIAN LETTER ALI GALI VISARGA ONE",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [],
+        "base_character": "MONGOLIAN LETTER ALI GALI VISARGA ONE"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1511,6 +1978,15 @@
         "MONGOLIAN LETTER ALI GALI A",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "isolate",
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER ALI GALI A"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1538,6 +2014,14 @@
         "MONGOLIAN LETTER ALI GALI A",
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "third form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER ALI GALI A"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1565,6 +2049,14 @@
         "MONGOLIAN LETTER ALI GALI A",
         "MONGOLIAN FREE VARIATION SELECTOR THREE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "fourth form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER ALI GALI A"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1592,6 +2084,14 @@
         "MONGOLIAN LETTER ALI GALI I",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "final"
+        ],
+        "base_character": "MONGOLIAN LETTER ALI GALI I"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1619,6 +2119,15 @@
         "MONGOLIAN LETTER ALI GALI NGA",
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "standardized_variation_sequence",
+        "desired_appearance": "second form",
+        "shaping_contexts": [
+          "initial",
+          "medial"
+        ],
+        "base_character": "MONGOLIAN LETTER ALI GALI NGA"
+      },
       "source": {
         "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
         "section": "Mongolian standardized variation sequences",
@@ -1644,6 +2153,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER A"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1668,6 +2181,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER E"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1692,6 +2209,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER I"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1716,6 +2237,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER O"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1740,6 +2265,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER U"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1764,6 +2293,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER OE"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1788,6 +2321,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER UE"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1812,6 +2349,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER EE"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1836,6 +2377,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER NA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1860,6 +2405,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER ANG"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1884,6 +2433,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER BA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1908,6 +2461,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER PA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1932,6 +2489,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER QA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1956,6 +2517,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER GA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -1980,6 +2545,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER MA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2004,6 +2573,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER LA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2028,6 +2601,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER SA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2052,6 +2629,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER SHA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2076,6 +2657,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER TA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2100,6 +2685,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER DA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2124,6 +2713,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER CHA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2148,6 +2741,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER JA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2172,6 +2769,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER YA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2196,6 +2797,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER RA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2220,6 +2825,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER WA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2244,6 +2853,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER FA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2268,6 +2881,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER KA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2292,6 +2909,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER KHA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2316,6 +2937,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER TSA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2340,6 +2965,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER ZA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2364,6 +2993,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER HAA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2388,6 +3021,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER ZRA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2412,6 +3049,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER LHA"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2436,6 +3077,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER ZHI"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2460,6 +3105,10 @@
       "unicode_names": [
         "MONGOLIAN LETTER CHI"
       ],
+      "expected": {
+        "encoding_status": "assigned_mongolian_character",
+        "range": "Mongolian letters U+1820..U+1842"
+      },
       "source": {
         "url": "https://www.unicode.org/charts/PDF/U1800.pdf",
         "section": "Mongolian Unicode block chart"
@@ -2484,6 +3133,11 @@
       "unicode_names": [
         "MONGOLIAN FREE VARIATION SELECTOR ONE"
       ],
+      "expected": {
+        "encoding_status": "assigned_format_control",
+        "short_name": "FVS1",
+        "standalone_behavior": "standalone variation selector is ignored"
+      },
       "source": {
         "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/",
         "section": "Section 13.5 Mongolian"
@@ -2508,6 +3162,11 @@
       "unicode_names": [
         "MONGOLIAN FREE VARIATION SELECTOR TWO"
       ],
+      "expected": {
+        "encoding_status": "assigned_format_control",
+        "short_name": "FVS2",
+        "standalone_behavior": "standalone variation selector is ignored"
+      },
       "source": {
         "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/",
         "section": "Section 13.5 Mongolian"
@@ -2532,6 +3191,11 @@
       "unicode_names": [
         "MONGOLIAN FREE VARIATION SELECTOR THREE"
       ],
+      "expected": {
+        "encoding_status": "assigned_format_control",
+        "short_name": "FVS3",
+        "standalone_behavior": "standalone variation selector is ignored"
+      },
       "source": {
         "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/",
         "section": "Section 13.5 Mongolian"
@@ -2556,6 +3220,11 @@
       "unicode_names": [
         "UNASSIGNED"
       ],
+      "expected": {
+        "encoding_status": "assigned_format_control",
+        "short_name": "FVS4",
+        "standalone_behavior": "standalone variation selector is ignored"
+      },
       "source": {
         "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/",
         "section": "Section 13.5 Mongolian"
@@ -2580,6 +3249,11 @@
       "unicode_names": [
         "MONGOLIAN VOWEL SEPARATOR"
       ],
+      "expected": {
+        "encoding_status": "assigned_format_control",
+        "short_name": "MVS",
+        "standalone_behavior": "format control requires contextual review"
+      },
       "source": {
         "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/",
         "section": "Section 13.5 Mongolian"

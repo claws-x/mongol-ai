@@ -51,4 +51,12 @@ python3 scripts/build_s1_review_queue.py \
   data/quality/s1-review-queue.json
 ```
 
-The state machine prevents `approved` unless the record includes a locked machine rendering, a named qualified reviewer, a correct decision, a reference screenshot, input-method and font versions, an Onon MN capture or explicit exception, and review notes. This gate proves evidence completeness, not that the human judgment itself is correct.
+Or rebuild the queue, 234-probe context matrix and locked-font machine evidence together:
+
+```bash
+npm run build:s1
+```
+
+The committed machine report currently separates 83 tasks with no mechanical conflict, 16 standardized-variant/font conflicts and one MVS task that needs context. This is an automated backend-support result, not a claim that 83 glyphs are linguistically approved.
+
+The state machine prevents `approved` unless the record includes locked machine evidence, a named qualified reviewer, a correct decision, a reference screenshot, input-method and font versions, and review notes. Onon/Menksoft captures are optional conflict evidence rather than mandatory busywork. This gate proves evidence completeness, not that the human judgment itself is correct.

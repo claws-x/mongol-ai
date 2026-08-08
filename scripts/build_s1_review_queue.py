@@ -42,6 +42,7 @@ def main() -> int:
             "text": case["text"],
             "code_points": case["codepoints"],
             "unicode_names": case.get("unicode_names", []),
+            "expected": case["expected"],
             "source": case["source"],
             "requirements": [
                 "capture_onon_mn_or_mark_not_applicable",

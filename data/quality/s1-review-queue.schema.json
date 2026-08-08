@@ -37,7 +37,7 @@
     "task": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["id", "status", "priority", "category", "text", "code_points", "source", "requirements"],
+      "required": ["id", "status", "priority", "category", "text", "code_points", "expected", "source", "requirements"],
       "properties": {
         "id": { "type": "string", "pattern": "^s1-" },
         "status": { "enum": ["captured", "machine_verified", "linguist_verified", "approved", "rejected"] },
@@ -46,6 +46,7 @@
         "text": { "type": "string", "minLength": 1 },
         "code_points": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^U\\+[0-9A-F]{4,6}$" } },
         "unicode_names": { "type": "array", "items": { "type": "string" } },
+        "expected": { "type": "object", "minProperties": 1 },
         "source": { "type": "object" },
         "requirements": { "type": "array", "minItems": 1, "items": { "type": "string" } }
       }

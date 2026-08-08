@@ -1,6 +1,6 @@
 import * as hb from "../node_modules/harfbuzzjs/dist/index.mjs";
 
-const ENGINE_VERSION = "0.3.0";
+const ENGINE_VERSION = "0.4.0";
 const FONT_URL = new URL("../assets/fonts/NotoSansMongolian-Regular.ttf", import.meta.url);
 const OVERRIDES_URL = new URL("../data/engine/glyph-overrides.json", import.meta.url);
 const LOCKED_FONT_SHA256 = "a28ba3cde3de22de7ddc934bd5d5babe54e6ce28c073a288cd978ffcf26b295b";
@@ -54,6 +54,10 @@ function isPua(codePoint) {
     return (codePoint >= 0xe000 && codePoint <= 0xf8ff) ||
         (codePoint >= 0xf0000 && codePoint <= 0xffffd) ||
         (codePoint >= 0x100000 && codePoint <= 0x10fffd);
+}
+
+function isControlArtifactName(name) {
+    return /^(?:fvs[1-4]|mvs)(?:\.|$)/i.test(name || "");
 }
 
 async function sha256(bytes) {
@@ -187,17 +191,24 @@ export class MongolianSuperEngine {
         buffer.setDirection(hb.Direction.LTR);
         buffer.setScript("Mong");
         buffer.setLanguage("mn");
-        buffer.setFlags(hb.BufferFlag.PRESERVE_DEFAULT_IGNORABLES);
+        // Default-ignorables still participate in joining and GSUB. Preserving them
+        // asks HarfBuzz to emit their font glyphs, which can visibly draw ZWJ/FVS
+        // control glyphs into the production SVG.
+        buffer.setFlags(hb.BufferFlag.DEFAULT);
         hb.shape(this.font, buffer);
-        let glyphs = buffer.getGlyphInfosAndPositions().map((glyph) => ({
+        let glyphs = buffer.getGlyphInfosAndPositions().map((glyph) => {
+            const name = this.font.glyphName(glyph.codepoint) || null;
+            return {
             id: glyph.codepoint,
+            name,
             cluster: glyph.cluster,
             xAdvance: glyph.xAdvance || 0,
             yAdvance: glyph.yAdvance || 0,
             xOffset: glyph.xOffset || 0,
             yOffset: glyph.yOffset || 0,
             path: this.font.glyphToPath(glyph.codepoint),
-        }));
+            controlArtifact: isControlArtifactName(name),
+        }});
         const override = this.findOverride(document);
         if (override) glyphs = this.applyOverride(glyphs, override);
         return {
@@ -238,11 +249,15 @@ export class MongolianSuperEngine {
         const extents = this.font.hExtents();
         const ascender = extents.ascender || shapeResult.upem;
         const descender = extents.descender || -Math.round(shapeResult.upem * 0.2);
-        const advance = shapeResult.glyphs.reduce((sum, glyph) => sum + glyph.xAdvance, 0);
+        const renderedGlyphs = options.showControlArtifacts
+            ? shapeResult.glyphs
+            : shapeResult.glyphs.filter((glyph) => !glyph.controlArtifact);
+        const advance = renderedGlyphs.reduce((sum, glyph) => sum + glyph.xAdvance, 0);
         const width = Math.ceil((ascender - descender) * scale + padding * 2);
         const height = Math.ceil(Math.max(advance * scale, fontSize) + padding * 2);
         let penX = 0;
-        const paths = shapeResult.glyphs.map((glyph, index) => {
+        const paths = renderedGlyphs.map((glyph) => {
+            const index = shapeResult.glyphs.indexOf(glyph);
             const transform = `translate(${penX + glyph.xOffset} ${glyph.yOffset})`;
             penX += glyph.xAdvance;
             return `<path d="${glyph.path}" transform="${transform}" data-glyph-index="${index}" data-glyph-id="${glyph.id}" data-cluster="${glyph.cluster}"/>`;

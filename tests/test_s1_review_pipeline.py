@@ -40,6 +40,7 @@ class PhaseS1ReviewPipelineTests(unittest.TestCase):
             self.assertRegex(task["source"]["url"], r"^https://")
             self.assertTrue(task["text"])
             self.assertTrue(task["code_points"])
+            self.assertTrue(task["expected"])
             self.assertEqual(set(task["requirements"]), required)
 
     def test_queue_builder_is_reproducible(self):
@@ -53,14 +54,34 @@ class PhaseS1ReviewPipelineTests(unittest.TestCase):
             ], check=True)
             self.assertEqual(json.loads(output.read_text(encoding="utf-8")), self.queue)
 
+    def test_context_matrix_is_reproducible_and_scoped(self):
+        committed = json.loads((ROOT / "data/quality/s1-context-matrix.json").read_text(encoding="utf-8"))
+        self.assertEqual(committed["summary"]["probe_count"], 234)
+        self.assertEqual(committed["summary"]["normative_target_count"], 93)
+        self.assertEqual(Counter(probe["expectation_class"] for probe in committed["probes"]), {
+            "normative_target": 93,
+            "outside_declared_context": 141,
+        })
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "matrix.json"
+            subprocess.run([
+                sys.executable,
+                str(ROOT / "scripts/build_s1_context_matrix.py"),
+                str(ROOT / "data/quality/s1-review-queue.json"),
+                str(output),
+            ], check=True)
+            self.assertEqual(json.loads(output.read_text(encoding="utf-8")), committed)
+
     def test_schemas_are_closed_and_cover_review_states(self):
         queue_schema = json.loads((ROOT / "data/quality/s1-review-queue.schema.json").read_text(encoding="utf-8"))
         evidence_schema = json.loads((ROOT / "data/quality/s1-evidence-bundle.schema.json").read_text(encoding="utf-8"))
+        machine_schema = json.loads((ROOT / "data/quality/s1-machine-evidence.schema.json").read_text(encoding="utf-8"))
         self.assertFalse(queue_schema["additionalProperties"])
         self.assertFalse(evidence_schema["additionalProperties"])
         states = {"captured", "machine_verified", "linguist_verified", "approved", "rejected"}
         self.assertEqual(set(queue_schema["$defs"]["task"]["properties"]["status"]["enum"]), states)
         self.assertEqual(set(evidence_schema["properties"]["status"]["enum"]), states)
+        self.assertEqual(machine_schema["properties"]["summary"]["properties"]["task_count"]["const"], 100)
 
     def test_review_workbench_contains_real_evidence_controls(self):
         html = (ROOT / "review/index.html").read_text(encoding="utf-8")
@@ -75,6 +96,8 @@ class PhaseS1ReviewPipelineTests(unittest.TestCase):
         self.assertIn('currentRecord.review.decision === "correct"', script)
         self.assertIn('currentRecord.reference.image_data_url', script)
         self.assertIn('allowedFrom[target].has(currentRecord.status)', script)
+        self.assertIn('evaluateCorrectnessTask', script)
+        self.assertIn('readonly', html)
         self.assertNotRegex(script, r"https?://[^\"']+\.(?:ttf|otf)")
 
 

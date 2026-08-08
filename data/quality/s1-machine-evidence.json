@@ -1,0 +1,4897 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-08",
+  "evaluator": "Mongol AI correctness evaluator 1.0.0",
+  "scope": "Unicode mechanics and locked-font behavior; not linguistic truth",
+  "runtime": {
+    "harfbuzz": "14.3.0",
+    "font_sha256": "a28ba3cde3de22de7ddc934bd5d5babe54e6ce28c073a288cd978ffcf26b295b",
+    "font_locked": true,
+    "production_default_ignorables_preserved": false,
+    "control_artifacts_suppressed_from_svg": true
+  },
+  "summary": {
+    "task_count": 100,
+    "by_verdict": {
+      "machine_aligned": 48,
+      "machine_conflict": 16,
+      "machine_covered": 35,
+      "needs_context": 1
+    }
+  },
+  "results": [
+    {
+      "task_id": "s1-stdvar-001",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            6
+          ],
+          "default_glyph_ids": [
+            5
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            9
+          ],
+          "default_glyph_ids": [
+            8
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            11
+          ],
+          "default_glyph_ids": [
+            10
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            13
+          ],
+          "default_glyph_ids": [
+            12
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-002",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            7
+          ],
+          "default_glyph_ids": [
+            5
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            8
+          ],
+          "default_glyph_ids": [
+            8
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            10
+          ],
+          "default_glyph_ids": [
+            10
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            12
+          ],
+          "default_glyph_ids": [
+            12
+          ]
+        }
+      ],
+      "score": 0,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-003",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            15
+          ],
+          "default_glyph_ids": [
+            14
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            17
+          ],
+          "default_glyph_ids": [
+            16
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            18
+          ],
+          "default_glyph_ids": [
+            18
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            20
+          ],
+          "default_glyph_ids": [
+            19
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-004",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            22
+          ],
+          "default_glyph_ids": [
+            21
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            25
+          ],
+          "default_glyph_ids": [
+            24
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            27
+          ],
+          "default_glyph_ids": [
+            26
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            29
+          ],
+          "default_glyph_ids": [
+            29
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-005",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            30
+          ],
+          "default_glyph_ids": [
+            30
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            31
+          ],
+          "default_glyph_ids": [
+            31
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            33
+          ],
+          "default_glyph_ids": [
+            32
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            35
+          ],
+          "default_glyph_ids": [
+            34
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-006",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            37
+          ],
+          "default_glyph_ids": [
+            36
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            40
+          ],
+          "default_glyph_ids": [
+            39
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            42
+          ],
+          "default_glyph_ids": [
+            41
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            44
+          ],
+          "default_glyph_ids": [
+            43
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-007",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            46
+          ],
+          "default_glyph_ids": [
+            45
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            47
+          ],
+          "default_glyph_ids": [
+            47
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            49
+          ],
+          "default_glyph_ids": [
+            48
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            52
+          ],
+          "default_glyph_ids": [
+            51
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-008",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            45
+          ],
+          "default_glyph_ids": [
+            45
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            47
+          ],
+          "default_glyph_ids": [
+            47
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            50
+          ],
+          "default_glyph_ids": [
+            48
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            53
+          ],
+          "default_glyph_ids": [
+            51
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-009",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            55
+          ],
+          "default_glyph_ids": [
+            54
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            59
+          ],
+          "default_glyph_ids": [
+            58
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            61
+          ],
+          "default_glyph_ids": [
+            60
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            64
+          ],
+          "default_glyph_ids": [
+            63
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-010",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            56
+          ],
+          "default_glyph_ids": [
+            54
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            58
+          ],
+          "default_glyph_ids": [
+            58
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            62
+          ],
+          "default_glyph_ids": [
+            60
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            65
+          ],
+          "default_glyph_ids": [
+            63
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-011",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            71
+          ],
+          "default_glyph_ids": [
+            70
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            73
+          ],
+          "default_glyph_ids": [
+            72
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            75
+          ],
+          "default_glyph_ids": [
+            74
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            77
+          ],
+          "default_glyph_ids": [
+            76
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-012",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            70
+          ],
+          "default_glyph_ids": [
+            70
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            72
+          ],
+          "default_glyph_ids": [
+            72
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            74
+          ],
+          "default_glyph_ids": [
+            74
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            76
+          ],
+          "default_glyph_ids": [
+            76
+          ]
+        }
+      ],
+      "score": 0,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-013",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "fourth form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            70
+          ],
+          "default_glyph_ids": [
+            70
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            72
+          ],
+          "default_glyph_ids": [
+            72
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            74
+          ],
+          "default_glyph_ids": [
+            74
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            76
+          ],
+          "default_glyph_ids": [
+            76
+          ]
+        }
+      ],
+      "score": 0,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-014",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            82
+          ],
+          "default_glyph_ids": [
+            82
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            83
+          ],
+          "default_glyph_ids": [
+            83
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            84
+          ],
+          "default_glyph_ids": [
+            84
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            86
+          ],
+          "default_glyph_ids": [
+            85
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-015",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            92
+          ],
+          "default_glyph_ids": [
+            91
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            96
+          ],
+          "default_glyph_ids": [
+            95
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            100
+          ],
+          "default_glyph_ids": [
+            101
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            104
+          ],
+          "default_glyph_ids": [
+            103
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-016",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            93
+          ],
+          "default_glyph_ids": [
+            91
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            97
+          ],
+          "default_glyph_ids": [
+            95
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            101
+          ],
+          "default_glyph_ids": [
+            101
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            103
+          ],
+          "default_glyph_ids": [
+            103
+          ]
+        }
+      ],
+      "score": 0,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-017",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "fourth form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            91
+          ],
+          "default_glyph_ids": [
+            91
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            95
+          ],
+          "default_glyph_ids": [
+            95
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            99
+          ],
+          "default_glyph_ids": [
+            101
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            103
+          ],
+          "default_glyph_ids": [
+            103
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-018",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            106
+          ],
+          "default_glyph_ids": [
+            105
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            110
+          ],
+          "default_glyph_ids": [
+            109
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            114
+          ],
+          "default_glyph_ids": [
+            115
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            117
+          ],
+          "default_glyph_ids": [
+            118
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-019",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            107
+          ],
+          "default_glyph_ids": [
+            105
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            111
+          ],
+          "default_glyph_ids": [
+            109
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            115
+          ],
+          "default_glyph_ids": [
+            115
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            118
+          ],
+          "default_glyph_ids": [
+            118
+          ]
+        }
+      ],
+      "score": 0,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-020",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "fourth form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            105
+          ],
+          "default_glyph_ids": [
+            105
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            109
+          ],
+          "default_glyph_ids": [
+            109
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            113
+          ],
+          "default_glyph_ids": [
+            115
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            119
+          ],
+          "default_glyph_ids": [
+            118
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-021",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            130
+          ],
+          "default_glyph_ids": [
+            130
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            131
+          ],
+          "default_glyph_ids": [
+            131
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            132
+          ],
+          "default_glyph_ids": [
+            132
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            134
+          ],
+          "default_glyph_ids": [
+            133
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-022",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            130
+          ],
+          "default_glyph_ids": [
+            130
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            131
+          ],
+          "default_glyph_ids": [
+            131
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            132
+          ],
+          "default_glyph_ids": [
+            132
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            135
+          ],
+          "default_glyph_ids": [
+            133
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-023",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            143
+          ],
+          "default_glyph_ids": [
+            143
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            144
+          ],
+          "default_glyph_ids": [
+            144
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            146
+          ],
+          "default_glyph_ids": [
+            145
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            147
+          ],
+          "default_glyph_ids": [
+            147
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-024",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            149
+          ],
+          "default_glyph_ids": [
+            148
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            151
+          ],
+          "default_glyph_ids": [
+            150
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            153
+          ],
+          "default_glyph_ids": [
+            152
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            155
+          ],
+          "default_glyph_ids": [
+            154
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-025",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            161
+          ],
+          "default_glyph_ids": [
+            160
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            162
+          ],
+          "default_glyph_ids": [
+            162
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            163
+          ],
+          "default_glyph_ids": [
+            163
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            165
+          ],
+          "default_glyph_ids": [
+            164
+          ]
+        }
+      ],
+      "score": 0,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-026",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            167
+          ],
+          "default_glyph_ids": [
+            166
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            169
+          ],
+          "default_glyph_ids": [
+            168
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            171
+          ],
+          "default_glyph_ids": [
+            170
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            173
+          ],
+          "default_glyph_ids": [
+            173
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-027",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            166
+          ],
+          "default_glyph_ids": [
+            166
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            168
+          ],
+          "default_glyph_ids": [
+            168
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            172
+          ],
+          "default_glyph_ids": [
+            170
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            173
+          ],
+          "default_glyph_ids": [
+            173
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-028",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            178
+          ],
+          "default_glyph_ids": [
+            178
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            179
+          ],
+          "default_glyph_ids": [
+            179
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            181
+          ],
+          "default_glyph_ids": [
+            180
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            183
+          ],
+          "default_glyph_ids": [
+            182
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-029",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            229
+          ],
+          "default_glyph_ids": [
+            229
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            230
+          ],
+          "default_glyph_ids": [
+            230
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            232
+          ],
+          "default_glyph_ids": [
+            231
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            233
+          ],
+          "default_glyph_ids": [
+            233
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-030",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            234
+          ],
+          "default_glyph_ids": [
+            234
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            236
+          ],
+          "default_glyph_ids": [
+            235
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            238
+          ],
+          "default_glyph_ids": [
+            237
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            241
+          ],
+          "default_glyph_ids": [
+            240
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-031",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            242
+          ],
+          "default_glyph_ids": [
+            242
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            243
+          ],
+          "default_glyph_ids": [
+            243
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            245
+          ],
+          "default_glyph_ids": [
+            244
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            246
+          ],
+          "default_glyph_ids": [
+            246
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-032",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            248
+          ],
+          "default_glyph_ids": [
+            247
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            249
+          ],
+          "default_glyph_ids": [
+            249
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            251
+          ],
+          "default_glyph_ids": [
+            250
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            254
+          ],
+          "default_glyph_ids": [
+            253
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-033",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            247
+          ],
+          "default_glyph_ids": [
+            247
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            249
+          ],
+          "default_glyph_ids": [
+            249
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            252
+          ],
+          "default_glyph_ids": [
+            250
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            255
+          ],
+          "default_glyph_ids": [
+            253
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-034",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            256
+          ],
+          "default_glyph_ids": [
+            256
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            257
+          ],
+          "default_glyph_ids": [
+            257
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            259
+          ],
+          "default_glyph_ids": [
+            258
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            262
+          ],
+          "default_glyph_ids": [
+            261
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-035",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            264
+          ],
+          "default_glyph_ids": [
+            263
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            265
+          ],
+          "default_glyph_ids": [
+            265
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            267
+          ],
+          "default_glyph_ids": [
+            266
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            269
+          ],
+          "default_glyph_ids": [
+            268
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-036",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            286
+          ],
+          "default_glyph_ids": [
+            285
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            288
+          ],
+          "default_glyph_ids": [
+            287
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            290
+          ],
+          "default_glyph_ids": [
+            289
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            291
+          ],
+          "default_glyph_ids": [
+            291
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-037",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            293
+          ],
+          "default_glyph_ids": [
+            292
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            295
+          ],
+          "default_glyph_ids": [
+            294
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            298
+          ],
+          "default_glyph_ids": [
+            297
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            300
+          ],
+          "default_glyph_ids": [
+            300
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-038",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            367
+          ],
+          "default_glyph_ids": [
+            367
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            368
+          ],
+          "default_glyph_ids": [
+            368
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            370
+          ],
+          "default_glyph_ids": [
+            369
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            372
+          ],
+          "default_glyph_ids": [
+            371
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-039",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            376
+          ],
+          "default_glyph_ids": [
+            375
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            377
+          ],
+          "default_glyph_ids": [
+            377
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            378
+          ],
+          "default_glyph_ids": [
+            378
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            381
+          ],
+          "default_glyph_ids": [
+            380
+          ]
+        }
+      ],
+      "score": 0.5,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-040",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            375
+          ],
+          "default_glyph_ids": [
+            375
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            377
+          ],
+          "default_glyph_ids": [
+            377
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            379
+          ],
+          "default_glyph_ids": [
+            378
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            382
+          ],
+          "default_glyph_ids": [
+            380
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-041",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            387
+          ],
+          "default_glyph_ids": [
+            387
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            388
+          ],
+          "default_glyph_ids": [
+            388
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            390
+          ],
+          "default_glyph_ids": [
+            389
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            392
+          ],
+          "default_glyph_ids": [
+            391
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-042",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            404
+          ],
+          "default_glyph_ids": [
+            403
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            407
+          ],
+          "default_glyph_ids": [
+            406
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            410
+          ],
+          "default_glyph_ids": [
+            409
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            414
+          ],
+          "default_glyph_ids": [
+            413
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-043",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            443
+          ],
+          "default_glyph_ids": [
+            442
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            445
+          ],
+          "default_glyph_ids": [
+            444
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            447
+          ],
+          "default_glyph_ids": [
+            446
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            449
+          ],
+          "default_glyph_ids": [
+            449
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-044",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            442
+          ],
+          "default_glyph_ids": [
+            442
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            444
+          ],
+          "default_glyph_ids": [
+            444
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            448
+          ],
+          "default_glyph_ids": [
+            446
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            449
+          ],
+          "default_glyph_ids": [
+            449
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-045",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            451
+          ],
+          "default_glyph_ids": [
+            450
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            453
+          ],
+          "default_glyph_ids": [
+            452
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            455
+          ],
+          "default_glyph_ids": [
+            454
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            456
+          ],
+          "default_glyph_ids": [
+            456
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-046",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            477
+          ],
+          "default_glyph_ids": [
+            477
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            478
+          ],
+          "default_glyph_ids": [
+            478
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            479
+          ],
+          "default_glyph_ids": [
+            479
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            480
+          ],
+          "default_glyph_ids": [
+            480
+          ]
+        }
+      ],
+      "score": 0,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-047",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            494
+          ],
+          "default_glyph_ids": [
+            493
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            495
+          ],
+          "default_glyph_ids": [
+            495
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            496
+          ],
+          "default_glyph_ids": [
+            496
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            499
+          ],
+          "default_glyph_ids": [
+            498
+          ]
+        }
+      ],
+      "score": 0.5,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-048",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            493
+          ],
+          "default_glyph_ids": [
+            493
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            495
+          ],
+          "default_glyph_ids": [
+            495
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            497
+          ],
+          "default_glyph_ids": [
+            496
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            500
+          ],
+          "default_glyph_ids": [
+            498
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-049",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "fourth form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            493
+          ],
+          "default_glyph_ids": [
+            493
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            495
+          ],
+          "default_glyph_ids": [
+            495
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            496
+          ],
+          "default_glyph_ids": [
+            496
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            498
+          ],
+          "default_glyph_ids": [
+            498
+          ]
+        }
+      ],
+      "score": 0,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-050",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            503
+          ],
+          "default_glyph_ids": [
+            502
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            506
+          ],
+          "default_glyph_ids": [
+            505
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            509
+          ],
+          "default_glyph_ids": [
+            508
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            513
+          ],
+          "default_glyph_ids": [
+            512
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-051",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            504
+          ],
+          "default_glyph_ids": [
+            502
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            507
+          ],
+          "default_glyph_ids": [
+            505
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            510
+          ],
+          "default_glyph_ids": [
+            508
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            514
+          ],
+          "default_glyph_ids": [
+            512
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-052",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "fourth form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            502
+          ],
+          "default_glyph_ids": [
+            502
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            505
+          ],
+          "default_glyph_ids": [
+            505
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            508
+          ],
+          "default_glyph_ids": [
+            508
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            512
+          ],
+          "default_glyph_ids": [
+            512
+          ]
+        }
+      ],
+      "score": 0,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-053",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": true,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            523
+          ],
+          "default_glyph_ids": [
+            522
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            525
+          ],
+          "default_glyph_ids": [
+            524
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            527
+          ],
+          "default_glyph_ids": [
+            526
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            528
+          ],
+          "default_glyph_ids": [
+            528
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-054",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            1517
+          ],
+          "default_glyph_ids": [
+            1516
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-055",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            1519
+          ],
+          "default_glyph_ids": [
+            1518
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-stdvar-056",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            533
+          ],
+          "default_glyph_ids": [
+            533
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            534
+          ],
+          "default_glyph_ids": [
+            534
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            535
+          ],
+          "default_glyph_ids": [
+            535
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": true,
+          "result": "aligned",
+          "target_glyph_ids": [
+            537
+          ],
+          "default_glyph_ids": [
+            536
+          ]
+        }
+      ],
+      "score": 0.5,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-057",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "third form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            533
+          ],
+          "default_glyph_ids": [
+            533
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            534
+          ],
+          "default_glyph_ids": [
+            534
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            535
+          ],
+          "default_glyph_ids": [
+            535
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            536
+          ],
+          "default_glyph_ids": [
+            536
+          ]
+        }
+      ],
+      "score": 0,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-058",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "fourth form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            533
+          ],
+          "default_glyph_ids": [
+            533
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            534
+          ],
+          "default_glyph_ids": [
+            534
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            535
+          ],
+          "default_glyph_ids": [
+            535
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            536
+          ],
+          "default_glyph_ids": [
+            536
+          ]
+        }
+      ],
+      "score": 0,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-059",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            538
+          ],
+          "default_glyph_ids": [
+            538
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            539
+          ],
+          "default_glyph_ids": [
+            539
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            540
+          ],
+          "default_glyph_ids": [
+            540
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            541
+          ],
+          "default_glyph_ids": [
+            541
+          ]
+        }
+      ],
+      "score": 0,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-stdvar-060",
+      "category": "standardized_variation_sequence",
+      "method": "unicode-contextual-variant-response",
+      "scope": "mechanical_standard_alignment_not_linguistic_truth",
+      "desired_appearance": "second form",
+      "probes": [
+        {
+          "context": "isolate",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            546
+          ],
+          "default_glyph_ids": [
+            546
+          ]
+        },
+        {
+          "context": "initial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            547
+          ],
+          "default_glyph_ids": [
+            547
+          ]
+        },
+        {
+          "context": "medial",
+          "expectation_class": "normative_target",
+          "observed_change": false,
+          "result": "missing_variant_response",
+          "target_glyph_ids": [
+            548
+          ],
+          "default_glyph_ids": [
+            548
+          ]
+        },
+        {
+          "context": "final",
+          "expectation_class": "outside_declared_context",
+          "observed_change": false,
+          "result": "outside_declared_context",
+          "target_glyph_ids": [
+            549
+          ],
+          "default_glyph_ids": [
+            549
+          ]
+        }
+      ],
+      "score": 0,
+      "verdict": "machine_conflict"
+    },
+    {
+      "task_id": "s1-base-001",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            5
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            8
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            10
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            12
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-002",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            14
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            16
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            18
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            19
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-003",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            21
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            24
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            26
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            29
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-004",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            30
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            31
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            32
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            34
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-005",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            36
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            39
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            41
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            43
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-006",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            45
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            47
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            48
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            51
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-007",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            54
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            58
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            60
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            63
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-008",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            66
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            67
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            68
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            69
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-009",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            70
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            72
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            74
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            76
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-010",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            78
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            79
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            80
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            81
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-011",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            82
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            83
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            84
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            85
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-012",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            87
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            88
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            89
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            90
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-013",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            91
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            95
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            101
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            103
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-014",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            105
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            109
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            115
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            118
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-015",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            120
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            121
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            122
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            123
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-016",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            124
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            126
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            128
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            129
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-017",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            130
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            131
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            132
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            133
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-018",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            136
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            138
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            140
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            142
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-019",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            143
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            144
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            145
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            147
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-020",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            148
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            150
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            152
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            154
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-021",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            156
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            157
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            158
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            159
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-022",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            160
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            162
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            163
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            164
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-023",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            166
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            168
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            170
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            173
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-024",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            174
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            175
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            176
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            177
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-025",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            178
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            179
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            180
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            182
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-026",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            184
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            185
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            186
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            187
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-027",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            188
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            189
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            190
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            191
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-028",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            193
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            194
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            195
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            196
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-029",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            197
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            198
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            199
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            200
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-030",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            201
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            202
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            203
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            204
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-031",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            205
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            206
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            207
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            208
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-032",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            209
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            210
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            211
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            212
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-033",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            213
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            214
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            215
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            216
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-034",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            217
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            218
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            219
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            220
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-base-035",
+      "category": "base_character",
+      "method": "four-context-font-coverage",
+      "scope": "mechanical_coverage_not_shape_correctness",
+      "probes": [
+        {
+          "context": "isolate",
+          "result": "covered",
+          "glyph_ids": [
+            221
+          ]
+        },
+        {
+          "context": "initial",
+          "result": "covered",
+          "glyph_ids": [
+            222
+          ]
+        },
+        {
+          "context": "medial",
+          "result": "covered",
+          "glyph_ids": [
+            223
+          ]
+        },
+        {
+          "context": "final",
+          "result": "covered",
+          "glyph_ids": [
+            224
+          ]
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_covered"
+    },
+    {
+      "task_id": "s1-control-001",
+      "category": "format_control",
+      "method": "standalone-format-control-visibility",
+      "scope": "mechanical_control_behavior",
+      "probes": [
+        {
+          "context": "standalone",
+          "result": "ignored_as_expected",
+          "glyph_ids": []
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-control-002",
+      "category": "format_control",
+      "method": "standalone-format-control-visibility",
+      "scope": "mechanical_control_behavior",
+      "probes": [
+        {
+          "context": "standalone",
+          "result": "ignored_as_expected",
+          "glyph_ids": []
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-control-003",
+      "category": "format_control",
+      "method": "standalone-format-control-visibility",
+      "scope": "mechanical_control_behavior",
+      "probes": [
+        {
+          "context": "standalone",
+          "result": "ignored_as_expected",
+          "glyph_ids": []
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-control-004",
+      "category": "format_control",
+      "method": "standalone-format-control-visibility",
+      "scope": "mechanical_control_behavior",
+      "probes": [
+        {
+          "context": "standalone",
+          "result": "ignored_as_expected",
+          "glyph_ids": []
+        }
+      ],
+      "score": 1,
+      "verdict": "machine_aligned"
+    },
+    {
+      "task_id": "s1-control-005",
+      "category": "format_control",
+      "method": "context-required-format-control",
+      "scope": "mechanical_control_behavior",
+      "probes": [
+        {
+          "context": "standalone",
+          "result": "needs_context",
+          "glyph_ids": []
+        }
+      ],
+      "score": 0,
+      "verdict": "needs_context"
+    }
+  ]
+}

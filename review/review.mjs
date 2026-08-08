@@ -3,6 +3,7 @@ import {
     MongolianSuperEngine,
     PROFILES,
 } from "../core/mongolian_super_engine.mjs";
+import { evaluateCorrectnessTask } from "../core/correctness_evaluator.mjs";
 
 const DB_NAME = "mongol-ai-s1";
 const STORE = "records";
@@ -29,6 +30,7 @@ const clone = (value) => structuredClone(value);
 
 let tasks = [];
 let records = new Map();
+let machineEvidence = new Map();
 let currentTask = null;
 let currentRecord = null;
 let lockedEngine = null;
@@ -112,11 +114,15 @@ function statusFor(task) {
 function renderMetrics() {
     const counts = Object.fromEntries(Object.keys(STATUS_LABELS).map((key) => [key, 0]));
     tasks.forEach((task) => counts[statusFor(task)] += 1);
+    const evidence = Array.from(machineEvidence.values());
+    const machineClean = evidence.filter((item) => ["machine_aligned", "machine_covered"].includes(item.verdict)).length;
+    const machineConflict = evidence.filter((item) => item.verdict === "machine_conflict").length;
+    const needsContext = evidence.filter((item) => ["needs_context", "needs_resolution"].includes(item.verdict)).length;
     const items = [
         [tasks.length, "总任务"],
-        [counts.captured, "待审核"],
-        [counts.machine_verified, "机器核验"],
-        [counts.linguist_verified, "人工核验"],
+        [machineClean, "机器无冲突"],
+        [machineConflict, "机器冲突"],
+        [needsContext, "需要上下文"],
         [counts.approved, "批准"],
         [counts.rejected, "拒绝"],
     ];
@@ -138,7 +144,9 @@ function renderTaskList() {
     const query = $("#task-search").value.trim().toLowerCase();
     const visible = tasks.filter((task) => {
         const haystack = [task.id, task.category, ...(task.code_points || [])].join(" ").toLowerCase();
-        return (filter === "all" || statusFor(task) === filter) && (!query || haystack.includes(query));
+        const verdict = machineEvidence.get(task.id)?.verdict;
+        const machineFilter = filter === "machine_clean" ? ["machine_aligned", "machine_covered"].includes(verdict) : verdict === filter;
+        return (filter === "all" || machineFilter || statusFor(task) === filter) && (!query || haystack.includes(query));
     });
     const list = $("#task-list");
     list.replaceChildren(...visible.map((task) => {
@@ -148,7 +156,8 @@ function renderTaskList() {
         const strong = document.createElement("strong");
         strong.textContent = `${task.id} · ${task.text || "自定义"}`;
         const small = document.createElement("small");
-        small.textContent = `${task.category} · ${STATUS_LABELS[statusFor(task)]}`;
+        const verdict = machineEvidence.get(task.id)?.verdict || "未计算";
+        small.textContent = `${task.category} · ${verdict} · ${STATUS_LABELS[statusFor(task)]}`;
         button.append(strong, small);
         button.addEventListener("click", () => selectTask(task));
         return button;
@@ -191,6 +200,7 @@ function readForm() {
 async function selectTask(task) {
     currentTask = task;
     currentRecord = clone(records.get(task.id) || emptyRecord(task));
+    if (task.expected) currentRecord.inputs.unicode_national = task.text;
     referenceEngine = null;
     referenceFontName = null;
     selectedGlyphIndex = null;
@@ -208,6 +218,14 @@ async function selectTask(task) {
     } else {
         source.textContent = (task.code_points || []).join(" ");
     }
+    const expected = task.expected || {};
+    const contexts = expected.shaping_contexts?.length ? expected.shaping_contexts.join(" / ") : "不限定位置";
+    const expectation = expected.desired_appearance
+        ? `目标：${expected.desired_appearance} · 有效位置：${contexts}`
+        : expected.short_name
+            ? `目标：${expected.short_name} · ${expected.standalone_behavior}`
+            : `目标：${expected.encoding_status || "自定义测试"}`;
+    setText("#task-expectation", expectation);
     fillForm(currentRecord);
     renderTaskList();
     renderAnnotations();
@@ -263,12 +281,54 @@ function renderGlyphs(shape) {
         const row = document.createElement("tr");
         row.dataset.selectable = "true";
         row.dataset.glyphIndex = String(index);
-        [index, glyph.id, glyph.cluster, glyph.xAdvance].forEach((value) => {
+        [index, glyph.id, glyph.name || "—", glyph.cluster, glyph.xAdvance, glyph.controlArtifact ? "控制证据，不绘制" : "正文绘制"].forEach((value) => {
             const cell = document.createElement("td");
             cell.textContent = String(value);
             row.append(cell);
         });
         row.addEventListener("click", () => chooseGlyph(index));
+        return row;
+    }));
+}
+
+function renderMachineEvidence(evidence) {
+    const labels = {
+        isolate: "孤立",
+        initial: "词首",
+        medial: "词中",
+        final: "词尾",
+        standalone: "独立控制符",
+    };
+    const resultLabels = {
+        aligned: "响应符合",
+        outside_declared_context: "仅观察",
+        missing_variant_response: "未产生变体",
+        visible_selector_artifact: "控制符污染",
+        covered: "字体覆盖",
+        missing_visible_glyph: "缺少字形",
+        ignored_as_expected: "正确忽略",
+        unexpected_visible_glyph: "错误可见",
+        needs_context: "需要上下文",
+    };
+    const clean = ["machine_aligned", "machine_covered"].includes(evidence.verdict);
+    const verdict = $("#machine-verdict");
+    verdict.className = clean ? "machine-pass" : "machine-conflict";
+    verdict.textContent = clean ? "机器检查：未发现标准冲突" : evidence.verdict === "needs_context" ? "机器检查：需要上下文" : "机器检查：发现标准—字体冲突";
+    setText("#machine-explanation", clean
+        ? "码位、连接位置、控制符和锁定字体响应通过机械检查；这不是书法或语言学的最终真值。"
+        : "只把冲突项交给复核：标准指定的位置未产生变体、出现控制符轮廓，或当前任务缺少必要上下文。");
+    const table = $("#machine-table");
+    table.replaceChildren(...evidence.probes.map((probe) => {
+        const row = document.createElement("tr");
+        const scope = probe.expectation_class === "normative_target" ? "标准目标" : probe.expectation_class === "outside_declared_context" ? "范围外观察" : "机械规则";
+        const response = probe.observed_change === undefined
+            ? (probe.glyph_ids?.length ? `glyph ${probe.glyph_ids.join(", ")}` : "无可见glyph")
+            : probe.observed_change ? "产生差异" : "无差异";
+        [labels[probe.context] || probe.context, scope, response, resultLabels[probe.result] || probe.result].forEach((value) => {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            row.append(cell);
+        });
         return row;
     }));
 }
@@ -289,7 +349,8 @@ async function compare() {
         $("#locked-output").innerHTML = lockedEngine.renderSvg(lockedShape, { fontSize: 52 });
         renderGlyphs(lockedShape);
         const report = lockedEngine.report();
-        setText("#locked-meta", `HarfBuzz ${report.harfbuzz} · SHA-256 ${report.fontSha256} · ${lockedShape.glyphs.length} glyph`);
+        const renderedCount = lockedShape.glyphs.filter((glyph) => !glyph.controlArtifact).length;
+        setText("#locked-meta", `HarfBuzz ${report.harfbuzz} · SHA-256 ${report.fontSha256} · ${renderedCount} 正文 glyph / ${lockedShape.glyphs.length} 原始 glyph`);
         currentRecord.rendering.locked = {
             status: lockedShape.status,
             glyph_ids: lockedShape.glyphs.map((glyph) => glyph.id),
@@ -298,6 +359,9 @@ async function compare() {
             font_locked: report.fontLocked,
             harfbuzz: report.harfbuzz,
         };
+        const evidence = machineEvidence.get(currentTask.id) || evaluateCorrectnessTask(lockedEngine, currentTask);
+        currentRecord.rendering.machine_evidence = clone(evidence);
+        renderMachineEvidence(evidence);
         currentRecord.rendering.native = { text: raw, css_writing_mode: "vertical-lr" };
         if (referenceEngine) {
             const referenceShape = referenceEngine.shape(referenceEngine.createDocument(raw, "unicode-national"));
@@ -349,14 +413,14 @@ function gateResults(target = $("#target-status").value) {
     const machine = Boolean(
         currentRecord.inputs.unicode_national &&
         lockedShape?.status === "shaped" &&
-        currentRecord.rendering.locked.font_locked
+        currentRecord.rendering.locked.font_locked &&
+        currentRecord.rendering.machine_evidence?.verdict
     );
     const expert = EXPERT_ROLES.has(currentRecord.review.role);
     const decided = ["correct", "incorrect"].includes(currentRecord.review.decision);
     const screenshot = Boolean(currentRecord.reference.image_data_url);
     const identity = Boolean(currentRecord.review.reviewer);
     const versions = Boolean(currentRecord.reference.ime_version && currentRecord.reference.font_version);
-    const onon = Boolean(currentRecord.inputs.onon_mn || currentRecord.reference.onon_not_applicable);
     const notes = Boolean(currentRecord.review.notes);
     const allowedFrom = {
         captured: new Set(["captured"]),
@@ -373,7 +437,7 @@ function gateResults(target = $("#target-status").value) {
         rules.push([identity, "已记录审核者"], [expert, "角色具备语言／字体／出版审核资格"], [decided, "已给出正确或错误结论"], [screenshot, "已附正确参考截图"], [versions, "已记录输入法与字体版本"]);
     }
     if (target === "approved") {
-        rules.push([currentRecord.review.decision === "correct", "结论为正确"], [onon, "已有 Onon MN 样本或有不适用说明"], [notes, "已有审核说明"]);
+        rules.push([currentRecord.review.decision === "correct", "结论为正确"], [notes, "已有审核说明"]);
     }
     if (target === "rejected") {
         rules.splice(0, rules.length, [identity, "已记录审核者"], [currentRecord.review.decision === "incorrect", "结论为错误"], [notes, "已有拒绝原因"]);
@@ -474,6 +538,9 @@ async function importRecord(file) {
         throw new Error("不是有效的 S1 证据包");
     }
     let task = tasks.find((item) => item.id === payload.task_id);
+    if (task?.expected && payload.inputs.unicode_national !== task.text) {
+        throw new Error("证据包修改了官方测试序列，已拒绝导入");
+    }
     if (!task) {
         task = {
             id: payload.task_id,
@@ -590,6 +657,7 @@ async function init() {
         records = new Map(saved.map((record) => [record.task_id, record]));
         lockedEngine = new MongolianSuperEngine();
         await lockedEngine.init();
+        machineEvidence = new Map(tasks.map((task) => [task.id, evaluateCorrectnessTask(lockedEngine, task)]));
         wireEvents();
         renderMetrics();
         renderTaskList();
