@@ -10,6 +10,29 @@ const profileNote = document.querySelector("#profile-note");
 const codepointBody = document.querySelector("#codepoint-body");
 const issueList = document.querySelector("#issue-list");
 const roundtrip = document.querySelector("#roundtrip-status");
+const imeStatus = document.querySelector("#ime-status");
+const imeDetail = document.querySelector("#ime-detail");
+const compositionCount = document.querySelector("#composition-count");
+const lastCommit = document.querySelector("#last-commit");
+const declaredProfile = document.querySelector("#declared-profile");
+let isComposing = false;
+let imeEvents = [];
+
+function codePoints(text) {
+    return Array.from(text, (character) => `U+${character.codePointAt(0).toString(16).toUpperCase().padStart(4, "0")}`);
+}
+
+function recordImeEvent(type, event) {
+    imeEvents.push({
+        sequence: imeEvents.length + 1,
+        type,
+        data: typeof event.data === "string" ? event.data : null,
+        inputType: event.inputType || null,
+        isComposing: Boolean(event.isComposing),
+        codePoints: typeof event.data === "string" ? codePoints(event.data) : [],
+    });
+    compositionCount.textContent = String(imeEvents.length);
+}
 
 function setStatus(text, kind = "") {
     status.textContent = text;
@@ -48,7 +71,15 @@ function run() {
     const inputDocument = engine.createDocument(source.value, profile.value);
     const diagnostics = renderDiagnostics(inputDocument);
     profileNote.textContent = `${PROFILES[profile.value].note} 依据：${PROFILES[profile.value].evidence}`;
+    declaredProfile.textContent = PROFILES[profile.value].label;
     output.replaceChildren();
+    if (!inputDocument.raw) {
+        const message = document.createElement("p");
+        message.textContent = "等待系统输入法提交文本。";
+        output.appendChild(message);
+        setStatus("等待输入");
+        return;
+    }
     if (!diagnostics.canShape) {
         const message = document.createElement("p");
         message.textContent = "已无损保存原文，但当前编码缺少权威映射，系统拒绝猜测塑形。";
@@ -69,8 +100,53 @@ function run() {
 
 form.addEventListener("submit", (event) => { event.preventDefault(); run(); });
 profile.addEventListener("change", run);
+source.addEventListener("compositionstart", (event) => {
+    isComposing = true;
+    recordImeEvent("compositionstart", event);
+    imeStatus.textContent = "候选组合中";
+    imeStatus.className = "status blocked";
+    imeDetail.textContent = "暂不塑形、不规范化、不改写输入框。";
+});
+source.addEventListener("compositionupdate", (event) => {
+    recordImeEvent("compositionupdate", event);
+    imeDetail.textContent = `候选内容 ${codePoints(event.data || "").join(" ") || "—"}`;
+});
+source.addEventListener("compositionend", (event) => {
+    recordImeEvent("compositionend", event);
+    isComposing = false;
+    imeStatus.textContent = "候选已提交";
+    imeStatus.className = "status ok";
+    lastCommit.textContent = `${event.data || "空提交"} · ${codePoints(event.data || "").join(" ") || "无新增码位"}`;
+    imeDetail.textContent = "已按输入框最终值重新塑形；原始文本保持不变。";
+    run();
+});
+source.addEventListener("beforeinput", (event) => recordImeEvent("beforeinput", event));
+source.addEventListener("input", (event) => {
+    recordImeEvent("input", event);
+    if (!isComposing && !event.isComposing) run();
+});
 document.querySelector("#copy-source").addEventListener("click", async () => {
     await navigator.clipboard.writeText(source.value);
+});
+document.querySelector("#export-evidence").addEventListener("click", () => {
+    const inputDocument = engine.createDocument(source.value, profile.value);
+    const evidence = {
+        schemaVersion: "1.0.0",
+        exportedAt: new Date().toISOString(),
+        declaredProfile: profile.value,
+        browserCannotIdentifySystemIme: true,
+        raw: inputDocument.raw,
+        codePoints: inputDocument.tokens.map((token) => token.label),
+        diagnostics: inputDocument.diagnostics(),
+        events: imeEvents,
+        engine: engine.report(),
+    };
+    const blob = new Blob([JSON.stringify(evidence, null, 2)], { type: "application/json" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = `mongol-ime-evidence-${Date.now()}.json`;
+    link.click();
+    URL.revokeObjectURL(link.href);
 });
 
 try {

@@ -49,3 +49,25 @@ test("rejected Pages phrase is not an approved override", () => {
     const payload = JSON.parse(fs.readFileSync(new URL("../../data/engine/glyph-overrides.json", import.meta.url), "utf8"));
     assert.deepEqual(payload.overrides, []);
 });
+
+test("web workbench respects native IME composition boundaries", () => {
+    const script = fs.readFileSync(new URL("../../engine/engine-lab.mjs", import.meta.url), "utf8");
+    const html = fs.readFileSync(new URL("../../engine/index.html", import.meta.url), "utf8");
+    for (const eventName of ["compositionstart", "compositionupdate", "compositionend", "beforeinput", "input"]) {
+        assert.ok(script.includes(eventName), `${eventName} handler is required`);
+    }
+    assert.ok(script.includes("if (!isComposing && !event.isComposing) run()"));
+    assert.ok(script.includes("browserCannotIdentifySystemIme: true"));
+    assert.ok(html.includes("导出输入证据 JSON"));
+    assert.doesNotMatch(html, /<textarea[^>]*>[^<]+<\/textarea>/);
+});
+
+test("captured user sample has an exact non-linguistic renderer fingerprint", () => {
+    const payload = JSON.parse(fs.readFileSync(new URL("../../data/quality/mongolian-rendering-goldens.json", import.meta.url), "utf8"));
+    const sample = payload.cases.find((item) => item.id === "user-captured-chat-sample-2026-08-08");
+    assert.equal(sample.text, "ᠦᠷᠭᠥᠯᠵᠢᠯ");
+    assert.deepEqual(sample.code_points, ["U+1826", "U+1837", "U+182D", "U+1825", "U+182F", "U+1835", "U+1822", "U+182F"]);
+    assert.deepEqual(sample.glyph_ids, [58, 176, 964, 128, 163, 26, 129]);
+    assert.equal(sample.review.linguistic_correctness, "unreviewed");
+    assert.equal(sample.review.input_method, "not_yet_confirmed");
+});

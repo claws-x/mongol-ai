@@ -34,10 +34,15 @@
                     <option value="menksoft-raw">蒙科立原始编码</option>
                 </select>
                 <label for="source-text">原始输入（不会自动规范化）</label>
-                <textarea id="source-text" rows="5" spellcheck="false" autocomplete="off">ᠮᠣᠩᠭᠣᠯ</textarea>
+                <textarea id="source-text" rows="5" spellcheck="false" autocomplete="off" placeholder="切换系统 Onon 输入法后在这里输入；候选提交前不会触发塑形。"></textarea>
+                <div class="ime-monitor" aria-live="polite">
+                    <span id="ime-status" class="status ok">等待系统输入法</span>
+                    <span id="ime-detail">浏览器不会读取输入法名称；来源由用户选择。</span>
+                </div>
                 <div class="actions">
                     <button type="submit">无损分析并塑形</button>
                     <button type="button" class="secondary" id="copy-source">复制原始输入</button>
+                    <button type="button" class="secondary" id="export-evidence">导出输入证据 JSON</button>
                 </div>
                 <p id="profile-note" class="note"></p>
             </form>
@@ -64,6 +69,17 @@
                 </table>
             </div>
             <ul id="issue-list" class="issues"></ul>
+        </section>
+
+        <section class="provenance" aria-labelledby="ime-evidence-title">
+            <h2 id="ime-evidence-title">系统输入法会话</h2>
+            <p>先在“输入来源”中声明 Onon MN/MK/MW，再切换操作系统输入法并在上方输入。候选组合期间只记录内存事件，不塑形；候选提交后才更新输出。证据文件只在点击导出时生成，不上传服务器。</p>
+            <dl>
+                <div><dt>声明来源</dt><dd id="declared-profile">—</dd></div>
+                <div><dt>组合事件</dt><dd id="composition-count">0</dd></div>
+                <div><dt>最终提交</dt><dd id="last-commit">尚无</dd></div>
+                <div><dt>会话存储</dt><dd>仅当前页面内存</dd></div>
+            </dl>
         </section>
 
         <section class="provenance" aria-labelledby="provenance-title">

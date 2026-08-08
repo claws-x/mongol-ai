@@ -18,6 +18,7 @@ label { font-weight: 750; }
 select, textarea { width: 100%; border: 1px solid #bdc9dc; border-radius: 10px; padding: .85rem; font: inherit; background: #fff; }
 textarea { resize: vertical; font-family: "Noto Sans Mongolian", sans-serif; font-size: 1.2rem; line-height: 1.8; }
 .actions { display: flex; flex-wrap: wrap; gap: .65rem; }
+.ime-monitor { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem; color: #59657b; font-size: .86rem; }
 button { border: 0; border-radius: 999px; padding: .75rem 1.1rem; background: #225bd3; color: white; font: inherit; font-weight: 750; cursor: pointer; }
 button.secondary { color: #24416f; background: #eaf0fa; }
 .panel-title { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }

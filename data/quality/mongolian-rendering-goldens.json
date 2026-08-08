@@ -33,6 +33,20 @@
         "reported_problem": "The second displayed character/glyph is wrong. Exact intended reference is still required before an override can be approved."
       },
       "must_not_publish_as_correct": true
+    },
+    {
+      "id": "user-captured-chat-sample-2026-08-08",
+      "kind": "captured_user_sample",
+      "text": "ᠦᠷᠭᠥᠯᠵᠢᠯ",
+      "code_points": ["U+1826", "U+1837", "U+182D", "U+1825", "U+182F", "U+1835", "U+1822", "U+182F"],
+      "glyph_ids": [58, 176, 964, 128, 163, 26, 129],
+      "review": {
+        "encoding": "machine_verified",
+        "renderer_determinism": "machine_verified",
+        "input_method": "not_yet_confirmed",
+        "linguistic_correctness": "unreviewed"
+      },
+      "warning": "Captured from the user conversation. Do not infer that it was produced by Onon or that the rendered glyphs are approved."
     }
   ]
 }
