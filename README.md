@@ -2,7 +2,13 @@
 
 传统蒙古文输入、竖排预览与语言技术研究项目。
 
-> 当前状态：**Phase 0 工程基线完成，Phase 1/2 基础能力可体验**。项目尚未完成母语专家审核、完整跨浏览器验证或生产级准确率评估。
+> **首次接手必读：**[`项目宪章：我们到底在解决什么`](docs/00_PROJECT_CHARTER.md)。
+> 它是最高优先级事实源：本项目正在建立独立于单一字体、输入法和浏览器默认
+> 行为的传统蒙古文语义字形计算引擎，而不只是给网页添加竖排 CSS。
+
+当前状态：**Phase 0–2 基础能力与 Phase S1 机器证据闭环已完成，正在进入
+Phase S2 语义字形计算引擎**。完整跨浏览器验证和生产级语言准确率评估尚未完成，
+但它们不是继续建设底层引擎的前置审批。
 
 ## 正式体验
 
@@ -12,7 +18,7 @@
 - [`knowledge/index.html`](knowledge/index.html) — 可追溯的传统蒙古文数字化科研知识库
 - [`engine/index.html`](engine/index.html) — 无损输入、确定性 HarfBuzz WASM 塑形与码位诊断实验室
 
-确定性引擎逐码位保留输入，锁定 HarfBuzz 与字体哈希生成 SVG glyph path；未取得权威映射的私有编码会被无损保存并阻止猜测转换。旧工作台仍保留在 [Labs](demos/README.md)，不再代表字形正确性承诺。
+确定性引擎逐码位保留输入，锁定 HarfBuzz 与字体哈希生成 SVG glyph path；未取得可靠映射的私有编码会被无损保存并阻止猜测转换。下一阶段在字体后端之上建立项目自己的 `semanticRole` 与几何规则；旧工作台仍保留在 [Labs](demos/README.md)，不再代表字形正确性承诺。
 
 ## 当前已验证能力
 
@@ -68,17 +74,23 @@ knowledge/  科研知识库公开检索页面
 tests/      Phase 0 自动化回归测试
 ```
 
-质量语料和审核流程见 [`data/quality/`](data/quality/) 与 [`LANGUAGE_REVIEW_WORKFLOW.md`](docs/05-project/LANGUAGE_REVIEW_WORKFLOW.md)。
+机器证据与历史审核数据见 [`data/quality/`](data/quality/)。人工材料用于交叉验证和
+发现反例，不是引擎继续开发的许可门禁。架构边界以[项目宪章](docs/00_PROJECT_CHARTER.md)
+为准。
 
 科研知识库的当前索引、证据等级和覆盖缺口见
 [`KNOWLEDGE_BASE_INDEX.md`](docs/04-research/KNOWLEDGE_BASE_INDEX.md)。旧研究文档中的人物、准确率和“完全支持”声明默认不再视为事实源。
+
+真实传统蒙古文用法将通过可重放网页语料管线采集原始 Unicode 和词级上下文，
+而不是收集所谓“正确截图”；执行规范见
+[`WEB_CORPUS_ACQUISITION.md`](docs/04-research/WEB_CORPUS_ACQUISITION.md)。
 
 ## 产品路线与质量原则
 
 Phase 0–2 的已交付能力、退出条件和明确边界见
 [`PRODUCT_ROADMAP.md`](docs/05-project/PRODUCT_ROADMAP.md)。
 
-1. 对外声明必须有可复现测试或专家审核证据。
+1. 对外声明必须标明依据：可复现测试、标准、实现观测或人工证据，不把其中任一种伪装成全部真值。
 2. 正式体验必须使用原生竖排，不通过旋转模拟。
 3. 用户输入必须作为文本处理，不注入 HTML。
 4. 核心流程必须可通过键盘操作，并提供可理解的标签和状态。

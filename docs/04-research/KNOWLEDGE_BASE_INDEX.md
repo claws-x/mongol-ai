@@ -14,11 +14,20 @@
 模型、字体和工具。它服务于产品决策、技术实现、科研合作和后续评测，
 但不把“收录”误写为“背书”，也不声称已经穷尽全球研究。
 
+本文件索引的是**外部科研事实**。项目自身要解决的问题、第一性原理、技术边界
+和当前阶段以 [`项目宪章`](../00_PROJECT_CHARTER.md) 为最高优先级事实源。外部
+标准、机构、专家、字体和输入法为引擎提供证据，不拥有单独决定项目方向的权力。
+
 机器可读事实源：
 
 - [`data/knowledge/knowledge-base.json`](../../data/knowledge/knowledge-base.json)
 - [`data/knowledge/schema.json`](../../data/knowledge/schema.json)
 - [公开浏览页面](../../knowledge/index.html)
+
+S2 的真实语言使用证据采用网页语料管线，见
+[`WEB_CORPUS_ACQUISITION.md`](WEB_CORPUS_ACQUISITION.md)。知识库负责记录来源，
+爬虫负责保存原始码位和上下文，规则引擎负责从跨来源证据中提出并验证规则；
+不以“正确截图”连接这三层。
 
 ## 当前已核验范围
 

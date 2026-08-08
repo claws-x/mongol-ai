@@ -59,4 +59,4 @@ npm run build:s1
 
 The committed machine report currently separates 83 tasks with no mechanical conflict, 16 standardized-variant/font conflicts and one MVS task that needs context. This is an automated backend-support result, not a claim that 83 glyphs are linguistically approved.
 
-The state machine prevents `approved` unless the record includes locked machine evidence, a named qualified reviewer, a correct decision, a reference screenshot, input-method and font versions, and review notes. Onon/Menksoft captures are optional conflict evidence rather than mandatory busywork. This gate proves evidence completeness, not that the human judgment itself is correct.
+The S1 state machine is retained for compatibility with previously exported evidence bundles. Its `reference screenshot` field is visual-review metadata only: it must not be treated as a source for code points, semantic glyph roles, outlines, or S2 execution permission. S2 learns from reproducible web-text corpora, explicit input sequences, versioned rules, lawful glyph assets, and automated assertions. See [`WEB_CORPUS_ACQUISITION.md`](../../docs/04-research/WEB_CORPUS_ACQUISITION.md).
