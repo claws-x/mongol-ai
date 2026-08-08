@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="可追溯、可验证的传统蒙古文数字化科研知识库。">
     <title>传统蒙古文数字化科研知识库 · Mongol AI</title>
-    <link rel="stylesheet" href="../core/mongolian_layout_engine.css">
     <style>
         :root {
             --ink: #172033;
@@ -63,16 +62,20 @@
         }
         h1 { max-width: 760px; margin: 18px 0 14px; font-size: clamp(32px, 5vw, 58px); line-height: 1.08; letter-spacing: -.04em; }
         .lead { max-width: 760px; margin: 0; color: var(--muted); font-size: 18px; }
-        .hero-script {
+        .engine-gate {
             width: 100%;
             min-height: 220px;
             padding: 16px;
             border: 1px solid #cfd9eb;
             border-radius: 20px;
             background: rgba(255,255,255,.82);
-            font-size: 28px;
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: var(--muted);
         }
+        .engine-gate strong { color: var(--ink); font-size: 18px; }
+        .engine-gate a { display: inline-flex; align-self: flex-start; padding: 9px 13px; border-radius: 999px; color: #fff; background: var(--blue); text-decoration: none; font-weight: 750; }
         .trust-note {
             margin-top: 20px;
             padding-left: 14px;
@@ -174,7 +177,7 @@
         footer { padding: 24px 0 48px; color: var(--muted); }
         @media (max-width: 900px) {
             .hero { grid-template-columns: 1fr; padding: 30px; }
-            .hero-script { height: 180px; min-height: 0; }
+            .engine-gate { min-height: 180px; }
             .metrics { grid-template-columns: repeat(3, 1fr); }
         }
         @media (max-width: 680px) {
@@ -186,7 +189,6 @@
             .result-head { align-items: flex-start; flex-direction: column; }
         }
     </style>
-    <script src="../core/mongolian_layout_engine.js" defer></script>
     <script src="knowledge-base.js" defer></script>
 </head>
 <body>
@@ -204,7 +206,11 @@
                     <p class="lead">把标准、机构、研究者、论文与开放资源连接成可追溯的事实网络。每条结论都回到原始来源，并明确传统蒙古文与西里尔蒙古文的边界。</p>
                     <p class="trust-note">收录不等于背书，公开不等于可商用，未收录不等于不存在。本库不声称已经穷尽全球研究。</p>
                 </div>
-                <div class="hero-script" lang="mn-Mong" data-mongol-vertical aria-label="传统蒙古文示例">ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ ᠦᠨ ᠲᠣᠭᠠᠴᠢᠯᠠᠯ</div>
+                <aside class="engine-gate" aria-label="蒙古文字形状态">
+                    <strong>旧示例已撤下</strong>
+                    <p>该示例已被母语用户判定存在错误。未经正确输入序列、字体和截图复核，不再把任何自动塑形结果标成正确蒙古文。</p>
+                    <a href="../engine/index.html">打开确定性引擎实验室</a>
+                </aside>
             </section>
 
             <section class="metrics" id="metrics" aria-label="知识库统计"></section>

@@ -37,6 +37,9 @@ Thumbs.db
 # Logs
 *.log
 
+# Node dependencies (restored with npm ci in CI and Pages)
+node_modules/
+
 # Test
 .pytest_cache/
 .coverage

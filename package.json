@@ -1,0 +1,14 @@
+{
+  "name": "mongol-ai",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic Traditional Mongolian input and shaping laboratory",
+  "scripts": {
+    "test": "python3 -m unittest discover && node --test tests/js/*.test.mjs",
+    "check:engine": "node --check core/mongolian_super_engine.mjs && node --check engine/engine-lab.mjs"
+  },
+  "dependencies": {
+    "harfbuzzjs": "1.5.0"
+  }
+}

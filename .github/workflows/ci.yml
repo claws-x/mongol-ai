@@ -18,7 +18,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install deterministic shaping runtime
+        run: npm ci
       - name: Compile Python modules
         run: python -m compileall -q core nlp modules scripts tests
       - name: Run regression tests
         run: python -m unittest discover -v
+      - name: Run deterministic engine tests
+        run: node --test tests/js/*.test.mjs

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mongol AI · 确定性蒙古文引擎实验室</title>
+    <link rel="stylesheet" href="engine-lab.css">
+</head>
+<body>
+    <nav aria-label="引擎导航">
+        <a href="../index.html">Mongol AI</a>
+        <a href="../knowledge/index.html">科研知识库</a>
+    </nav>
+    <main>
+        <header>
+            <p class="eyebrow">PHASE S0 · LOSSLESS + DETERMINISTIC</p>
+            <h1>确定性传统蒙古文引擎实验室</h1>
+            <p class="lead">输入原文永久保留；编码、输入法协议、字形塑形和视觉输出分层处理。系统不会把未经母语确认的字体结果冒充“正确蒙古文”。</p>
+        </header>
+
+        <section class="warning" aria-labelledby="boundary-title">
+            <h2 id="boundary-title">当前真实边界</h2>
+            <p>Onon MN 的已提交 Unicode 文本可以无损塑形。Onon MK、MW 和蒙科立私有编码在缺少授权完整映射表时只保存、不猜转。当前 Pages 旧示例已被用户判定存在错误，因此不再作为正确示范。</p>
+        </section>
+
+        <section class="workspace" aria-label="蒙古文引擎工作台">
+            <form id="engine-form">
+                <label for="profile">输入来源</label>
+                <select id="profile" name="profile">
+                    <option value="unicode-national">国家标准／Unicode 已提交文本</option>
+                    <option value="onon-mn">Onon MN 已提交文本</option>
+                    <option value="onon-mk">Onon MK／蒙科立编码原文</option>
+                    <option value="onon-mw">Onon MW 原文</option>
+                    <option value="menksoft-raw">蒙科立原始编码</option>
+                </select>
+                <label for="source-text">原始输入（不会自动规范化）</label>
+                <textarea id="source-text" rows="5" spellcheck="false" autocomplete="off">ᠮᠣᠩᠭᠣᠯ</textarea>
+                <div class="actions">
+                    <button type="submit">无损分析并塑形</button>
+                    <button type="button" class="secondary" id="copy-source">复制原始输入</button>
+                </div>
+                <p id="profile-note" class="note"></p>
+            </form>
+
+            <article class="output-panel">
+                <div class="panel-title">
+                    <h2>确定性 SVG 输出</h2>
+                    <span id="render-status" class="status">引擎加载中</span>
+                </div>
+                <div id="deterministic-output" class="deterministic-output" aria-live="polite"></div>
+                <p class="note">视觉层由锁定版本 HarfBuzz WASM 和锁定字体生成 SVG 路径；隐藏文本保留原始 Unicode，供复制、搜索和辅助技术使用。</p>
+            </article>
+        </section>
+
+        <section class="diagnostics" aria-labelledby="diagnostic-title">
+            <div class="panel-title">
+                <h2 id="diagnostic-title">码位与控制符诊断</h2>
+                <span id="roundtrip-status" class="status"></span>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>序号</th><th>字符</th><th>码位</th><th>类型</th><th>控制符</th></tr></thead>
+                    <tbody id="codepoint-body"></tbody>
+                </table>
+            </div>
+            <ul id="issue-list" class="issues"></ul>
+        </section>
+
+        <section class="provenance" aria-labelledby="provenance-title">
+            <h2 id="provenance-title">可复现环境</h2>
+            <dl>
+                <div><dt>引擎</dt><dd id="engine-version">—</dd></div>
+                <div><dt>HarfBuzz</dt><dd id="hb-version">—</dd></div>
+                <div><dt>字体 SHA-256</dt><dd id="font-hash">—</dd></div>
+                <div><dt>字形覆盖规则</dt><dd id="override-count">—</dd></div>
+            </dl>
+            <p>规则覆盖只有在具体码位、字体哈希、正确截图和人工复核全部齐备后才能标记为 approved。现在没有任何“猜出来”的覆盖规则。</p>
+        </section>
+    </main>
+    <script type="module" src="engine-lab.mjs"></script>
+</body>
+</html>

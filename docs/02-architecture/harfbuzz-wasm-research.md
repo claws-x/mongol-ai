@@ -1,5 +1,7 @@
 # 🔬 HarfBuzz WASM 集成研究
 
+> **历史材料警告（2026-08-08）**：本文的工时、性能、用户比例和 ROI 是未验证估算，不得作为事实或架构结论。HarfBuzz WASM 已在 `core/mongolian_super_engine.mjs` 中实际集成；当前依据见 [确定性传统蒙古文引擎](DETERMINISTIC_MONGOLIAN_ENGINE.md)。
+
 **研究日期**: 2026-04-01  
 **负责人**: OpenClaw Main Agent  
 **优先级**: P3-1 (长期研究)

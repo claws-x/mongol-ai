@@ -10,8 +10,9 @@
 
 - [`demos/input/ai-chat.html`](demos/input/ai-chat.html) — 本地优先写作工作台与 Unicode 诊断 Alpha
 - [`knowledge/index.html`](knowledge/index.html) — 可追溯的传统蒙古文数字化科研知识库
+- [`engine/index.html`](engine/index.html) — 无损输入、确定性 HarfBuzz WASM 塑形与码位诊断实验室
 
-工作台提供实时竖排预览、浏览器本地草稿、复制、UTF-8 文本导出和编码级诊断。页面中的响应仍由本地关键词规则生成，不是大模型。其他演示统一归入 [Labs](demos/README.md)，只用于研究和回归参考。
+确定性引擎逐码位保留输入，锁定 HarfBuzz 与字体哈希生成 SVG glyph path；未取得权威映射的私有编码会被无损保存并阻止猜测转换。旧工作台仍保留在 [Labs](demos/README.md)，不再代表字形正确性承诺。
 
 ## 当前已验证能力
 
@@ -57,6 +58,7 @@ PYTHONPYCACHEPREFIX=/tmp/mongol-ai-pycache python3 -m unittest discover -v
 
 ```text
 core/       竖排渲染引擎、文本、输入与规则响应原型
+engine/     确定性传统蒙古文引擎实验室
 nlp/        分词、词性标注与句法分析原型
 data/       小规模实验词汇和短语
              `data/knowledge/` 为机器可读科研事实源与 JSON Schema

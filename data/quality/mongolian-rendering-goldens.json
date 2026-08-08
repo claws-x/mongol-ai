@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "engine_version": "0.3.0",
+  "harfbuzz_version": "14.3.0",
+  "font": {
+    "family": "Noto Sans Mongolian",
+    "license": "OFL-1.1",
+    "sha256": "a28ba3cde3de22de7ddc934bd5d5babe54e6ce28c073a288cd978ffcf26b295b"
+  },
+  "cases": [
+    {
+      "id": "renderer-fingerprint-mongol",
+      "kind": "renderer_fingerprint_only",
+      "text": "ᠮᠣᠩᠭᠣᠯ",
+      "code_points": ["U+182E", "U+1823", "U+1829", "U+182D", "U+1823", "U+182F"],
+      "glyph_ids": [121, 32, 1299, 32, 129],
+      "review": {
+        "encoding": "machine_verified",
+        "renderer_determinism": "machine_verified",
+        "linguistic_correctness": "unreviewed"
+      },
+      "warning": "This fingerprint detects engine drift; it does not assert that the typeface form is linguistically preferred."
+    },
+    {
+      "id": "user-rejected-pages-hero-2026-08-08",
+      "kind": "rejected_reference",
+      "text": "ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ ᠦᠨ ᠲᠣᠭᠠᠴᠢᠯᠠᠯ",
+      "code_points": ["U+182E", "U+1823", "U+1829", "U+182D", "U+1823", "U+182F", "U+0020", "U+182A", "U+1822", "U+1834", "U+1822", "U+182D", "U+0020", "U+1826", "U+1828", "U+0020", "U+1832", "U+1823", "U+182D", "U+1820", "U+1834", "U+1822", "U+182F", "U+1820", "U+182F"],
+      "review": {
+        "encoding": "machine_verified",
+        "renderer_determinism": "machine_verified",
+        "linguistic_correctness": "rejected_by_user",
+        "reported_problem": "The second displayed character/glyph is wrong. Exact intended reference is still required before an override can be approved."
+      },
+      "must_not_publish_as_correct": true
+    }
+  ]
+}

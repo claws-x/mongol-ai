@@ -3,10 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="传统蒙古文输入、竖排预览与基础文本实验工具。">
-    <title>Mongol AI · 传统蒙古文写作实验台</title>
-    <link rel="stylesheet" href="core/mongolian_layout_engine.css">
-    <script src="core/mongolian_layout_engine.js" defer></script>
+    <meta name="description" content="传统蒙古文无损输入、确定性塑形与字形审核实验工具。">
+    <title>Mongol AI · 确定性传统蒙古文引擎</title>
     <style>
         :root {
             color-scheme: light;
@@ -107,13 +105,17 @@
         .hero-script {
             height: 300px;
             padding: 20px;
-            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
             color: var(--brand-dark);
             background: var(--soft);
             border: 1px solid var(--line);
             border-radius: var(--radius);
             font-size: 26px;
         }
+        .hero-script span { color: var(--muted); font-size: 16px; line-height: 1.7; }
 
         section { margin-top: 56px; }
         h2 { margin: 0 0 10px; font-size: 30px; letter-spacing: -0.025em; }
@@ -177,15 +179,16 @@
         <main>
             <section class="hero" aria-labelledby="hero-title">
                 <div>
-                    <div class="eyebrow">可信竖排引擎上的本地优先工作台</div>
-                    <h1 id="hero-title">更可靠地输入和预览传统蒙古文</h1>
+                    <div class="eyebrow">无损输入与确定性字形研究</div>
+                    <h1 id="hero-title">不再把“能竖排”冒充“字形正确”</h1>
                     <p class="lead">
-                        当前 Alpha 提供输入、实时原生竖排预览、本地草稿、复制导出和 Unicode 编码诊断。它不是成熟的大模型产品，文字正确性仍在持续验证。
+                        新引擎逐码位保存原文，锁定 HarfBuzz 与字体生成可复现 SVG，并拒绝猜测转换私有编码。具体词形只有经过真实输入法样本和人工复核后才会标记为正确。
                     </p>
-                    <a class="primary-action" data-primary-action="true" href="demos/input/ai-chat.html">进入 Alpha 体验</a>
+                    <a class="primary-action" data-primary-action="true" href="engine/index.html">进入确定性引擎实验室</a>
                 </div>
-                <div class="hero-script" lang="mn-Mong" data-mongol-vertical aria-label="传统蒙古文示例">
-                    ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ ᠢᠶᠡᠨ ᠳᠢᠭᠢᠲᠠᠯ ᠦᠶ᠎ᠡ ᠳᠦ ᠠᠰᠢᠭᠯᠠᠶ᠎ᠠ
+                <div class="hero-script" aria-label="蒙古文字形审核状态">
+                    <strong>字形审核闸门</strong>
+                    <span>当前旧示例已撤下。没有母语确认和输入法对照，不发布“正确示范”。</span>
                 </div>
             </section>
 
@@ -198,8 +201,8 @@
                         <p>通过物理键盘或语义化虚拟键盘输入字符，草稿仅保存在当前浏览器。</p>
                     </article>
                     <article class="card">
-                        <h3>原生竖排预览</h3>
-                        <p>Vertical Engine 2.0 使用原生竖排连写，并按从左到右换列。</p>
+                        <h3>确定性字形输出</h3>
+                        <p>HarfBuzz WASM、字体文件和字形指纹全部锁定，输出不再随浏览器塑形器漂移。</p>
                     </article>
                     <article class="card">
                         <h3>Unicode 编码诊断</h3>
@@ -220,6 +223,7 @@
                             <li>Firefox、移动设备及专家审核仍待完成</li>
                         </ul>
                         <a class="labs-link" href="knowledge/index.html">打开科研知识库</a>
+                        <a class="labs-link" href="engine/index.html">打开确定性引擎</a>
                     </div>
                     <div>
                         <h3>历史实验归入 Labs</h3>
