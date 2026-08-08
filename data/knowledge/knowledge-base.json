@@ -1,0 +1,899 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-08-08",
+  "methodology": {
+    "scope": "Traditional Mongolian script digitization, Web layout, Unicode encoding and shaping, OCR, language resources, NLP and AI evaluation. Cyrillic-only work is included only when it provides an explicit bridge to Traditional Mongolian.",
+    "evidence_policy": [
+      "Tier A sources are standards bodies, official institution pages and peer-reviewed proceedings.",
+      "Tier B sources are clearly labelled preprints or original public code/data repositories.",
+      "Search snippets, marketing summaries, secondary blogs and unverified contact details are not accepted as standalone evidence.",
+      "A record describes only what its cited source establishes; absence from this dataset is never evidence that an institution or researcher does not exist.",
+      "Traditional Mongolian, Cyrillic Mongolian and mixed-script work are tagged separately."
+    ],
+    "verification_states": ["verified", "provisional", "rejected"],
+    "script_scopes": ["traditional", "cyrillic", "mixed", "unspecified"]
+  },
+  "sources": [
+    {
+      "id": "src-unicode17",
+      "title": "Unicode 17.0 Core Specification, Chapter 13.5 Mongolian",
+      "publisher": "Unicode Consortium",
+      "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-13/",
+      "source_type": "standard_body",
+      "accessed_at": "2026-08-08",
+      "tier": "A",
+      "note": "Normative Unicode character model context; points implementers to UTN #57."
+    },
+    {
+      "id": "src-unicode-tn57",
+      "title": "Unicode Technical Note #57: Encoding and Shaping of the Mongolian Script, Version 4",
+      "publisher": "Unicode Consortium / Kushim Jiang",
+      "url": "https://www.unicode.org/notes/tn57/",
+      "source_type": "standard_body",
+      "accessed_at": "2026-08-08",
+      "tier": "A",
+      "note": "Technical note, not a normative Unicode Standard endorsement."
+    },
+    {
+      "id": "src-unicode-doclist",
+      "title": "Unicode Mongolian Document List",
+      "publisher": "Unicode Consortium",
+      "url": "https://www.unicode.org/L2/topical/mongolian/",
+      "source_type": "standard_body",
+      "accessed_at": "2026-08-08",
+      "tier": "A",
+      "note": "Primary registry of Mongolian encoding proposals, meeting documents and reports."
+    },
+    {
+      "id": "src-w3c-mlreq",
+      "title": "Mongolian Layout Requirements",
+      "publisher": "W3C Internationalization Working Group",
+      "url": "https://www.w3.org/International/mlreq/",
+      "source_type": "standard_body",
+      "accessed_at": "2026-08-08",
+      "tier": "A",
+      "note": "Editor draft targeting a W3C Working Group Note; documents vertical left-to-right layout and NNBSP behavior."
+    },
+    {
+      "id": "src-w3c-charter",
+      "title": "Mongolian Layout Task Force Charter",
+      "publisher": "W3C",
+      "url": "https://www.w3.org/International/mlreq/charter/",
+      "source_type": "standard_body",
+      "accessed_at": "2026-08-08",
+      "tier": "A",
+      "note": "Defines the task force mission, chairs, contacts and public process."
+    },
+    {
+      "id": "src-noto",
+      "title": "Noto Mongolian source repository",
+      "publisher": "Noto Fonts",
+      "url": "https://github.com/notofonts/mongolian",
+      "source_type": "official_repository",
+      "accessed_at": "2026-08-08",
+      "tier": "B",
+      "note": "Original font sources, releases, OFL license and automated QA workflow."
+    },
+    {
+      "id": "src-imu-lab",
+      "title": "内蒙古自治区多语种人工智能技术重点实验室",
+      "publisher": "内蒙古大学计算机学院",
+      "url": "https://ccs.imu.edu.cn/info/1041/1770.htm",
+      "source_type": "official_institution",
+      "accessed_at": "2026-08-08",
+      "tier": "A",
+      "note": "Official laboratory profile covering OCR, ASR/TTS, translation, conversion, input methods and AI systems."
+    },
+    {
+      "id": "src-imu-tmbench",
+      "title": "飞龙、王炜华课题组2篇论文被SIGIR 2026录用",
+      "publisher": "内蒙古大学",
+      "url": "https://www.imu.edu.cn/info/1375/14064.htm",
+      "source_type": "official_institution",
+      "accessed_at": "2026-08-08",
+      "tier": "A",
+      "note": "Official acceptance announcement and factual summary of TM-Bench."
+    },
+    {
+      "id": "src-imu-si",
+      "title": "斯·劳格劳教师主页",
+      "publisher": "内蒙古大学蒙古学学院",
+      "url": "https://mgx.imu.edu.cn/info/1321/3030.htm",
+      "source_type": "official_institution",
+      "accessed_at": "2026-08-08",
+      "tier": "A",
+      "note": "Official research, standards and publication profile."
+    },
+    {
+      "id": "src-imu-micro",
+      "title": "蒙古语言文学数智化处理微专业招生与遴选办法",
+      "publisher": "内蒙古大学蒙古学学院",
+      "url": "https://mgx.imu.edu.cn/info/1065/3965.htm",
+      "source_type": "official_institution",
+      "accessed_at": "2026-08-08",
+      "tier": "A",
+      "note": "2026 cross-disciplinary curriculum connecting Mongolian studies, AI, data and cultural digitization."
+    },
+    {
+      "id": "src-imu-wang",
+      "title": "王炜华教师主页",
+      "publisher": "内蒙古大学计算机学院",
+      "url": "https://ccs.imu.edu.cn/info/1021/2685.htm",
+      "source_type": "official_institution",
+      "accessed_at": "2026-08-08",
+      "tier": "A"
+    },
+    {
+      "id": "src-imnu-team",
+      "title": "蒙古文信息处理与机器翻译创新团队",
+      "publisher": "内蒙古师范大学计算机科学技术学院",
+      "url": "https://cs.imnu.edu.cn/info/1053/1291.htm",
+      "source_type": "official_institution",
+      "accessed_at": "2026-08-08",
+      "tier": "A"
+    },
+    {
+      "id": "src-imnu-bai",
+      "title": "白双成教师主页",
+      "publisher": "内蒙古师范大学人工智能学院",
+      "url": "https://sai.imnu.edu.cn/info/1081/1151.htm",
+      "source_type": "official_institution",
+      "accessed_at": "2026-08-08",
+      "tier": "A"
+    },
+    {
+      "id": "src-muc-lab",
+      "title": "民族语言多模态信息处理应用研究",
+      "publisher": "中央民族大学民族语言智能分析与安全治理教育部重点实验室",
+      "url": "https://mzyy.muc.edu.cn/info/1078/1133.htm",
+      "source_type": "official_institution",
+      "accessed_at": "2026-08-08",
+      "tier": "A"
+    },
+    {
+      "id": "src-muc-base",
+      "title": "蒙古文大数据研究基地（内蒙古师范大学）",
+      "publisher": "国家语言资源监测与研究民族语言中心",
+      "url": "https://nmlr.muc.edu.cn/info/1096/1108.htm",
+      "source_type": "official_institution",
+      "accessed_at": "2026-08-08",
+      "tier": "A"
+    },
+    {
+      "id": "src-num-ocr",
+      "title": "Deep Learning Optimization for Printed Mongolian Script Text Recognition",
+      "publisher": "National University of Mongolia",
+      "url": "https://portal.num.edu.mn/Staff/bb97c007-e2af-491f-97bc-42b9dba83944/Publications",
+      "source_type": "official_institution",
+      "accessed_at": "2026-08-08",
+      "tier": "A",
+      "note": "Official university publication profile reporting the 2025 printed-script OCR study."
+    },
+    {
+      "id": "src-acl-ner2016",
+      "title": "Mongolian Named Entity Recognition System with Rich Features",
+      "publisher": "ACL Anthology / COLING 2016",
+      "url": "https://aclanthology.org/C16-1049/",
+      "source_type": "peer_reviewed",
+      "accessed_at": "2026-08-08",
+      "tier": "A"
+    },
+    {
+      "id": "src-acl-ner2018",
+      "title": "Attention-based BLSTM-CRF Architecture for Mongolian Named Entity Recognition",
+      "publisher": "ACL Anthology / PACLIC 2018",
+      "url": "https://aclanthology.org/Y18-1088/",
+      "source_type": "peer_reviewed",
+      "accessed_at": "2026-08-08",
+      "tier": "A"
+    },
+    {
+      "id": "src-acl-mc2",
+      "title": "MC²: Towards Transparent and Culturally-Aware NLP for Minority Languages in China",
+      "publisher": "ACL Anthology / ACL 2024",
+      "url": "https://aclanthology.org/2024.acl-long.479/",
+      "source_type": "peer_reviewed",
+      "accessed_at": "2026-08-08",
+      "tier": "A"
+    },
+    {
+      "id": "src-acl-lotus",
+      "title": "Can Large Language Models Translate Unseen Languages in Underrepresented Scripts?",
+      "publisher": "ACL Anthology / EMNLP 2025",
+      "url": "https://aclanthology.org/2025.emnlp-main.1179/",
+      "source_type": "peer_reviewed",
+      "accessed_at": "2026-08-08",
+      "tier": "A"
+    },
+    {
+      "id": "src-acl-cmhg",
+      "title": "CMHG: A Dataset and Benchmark for Headline Generation of Minority Languages in China",
+      "publisher": "ACL Anthology / EMNLP 2025",
+      "url": "https://aclanthology.org/2025.emnlp-main.622/",
+      "source_type": "peer_reviewed",
+      "accessed_at": "2026-08-08",
+      "tier": "A"
+    },
+    {
+      "id": "src-acl-monculture",
+      "title": "MonCulture-Eval: A Hierarchical Benchmark for Evaluating Mongolian Cultural Capabilities of Large Language Models across Scripts and Regions",
+      "publisher": "ACL Anthology / Findings of ACL 2026",
+      "url": "https://aclanthology.org/2026.findings-acl.1449/",
+      "source_type": "peer_reviewed",
+      "accessed_at": "2026-08-08",
+      "tier": "A"
+    },
+    {
+      "id": "src-arxiv-mmeval",
+      "title": "MM-Eval: A Hierarchical Benchmark for Modern Mongolian Evaluation in LLMs",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2411.09492",
+      "source_type": "preprint",
+      "accessed_at": "2026-08-08",
+      "tier": "B",
+      "note": "Preprint; retained separately from peer-reviewed evidence."
+    },
+    {
+      "id": "src-arxiv-milic",
+      "title": "MiLiC-Eval: Benchmarking Multilingual LLMs for China's Minority Languages",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2503.01150",
+      "source_type": "preprint",
+      "accessed_at": "2026-08-08",
+      "tier": "B"
+    },
+    {
+      "id": "src-arxiv-copit",
+      "title": "CoPiT: Cognitive Pivot Translation for Digraphic Low-Resource Mongolian in the Traditional Script",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2607.05849",
+      "source_type": "preprint",
+      "accessed_at": "2026-08-08",
+      "tier": "B"
+    },
+    {
+      "id": "src-tugstugi",
+      "title": "tugstugi/mongolian-nlp resource catalog",
+      "publisher": "tugstugi",
+      "url": "https://github.com/tugstugi/mongolian-nlp",
+      "source_type": "official_repository",
+      "accessed_at": "2026-08-08",
+      "tier": "B",
+      "note": "Community-maintained catalog; each linked dataset or model needs independent license and quality review before product use."
+    }
+  ],
+  "institutions": [
+    {
+      "id": "inst-unicode",
+      "name": "Unicode Consortium",
+      "region": "国际",
+      "kind": "standards_body",
+      "focus": ["字符编码", "蒙古文字形与变体登记", "实现指南"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-unicode17", "src-unicode-doclist"]
+    },
+    {
+      "id": "inst-w3c-mlreq",
+      "name": "W3C 蒙古文布局任务组",
+      "name_en": "W3C Mongolian Layout Task Force",
+      "region": "国际",
+      "kind": "standards_body",
+      "focus": ["Web竖排", "数字出版", "浏览器支持缺口", "交互与排版需求"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-w3c-charter", "src-w3c-mlreq"]
+    },
+    {
+      "id": "inst-imu-lab",
+      "name": "内蒙古自治区多语种人工智能技术重点实验室",
+      "name_en": "Inner Mongolia Key Laboratory of Multilingual Artificial Intelligence Technology",
+      "region": "中国·内蒙古",
+      "kind": "laboratory",
+      "focus": ["蒙古文OCR", "手写识别", "语音识别与合成", "机器翻译", "文字转换", "智能输入法", "大模型"],
+      "script_scope": ["traditional", "cyrillic", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-imu-lab", "src-imu-tmbench"]
+    },
+    {
+      "id": "inst-imu-mongol",
+      "name": "内蒙古大学蒙古学学院",
+      "region": "中国·内蒙古",
+      "kind": "university",
+      "focus": ["计算语言学", "蒙古文信息处理", "数字出版", "语言文学数智化"],
+      "script_scope": ["traditional", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-imu-si", "src-imu-micro"]
+    },
+    {
+      "id": "inst-imnu-team",
+      "name": "内蒙古师范大学蒙古文信息处理与机器翻译创新团队",
+      "region": "中国·内蒙古",
+      "kind": "research_center",
+      "focus": ["蒙古文树库", "分词与词性标注", "蒙汉机器翻译", "语义资源", "OCR"],
+      "script_scope": ["traditional", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-imnu-team", "src-muc-base"]
+    },
+    {
+      "id": "inst-imnu-ai",
+      "name": "内蒙古师范大学人工智能学院语言智能研究团队",
+      "region": "中国·内蒙古",
+      "kind": "university",
+      "focus": ["多语种信息处理", "OCR", "机器翻译", "语音识别", "智能输入法", "语言资源"],
+      "script_scope": ["traditional", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-imnu-bai"]
+    },
+    {
+      "id": "inst-muc-lab",
+      "name": "中央民族大学民族语言智能分析与安全治理教育部重点实验室",
+      "region": "中国·北京",
+      "kind": "laboratory",
+      "focus": ["民族语言多模态处理", "低资源机器翻译", "数据增强", "古籍智能分析"],
+      "script_scope": ["traditional", "mixed", "unspecified"],
+      "verification": "verified",
+      "source_ids": ["src-muc-lab"]
+    },
+    {
+      "id": "inst-nmlr",
+      "name": "国家语言资源监测与研究民族语言中心",
+      "region": "中国·北京",
+      "kind": "research_center",
+      "focus": ["民族语言资源监测", "语料建库", "机器翻译", "跨语言检索", "标准研究"],
+      "script_scope": ["traditional", "mixed", "unspecified"],
+      "verification": "verified",
+      "source_ids": ["src-muc-base"]
+    },
+    {
+      "id": "inst-num",
+      "name": "蒙古国立大学",
+      "name_en": "National University of Mongolia",
+      "region": "蒙古国",
+      "kind": "university",
+      "focus": ["传统蒙古文OCR", "蒙古语语言资源", "计算机与语言技术"],
+      "script_scope": ["traditional", "cyrillic", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-num-ocr", "src-tugstugi"]
+    },
+    {
+      "id": "inst-noto",
+      "name": "Noto Fonts Mongolian",
+      "region": "国际开源社区",
+      "kind": "community",
+      "focus": ["开源蒙古文字体", "字体构建", "FontBakery质量检查", "塑形测试"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-noto"]
+    },
+    {
+      "id": "inst-tugstugi",
+      "name": "tugstugi 蒙古语NLP开源资源社区",
+      "region": "蒙古国／国际开源社区",
+      "kind": "community",
+      "focus": ["资源目录", "传统蒙古文OCR", "文字转换", "蒙古语NLP模型与数据"],
+      "script_scope": ["traditional", "cyrillic", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-tugstugi"]
+    }
+  ],
+  "people": [
+    {
+      "id": "person-kushim-jiang",
+      "name": "Kushim Jiang",
+      "name_zh": "姜兆勤",
+      "roles": ["Unicode Technical Note #57作者"],
+      "affiliation_ids": [],
+      "focus": ["蒙古文编码", "文本表记", "字形塑形规则"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-unicode-tn57", "src-unicode-doclist"]
+    },
+    {
+      "id": "person-nasun-urt",
+      "name": "Nasun-urt",
+      "roles": ["W3C蒙古文布局任务组主席", "布局需求原始作者"],
+      "affiliation_ids": ["inst-w3c-mlreq"],
+      "focus": ["Web布局需求", "传统蒙古文排版"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-w3c-charter", "src-w3c-mlreq", "src-unicode-doclist"]
+    },
+    {
+      "id": "person-hu-qitu",
+      "name": "Hu Qitu",
+      "roles": ["W3C蒙古文布局任务组主席", "布局需求原始作者"],
+      "affiliation_ids": ["inst-w3c-mlreq"],
+      "focus": ["Web布局需求", "数字出版"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-w3c-charter", "src-w3c-mlreq"]
+    },
+    {
+      "id": "person-richard-ishida",
+      "name": "Richard Ishida",
+      "roles": ["W3C国际化专家", "蒙古文布局任务组团队联系人"],
+      "affiliation_ids": ["inst-w3c-mlreq"],
+      "focus": ["国际化", "Web文字布局", "NNBSP"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-w3c-charter", "src-w3c-mlreq", "src-unicode-doclist"]
+    },
+    {
+      "id": "person-fuqiao-xue",
+      "name": "Fuqiao Xue",
+      "name_zh": "薛富侨",
+      "roles": ["W3C蒙古文布局任务组团队联系人"],
+      "affiliation_ids": ["inst-w3c-mlreq"],
+      "focus": ["W3C国际化", "Web标准协作"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-w3c-charter"]
+    },
+    {
+      "id": "person-liang-hai",
+      "name": "Liang Hai",
+      "name_zh": "梁海",
+      "roles": ["Unicode蒙古文编码独立专家"],
+      "affiliation_ids": [],
+      "focus": ["蒙古文编码模型", "字形规范", "UTN #57推进"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-unicode-doclist"]
+    },
+    {
+      "id": "person-peter-constable",
+      "name": "Peter Constable",
+      "roles": ["Unicode与ISO WG2蒙古文工作参与者"],
+      "affiliation_ids": ["inst-unicode"],
+      "focus": ["字符编码标准", "复杂文字实现"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-unicode-doclist"]
+    },
+    {
+      "id": "person-debbie-anderson",
+      "name": "Debbie Anderson",
+      "roles": ["Unicode Script Ad Hoc专家", "蒙古文工作会议参与者"],
+      "affiliation_ids": ["inst-unicode"],
+      "focus": ["文字编码提案", "Unicode脚本标准"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-unicode-doclist"]
+    },
+    {
+      "id": "person-andrew-glass",
+      "name": "Andrew Glass",
+      "roles": ["Unicode蒙古文塑形与字体专家"],
+      "affiliation_ids": [],
+      "focus": ["复杂文字塑形", "字体", "文本引擎"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-unicode-doclist"]
+    },
+    {
+      "id": "person-quejingzhabu",
+      "name": "Quejingzhabu",
+      "roles": ["Unicode蒙古文工作专家", "传统蒙古文塑形规则贡献者"],
+      "affiliation_ids": [],
+      "focus": ["传统蒙古文语言学", "字符与字形规则"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-unicode-doclist"]
+    },
+    {
+      "id": "person-feilong-bao",
+      "name": "Feilong Bao",
+      "name_zh": "飞龙",
+      "roles": ["实验室主任", "教授", "TM-Bench通讯团队成员"],
+      "affiliation_ids": ["inst-imu-lab"],
+      "focus": ["传统蒙古文NLP", "信息检索", "语言模型评测", "命名实体识别"],
+      "script_scope": ["traditional", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-imu-lab", "src-imu-tmbench", "src-acl-ner2016"]
+    },
+    {
+      "id": "person-weihua-wang",
+      "name": "Weihua Wang",
+      "name_zh": "王炜华",
+      "roles": ["内蒙古大学教师", "TM-Bench研究团队成员"],
+      "affiliation_ids": ["inst-imu-lab"],
+      "focus": ["大模型", "自然语言理解与生成", "知识图谱", "蒙古文命名实体识别"],
+      "script_scope": ["traditional", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-imu-wang", "src-imu-tmbench", "src-acl-ner2016"]
+    },
+    {
+      "id": "person-guanglai-gao",
+      "name": "Guanglai Gao",
+      "name_zh": "高光来",
+      "roles": ["内蒙古大学教授", "蒙古文信息处理研究者"],
+      "affiliation_ids": ["inst-imu-lab"],
+      "focus": ["模式识别", "蒙古文软件", "命名实体识别"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-imu-lab", "src-acl-ner2016"]
+    },
+    {
+      "id": "person-hongxu-hou",
+      "name": "Hongxu Hou",
+      "name_zh": "侯宏旭",
+      "roles": ["内蒙古大学教授", "传统蒙古文低资源翻译研究者"],
+      "affiliation_ids": ["inst-imu-lab"],
+      "focus": ["自然语言处理", "机器翻译", "低资源语言"],
+      "script_scope": ["traditional", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-imu-lab", "src-acl-lotus"]
+    },
+    {
+      "id": "person-si-laoglao",
+      "name": "Si Laoglao",
+      "name_zh": "斯·劳格劳",
+      "roles": ["教授", "博士生导师", "蒙古文信息处理标准参与者"],
+      "affiliation_ids": ["inst-imu-mongol"],
+      "focus": ["计算语言学", "传统蒙古文拼写检查", "数字出版", "信息处理标准"],
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-imu-si"]
+    },
+    {
+      "id": "person-wang-siriguleng",
+      "name": "Wang Siriguleng",
+      "name_zh": "王斯日古楞",
+      "roles": ["蒙古文信息处理与机器翻译创新团队研究者"],
+      "affiliation_ids": ["inst-imnu-team"],
+      "focus": ["蒙古文树库", "分词", "机器翻译", "语言生成"],
+      "script_scope": ["traditional", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-imnu-team"]
+    },
+    {
+      "id": "person-baishuangcheng",
+      "name": "Baishuangcheng",
+      "name_zh": "白双成",
+      "roles": ["研究员", "硕士生导师", "蒙古文信息技术标准工作组成员"],
+      "affiliation_ids": ["inst-imnu-ai"],
+      "focus": ["语言智能", "多语种信息处理", "OCR", "机器翻译", "语言资源"],
+      "script_scope": ["traditional", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-imnu-bai"]
+    },
+    {
+      "id": "person-yansong-feng",
+      "name": "Yansong Feng",
+      "name_zh": "冯岩松",
+      "roles": ["MC²作者", "低资源民族语言NLP研究者"],
+      "affiliation_ids": [],
+      "focus": ["低资源NLP", "文化感知语料", "传统蒙古文预训练数据"],
+      "script_scope": ["traditional", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-acl-mc2"]
+    },
+    {
+      "id": "person-quulgan-minggad",
+      "name": "Quulgan Minggad",
+      "roles": ["MonCulture-Eval作者"],
+      "affiliation_ids": [],
+      "focus": ["蒙古文化评测", "大模型", "跨文字与地区差异"],
+      "script_scope": ["traditional", "cyrillic", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-acl-monculture"]
+    },
+    {
+      "id": "person-tugstugi",
+      "name": "tugstugi",
+      "roles": ["开源维护者", "蒙古语NLP资源整理者"],
+      "affiliation_ids": ["inst-tugstugi"],
+      "focus": ["传统蒙古文OCR", "文字转换", "蒙古语数据与模型索引"],
+      "script_scope": ["traditional", "cyrillic", "mixed"],
+      "verification": "verified",
+      "source_ids": ["src-tugstugi"]
+    }
+  ],
+  "publications": [
+    {
+      "id": "pub-ner-2016",
+      "title": "Mongolian Named Entity Recognition System with Rich Features",
+      "year": 2016,
+      "authors": ["Weihua Wang", "Feilong Bao", "Guanglai Gao"],
+      "venue": "COLING 2016",
+      "publication_status": "peer_reviewed",
+      "topics": ["命名实体识别", "人工标注语料", "形态学特征"],
+      "script_scope": ["traditional"],
+      "evidence_summary": "论文明确研究中国使用的传统／古典蒙古文，构建人工标注NER语料并报告F1结果。",
+      "verification": "verified",
+      "source_ids": ["src-acl-ner2016"]
+    },
+    {
+      "id": "pub-ner-2018",
+      "title": "Attention-based BLSTM-CRF Architecture for Mongolian Named Entity Recognition",
+      "year": 2018,
+      "authors": ["Yuzhu Xiong", "Minghua Nuo"],
+      "venue": "PACLIC 2018",
+      "publication_status": "peer_reviewed",
+      "topics": ["命名实体识别", "BLSTM-CRF", "注意力机制"],
+      "script_scope": ["traditional"],
+      "evidence_summary": "内蒙古大学团队使用神经序列标注方法研究蒙古文命名实体识别。",
+      "verification": "verified",
+      "source_ids": ["src-acl-ner2018"]
+    },
+    {
+      "id": "pub-mc2-2024",
+      "title": "MC²: Towards Transparent and Culturally-Aware NLP for Minority Languages in China",
+      "year": 2024,
+      "authors": ["Chen Zhang", "Mingxu Tao", "Quzhe Huang", "Jiuheng Lin", "Zhibin Chen", "Yansong Feng"],
+      "venue": "ACL 2024",
+      "publication_status": "peer_reviewed",
+      "topics": ["预训练语料", "数据质量", "文化感知", "低资源语言"],
+      "script_scope": ["traditional"],
+      "evidence_summary": "构建包含原生传统蒙古文的少数民族语言语料，实验强调转写语料不能替代真实文字数据。",
+      "verification": "verified",
+      "source_ids": ["src-acl-mc2"]
+    },
+    {
+      "id": "pub-mmeval-2024",
+      "title": "MM-Eval: A Hierarchical Benchmark for Modern Mongolian Evaluation in LLMs",
+      "year": 2024,
+      "authors": ["Mengyuan Zhang", "Ruihui Wang", "Bo Xia", "Yuan Sun", "Xiaobing Zhao"],
+      "venue": "arXiv",
+      "publication_status": "preprint",
+      "topics": ["大模型评测", "句法", "语义", "知识与推理"],
+      "script_scope": ["unspecified"],
+      "evidence_summary": "预印本提供蒙古语分层评测集；公开摘要未充分证明其传统蒙古文覆盖，因此脚本范围标为未指定。",
+      "verification": "provisional",
+      "source_ids": ["src-arxiv-mmeval"]
+    },
+    {
+      "id": "pub-milic-2025",
+      "title": "MiLiC-Eval: Benchmarking Multilingual LLMs for China's Minority Languages",
+      "year": 2025,
+      "authors": ["Chen Zhang", "Mingxu Tao", "Zhiyuan Liao", "Yansong Feng"],
+      "venue": "arXiv",
+      "publication_status": "preprint",
+      "topics": ["少数民族语言", "多任务大模型评测", "多文字系统"],
+      "script_scope": ["traditional", "mixed"],
+      "evidence_summary": "预印本覆盖包括蒙古文在内的中国少数民族语言，并关注多文字系统任务；结论需等待正式同行评审。",
+      "verification": "provisional",
+      "source_ids": ["src-arxiv-milic"]
+    },
+    {
+      "id": "pub-lotus-2025",
+      "title": "Can Large Language Models Translate Unseen Languages in Underrepresented Scripts?",
+      "year": 2025,
+      "authors": ["Dianqing Lin", "Aruukhan", "Hongxu Hou", "Shuo Sun", "Wei Chen", "Yichen Yang", "Guodong Shi"],
+      "venue": "EMNLP 2025",
+      "publication_status": "peer_reviewed",
+      "topics": ["机器翻译", "低资源文字", "语言学资源增强", "Lotus基准"],
+      "script_scope": ["traditional"],
+      "evidence_summary": "以传统蒙古文和彝文评估LLM翻译；语言学资源可改善指标，但模型整体能力仍受限。",
+      "verification": "verified",
+      "source_ids": ["src-acl-lotus"]
+    },
+    {
+      "id": "pub-cmhg-2025",
+      "title": "CMHG: A Dataset and Benchmark for Headline Generation of Minority Languages in China",
+      "year": 2025,
+      "authors": ["Guixian Xu", "Zeli Su", "Ziyin Zhang", "Jianing Liu", "Xu Han", "Ting Zhang", "Yushuang Dong"],
+      "venue": "EMNLP 2025",
+      "publication_status": "peer_reviewed",
+      "topics": ["标题生成", "监督语料", "母语者测试集"],
+      "script_scope": ["traditional"],
+      "evidence_summary": "发布面向藏文、维吾尔文和传统蒙古文的标题生成数据，其中蒙古文规模为5万条并含母语者标注测试集。",
+      "verification": "verified",
+      "source_ids": ["src-acl-cmhg"]
+    },
+    {
+      "id": "pub-num-ocr-2025",
+      "title": "Deep Learning Optimization for Printed Mongolian Script Text Recognition",
+      "year": 2025,
+      "authors": ["Khurel Togoot"],
+      "venue": "National University of Mongolia publication record",
+      "publication_status": "institutional_publication",
+      "topics": ["印刷体OCR", "CNN", "数据增强"],
+      "script_scope": ["traditional"],
+      "evidence_summary": "蒙古国立大学官方记录描述55类、三种印刷风格的传统蒙古文字识别实验；尚需补齐论文正式出版物元数据。",
+      "verification": "provisional",
+      "source_ids": ["src-num-ocr"]
+    },
+    {
+      "id": "pub-tmbench-2026",
+      "title": "TM-Bench: Benchmarking Large Language Models on Low-Resource Traditional Mongolian",
+      "year": 2026,
+      "authors": ["郜振杰", "飞龙", "阿如汗", "侯瑞辰", "吉谐琦", "达布力干", "呼格吉乐", "李源"],
+      "venue": "SIGIR 2026",
+      "publication_status": "accepted",
+      "topics": ["传统蒙古文", "大模型评测", "理解与生成", "人工双盲评测"],
+      "script_scope": ["traditional"],
+      "evidence_summary": "内蒙古大学官方公告称基准含五项任务、18,357个实例，并报告现有模型在生成任务出现严重语义崩溃和乱码。",
+      "verification": "verified",
+      "source_ids": ["src-imu-tmbench"]
+    },
+    {
+      "id": "pub-monculture-2026",
+      "title": "MonCulture-Eval: A Hierarchical Benchmark for Evaluating Mongolian Cultural Capabilities of Large Language Models across Scripts and Regions",
+      "year": 2026,
+      "authors": ["Quulgan Minggad", "Xiao Zinan", "Yuan Sun"],
+      "venue": "Findings of ACL 2026",
+      "publication_status": "peer_reviewed",
+      "topics": ["文化能力评测", "多文字系统", "地区文化", "大模型偏差"],
+      "script_scope": ["traditional", "cyrillic", "mixed"],
+      "evidence_summary": "覆盖传统与西里尔蒙古文以及阿拉善、鄂尔多斯、科尔沁文化，报告明显的script gap与文化偏差。",
+      "verification": "verified",
+      "source_ids": ["src-acl-monculture"]
+    },
+    {
+      "id": "pub-copit-2026",
+      "title": "CoPiT: Cognitive Pivot Translation for Digraphic Low-Resource Mongolian in the Traditional Script",
+      "year": 2026,
+      "authors": ["Burte Bayarsaikhan", "Serynn Kim", "Buru Chang"],
+      "venue": "arXiv",
+      "publication_status": "preprint",
+      "topics": ["传统—西里尔枢轴翻译", "多语平行数据", "低资源翻译"],
+      "script_scope": ["traditional", "cyrillic", "mixed"],
+      "evidence_summary": "预印本提出经西里尔蒙古文消歧的翻译流程并声称发布多文字平行数据；代码、许可证和复现性仍待独立核验。",
+      "verification": "provisional",
+      "source_ids": ["src-arxiv-copit"]
+    }
+  ],
+  "resources": [
+    {
+      "id": "resource-noto",
+      "name": "Noto Sans Mongolian",
+      "resource_type": "font",
+      "maintainer": "Noto Fonts",
+      "availability": "open",
+      "license_status": "SIL Open Font License 1.1",
+      "script_scope": ["traditional"],
+      "notes": "仓库提供字体源文件、版本发布、FontBakery测试与proof页面；本项目固定使用v3.002。",
+      "verification": "verified",
+      "source_ids": ["src-noto"]
+    },
+    {
+      "id": "resource-mc2",
+      "name": "MC² minority-language corpus",
+      "resource_type": "dataset",
+      "maintainer": "MC² authors",
+      "availability": "open",
+      "license_status": "须在导入前逐项核对论文和数据仓库许可",
+      "script_scope": ["traditional"],
+      "notes": "论文明确包含原生传统蒙古文语料；不得把论文开放访问等同于全部数据可商用。",
+      "verification": "verified",
+      "source_ids": ["src-acl-mc2"]
+    },
+    {
+      "id": "resource-lotus",
+      "name": "Lotus translation benchmark",
+      "resource_type": "dataset",
+      "maintainer": "Lotus authors",
+      "availability": "open",
+      "license_status": "论文声明代码与数据可用，具体仓库许可待导入审计",
+      "script_scope": ["traditional"],
+      "notes": "用于评估传统蒙古文在低资源、低覆盖文字系统中的LLM翻译。",
+      "verification": "verified",
+      "source_ids": ["src-acl-lotus"]
+    },
+    {
+      "id": "resource-cmhg",
+      "name": "CMHG Traditional Mongolian headline generation subset",
+      "resource_type": "dataset",
+      "maintainer": "CMHG authors",
+      "availability": "described_only",
+      "license_status": "未在当前证据中确认",
+      "script_scope": ["traditional"],
+      "notes": "论文报告5万条蒙古文标题生成记录和母语者标注测试集；使用前必须确认下载地址、许可和编码质量。",
+      "verification": "provisional",
+      "source_ids": ["src-acl-cmhg"]
+    },
+    {
+      "id": "resource-tmbench",
+      "name": "TM-Bench",
+      "resource_type": "dataset",
+      "maintainer": "内蒙古大学飞龙、王炜华团队",
+      "availability": "described_only",
+      "license_status": "公开发布与许可尚未由当前来源确认",
+      "script_scope": ["traditional"],
+      "notes": "18,357个实例、五项理解与生成任务；当前只记录官方公告已确认的范围。",
+      "verification": "provisional",
+      "source_ids": ["src-imu-tmbench"]
+    },
+    {
+      "id": "resource-tugstugi-catalog",
+      "name": "mongolian-nlp resource catalog",
+      "resource_type": "catalog",
+      "maintainer": "tugstugi",
+      "availability": "open",
+      "license_status": "目录本身公开；每个下游资源许可不同",
+      "script_scope": ["traditional", "cyrillic", "mixed"],
+      "notes": "聚合OCR、文字转换、NER、POS、WordNet、语音和模型链接；本知识库不继承目录中的准确率声明。",
+      "verification": "verified",
+      "source_ids": ["src-tugstugi"]
+    },
+    {
+      "id": "resource-image2bichig",
+      "name": "image2bichig Traditional Mongolian OCR",
+      "resource_type": "tool",
+      "maintainer": "tugstugi",
+      "availability": "open",
+      "license_status": "使用前需在原始子仓库复核代码和数据许可证",
+      "script_scope": ["traditional"],
+      "notes": "社区目录将其描述为基于CRNN的传统蒙古文OCR并链接合成OCR数据。",
+      "verification": "provisional",
+      "source_ids": ["src-tugstugi"]
+    },
+    {
+      "id": "resource-bichig2cyrillic",
+      "name": "bichig2cyrillic",
+      "resource_type": "model",
+      "maintainer": "tugstugi",
+      "availability": "open",
+      "license_status": "使用前需在原始子仓库复核",
+      "script_scope": ["traditional", "cyrillic", "mixed"],
+      "notes": "传统蒙古文与西里尔蒙古文转换原型；不能未经评测作为标准转写或权威翻译。",
+      "verification": "provisional",
+      "source_ids": ["src-tugstugi"]
+    }
+  ],
+  "standards": [
+    {
+      "id": "standard-unicode17",
+      "name": "Unicode Standard 17.0 — Mongolian block and implementation guidance",
+      "owner": "Unicode Consortium",
+      "normative_status": "normative",
+      "scope": "蒙古文字符、FVS1–FVS4、MVS、位置与变体字形的字符模型。",
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-unicode17"]
+    },
+    {
+      "id": "standard-unicode-registry",
+      "name": "Unicode Mongolian document registry",
+      "owner": "Unicode Consortium",
+      "normative_status": "registry",
+      "scope": "蒙古文编码提案、工作组会议、技术报告和国家标准引用的历史事实源。",
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-unicode-doclist"]
+    },
+    {
+      "id": "standard-utn57",
+      "name": "Unicode Technical Note #57 version 4",
+      "owner": "Kushim Jiang / Unicode Technical Notes",
+      "normative_status": "technical_note",
+      "scope": "蒙古文文本表记与分层字形塑形规则；技术说明而非Unicode规范性认可。",
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-unicode-tn57"]
+    },
+    {
+      "id": "standard-w3c-mlreq",
+      "name": "W3C Mongolian Layout Requirements",
+      "owner": "W3C Internationalization Working Group",
+      "normative_status": "working_group_note",
+      "scope": "传统蒙古文在Web和电子书中的竖排、换列、间距、选择、光标、标点、混排和表单需求。",
+      "script_scope": ["traditional"],
+      "verification": "verified",
+      "source_ids": ["src-w3c-mlreq", "src-w3c-charter"]
+    },
+    {
+      "id": "standard-gbt25914-2023",
+      "name": "GB/T 25914-2023 信息技术 传统蒙古文名义字符、变形显现字符和控制字符使用规则",
+      "owner": "中国国家标准体系",
+      "normative_status": "national_standard",
+      "scope": "传统蒙古文字符、显现形式和控制字符使用规则；本知识库当前只确认其在Unicode官方文档目录中的登记，完整标准文本仍需合法获取。",
+      "script_scope": ["traditional"],
+      "verification": "provisional",
+      "source_ids": ["src-unicode-doclist"]
+    }
+  ],
+  "coverage": {
+    "known_gaps": [
+      "尚未完成蒙古国科学院、蒙古科技大学、内蒙古民族大学、呼和浩特民族学院等机构的官方团队与成果核验。",
+      "尚未建立中文核心期刊、硕博论文、国家项目和专利的系统检索与去重流程。",
+      "多数公开数据集的许可证、下载稳定性、编码纯度、个人信息风险和训练可用性尚未逐项审计。",
+      "尚未邀请传统蒙古文母语者、教师、出版技术人员和Unicode／字体专家确认人物与技术结论。",
+      "企业产品、政府平台、输入法和商业字体尚未建立可复现的能力与许可矩阵。",
+      "本知识库只证明当前已收录记录，不声称全球穷尽。"
+    ],
+    "next_review_at": "2026-09-08"
+  }
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="可追溯、可验证的传统蒙古文数字化科研知识库。">
+    <title>传统蒙古文数字化科研知识库 · Mongol AI</title>
+    <link rel="stylesheet" href="../core/mongolian_layout_engine.css">
+    <style>
+        :root {
+            --ink: #172033;
+            --muted: #5f6b7d;
+            --line: #dbe2ec;
+            --surface: #ffffff;
+            --wash: #f4f7fb;
+            --blue: #2457d6;
+            --blue-soft: #eaf0ff;
+            --green: #147a55;
+            --amber: #9a5b00;
+            --shadow: 0 12px 34px rgba(28, 44, 78, 0.08);
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: var(--wash);
+            font: 15px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+        a { color: var(--blue); }
+        button, input, select { font: inherit; }
+        .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 68px;
+            gap: 16px;
+        }
+        .brand { color: var(--ink); font-weight: 800; text-decoration: none; }
+        .back { font-weight: 650; text-decoration: none; }
+        .hero {
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 220px;
+            gap: 42px;
+            padding: 48px;
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background: linear-gradient(135deg, #fff 0%, #f3f7ff 100%);
+            box-shadow: var(--shadow);
+        }
+        .eyebrow {
+            display: inline-flex;
+            padding: 6px 11px;
+            border-radius: 999px;
+            color: var(--blue);
+            background: var(--blue-soft);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: .04em;
+        }
+        h1 { max-width: 760px; margin: 18px 0 14px; font-size: clamp(32px, 5vw, 58px); line-height: 1.08; letter-spacing: -.04em; }
+        .lead { max-width: 760px; margin: 0; color: var(--muted); font-size: 18px; }
+        .hero-script {
+            width: 100%;
+            min-height: 220px;
+            padding: 16px;
+            border: 1px solid #cfd9eb;
+            border-radius: 20px;
+            background: rgba(255,255,255,.82);
+            font-size: 28px;
+            overflow: hidden;
+        }
+        .trust-note {
+            margin-top: 20px;
+            padding-left: 14px;
+            border-left: 3px solid var(--blue);
+            color: var(--muted);
+        }
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 12px;
+            margin: 24px 0;
+        }
+        .metric {
+            padding: 20px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: var(--surface);
+        }
+        .metric strong { display: block; font-size: 26px; line-height: 1.2; }
+        .metric span { color: var(--muted); font-size: 13px; }
+        .toolbar {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            display: grid;
+            grid-template-columns: minmax(220px, 1fr) 220px;
+            gap: 12px;
+            padding: 14px 0;
+            background: color-mix(in srgb, var(--wash) 92%, transparent);
+            backdrop-filter: blur(12px);
+        }
+        .search, .script-filter {
+            min-height: 48px;
+            padding: 0 15px;
+            border: 1px solid #c7d0df;
+            border-radius: 13px;
+            background: #fff;
+            color: var(--ink);
+        }
+        .search:focus, .script-filter:focus { outline: 3px solid rgba(36,87,214,.18); border-color: var(--blue); }
+        .type-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+        .type-tab {
+            padding: 9px 14px;
+            border: 1px solid #cbd4e2;
+            border-radius: 999px;
+            background: #fff;
+            color: var(--ink);
+            cursor: pointer;
+        }
+        .type-tab[aria-pressed="true"] { border-color: var(--blue); color: #fff; background: var(--blue); }
+        .result-head { display: flex; justify-content: space-between; gap: 16px; align-items: end; margin: 28px 0 12px; }
+        .result-head h2 { margin: 0; font-size: 24px; }
+        .result-state { color: var(--muted); }
+        .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+        .card {
+            min-width: 0;
+            padding: 22px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: #fff;
+        }
+        .card-top { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+        .card h3 { margin: 0; font-size: 19px; line-height: 1.35; }
+        .kind { margin: 7px 0 0; color: var(--muted); font-size: 13px; }
+        .status {
+            flex: none;
+            padding: 3px 8px;
+            border-radius: 999px;
+            color: var(--green);
+            background: #e7f6ef;
+            font-size: 12px;
+            font-weight: 800;
+        }
+        .status.provisional { color: var(--amber); background: #fff3d8; }
+        .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 15px 0; }
+        .tag { padding: 4px 8px; border-radius: 8px; color: #3f4d64; background: #eef2f8; font-size: 12px; }
+        .summary { margin: 12px 0; color: #38445a; }
+        .sources { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid #edf0f5; }
+        .sources-label { display: block; margin-bottom: 5px; color: var(--muted); font-size: 12px; font-weight: 700; }
+        .source-link { display: inline; margin-right: 10px; font-size: 13px; overflow-wrap: anywhere; }
+        .empty { grid-column: 1 / -1; padding: 48px; text-align: center; color: var(--muted); border: 1px dashed #bfc9d8; border-radius: 18px; }
+        .gaps {
+            margin: 42px 0;
+            padding: 28px;
+            border-radius: 22px;
+            color: #fff;
+            background: #172033;
+        }
+        .gaps h2 { margin-top: 0; }
+        .gaps li + li { margin-top: 8px; }
+        .method {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin: 36px 0 60px;
+        }
+        .method article { padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: #fff; }
+        .method h2 { margin-top: 0; font-size: 20px; }
+        footer { padding: 24px 0 48px; color: var(--muted); }
+        @media (max-width: 900px) {
+            .hero { grid-template-columns: 1fr; padding: 30px; }
+            .hero-script { height: 180px; min-height: 0; }
+            .metrics { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 680px) {
+            .shell { width: min(100% - 22px, 1180px); }
+            .hero { padding: 24px; border-radius: 20px; }
+            .metrics { grid-template-columns: repeat(2, 1fr); }
+            .toolbar { grid-template-columns: 1fr; }
+            .cards, .method { grid-template-columns: 1fr; }
+            .result-head { align-items: flex-start; flex-direction: column; }
+        }
+    </style>
+    <script src="../core/mongolian_layout_engine.js" defer></script>
+    <script src="knowledge-base.js" defer></script>
+</head>
+<body>
+    <div class="shell">
+        <nav class="topbar" aria-label="知识库导航">
+            <a class="brand" href="../index.html">Mongol AI</a>
+            <a class="back" href="../index.html">返回项目首页</a>
+        </nav>
+
+        <main>
+            <section class="hero" aria-labelledby="page-title">
+                <div>
+                    <span class="eyebrow">PHASE K0 · VERIFIED BASELINE</span>
+                    <h1 id="page-title">传统蒙古文数字化科研知识库</h1>
+                    <p class="lead">把标准、机构、研究者、论文与开放资源连接成可追溯的事实网络。每条结论都回到原始来源，并明确传统蒙古文与西里尔蒙古文的边界。</p>
+                    <p class="trust-note">收录不等于背书，公开不等于可商用，未收录不等于不存在。本库不声称已经穷尽全球研究。</p>
+                </div>
+                <div class="hero-script" lang="mn-Mong" data-mongol-vertical aria-label="传统蒙古文示例">ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ ᠦᠨ ᠲᠣᠭᠠᠴᠢᠯᠠᠯ</div>
+            </section>
+
+            <section class="metrics" id="metrics" aria-label="知识库统计"></section>
+
+            <div class="toolbar" aria-label="知识库筛选">
+                <label>
+                    <span hidden>搜索知识库</span>
+                    <input class="search" id="search" type="search" placeholder="搜索机构、专家、论文、技术方向…" autocomplete="off">
+                </label>
+                <label>
+                    <span hidden>文字系统</span>
+                    <select class="script-filter" id="script-filter">
+                        <option value="all">全部文字系统</option>
+                        <option value="traditional">传统蒙古文</option>
+                        <option value="cyrillic">西里尔蒙古文</option>
+                        <option value="mixed">跨文字系统</option>
+                        <option value="unspecified">来源未说明</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="type-tabs" id="type-tabs" aria-label="实体类型"></div>
+
+            <section aria-labelledby="results-title">
+                <div class="result-head">
+                    <h2 id="results-title">全部可信记录</h2>
+                    <span class="result-state" id="result-state" aria-live="polite">正在加载事实源…</span>
+                </div>
+                <div class="cards" id="cards"></div>
+            </section>
+
+            <section class="gaps" aria-labelledby="gaps-title">
+                <h2 id="gaps-title">已知缺口</h2>
+                <ul id="known-gaps"></ul>
+                <p id="next-review"></p>
+            </section>
+
+            <section class="method" aria-label="方法与贡献">
+                <article>
+                    <h2>证据规则</h2>
+                    <p>Tier A 只接受标准组织、大学官方页面和同行评审论文；Tier B 接受明确标注的预印本与原始仓库。搜索摘要和二手文章不能单独证明事实。</p>
+                    <a href="../docs/04-research/TRUST_POLICY.md">阅读完整证据规则</a>
+                </article>
+                <article>
+                    <h2>机器可读与可验证</h2>
+                    <p>所有关系保存为版本化 JSON，CI 检查 ID、来源、HTTPS、文字范围和状态，不让占位身份或断开的引用重新进入项目。</p>
+                    <a href="../data/knowledge/knowledge-base.json">查看原始 JSON</a>
+                </article>
+            </section>
+        </main>
+
+        <footer>Phase K0 · 数据版本 1.0.0 · 核验日期 <span id="updated-at">—</span></footer>
+    </div>
+</body>
+</html>

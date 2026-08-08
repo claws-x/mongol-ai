@@ -1,5 +1,9 @@
 # 研究者名录
 
+> **⚠️ LEGACY / DO NOT CONTACT（2026-08-08）**：本文含占位 Scholar ID、
+> 全零 ORCID、未核实联系方式及无法确认的论文，不得用于合作联络或项目事实。
+> 已核验人物请查 `data/knowledge/knowledge-base.json`。
+
 **版本**: v1.0  
 **创建时间**: 2026-04-03  
 **状态**: 高优先级  

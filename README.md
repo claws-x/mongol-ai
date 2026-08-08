@@ -9,6 +9,7 @@
 当前唯一正式入口是 [`index.html`](index.html)，核心体验位于：
 
 - [`demos/input/ai-chat.html`](demos/input/ai-chat.html) — 本地优先写作工作台与 Unicode 诊断 Alpha
+- [`knowledge/index.html`](knowledge/index.html) — 可追溯的传统蒙古文数字化科研知识库
 
 工作台提供实时竖排预览、浏览器本地草稿、复制、UTF-8 文本导出和编码级诊断。页面中的响应仍由本地关键词规则生成，不是大模型。其他演示统一归入 [Labs](demos/README.md)，只用于研究和回归参考。
 
@@ -24,6 +25,7 @@
 - 不改写原文的 FVS、MVS、NNBSP、ZWJ、ZWNJ 编码诊断
 - 实时竖排预览、浏览器本地草稿、原文复制与 UTF-8 文本导出
 - 115 条等待母语专家和来源审核的历史词汇/短语队列
+- Phase K0 科研知识库：26 个原始来源、11 个机构/团队、20 位研究者、11 项代表性研究、8 项资源和 5 项标准
 
 ## 尚未证明的能力
 
@@ -57,12 +59,17 @@ PYTHONPYCACHEPREFIX=/tmp/mongol-ai-pycache python3 -m unittest discover -v
 core/       竖排渲染引擎、文本、输入与规则响应原型
 nlp/        分词、词性标注与句法分析原型
 data/       小规模实验词汇和短语
+             `data/knowledge/` 为机器可读科研事实源与 JSON Schema
 demos/      正式 Alpha 与历史 Labs
 docs/       标准研究、技术笔记与历史项目文档
+knowledge/  科研知识库公开检索页面
 tests/      Phase 0 自动化回归测试
 ```
 
 质量语料和审核流程见 [`data/quality/`](data/quality/) 与 [`LANGUAGE_REVIEW_WORKFLOW.md`](docs/05-project/LANGUAGE_REVIEW_WORKFLOW.md)。
+
+科研知识库的当前索引、证据等级和覆盖缺口见
+[`KNOWLEDGE_BASE_INDEX.md`](docs/04-research/KNOWLEDGE_BASE_INDEX.md)。旧研究文档中的人物、准确率和“完全支持”声明默认不再视为事实源。
 
 ## 产品路线与质量原则
 

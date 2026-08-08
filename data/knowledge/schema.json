@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claws-x.github.io/mongol-ai/data/knowledge/schema.json",
+  "title": "Mongol AI Traditional Mongolian Digital Research Knowledge Base",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "updated_at",
+    "methodology",
+    "sources",
+    "institutions",
+    "people",
+    "publications",
+    "resources",
+    "standards",
+    "coverage"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "updated_at": { "type": "string", "format": "date" },
+    "methodology": {
+      "type": "object",
+      "required": ["scope", "evidence_policy", "verification_states", "script_scopes"],
+      "properties": {
+        "scope": { "type": "string", "minLength": 20 },
+        "evidence_policy": { "type": "array", "minItems": 3, "items": { "type": "string" } },
+        "verification_states": { "type": "array", "items": { "enum": ["verified", "provisional", "rejected"] } },
+        "script_scopes": { "type": "array", "items": { "enum": ["traditional", "cyrillic", "mixed", "unspecified"] } }
+      },
+      "additionalProperties": false
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "institutions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/institution" }
+    },
+    "people": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/person" }
+    },
+    "publications": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/publication" }
+    },
+    "resources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/resource" }
+    },
+    "standards": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/standard" }
+    },
+    "coverage": {
+      "type": "object",
+      "required": ["known_gaps", "next_review_at"],
+      "properties": {
+        "known_gaps": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "next_review_at": { "type": "string", "format": "date" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "sourceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^src-" }
+    },
+    "scriptScopes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["traditional", "cyrillic", "mixed", "unspecified"] }
+    },
+    "source": {
+      "type": "object",
+      "required": ["id", "title", "publisher", "url", "source_type", "accessed_at", "tier"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^src-" },
+        "title": { "type": "string", "minLength": 3 },
+        "publisher": { "type": "string", "minLength": 2 },
+        "url": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "source_type": { "enum": ["standard_body", "official_institution", "peer_reviewed", "preprint", "official_repository"] },
+        "accessed_at": { "type": "string", "format": "date" },
+        "tier": { "enum": ["A", "B"] },
+        "note": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "institution": {
+      "type": "object",
+      "required": ["id", "name", "region", "kind", "focus", "script_scope", "verification", "source_ids"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^inst-" },
+        "name": { "type": "string" },
+        "name_en": { "type": "string" },
+        "region": { "type": "string" },
+        "kind": { "enum": ["standards_body", "university", "laboratory", "research_center", "community", "company"] },
+        "focus": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "script_scope": { "$ref": "#/$defs/scriptScopes" },
+        "verification": { "enum": ["verified", "provisional", "rejected"] },
+        "source_ids": { "$ref": "#/$defs/sourceRefs" }
+      },
+      "additionalProperties": false
+    },
+    "person": {
+      "type": "object",
+      "required": ["id", "name", "roles", "affiliation_ids", "focus", "script_scope", "verification", "source_ids"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^person-" },
+        "name": { "type": "string" },
+        "name_zh": { "type": "string" },
+        "roles": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "affiliation_ids": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^inst-" } },
+        "focus": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "script_scope": { "$ref": "#/$defs/scriptScopes" },
+        "verification": { "enum": ["verified", "provisional", "rejected"] },
+        "source_ids": { "$ref": "#/$defs/sourceRefs" }
+      },
+      "additionalProperties": false
+    },
+    "publication": {
+      "type": "object",
+      "required": ["id", "title", "year", "authors", "venue", "publication_status", "topics", "script_scope", "evidence_summary", "verification", "source_ids"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^pub-" },
+        "title": { "type": "string" },
+        "year": { "type": "integer", "minimum": 1990, "maximum": 2100 },
+        "authors": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "venue": { "type": "string" },
+        "publication_status": { "enum": ["peer_reviewed", "accepted", "preprint", "institutional_publication"] },
+        "topics": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "script_scope": { "$ref": "#/$defs/scriptScopes" },
+        "evidence_summary": { "type": "string", "minLength": 20 },
+        "verification": { "enum": ["verified", "provisional", "rejected"] },
+        "source_ids": { "$ref": "#/$defs/sourceRefs" }
+      },
+      "additionalProperties": false
+    },
+    "resource": {
+      "type": "object",
+      "required": ["id", "name", "resource_type", "maintainer", "availability", "license_status", "script_scope", "verification", "source_ids"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^resource-" },
+        "name": { "type": "string" },
+        "resource_type": { "enum": ["dataset", "model", "tool", "font", "catalog", "platform"] },
+        "maintainer": { "type": "string" },
+        "availability": { "enum": ["open", "restricted", "described_only", "unknown"] },
+        "license_status": { "type": "string" },
+        "script_scope": { "$ref": "#/$defs/scriptScopes" },
+        "notes": { "type": "string" },
+        "verification": { "enum": ["verified", "provisional", "rejected"] },
+        "source_ids": { "$ref": "#/$defs/sourceRefs" }
+      },
+      "additionalProperties": false
+    },
+    "standard": {
+      "type": "object",
+      "required": ["id", "name", "owner", "normative_status", "scope", "script_scope", "verification", "source_ids"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^standard-" },
+        "name": { "type": "string" },
+        "owner": { "type": "string" },
+        "normative_status": { "enum": ["normative", "working_group_note", "technical_note", "registry", "national_standard"] },
+        "scope": { "type": "string" },
+        "script_scope": { "$ref": "#/$defs/scriptScopes" },
+        "verification": { "enum": ["verified", "provisional", "rejected"] },
+        "source_ids": { "$ref": "#/$defs/sourceRefs" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
