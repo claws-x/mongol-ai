@@ -16,6 +16,7 @@ class PhaseS2FoundationTests(unittest.TestCase):
         cls.observations = json.loads((ROOT / "data/corpus/observations.json").read_text(encoding="utf-8"))
         cls.joining = json.loads((ROOT / "data/unicode/joining-types-17.0.0.json").read_text(encoding="utf-8"))
         cls.cooccurrence = json.loads((ROOT / "data/corpus/control-cooccurrence.json").read_text(encoding="utf-8"))
+        cls.geometry = json.loads((ROOT / "data/engine/project-glyph-geometry.json").read_text(encoding="utf-8"))
 
     def test_joining_data_is_version_locked_to_unicode_17(self):
         self.assertEqual(self.joining["unicodeVersion"], "17.0.0")
@@ -52,6 +53,26 @@ class PhaseS2FoundationTests(unittest.TestCase):
         self.assertEqual(self.cooccurrence["observedControls"]["U+180C"], 1)
         self.assertEqual(self.cooccurrence["observedControls"]["U+180E"], 0)
         self.assertEqual(self.cooccurrence["observedControls"]["U+202F"], 0)
+
+    def test_geometry_requirements_are_reproducible_and_assets_remain_honestly_missing(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "geometry.json"
+            subprocess.run([
+                "node",
+                str(ROOT / "scripts/build_s2_geometry_requirements.mjs"),
+                str(ROOT / "data/engine/s2-semantic-registry.json"),
+                str(output),
+            ], check=True)
+            self.assertEqual(json.loads(output.read_text(encoding="utf-8")), self.geometry)
+        self.assertEqual(self.geometry["phase"], "S2.2")
+        self.assertEqual(self.geometry["summary"], {
+            "requirementCount": 18,
+            "assetCount": 0,
+            "readyCount": 0,
+            "missingCount": 18,
+        })
+        roles = {item["semanticRole"] for item in self.geometry["requirements"]}
+        self.assertIn("MONGOLIAN_A.medial.form3", roles)
 
     def test_registry_has_93_unique_semantic_roles_and_honest_backend_states(self):
         targets = self.registry["targets"]

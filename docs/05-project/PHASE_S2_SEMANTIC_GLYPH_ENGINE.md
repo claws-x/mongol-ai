@@ -1,8 +1,8 @@
 # Phase S2 — 语义字形计算引擎
 
-**当前子阶段**：S2.1 Context Model 进行中
+**当前子阶段**：S2.2 Geometry Contract 已启动
 
-**版本**：0.7.0
+**版本**：0.8.0
 
 **日期**：2026-08-24
 
@@ -56,9 +56,24 @@
 
 1. 扩展多地区、多类型网页来源，取得真实 MVS／NNBSP 共现，不用标准示例冒充自然语料；
 2. 建立版本化分离后缀词典和多后缀结构，但所有词条必须有可追溯来源；
-3. 为 `MONGOLIAN_A.medial.form3` 建立第一套原创项目字形几何接口；
-4. 定义连接入口、出口、主干、推进量和边界框断言；
-5. 将语义角色选择真正接到几何后端，而不只展示诊断轨迹。
+
+## S2.2 已交付的几何契约
+
+- 由语义注册表确定性生成18个 `project-glyph-required` 几何要求；
+- 明确定义旋转前正 X 流向与旋转后的自上而下映射；
+- isolate／initial／medial／final 分别映射到不同入口和出口拓扑；
+- 验证 path、推进量、边界框、边缘锚点、主干连续性和轮廓许可证；
+- 页面把 `project-glyph-required` 继续解析为 `asset-missing`，不隐藏缺口；
+- 当前0／18资产就绪，不复制闭源轮廓，也不把 Noto 默认字形冒充第三形。
+
+详细合同见 [`PROJECT_GLYPH_GEOMETRY.md`](../02-architecture/PROJECT_GLYPH_GEOMETRY.md)。
+
+## S2.2 接下来完成
+
+1. 从 SVG path 自身推导真实 bounding box，消除对资产声明的信任；
+2. 为 `MONGOLIAN_A.medial.form3` 建立第一套原创或 OFL 兼容轮廓资产；
+3. 将通过验证的项目字形插入 glyph run，并保持 cluster 到原始码位的追踪；
+4. 对入口、出口与相邻字体 glyph 建立组合级连续性断言。
 
 ## Ollama 使用边界
 

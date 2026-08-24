@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claws-x.github.io/mongol-ai/data/engine/project-glyph-geometry.schema.json",
+  "title": "Mongol AI project glyph geometry registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedAt", "phase", "coordinateSystem", "licensePolicy", "summary", "requirements", "assets"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date" },
+    "phase": { "const": "S2.2" },
+    "coordinateSystem": { "type": "object" },
+    "licensePolicy": { "type": "string" },
+    "summary": {
+      "type": "object",
+      "required": ["requirementCount", "assetCount", "readyCount", "missingCount"]
+    },
+    "requirements": {
+      "type": "array",
+      "minItems": 18,
+      "items": {
+        "type": "object",
+        "required": ["id", "semanticRole", "semanticTargetId", "joiningState", "requiredAnchors", "constraints", "assetStatus"]
+      }
+    },
+    "assets": { "type": "array" }
+  }
+}

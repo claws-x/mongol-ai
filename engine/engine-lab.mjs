@@ -1,6 +1,7 @@
-import { MongolianSuperEngine, PROFILES } from "../core/mongolian_super_engine.mjs?v=0.7.0";
-import { SemanticGlyphRegistry } from "../core/semantic_glyph_engine.mjs?v=0.7.0";
-import { analyzeMongolianLexicalControls } from "../core/mongolian_lexical_controls.mjs?v=0.7.0";
+import { MongolianSuperEngine, PROFILES } from "../core/mongolian_super_engine.mjs?v=0.8.0";
+import { SemanticGlyphRegistry } from "../core/semantic_glyph_engine.mjs?v=0.8.0";
+import { analyzeMongolianLexicalControls } from "../core/mongolian_lexical_controls.mjs?v=0.8.0";
+import { ProjectGlyphGeometryRegistry } from "../core/project_glyph_geometry.mjs?v=0.8.0";
 
 const engine = new MongolianSuperEngine();
 const form = document.querySelector("#engine-form");
@@ -22,6 +23,7 @@ const lexicalControlBody = document.querySelector("#lexical-control-body");
 let isComposing = false;
 let imeEvents = [];
 let semanticRegistry = null;
+let geometryRegistry = null;
 
 const requestedProfile = new URLSearchParams(window.location.search).get("profile");
 if (requestedProfile && Object.hasOwn(PROFILES, requestedProfile)) {
@@ -91,6 +93,9 @@ function renderSemanticTrace(trace) {
             token.joiningState,
             token.resolution?.semanticRole ?? (token.controls.length ? token.resolution?.status : "基础字母／无 FVS"),
             token.resolution?.backend?.status ?? "由字体后端塑形",
+            token.resolution?.backend?.status === "project-glyph-required"
+                ? geometryRegistry.resolve(token.resolution.semanticRole).status
+                : "font-backend",
         ];
         values.forEach((value) => {
             const cell = document.createElement("td");
@@ -103,6 +108,13 @@ function renderSemanticTrace(trace) {
 
 function lexicalControlEvents(text) {
     return analyzeMongolianLexicalControls(text);
+}
+
+function projectGlyphGaps(trace) {
+    return trace
+        .filter((token) => token.resolution?.backend?.status === "project-glyph-required")
+        .map((token) => geometryRegistry.resolve(token.resolution.semanticRole))
+        .filter((result) => result.status !== "asset-ready");
 }
 
 function renderLexicalControls(events) {
@@ -127,7 +139,8 @@ function renderLexicalControls(events) {
 function run() {
     const inputDocument = engine.createDocument(source.value, profile.value);
     const diagnostics = renderDiagnostics(inputDocument);
-    renderSemanticTrace(semanticTrace(inputDocument.raw));
+    const trace = semanticTrace(inputDocument.raw);
+    renderSemanticTrace(trace);
     renderLexicalControls(lexicalControlEvents(inputDocument.raw));
     profileNote.textContent = `${PROFILES[profile.value].note} 依据：${PROFILES[profile.value].evidence}`;
     declaredProfile.textContent = PROFILES[profile.value].label;
@@ -144,6 +157,15 @@ function run() {
         message.textContent = "已无损保存原文，但当前编码缺少权威映射，系统拒绝猜测塑形。";
         output.appendChild(message);
         setStatus("阻止猜测转换", "blocked");
+        return;
+    }
+    const geometryGaps = projectGlyphGaps(trace);
+    if (geometryGaps.length) {
+        const message = document.createElement("p");
+        const roles = geometryGaps.map((gap) => `${gap.semanticRole} (${gap.status})`).join("；");
+        message.textContent = `语义已经确定，但项目字形尚未通过几何合同：${roles}。系统拒绝显示字体的错误默认字形。`;
+        output.appendChild(message);
+        setStatus("项目字形缺失，停止输出", "blocked");
         return;
     }
     try {
@@ -211,16 +233,20 @@ document.querySelector("#export-evidence").addEventListener("click", () => {
 });
 
 try {
-    const [report, registryResponse] = await Promise.all([
+    const [report, registryResponse, geometryResponse] = await Promise.all([
         engine.init(),
-        fetch(new URL("../data/engine/s2-semantic-registry.json?v=0.7.0", import.meta.url)),
+        fetch(new URL("../data/engine/s2-semantic-registry.json?v=0.8.0", import.meta.url)),
+        fetch(new URL("../data/engine/project-glyph-geometry.json?v=0.8.0", import.meta.url)),
     ]);
     if (!registryResponse.ok) throw new Error(`semantic registry HTTP ${registryResponse.status}`);
+    if (!geometryResponse.ok) throw new Error(`geometry registry HTTP ${geometryResponse.status}`);
     semanticRegistry = new SemanticGlyphRegistry(await registryResponse.json());
+    geometryRegistry = new ProjectGlyphGeometryRegistry(await geometryResponse.json());
     document.querySelector("#engine-version").textContent = report.version;
     document.querySelector("#hb-version").textContent = report.harfbuzz;
     document.querySelector("#font-hash").textContent = report.fontSha256;
     document.querySelector("#override-count").textContent = `${report.approvedOverrides} 条已批准`;
+    document.querySelector("#geometry-count").textContent = `${geometryRegistry.payload.summary.readyCount}／${geometryRegistry.payload.summary.requirementCount} 资产就绪`;
     run();
     window.dispatchEvent(new CustomEvent("mongol-engine-ready"));
 } catch (error) {

@@ -36,6 +36,11 @@ class ProductContractTests(unittest.TestCase):
         self.assertIn('id="lexical-control-body"', html)
         self.assertIn("analyzeMongolianLexicalControls", script)
         self.assertIn("Unicode 16.0 起 MVS", html)
+        self.assertIn('id="geometry-count"', html)
+        self.assertIn("几何状态", html)
+        self.assertIn("ProjectGlyphGeometryRegistry", script)
+        self.assertIn("项目字形缺失，停止输出", script)
+        self.assertIn("系统拒绝显示字体的错误默认字形", script)
 
     def test_engine_runtime_urls_are_versioned_with_package_release(self):
         package = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))
@@ -48,6 +53,8 @@ class ProductContractTests(unittest.TestCase):
         self.assertIn(f'semantic_glyph_engine.mjs?v={version}', script)
         self.assertIn(f'mongolian_lexical_controls.mjs?v={version}', script)
         self.assertIn(f's2-semantic-registry.json?v={version}', script)
+        self.assertIn(f'project_glyph_geometry.mjs?v={version}', script)
+        self.assertIn(f'project-glyph-geometry.json?v={version}', script)
 
     def test_official_experience_uses_native_vertical_layout(self):
         html = (ROOT / "demos/input/ai-chat.html").read_text(encoding="utf-8")

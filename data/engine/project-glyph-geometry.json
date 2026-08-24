@@ -1,0 +1,362 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-08-25",
+  "phase": "S2.2",
+  "coordinateSystem": {
+    "name": "logical-font-space-x-forward-y-up",
+    "flowAxis": "positive-x-before-vertical-rotation",
+    "verticalMapping": "leading-edge-to-top; trailing-edge-to-bottom"
+  },
+  "licensePolicy": "Only Mongol AI original outlines or explicitly OFL-compatible derived outlines may be registered.",
+  "summary": {
+    "requirementCount": 18,
+    "assetCount": 0,
+    "readyCount": 0,
+    "missingCount": 18
+  },
+  "requirements": [
+    {
+      "id": "geometry-s2-role-002-medial",
+      "semanticRole": "MONGOLIAN_A.medial.form3",
+      "semanticTargetId": "s2-role-002-medial",
+      "joiningState": "medial",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-012-medial",
+      "semanticRole": "MONGOLIAN_NA.medial.form3",
+      "semanticTargetId": "s2-role-012-medial",
+      "joiningState": "medial",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-013-medial",
+      "semanticRole": "MONGOLIAN_NA.medial.form4",
+      "semanticTargetId": "s2-role-013-medial",
+      "joiningState": "medial",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-016-medial",
+      "semanticRole": "MONGOLIAN_QA.medial.form3",
+      "semanticTargetId": "s2-role-016-medial",
+      "joiningState": "medial",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-019-medial",
+      "semanticRole": "MONGOLIAN_GA.medial.form3",
+      "semanticTargetId": "s2-role-019-medial",
+      "joiningState": "medial",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-025-medial",
+      "semanticRole": "MONGOLIAN_JA.medial.form2",
+      "semanticTargetId": "s2-role-025-medial",
+      "joiningState": "medial",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-039-medial",
+      "semanticRole": "MONGOLIAN_SIBE_I.medial.form2",
+      "semanticTargetId": "s2-role-039-medial",
+      "joiningState": "medial",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-046-initial",
+      "semanticRole": "MONGOLIAN_SIBE_ZA.initial.form2",
+      "semanticTargetId": "s2-role-046-initial",
+      "joiningState": "initial",
+      "requiredAnchors": {
+        "entry": false,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-046-medial",
+      "semanticRole": "MONGOLIAN_SIBE_ZA.medial.form2",
+      "semanticTargetId": "s2-role-046-medial",
+      "joiningState": "medial",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-047-medial",
+      "semanticRole": "MONGOLIAN_MANCHU_I.medial.form2",
+      "semanticTargetId": "s2-role-047-medial",
+      "joiningState": "medial",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-049-medial",
+      "semanticRole": "MONGOLIAN_MANCHU_I.medial.form4",
+      "semanticTargetId": "s2-role-049-medial",
+      "joiningState": "medial",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-052-medial",
+      "semanticRole": "MONGOLIAN_MANCHU_KA.medial.form4",
+      "semanticTargetId": "s2-role-052-medial",
+      "joiningState": "medial",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-056-isolate",
+      "semanticRole": "MONGOLIAN_ALI_GALI_A.isolate.form2",
+      "semanticTargetId": "s2-role-056-isolate",
+      "joiningState": "isolate",
+      "requiredAnchors": {
+        "entry": false,
+        "exit": false
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-057-final",
+      "semanticRole": "MONGOLIAN_ALI_GALI_A.final.form3",
+      "semanticTargetId": "s2-role-057-final",
+      "joiningState": "final",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": false
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-058-final",
+      "semanticRole": "MONGOLIAN_ALI_GALI_A.final.form4",
+      "semanticTargetId": "s2-role-058-final",
+      "joiningState": "final",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": false
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-059-final",
+      "semanticRole": "MONGOLIAN_ALI_GALI_I.final.form2",
+      "semanticTargetId": "s2-role-059-final",
+      "joiningState": "final",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": false
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-060-initial",
+      "semanticRole": "MONGOLIAN_ALI_GALI_NGA.initial.form2",
+      "semanticTargetId": "s2-role-060-initial",
+      "joiningState": "initial",
+      "requiredAnchors": {
+        "entry": false,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    },
+    {
+      "id": "geometry-s2-role-060-medial",
+      "semanticRole": "MONGOLIAN_ALI_GALI_NGA.medial.form2",
+      "semanticTargetId": "s2-role-060-medial",
+      "joiningState": "medial",
+      "requiredAnchors": {
+        "entry": true,
+        "exit": true
+      },
+      "constraints": {
+        "positiveAdvance": true,
+        "nonEmptyPath": true,
+        "nonEmptyBoundingBox": true,
+        "edgeToleranceEm": 0.02,
+        "stemAlignmentToleranceEm": 0.04,
+        "controlGlyphsForbidden": true
+      },
+      "assetStatus": "missing"
+    }
+  ],
+  "assets": []
+}
