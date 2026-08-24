@@ -26,6 +26,8 @@ jobs:
         run: npm ci
       - name: Compile Python modules
         run: python -m compileall -q core nlp modules scripts tests
+      - name: Verify publishable browser runtime
+        run: npm run check:pages-runtime
       - name: Run regression tests
         run: python -m unittest discover -v
       - name: Run deterministic engine tests

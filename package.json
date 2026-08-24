@@ -1,12 +1,13 @@
 {
   "name": "mongol-ai",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "private": true,
   "type": "module",
   "description": "Deterministic Traditional Mongolian input and shaping laboratory",
   "scripts": {
     "test": "python3 -m unittest discover && node --test tests/js/*.test.mjs",
-    "check:engine": "node --check core/mongolian_super_engine.mjs && node --check core/correctness_evaluator.mjs && node --check core/semantic_glyph_engine.mjs && node --check core/web_corpus.mjs && node --check tools/corpus/crawl.mjs && node --check engine/engine-lab.mjs && node --check review/review.mjs",
+    "check:engine": "node --check core/mongolian_super_engine.mjs && node --check core/correctness_evaluator.mjs && node --check core/semantic_glyph_engine.mjs && node --check core/web_corpus.mjs && node --check tools/corpus/crawl.mjs && node --check engine/engine-bootstrap.js && node --check engine/engine-lab.mjs && node --check review/review.mjs && npm run check:pages-runtime",
+    "check:pages-runtime": "node scripts/check_pages_runtime.mjs",
     "build:s1": "python3 scripts/build_s1_review_queue.py data/quality/mongolian-unicode-cases.json data/quality/s1-review-queue.json && python3 scripts/build_s1_context_matrix.py data/quality/s1-review-queue.json data/quality/s1-context-matrix.json && node scripts/build_s1_machine_evidence.mjs data/quality/s1-review-queue.json data/quality/s1-machine-evidence.json",
     "build:s2": "node scripts/build_s2_semantic_registry.mjs data/quality/s1-review-queue.json data/quality/s1-context-matrix.json data/quality/s1-machine-evidence.json data/engine/s2-semantic-registry.json",
     "crawl:s2": "node tools/corpus/crawl.mjs --sources data/corpus/sources.json --output data/corpus/observations.json --delay-ms 1500",

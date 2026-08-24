@@ -18,6 +18,11 @@ const declaredProfile = document.querySelector("#declared-profile");
 let isComposing = false;
 let imeEvents = [];
 
+const requestedProfile = new URLSearchParams(window.location.search).get("profile");
+if (requestedProfile && Object.hasOwn(PROFILES, requestedProfile)) {
+    profile.value = requestedProfile;
+}
+
 function codePoints(text) {
     return Array.from(text, (character) => `U+${character.codePointAt(0).toString(16).toUpperCase().padStart(4, "0")}`);
 }
@@ -156,7 +161,9 @@ try {
     document.querySelector("#font-hash").textContent = report.fontSha256;
     document.querySelector("#override-count").textContent = `${report.approvedOverrides} 条已批准`;
     run();
+    window.dispatchEvent(new CustomEvent("mongol-engine-ready"));
 } catch (error) {
     setStatus("引擎初始化失败", "blocked");
     output.textContent = error.message;
+    window.dispatchEvent(new CustomEvent("mongol-engine-failed", { detail: error.message }));
 }

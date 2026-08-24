@@ -1,4 +1,6 @@
 import re
+import hashlib
+import json
 import unittest
 from pathlib import Path
 
@@ -7,6 +9,23 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class ProductContractTests(unittest.TestCase):
+    def test_pages_engine_uses_locked_publishable_runtime(self):
+        core = (ROOT / "core/mongolian_super_engine.mjs").read_text(encoding="utf-8")
+        vendor = ROOT / "assets/vendor/harfbuzzjs"
+        manifest = json.loads((vendor / "manifest.json").read_text(encoding="utf-8"))
+        self.assertIn('../assets/vendor/harfbuzzjs/index.mjs', core)
+        self.assertNotRegex(core, r'from\s+["\'][^"\']*node_modules/')
+        for name, expected in manifest["files"].items():
+            self.assertEqual(hashlib.sha256((vendor / name).read_bytes()).hexdigest(), expected)
+
+    def test_engine_page_reports_module_load_failure_instead_of_hanging(self):
+        html = (ROOT / "engine/index.html").read_text(encoding="utf-8")
+        bootstrap = (ROOT / "engine/engine-bootstrap.js").read_text(encoding="utf-8")
+        self.assertIn('<script src="engine-bootstrap.js"></script>', html)
+        self.assertLess(html.index("engine-bootstrap.js"), html.index("engine-lab.mjs"))
+        self.assertIn("引擎资源加载失败", bootstrap)
+        self.assertIn("mongol-engine-ready", bootstrap)
+
     def test_official_experience_uses_native_vertical_layout(self):
         html = (ROOT / "demos/input/ai-chat.html").read_text(encoding="utf-8")
         engine_css = (ROOT / "core/mongolian_layout_engine.css").read_text(encoding="utf-8")

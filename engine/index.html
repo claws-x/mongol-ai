@@ -13,9 +13,9 @@
     </nav>
     <main>
         <header>
-            <p class="eyebrow">PHASE S0 · LOSSLESS + DETERMINISTIC</p>
+            <p class="eyebrow">PHASE S2 · SEMANTICS → GLYPH → GEOMETRY</p>
             <h1>确定性传统蒙古文引擎实验室</h1>
-            <p class="lead">输入原文永久保留；编码、输入法协议、字形塑形和视觉输出分层处理。系统不会把未经母语确认的字体结果冒充“正确蒙古文”。</p>
+            <p class="lead">输入原文永久保留；编码、语义、字形计算、几何与纵向输出分层处理。Unicode、输入法、字体和塑形库都是可核验的证据源，不是单一真相。</p>
         </header>
 
         <section class="warning" aria-labelledby="boundary-title">
@@ -90,9 +90,10 @@
                 <div><dt>字体 SHA-256</dt><dd id="font-hash">—</dd></div>
                 <div><dt>字形覆盖规则</dt><dd id="override-count">—</dd></div>
             </dl>
-            <p>规则覆盖只有在具体码位、字体哈希、正确截图和人工复核全部齐备后才能标记为 approved。现在没有任何“猜出来”的覆盖规则。</p>
+            <p>规则覆盖必须记录具体码位、上下文、字体哈希与可复现依据；截图只用于视觉回归，不作为字形真值。现在没有任何“猜出来”的闭源编码映射。</p>
         </section>
     </main>
+    <script src="engine-bootstrap.js"></script>
     <script type="module" src="engine-lab.mjs"></script>
 </body>
 </html>
