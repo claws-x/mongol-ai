@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "unicodeVersion": "17.0.0",
+  "property": "Joining_Type",
+  "defaultValue": "U",
+  "source": "https://www.unicode.org/Public/17.0.0/ucd/extracted/DerivedJoiningType.txt",
+  "sourceSha256": "f39ebe974825d6736aee15582250307aa532b2cfab3caf3f86bd23fddc9c5c4d",
+  "terms": "https://www.unicode.org/terms_of_use.html",
+  "scope": "Mongolian-script ranges and format controls required by the S2.1 context model",
+  "ranges": [
+    { "start": "U+1807", "end": "U+1807", "value": "D", "name": "MONGOLIAN SIBE SYLLABLE BOUNDARY MARKER" },
+    { "start": "U+180A", "end": "U+180A", "value": "C", "name": "MONGOLIAN NIRUGU" },
+    { "start": "U+180B", "end": "U+180D", "value": "T", "name": "MONGOLIAN FREE VARIATION SELECTORS" },
+    { "start": "U+180F", "end": "U+180F", "value": "T", "name": "MONGOLIAN FREE VARIATION SELECTOR FOUR" },
+    { "start": "U+1820", "end": "U+1842", "value": "D", "name": "MONGOLIAN LETTER A..MONGOLIAN LETTER CHI" },
+    { "start": "U+1843", "end": "U+1843", "value": "D", "name": "MONGOLIAN LETTER TODO LONG VOWEL SIGN" },
+    { "start": "U+1844", "end": "U+1878", "value": "D", "name": "MONGOLIAN LETTER TODO E..MONGOLIAN LETTER CHA WITH TWO DOTS" },
+    { "start": "U+1885", "end": "U+1886", "value": "T", "name": "MONGOLIAN ALI GALI BALUDA MARKS" },
+    { "start": "U+1887", "end": "U+18A8", "value": "D", "name": "MONGOLIAN LETTER ALI GALI A..MONGOLIAN LETTER MANCHU ALI GALI BHA" },
+    { "start": "U+18A9", "end": "U+18A9", "value": "T", "name": "MONGOLIAN LETTER ALI GALI DAGALGA" },
+    { "start": "U+18AA", "end": "U+18AA", "value": "D", "name": "MONGOLIAN LETTER MANCHU ALI GALI LHA" },
+    { "start": "U+200D", "end": "U+200D", "value": "C", "name": "ZERO WIDTH JOINER" }
+  ],
+  "explicitBoundaries": [
+    { "codePoint": "U+180E", "value": "U", "name": "MONGOLIAN VOWEL SEPARATOR" },
+    { "codePoint": "U+200C", "value": "U", "name": "ZERO WIDTH NON-JOINER" },
+    { "codePoint": "U+202F", "value": "U", "name": "NARROW NO-BREAK SPACE" }
+  ]
+}

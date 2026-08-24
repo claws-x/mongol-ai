@@ -69,6 +69,14 @@
                 </table>
             </div>
             <ul id="issue-list" class="issues"></ul>
+            <h3>S2.1 上下文语义轨迹</h3>
+            <p class="note">字位由锁定的 Unicode Joining_Type 17.0.0 计算；FVS 保持原位但不参与相邻连接判断。</p>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>片段</th><th>Joining_Type</th><th>计算字位</th><th>语义角色</th><th>后端状态</th></tr></thead>
+                    <tbody id="semantic-body"></tbody>
+                </table>
+            </div>
         </section>
 
         <section class="provenance" aria-labelledby="ime-evidence-title">
@@ -89,6 +97,7 @@
                 <div><dt>HarfBuzz</dt><dd id="hb-version">—</dd></div>
                 <div><dt>字体 SHA-256</dt><dd id="font-hash">—</dd></div>
                 <div><dt>字形覆盖规则</dt><dd id="override-count">—</dd></div>
+                <div><dt>Joining_Type</dt><dd>Unicode 17.0.0</dd></div>
             </dl>
             <p>规则覆盖必须记录具体码位、上下文、字体哈希与可复现依据；截图只用于视觉回归，不作为字形真值。现在没有任何“猜出来”的闭源编码映射。</p>
         </section>

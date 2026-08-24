@@ -1,3 +1,5 @@
+import { computeJoiningStates, tokenJoiningType } from "./unicode_joining.mjs";
+
 const FVS = new Set([0x180B, 0x180C, 0x180D, 0x180F]);
 const MVS = 0x180E;
 const ZWNJ = 0x200C;
@@ -29,13 +31,13 @@ export function tokenizeMongolianInput(text) {
             while (index + 1 < characters.length) {
                 const next = characters[index + 1];
                 const nextCodePoint = next.codePointAt(0);
-                if (!FVS.has(nextCodePoint) && nextCodePoint !== MVS) break;
+                if (!FVS.has(nextCodePoint)) break;
                 index += 1;
                 codepoints.push(codePointLabel(next));
                 controls.push(codePointLabel(next));
             }
             tokens.push({ type: "mongolian-grapheme", text: characters.slice(index - controls.length, index + 1).join(""), codepoints, controls });
-        } else if ([ZWNJ, ZWJ, NNBSP].includes(codePoint)) {
+        } else if ([MVS, ZWNJ, ZWJ, NNBSP].includes(codePoint)) {
             tokens.push({ type: "format-control", text: character, codepoints: [codePointLabel(character)], controls: [codePointLabel(character)] });
         } else {
             tokens.push({ type: "literal", text: character, codepoints: [codePointLabel(character)], controls: [] });
@@ -45,12 +47,7 @@ export function tokenizeMongolianInput(text) {
 }
 
 export function inferExplicitJoiningState(tokens, tokenIndex) {
-    const before = tokens[tokenIndex - 1]?.codepoints.includes("U+200D") ?? false;
-    const after = tokens[tokenIndex + 1]?.codepoints.includes("U+200D") ?? false;
-    if (before && after) return "medial";
-    if (after) return "initial";
-    if (before) return "final";
-    return "isolate";
+    return computeJoiningStates(tokens).get(tokenIndex) ?? "isolate";
 }
 
 export class SemanticGlyphRegistry {
@@ -85,11 +82,13 @@ export class SemanticGlyphRegistry {
 
     resolveText(text, joiningStates = new Map()) {
         const tokens = tokenizeMongolianInput(text);
+        const inferredStates = computeJoiningStates(tokens);
         return tokens.map((token, index) => {
-            if (token.type !== "mongolian-grapheme" || token.controls.length === 0) return { ...token, resolution: null };
-            const explicit = inferExplicitJoiningState(tokens, index);
-            const joiningState = joiningStates.get(index) ?? explicit;
-            return { ...token, resolution: this.resolve(token.codepoints, joiningState) };
+            const joiningType = tokenJoiningType(token);
+            if (token.type !== "mongolian-grapheme") return { ...token, joiningType, joiningState: null, resolution: null };
+            const joiningState = joiningStates.get(index) ?? inferredStates.get(index) ?? "isolate";
+            const resolution = token.controls.length > 0 ? this.resolve(token.codepoints, joiningState) : null;
+            return { ...token, joiningType, joiningState, resolution };
         });
     }
 }

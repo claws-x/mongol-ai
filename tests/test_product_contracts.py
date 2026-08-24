@@ -26,6 +26,14 @@ class ProductContractTests(unittest.TestCase):
         self.assertIn("引擎资源加载失败", bootstrap)
         self.assertIn("mongol-engine-ready", bootstrap)
 
+    def test_engine_page_exposes_s2_context_trace(self):
+        html = (ROOT / "engine/index.html").read_text(encoding="utf-8")
+        script = (ROOT / "engine/engine-lab.mjs").read_text(encoding="utf-8")
+        self.assertIn('id="semantic-body"', html)
+        self.assertIn("Unicode Joining_Type 17.0.0", html)
+        self.assertIn("SemanticGlyphRegistry", script)
+        self.assertIn("semanticTrace", script)
+
     def test_official_experience_uses_native_vertical_layout(self):
         html = (ROOT / "demos/input/ai-chat.html").read_text(encoding="utf-8")
         engine_css = (ROOT / "core/mongolian_layout_engine.css").read_text(encoding="utf-8")

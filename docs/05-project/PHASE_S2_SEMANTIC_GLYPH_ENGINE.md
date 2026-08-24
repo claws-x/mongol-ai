@@ -1,7 +1,9 @@
 # Phase S2 — 语义字形计算引擎
 
-**当前子阶段**：S2.0 Foundation 已实现  
-**版本**：0.5.0  
+**当前子阶段**：S2.1 Context Model 进行中
+
+**版本**：0.6.0
+
 **日期**：2026-08-24
 
 ## 目标
@@ -35,14 +37,25 @@
 - 大规模、多地区、多类型网页语料；
 - 完整的多列竖排输出接入。
 
-## 下一子阶段：S2.1 Context Model
+## S2.1 已交付的确定性纵向切片
 
-1. 引入版本锁定的 Unicode Joining_Type 数据；
-2. 从网页语料生成词与控制符共现索引；
-3. 计算真实文本中的 isolate／initial／medial／final；
-4. 将语义解析器接入引擎实验室；
-5. 为 `MONGOLIAN_A.medial.form3` 建立第一套项目字形几何接口，但不复制闭源轮廓；
-6. 对所有18个 `project-glyph-required` 目标建立失败测试。
+- 锁定 Unicode 17.0.0 `DerivedJoiningType.txt` 的来源 URL 与 SHA-256；
+- 抽取蒙古文相关的 `D`、`C`、`T` 和默认 `U` 连接属性，版本化保存；
+- 普通蒙古文单词自动计算 isolate／initial／medial／final，不再依赖人为插入 ZWJ；
+- FVS 保留在原始 grapheme 中并作为 Transparent 处理，不破坏相邻连接；
+- NNBSP、MVS、ZWNJ 明确断开连接，Nirugu 与 ZWJ 明确促成连接；
+- 引擎实验室展示每个 grapheme 的 Joining_Type、计算字位、semanticRole 与后端状态；
+- 18个 `project-glyph-required` 目标全部具有显式失败状态测试。
+
+这套模型计算字符连接位置，不擅自推断词义，也不把字体输出倒推为 Unicode 语义。
+
+## S2.1 接下来完成
+
+1. 从网页语料生成词与控制符共现索引；
+2. 建立 MVS、NNBSP 与后缀的词法语义层，不和 Joining_Type 混为一谈；
+3. 为 `MONGOLIAN_A.medial.form3` 建立第一套原创项目字形几何接口；
+4. 定义连接入口、出口、主干、推进量和边界框断言；
+5. 将语义角色选择真正接到几何后端，而不只展示诊断轨迹。
 
 ## Ollama 使用边界
 

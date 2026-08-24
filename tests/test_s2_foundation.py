@@ -14,6 +14,15 @@ class PhaseS2FoundationTests(unittest.TestCase):
         cls.registry = json.loads((ROOT / "data/engine/s2-semantic-registry.json").read_text(encoding="utf-8"))
         cls.sources = json.loads((ROOT / "data/corpus/sources.json").read_text(encoding="utf-8"))
         cls.observations = json.loads((ROOT / "data/corpus/observations.json").read_text(encoding="utf-8"))
+        cls.joining = json.loads((ROOT / "data/unicode/joining-types-17.0.0.json").read_text(encoding="utf-8"))
+
+    def test_joining_data_is_version_locked_to_unicode_17(self):
+        self.assertEqual(self.joining["unicodeVersion"], "17.0.0")
+        self.assertEqual(self.joining["property"], "Joining_Type")
+        self.assertRegex(self.joining["sourceSha256"], r"^[0-9a-f]{64}$")
+        self.assertEqual(self.joining["defaultValue"], "U")
+        values = {record["value"] for record in self.joining["ranges"]}
+        self.assertTrue({"C", "D", "T"}.issubset(values))
 
     def test_semantic_registry_is_reproducible(self):
         with tempfile.TemporaryDirectory() as directory:

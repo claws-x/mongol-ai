@@ -1,4 +1,5 @@
 import { MongolianSuperEngine, PROFILES } from "../core/mongolian_super_engine.mjs";
+import { SemanticGlyphRegistry } from "../core/semantic_glyph_engine.mjs";
 
 const engine = new MongolianSuperEngine();
 const form = document.querySelector("#engine-form");
@@ -15,8 +16,10 @@ const imeDetail = document.querySelector("#ime-detail");
 const compositionCount = document.querySelector("#composition-count");
 const lastCommit = document.querySelector("#last-commit");
 const declaredProfile = document.querySelector("#declared-profile");
+const semanticBody = document.querySelector("#semantic-body");
 let isComposing = false;
 let imeEvents = [];
+let semanticRegistry = null;
 
 const requestedProfile = new URLSearchParams(window.location.search).get("profile");
 if (requestedProfile && Object.hasOwn(PROFILES, requestedProfile)) {
@@ -72,9 +75,34 @@ function renderDiagnostics(inputDocument) {
     return diagnostics;
 }
 
+function semanticTrace(text) {
+    return semanticRegistry ? semanticRegistry.resolveText(text) : [];
+}
+
+function renderSemanticTrace(trace) {
+    const graphemes = trace.filter((token) => token.type === "mongolian-grapheme");
+    semanticBody.replaceChildren(...graphemes.map((token) => {
+        const row = document.createElement("tr");
+        const values = [
+            token.text,
+            token.joiningType,
+            token.joiningState,
+            token.resolution?.semanticRole ?? (token.controls.length ? token.resolution?.status : "基础字母／无 FVS"),
+            token.resolution?.backend?.status ?? "由字体后端塑形",
+        ];
+        values.forEach((value) => {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            row.appendChild(cell);
+        });
+        return row;
+    }));
+}
+
 function run() {
     const inputDocument = engine.createDocument(source.value, profile.value);
     const diagnostics = renderDiagnostics(inputDocument);
+    renderSemanticTrace(semanticTrace(inputDocument.raw));
     profileNote.textContent = `${PROFILES[profile.value].note} 依据：${PROFILES[profile.value].evidence}`;
     declaredProfile.textContent = PROFILES[profile.value].label;
     output.replaceChildren();
@@ -143,6 +171,7 @@ document.querySelector("#export-evidence").addEventListener("click", () => {
         raw: inputDocument.raw,
         codePoints: inputDocument.tokens.map((token) => token.label),
         diagnostics: inputDocument.diagnostics(),
+        semanticTrace: semanticTrace(inputDocument.raw),
         events: imeEvents,
         engine: engine.report(),
     };
@@ -155,7 +184,12 @@ document.querySelector("#export-evidence").addEventListener("click", () => {
 });
 
 try {
-    const report = await engine.init();
+    const [report, registryResponse] = await Promise.all([
+        engine.init(),
+        fetch(new URL("../data/engine/s2-semantic-registry.json", import.meta.url)),
+    ]);
+    if (!registryResponse.ok) throw new Error(`semantic registry HTTP ${registryResponse.status}`);
+    semanticRegistry = new SemanticGlyphRegistry(await registryResponse.json());
     document.querySelector("#engine-version").textContent = report.version;
     document.querySelector("#hb-version").textContent = report.harfbuzz;
     document.querySelector("#font-hash").textContent = report.fontSha256;

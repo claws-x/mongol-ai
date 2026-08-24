@@ -171,13 +171,15 @@ glyph ID 只属于具体字体版本，不能代替 `semanticRole`。不同字�
 - GitHub Pages 提供引擎实验室和证据检查界面。
 - S2.0 已把93个 Unicode 声明目标转换为稳定 `semanticRole`；当前后端75个具体目标可响应、18个具体目标需要项目字形；
 - S2.0 网页语料管线已能检查 robots/TLS、限速抓取、无损提取控制符并生成码位统计。
+- S2.1 已锁定 Unicode 17.0.0 `Joining_Type`，普通蒙古文单词无需注入 ZWJ 即可计算 isolate／initial／medial／final；连接边界、透明选择符和促连字符均有自动断言。
 
 这些数字描述**当前后端的可观察行为**，不代表“83 个字已经被专家批准”，
 也不表示开发必须停下来等待批准。
 
 ## 8. 当前阶段：S2 语义字形计算引擎
 
-S2.0 Foundation 已于 2026-08-24 落地；当前进入 S2.1 Context Model。阶段事实与
+S2.0 Foundation 已于 2026-08-24 落地；S2.1 Context Model 的确定性连接状态
+纵向切片已实现，当前继续补充 MVS／NNBSP 词法语义和项目字形几何。阶段事实与
 未完成边界见
 [`PHASE_S2_SEMANTIC_GLYPH_ENGINE.md`](05-project/PHASE_S2_SEMANTIC_GLYPH_ENGINE.md)。
 
