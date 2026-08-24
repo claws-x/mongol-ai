@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.0",
+  "reviewedAt": "2026-08-24",
+  "policy": "Each run rechecks robots.txt. Only short code-point observations and derived statistics may be committed unless redistribution permission is explicit.",
+  "sources": [
+    {
+      "id": "mongolfont-sample",
+      "name": "MongolianFont Traditional Mongolian Unicode sample",
+      "kind": "public-technical-sample",
+      "language": "mn-Mong",
+      "seedUrls": [
+        "https://mongolfont.com/en/font/mnglwritingaat.html"
+      ],
+      "enabled": false,
+      "disabledReason": "TLS certificate hostname mismatch observed on 2026-08-24; crawler must not bypass certificate validation.",
+      "selectionReason": "Public page contains Traditional Mongolian Unicode sample text and identifies its font implementation.",
+      "license": "site-terms-unknown-text-observation-only",
+      "redistributable": false,
+      "sourceEvidence": "https://mongolfont.com/en/font/mnglwritingaat.html"
+    },
+    {
+      "id": "unesun-sambara-editor",
+      "name": "unesun sambarA Mongolian text editor",
+      "kind": "public-editor-sample",
+      "language": "mn-Mong",
+      "seedUrls": [
+        "https://unesun-sambara.com/"
+      ],
+      "enabled": true,
+      "selectionReason": "Public editor page exposes Unicode Mongolian labels and format-control examples.",
+      "license": "site-terms-unknown-text-observation-only",
+      "redistributable": false,
+      "sourceEvidence": "https://unesun-sambara.com/"
+    },
+    {
+      "id": "lianghai-mongolian-resources",
+      "name": "Liang Hai Mongolian public resources",
+      "kind": "public-research-index",
+      "language": "mn-Mong",
+      "seedUrls": [
+        "https://lianghai.github.io/mongolian/"
+      ],
+      "enabled": true,
+      "selectionReason": "Public research index contains Unicode Mongolian examples and links useful for later source discovery.",
+      "license": "site-terms-unknown-text-observation-only",
+      "redistributable": false,
+      "sourceEvidence": "https://lianghai.github.io/mongolian/"
+    },
+    {
+      "id": "mngl-refined-model",
+      "name": "Refined model public Traditional Mongolian page",
+      "kind": "public-implementation-sample",
+      "language": "mn-Mong",
+      "seedUrls": [
+        "https://www.mngl.net/en/"
+      ],
+      "enabled": false,
+      "disabledReason": "TLS SNI handshake failure observed on 2026-08-24; crawler must not weaken TLS to access the site.",
+      "selectionReason": "Public page contains extensive Traditional Mongolian text including supplementary characters; observations must remain separate from its implementation claims.",
+      "license": "site-terms-unknown-text-observation-only",
+      "redistributable": false,
+      "sourceEvidence": "https://www.mngl.net/en/"
+    },
+    {
+      "id": "unicode-utn57",
+      "name": "Unicode Technical Note 57",
+      "kind": "standard-reference-not-natural-corpus",
+      "language": "en",
+      "seedUrls": [
+        "https://www.unicode.org/notes/tn57/"
+      ],
+      "enabled": false,
+      "selectionReason": "Normative-adjacent technical reference kept outside natural-usage corpus statistics.",
+      "license": "unicode-terms-of-use",
+      "redistributable": false,
+      "sourceEvidence": "https://www.unicode.org/notes/tn57/"
+    }
+  ]
+}

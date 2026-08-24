@@ -173,7 +173,7 @@
     <div class="shell">
         <header>
             <div class="brand">Mongol AI</div>
-            <div class="phase">Phase 0–2 · Alpha</div>
+            <div class="phase">Phase S2.0 · Semantic Engine Foundation</div>
         </header>
 
         <main>
@@ -182,13 +182,13 @@
                     <div class="eyebrow">无损输入与确定性字形研究</div>
                     <h1 id="hero-title">不再把“能竖排”冒充“字形正确”</h1>
                     <p class="lead">
-                        新引擎逐码位保存原文，锁定 HarfBuzz 与字体生成可复现 SVG，并拒绝猜测转换私有编码。具体词形只有经过真实输入法样本和人工复核后才会标记为正确。
+                        新引擎逐码位保存原文，把输入编码、语义字形和最终轮廓分层。93个标准目标已经进入语义注册表；公开网页语料、字体与输入法作为交叉证据，不是唯一裁判。
                     </p>
                     <a class="primary-action" data-primary-action="true" href="engine/index.html">进入确定性引擎实验室</a>
                 </div>
-                <div class="hero-script" aria-label="蒙古文字形审核状态">
-                    <strong>字形审核闸门</strong>
-                    <span>当前旧示例已撤下。没有母语确认和输入法对照，不发布“正确示范”。</span>
+                <div class="hero-script" aria-label="蒙古文语义引擎状态">
+                    <strong>S2 语义字形层</strong>
+                    <span>输入 → 语义角色 → 后端状态 → 字形几何。截图只做视觉回归，不作为字形真值。</span>
                 </div>
             </section>
 
@@ -205,8 +205,8 @@
                         <p>HarfBuzz WASM、字体文件和字形指纹全部锁定，输出不再随浏览器塑形器漂移。</p>
                     </article>
                     <article class="card">
-                        <h3>Unicode 编码诊断</h3>
-                        <p>识别 FVS 等格式控制符和异常码位，不修改用户原文，也不冒充语言学判断。</p>
+                        <h3>语义字形注册表</h3>
+                        <p>93个 Unicode 声明目标已获得稳定 semanticRole；后端缺失会明确进入 project-glyph-required。</p>
                     </article>
                 </div>
             </section>
@@ -225,6 +225,8 @@
                         <a class="labs-link" href="knowledge/index.html">打开科研知识库</a>
                         <a class="labs-link" href="engine/index.html">打开确定性引擎</a>
                         <a class="labs-link" href="review/index.html">打开 Phase S1 正确性审核台</a>
+                        <a class="labs-link" href="data/engine/s2-semantic-registry.json">查看 S2 语义注册表</a>
+                        <a class="labs-link" href="data/corpus/stats.json">查看网页语料统计</a>
                     </div>
                     <div>
                         <h3>历史实验归入 Labs</h3>
@@ -236,7 +238,7 @@
         </main>
 
         <footer>
-            开源研究原型 · Phase 0–2 Alpha · <a href="https://github.com/claws-x/mongol-ai">GitHub</a>
+            开源研究原型 · Phase S2.0 Foundation · <a href="https://github.com/claws-x/mongol-ai">GitHub</a>
         </footer>
     </div>
 </body>

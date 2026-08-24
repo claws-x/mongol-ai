@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "raw-codepoint-and-context-observation-not-linguistic-truth",
+  "documentCount": 2,
+  "domainCount": 2,
+  "segmentCount": 2,
+  "mongolianCodePointCount": 23,
+  "codepoints": {
+    "U+180C": 1,
+    "U+1822": 4,
+    "U+1823": 4,
+    "U+1829": 2,
+    "U+182A": 2,
+    "U+182D": 4,
+    "U+182E": 2,
+    "U+182F": 2,
+    "U+1834": 2
+  },
+  "controls": {
+    "U+180C": 1
+  }
+}

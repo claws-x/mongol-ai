@@ -1,0 +1,2899 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-08-08",
+  "phase": "S2",
+  "scope": "semantic-role registry derived from Unicode-declared contexts plus locked-backend observation",
+  "summary": {
+    "targetCount": 93,
+    "semanticRoleCount": 93,
+    "byBackendStatus": {
+      "project-glyph-required": 18,
+      "supported": 75
+    }
+  },
+  "targets": [
+    {
+      "id": "s2-role-001-isolate",
+      "semanticRole": "MONGOLIAN_A.isolate.form2",
+      "character": "MONGOLIAN LETTER A",
+      "baseCodePoint": "U+1820",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1820",
+        "U+180B"
+      ],
+      "joiningState": "isolate",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 226
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          6
+        ],
+        "defaultGlyphIds": [
+          5
+        ]
+      }
+    },
+    {
+      "id": "s2-role-001-medial",
+      "semanticRole": "MONGOLIAN_A.medial.form2",
+      "character": "MONGOLIAN LETTER A",
+      "baseCodePoint": "U+1820",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1820",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 226
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          11
+        ],
+        "defaultGlyphIds": [
+          10
+        ]
+      }
+    },
+    {
+      "id": "s2-role-001-final",
+      "semanticRole": "MONGOLIAN_A.final.form2",
+      "character": "MONGOLIAN LETTER A",
+      "baseCodePoint": "U+1820",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1820",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 226
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          13
+        ],
+        "defaultGlyphIds": [
+          12
+        ]
+      }
+    },
+    {
+      "id": "s2-role-002-medial",
+      "semanticRole": "MONGOLIAN_A.medial.form3",
+      "character": "MONGOLIAN LETTER A",
+      "baseCodePoint": "U+1820",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+1820",
+        "U+180C"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 227
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          10
+        ],
+        "defaultGlyphIds": [
+          10
+        ]
+      }
+    },
+    {
+      "id": "s2-role-003-initial",
+      "semanticRole": "MONGOLIAN_E.initial.form2",
+      "character": "MONGOLIAN LETTER E",
+      "baseCodePoint": "U+1821",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1821",
+        "U+180B"
+      ],
+      "joiningState": "initial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 228
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          17
+        ],
+        "defaultGlyphIds": [
+          16
+        ]
+      }
+    },
+    {
+      "id": "s2-role-003-final",
+      "semanticRole": "MONGOLIAN_E.final.form2",
+      "character": "MONGOLIAN LETTER E",
+      "baseCodePoint": "U+1821",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1821",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 228
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          20
+        ],
+        "defaultGlyphIds": [
+          19
+        ]
+      }
+    },
+    {
+      "id": "s2-role-004-medial",
+      "semanticRole": "MONGOLIAN_I.medial.form2",
+      "character": "MONGOLIAN LETTER I",
+      "baseCodePoint": "U+1822",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1822",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 229
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          27
+        ],
+        "defaultGlyphIds": [
+          26
+        ]
+      }
+    },
+    {
+      "id": "s2-role-005-medial",
+      "semanticRole": "MONGOLIAN_O.medial.form2",
+      "character": "MONGOLIAN LETTER O",
+      "baseCodePoint": "U+1823",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1823",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 230
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          33
+        ],
+        "defaultGlyphIds": [
+          32
+        ]
+      }
+    },
+    {
+      "id": "s2-role-005-final",
+      "semanticRole": "MONGOLIAN_O.final.form2",
+      "character": "MONGOLIAN LETTER O",
+      "baseCodePoint": "U+1823",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1823",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 230
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          35
+        ],
+        "defaultGlyphIds": [
+          34
+        ]
+      }
+    },
+    {
+      "id": "s2-role-006-medial",
+      "semanticRole": "MONGOLIAN_U.medial.form2",
+      "character": "MONGOLIAN LETTER U",
+      "baseCodePoint": "U+1824",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1824",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 231
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          42
+        ],
+        "defaultGlyphIds": [
+          41
+        ]
+      }
+    },
+    {
+      "id": "s2-role-007-medial",
+      "semanticRole": "MONGOLIAN_OE.medial.form2",
+      "character": "MONGOLIAN LETTER OE",
+      "baseCodePoint": "U+1825",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1825",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 232
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          49
+        ],
+        "defaultGlyphIds": [
+          48
+        ]
+      }
+    },
+    {
+      "id": "s2-role-007-final",
+      "semanticRole": "MONGOLIAN_OE.final.form2",
+      "character": "MONGOLIAN LETTER OE",
+      "baseCodePoint": "U+1825",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1825",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 232
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          52
+        ],
+        "defaultGlyphIds": [
+          51
+        ]
+      }
+    },
+    {
+      "id": "s2-role-008-medial",
+      "semanticRole": "MONGOLIAN_OE.medial.form3",
+      "character": "MONGOLIAN LETTER OE",
+      "baseCodePoint": "U+1825",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+1825",
+        "U+180C"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 233
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          50
+        ],
+        "defaultGlyphIds": [
+          48
+        ]
+      }
+    },
+    {
+      "id": "s2-role-009-isolate",
+      "semanticRole": "MONGOLIAN_UE.isolate.form2",
+      "character": "MONGOLIAN LETTER UE",
+      "baseCodePoint": "U+1826",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1826",
+        "U+180B"
+      ],
+      "joiningState": "isolate",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 234
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          55
+        ],
+        "defaultGlyphIds": [
+          54
+        ]
+      }
+    },
+    {
+      "id": "s2-role-009-medial",
+      "semanticRole": "MONGOLIAN_UE.medial.form2",
+      "character": "MONGOLIAN LETTER UE",
+      "baseCodePoint": "U+1826",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1826",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 234
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          61
+        ],
+        "defaultGlyphIds": [
+          60
+        ]
+      }
+    },
+    {
+      "id": "s2-role-009-final",
+      "semanticRole": "MONGOLIAN_UE.final.form2",
+      "character": "MONGOLIAN LETTER UE",
+      "baseCodePoint": "U+1826",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1826",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 234
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          64
+        ],
+        "defaultGlyphIds": [
+          63
+        ]
+      }
+    },
+    {
+      "id": "s2-role-010-medial",
+      "semanticRole": "MONGOLIAN_UE.medial.form3",
+      "character": "MONGOLIAN LETTER UE",
+      "baseCodePoint": "U+1826",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+1826",
+        "U+180C"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 235
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          62
+        ],
+        "defaultGlyphIds": [
+          60
+        ]
+      }
+    },
+    {
+      "id": "s2-role-011-initial",
+      "semanticRole": "MONGOLIAN_NA.initial.form2",
+      "character": "MONGOLIAN LETTER NA",
+      "baseCodePoint": "U+1828",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1828",
+        "U+180B"
+      ],
+      "joiningState": "initial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 236
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          73
+        ],
+        "defaultGlyphIds": [
+          72
+        ]
+      }
+    },
+    {
+      "id": "s2-role-011-medial",
+      "semanticRole": "MONGOLIAN_NA.medial.form2",
+      "character": "MONGOLIAN LETTER NA",
+      "baseCodePoint": "U+1828",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1828",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 236
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          75
+        ],
+        "defaultGlyphIds": [
+          74
+        ]
+      }
+    },
+    {
+      "id": "s2-role-012-medial",
+      "semanticRole": "MONGOLIAN_NA.medial.form3",
+      "character": "MONGOLIAN LETTER NA",
+      "baseCodePoint": "U+1828",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+1828",
+        "U+180C"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 237
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          74
+        ],
+        "defaultGlyphIds": [
+          74
+        ]
+      }
+    },
+    {
+      "id": "s2-role-013-medial",
+      "semanticRole": "MONGOLIAN_NA.medial.form4",
+      "character": "MONGOLIAN LETTER NA",
+      "baseCodePoint": "U+1828",
+      "selectorCodePoint": "U+180D",
+      "inputSequence": [
+        "U+1828",
+        "U+180D"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form4",
+      "desiredAppearance": "fourth form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 238
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          74
+        ],
+        "defaultGlyphIds": [
+          74
+        ]
+      }
+    },
+    {
+      "id": "s2-role-014-final",
+      "semanticRole": "MONGOLIAN_BA.final.form2",
+      "character": "MONGOLIAN LETTER BA",
+      "baseCodePoint": "U+182A",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+182A",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 239
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          86
+        ],
+        "defaultGlyphIds": [
+          85
+        ]
+      }
+    },
+    {
+      "id": "s2-role-015-isolate",
+      "semanticRole": "MONGOLIAN_QA.isolate.form2",
+      "character": "MONGOLIAN LETTER QA",
+      "baseCodePoint": "U+182C",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+182C",
+        "U+180B"
+      ],
+      "joiningState": "isolate",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 240
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          92
+        ],
+        "defaultGlyphIds": [
+          91
+        ]
+      }
+    },
+    {
+      "id": "s2-role-015-initial",
+      "semanticRole": "MONGOLIAN_QA.initial.form2",
+      "character": "MONGOLIAN LETTER QA",
+      "baseCodePoint": "U+182C",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+182C",
+        "U+180B"
+      ],
+      "joiningState": "initial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 240
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          96
+        ],
+        "defaultGlyphIds": [
+          95
+        ]
+      }
+    },
+    {
+      "id": "s2-role-015-medial",
+      "semanticRole": "MONGOLIAN_QA.medial.form2",
+      "character": "MONGOLIAN LETTER QA",
+      "baseCodePoint": "U+182C",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+182C",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 240
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          100
+        ],
+        "defaultGlyphIds": [
+          101
+        ]
+      }
+    },
+    {
+      "id": "s2-role-016-medial",
+      "semanticRole": "MONGOLIAN_QA.medial.form3",
+      "character": "MONGOLIAN LETTER QA",
+      "baseCodePoint": "U+182C",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+182C",
+        "U+180C"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 241
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          101
+        ],
+        "defaultGlyphIds": [
+          101
+        ]
+      }
+    },
+    {
+      "id": "s2-role-017-medial",
+      "semanticRole": "MONGOLIAN_QA.medial.form4",
+      "character": "MONGOLIAN LETTER QA",
+      "baseCodePoint": "U+182C",
+      "selectorCodePoint": "U+180D",
+      "inputSequence": [
+        "U+182C",
+        "U+180D"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form4",
+      "desiredAppearance": "fourth form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 242
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          99
+        ],
+        "defaultGlyphIds": [
+          101
+        ]
+      }
+    },
+    {
+      "id": "s2-role-018-initial",
+      "semanticRole": "MONGOLIAN_GA.initial.form2",
+      "character": "MONGOLIAN LETTER GA",
+      "baseCodePoint": "U+182D",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+182D",
+        "U+180B"
+      ],
+      "joiningState": "initial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 243
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          110
+        ],
+        "defaultGlyphIds": [
+          109
+        ]
+      }
+    },
+    {
+      "id": "s2-role-018-medial",
+      "semanticRole": "MONGOLIAN_GA.medial.form2",
+      "character": "MONGOLIAN LETTER GA",
+      "baseCodePoint": "U+182D",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+182D",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 243
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          114
+        ],
+        "defaultGlyphIds": [
+          115
+        ]
+      }
+    },
+    {
+      "id": "s2-role-018-final",
+      "semanticRole": "MONGOLIAN_GA.final.form2",
+      "character": "MONGOLIAN LETTER GA",
+      "baseCodePoint": "U+182D",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+182D",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 243
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          117
+        ],
+        "defaultGlyphIds": [
+          118
+        ]
+      }
+    },
+    {
+      "id": "s2-role-019-medial",
+      "semanticRole": "MONGOLIAN_GA.medial.form3",
+      "character": "MONGOLIAN LETTER GA",
+      "baseCodePoint": "U+182D",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+182D",
+        "U+180C"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 244
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          115
+        ],
+        "defaultGlyphIds": [
+          115
+        ]
+      }
+    },
+    {
+      "id": "s2-role-020-medial",
+      "semanticRole": "MONGOLIAN_GA.medial.form4",
+      "character": "MONGOLIAN LETTER GA",
+      "baseCodePoint": "U+182D",
+      "selectorCodePoint": "U+180D",
+      "inputSequence": [
+        "U+182D",
+        "U+180D"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form4",
+      "desiredAppearance": "fourth form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 245
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          113
+        ],
+        "defaultGlyphIds": [
+          115
+        ]
+      }
+    },
+    {
+      "id": "s2-role-021-final",
+      "semanticRole": "MONGOLIAN_SA.final.form2",
+      "character": "MONGOLIAN LETTER SA",
+      "baseCodePoint": "U+1830",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1830",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 246
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          134
+        ],
+        "defaultGlyphIds": [
+          133
+        ]
+      }
+    },
+    {
+      "id": "s2-role-022-final",
+      "semanticRole": "MONGOLIAN_SA.final.form3",
+      "character": "MONGOLIAN LETTER SA",
+      "baseCodePoint": "U+1830",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+1830",
+        "U+180C"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 247
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          135
+        ],
+        "defaultGlyphIds": [
+          133
+        ]
+      }
+    },
+    {
+      "id": "s2-role-023-medial",
+      "semanticRole": "MONGOLIAN_TA.medial.form2",
+      "character": "MONGOLIAN LETTER TA",
+      "baseCodePoint": "U+1832",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1832",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 248
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          146
+        ],
+        "defaultGlyphIds": [
+          145
+        ]
+      }
+    },
+    {
+      "id": "s2-role-024-initial",
+      "semanticRole": "MONGOLIAN_DA.initial.form2",
+      "character": "MONGOLIAN LETTER DA",
+      "baseCodePoint": "U+1833",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1833",
+        "U+180B"
+      ],
+      "joiningState": "initial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 249
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          151
+        ],
+        "defaultGlyphIds": [
+          150
+        ]
+      }
+    },
+    {
+      "id": "s2-role-024-medial",
+      "semanticRole": "MONGOLIAN_DA.medial.form2",
+      "character": "MONGOLIAN LETTER DA",
+      "baseCodePoint": "U+1833",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1833",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 249
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          153
+        ],
+        "defaultGlyphIds": [
+          152
+        ]
+      }
+    },
+    {
+      "id": "s2-role-024-final",
+      "semanticRole": "MONGOLIAN_DA.final.form2",
+      "character": "MONGOLIAN LETTER DA",
+      "baseCodePoint": "U+1833",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1833",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 249
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          155
+        ],
+        "defaultGlyphIds": [
+          154
+        ]
+      }
+    },
+    {
+      "id": "s2-role-025-medial",
+      "semanticRole": "MONGOLIAN_JA.medial.form2",
+      "character": "MONGOLIAN LETTER JA",
+      "baseCodePoint": "U+1835",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1835",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 250
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          163
+        ],
+        "defaultGlyphIds": [
+          163
+        ]
+      }
+    },
+    {
+      "id": "s2-role-026-initial",
+      "semanticRole": "MONGOLIAN_YA.initial.form2",
+      "character": "MONGOLIAN LETTER YA",
+      "baseCodePoint": "U+1836",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1836",
+        "U+180B"
+      ],
+      "joiningState": "initial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 251
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          169
+        ],
+        "defaultGlyphIds": [
+          168
+        ]
+      }
+    },
+    {
+      "id": "s2-role-026-medial",
+      "semanticRole": "MONGOLIAN_YA.medial.form2",
+      "character": "MONGOLIAN LETTER YA",
+      "baseCodePoint": "U+1836",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1836",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 251
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          171
+        ],
+        "defaultGlyphIds": [
+          170
+        ]
+      }
+    },
+    {
+      "id": "s2-role-027-medial",
+      "semanticRole": "MONGOLIAN_YA.medial.form3",
+      "character": "MONGOLIAN LETTER YA",
+      "baseCodePoint": "U+1836",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+1836",
+        "U+180C"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 252
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          172
+        ],
+        "defaultGlyphIds": [
+          170
+        ]
+      }
+    },
+    {
+      "id": "s2-role-028-final",
+      "semanticRole": "MONGOLIAN_WA.final.form2",
+      "character": "MONGOLIAN LETTER WA",
+      "baseCodePoint": "U+1838",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1838",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 253
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          183
+        ],
+        "defaultGlyphIds": [
+          182
+        ]
+      }
+    },
+    {
+      "id": "s2-role-029-medial",
+      "semanticRole": "MONGOLIAN_TODO_E.medial.form2",
+      "character": "MONGOLIAN LETTER TODO E",
+      "baseCodePoint": "U+1844",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1844",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 254
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          232
+        ],
+        "defaultGlyphIds": [
+          231
+        ]
+      }
+    },
+    {
+      "id": "s2-role-030-medial",
+      "semanticRole": "MONGOLIAN_TODO_I.medial.form2",
+      "character": "MONGOLIAN LETTER TODO I",
+      "baseCodePoint": "U+1845",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1845",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 255
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          238
+        ],
+        "defaultGlyphIds": [
+          237
+        ]
+      }
+    },
+    {
+      "id": "s2-role-031-medial",
+      "semanticRole": "MONGOLIAN_TODO_O.medial.form2",
+      "character": "MONGOLIAN LETTER TODO O",
+      "baseCodePoint": "U+1846",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1846",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 256
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          245
+        ],
+        "defaultGlyphIds": [
+          244
+        ]
+      }
+    },
+    {
+      "id": "s2-role-032-isolate",
+      "semanticRole": "MONGOLIAN_TODO_U.isolate.form2",
+      "character": "MONGOLIAN LETTER TODO U",
+      "baseCodePoint": "U+1847",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1847",
+        "U+180B"
+      ],
+      "joiningState": "isolate",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 257
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          248
+        ],
+        "defaultGlyphIds": [
+          247
+        ]
+      }
+    },
+    {
+      "id": "s2-role-032-medial",
+      "semanticRole": "MONGOLIAN_TODO_U.medial.form2",
+      "character": "MONGOLIAN LETTER TODO U",
+      "baseCodePoint": "U+1847",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1847",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 257
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          251
+        ],
+        "defaultGlyphIds": [
+          250
+        ]
+      }
+    },
+    {
+      "id": "s2-role-032-final",
+      "semanticRole": "MONGOLIAN_TODO_U.final.form2",
+      "character": "MONGOLIAN LETTER TODO U",
+      "baseCodePoint": "U+1847",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1847",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 257
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          254
+        ],
+        "defaultGlyphIds": [
+          253
+        ]
+      }
+    },
+    {
+      "id": "s2-role-033-medial",
+      "semanticRole": "MONGOLIAN_TODO_U.medial.form3",
+      "character": "MONGOLIAN LETTER TODO U",
+      "baseCodePoint": "U+1847",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+1847",
+        "U+180C"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 258
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          252
+        ],
+        "defaultGlyphIds": [
+          250
+        ]
+      }
+    },
+    {
+      "id": "s2-role-034-medial",
+      "semanticRole": "MONGOLIAN_TODO_OE.medial.form2",
+      "character": "MONGOLIAN LETTER TODO OE",
+      "baseCodePoint": "U+1848",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1848",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 259
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          259
+        ],
+        "defaultGlyphIds": [
+          258
+        ]
+      }
+    },
+    {
+      "id": "s2-role-035-isolate",
+      "semanticRole": "MONGOLIAN_TODO_UE.isolate.form2",
+      "character": "MONGOLIAN LETTER TODO UE",
+      "baseCodePoint": "U+1849",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1849",
+        "U+180B"
+      ],
+      "joiningState": "isolate",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 260
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          264
+        ],
+        "defaultGlyphIds": [
+          263
+        ]
+      }
+    },
+    {
+      "id": "s2-role-035-medial",
+      "semanticRole": "MONGOLIAN_TODO_UE.medial.form2",
+      "character": "MONGOLIAN LETTER TODO UE",
+      "baseCodePoint": "U+1849",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1849",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 260
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          267
+        ],
+        "defaultGlyphIds": [
+          266
+        ]
+      }
+    },
+    {
+      "id": "s2-role-036-initial",
+      "semanticRole": "MONGOLIAN_TODO_QA.initial.form2",
+      "character": "MONGOLIAN LETTER TODO QA",
+      "baseCodePoint": "U+184D",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+184D",
+        "U+180B"
+      ],
+      "joiningState": "initial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 261
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          288
+        ],
+        "defaultGlyphIds": [
+          287
+        ]
+      }
+    },
+    {
+      "id": "s2-role-036-medial",
+      "semanticRole": "MONGOLIAN_TODO_QA.medial.form2",
+      "character": "MONGOLIAN LETTER TODO QA",
+      "baseCodePoint": "U+184D",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+184D",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 261
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          290
+        ],
+        "defaultGlyphIds": [
+          289
+        ]
+      }
+    },
+    {
+      "id": "s2-role-037-medial",
+      "semanticRole": "MONGOLIAN_TODO_GA.medial.form2",
+      "character": "MONGOLIAN LETTER TODO GA",
+      "baseCodePoint": "U+184E",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+184E",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 262
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          298
+        ],
+        "defaultGlyphIds": [
+          297
+        ]
+      }
+    },
+    {
+      "id": "s2-role-038-medial",
+      "semanticRole": "MONGOLIAN_SIBE_E.medial.form2",
+      "character": "MONGOLIAN LETTER SIBE E",
+      "baseCodePoint": "U+185D",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+185D",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 263
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          370
+        ],
+        "defaultGlyphIds": [
+          369
+        ]
+      }
+    },
+    {
+      "id": "s2-role-038-final",
+      "semanticRole": "MONGOLIAN_SIBE_E.final.form2",
+      "character": "MONGOLIAN LETTER SIBE E",
+      "baseCodePoint": "U+185D",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+185D",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 263
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          372
+        ],
+        "defaultGlyphIds": [
+          371
+        ]
+      }
+    },
+    {
+      "id": "s2-role-039-medial",
+      "semanticRole": "MONGOLIAN_SIBE_I.medial.form2",
+      "character": "MONGOLIAN LETTER SIBE I",
+      "baseCodePoint": "U+185E",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+185E",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 264
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          378
+        ],
+        "defaultGlyphIds": [
+          378
+        ]
+      }
+    },
+    {
+      "id": "s2-role-039-final",
+      "semanticRole": "MONGOLIAN_SIBE_I.final.form2",
+      "character": "MONGOLIAN LETTER SIBE I",
+      "baseCodePoint": "U+185E",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+185E",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 264
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          381
+        ],
+        "defaultGlyphIds": [
+          380
+        ]
+      }
+    },
+    {
+      "id": "s2-role-040-medial",
+      "semanticRole": "MONGOLIAN_SIBE_I.medial.form3",
+      "character": "MONGOLIAN LETTER SIBE I",
+      "baseCodePoint": "U+185E",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+185E",
+        "U+180C"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 265
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          379
+        ],
+        "defaultGlyphIds": [
+          378
+        ]
+      }
+    },
+    {
+      "id": "s2-role-040-final",
+      "semanticRole": "MONGOLIAN_SIBE_I.final.form3",
+      "character": "MONGOLIAN LETTER SIBE I",
+      "baseCodePoint": "U+185E",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+185E",
+        "U+180C"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 265
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          382
+        ],
+        "defaultGlyphIds": [
+          380
+        ]
+      }
+    },
+    {
+      "id": "s2-role-041-medial",
+      "semanticRole": "MONGOLIAN_SIBE_UE.medial.form2",
+      "character": "MONGOLIAN LETTER SIBE UE",
+      "baseCodePoint": "U+1860",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1860",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 266
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          390
+        ],
+        "defaultGlyphIds": [
+          389
+        ]
+      }
+    },
+    {
+      "id": "s2-role-041-final",
+      "semanticRole": "MONGOLIAN_SIBE_UE.final.form2",
+      "character": "MONGOLIAN LETTER SIBE UE",
+      "baseCodePoint": "U+1860",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1860",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 266
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          392
+        ],
+        "defaultGlyphIds": [
+          391
+        ]
+      }
+    },
+    {
+      "id": "s2-role-042-medial",
+      "semanticRole": "MONGOLIAN_SIBE_KA.medial.form2",
+      "character": "MONGOLIAN LETTER SIBE KA",
+      "baseCodePoint": "U+1863",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1863",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 267
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          410
+        ],
+        "defaultGlyphIds": [
+          409
+        ]
+      }
+    },
+    {
+      "id": "s2-role-043-initial",
+      "semanticRole": "MONGOLIAN_SIBE_TA.initial.form2",
+      "character": "MONGOLIAN LETTER SIBE TA",
+      "baseCodePoint": "U+1868",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1868",
+        "U+180B"
+      ],
+      "joiningState": "initial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 268
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          445
+        ],
+        "defaultGlyphIds": [
+          444
+        ]
+      }
+    },
+    {
+      "id": "s2-role-043-medial",
+      "semanticRole": "MONGOLIAN_SIBE_TA.medial.form2",
+      "character": "MONGOLIAN LETTER SIBE TA",
+      "baseCodePoint": "U+1868",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1868",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 268
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          447
+        ],
+        "defaultGlyphIds": [
+          446
+        ]
+      }
+    },
+    {
+      "id": "s2-role-044-medial",
+      "semanticRole": "MONGOLIAN_SIBE_TA.medial.form3",
+      "character": "MONGOLIAN LETTER SIBE TA",
+      "baseCodePoint": "U+1868",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+1868",
+        "U+180C"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 269
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          448
+        ],
+        "defaultGlyphIds": [
+          446
+        ]
+      }
+    },
+    {
+      "id": "s2-role-045-initial",
+      "semanticRole": "MONGOLIAN_SIBE_DA.initial.form2",
+      "character": "MONGOLIAN LETTER SIBE DA",
+      "baseCodePoint": "U+1869",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1869",
+        "U+180B"
+      ],
+      "joiningState": "initial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 270
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          453
+        ],
+        "defaultGlyphIds": [
+          452
+        ]
+      }
+    },
+    {
+      "id": "s2-role-045-medial",
+      "semanticRole": "MONGOLIAN_SIBE_DA.medial.form2",
+      "character": "MONGOLIAN LETTER SIBE DA",
+      "baseCodePoint": "U+1869",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1869",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 270
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          455
+        ],
+        "defaultGlyphIds": [
+          454
+        ]
+      }
+    },
+    {
+      "id": "s2-role-046-initial",
+      "semanticRole": "MONGOLIAN_SIBE_ZA.initial.form2",
+      "character": "MONGOLIAN LETTER SIBE ZA",
+      "baseCodePoint": "U+186F",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+186F",
+        "U+180B"
+      ],
+      "joiningState": "initial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 271
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          478
+        ],
+        "defaultGlyphIds": [
+          478
+        ]
+      }
+    },
+    {
+      "id": "s2-role-046-medial",
+      "semanticRole": "MONGOLIAN_SIBE_ZA.medial.form2",
+      "character": "MONGOLIAN LETTER SIBE ZA",
+      "baseCodePoint": "U+186F",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+186F",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 271
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          479
+        ],
+        "defaultGlyphIds": [
+          479
+        ]
+      }
+    },
+    {
+      "id": "s2-role-047-medial",
+      "semanticRole": "MONGOLIAN_MANCHU_I.medial.form2",
+      "character": "MONGOLIAN LETTER MANCHU I",
+      "baseCodePoint": "U+1873",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1873",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 272
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          496
+        ],
+        "defaultGlyphIds": [
+          496
+        ]
+      }
+    },
+    {
+      "id": "s2-role-047-final",
+      "semanticRole": "MONGOLIAN_MANCHU_I.final.form2",
+      "character": "MONGOLIAN LETTER MANCHU I",
+      "baseCodePoint": "U+1873",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1873",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 272
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          499
+        ],
+        "defaultGlyphIds": [
+          498
+        ]
+      }
+    },
+    {
+      "id": "s2-role-048-medial",
+      "semanticRole": "MONGOLIAN_MANCHU_I.medial.form3",
+      "character": "MONGOLIAN LETTER MANCHU I",
+      "baseCodePoint": "U+1873",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+1873",
+        "U+180C"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 273
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          497
+        ],
+        "defaultGlyphIds": [
+          496
+        ]
+      }
+    },
+    {
+      "id": "s2-role-048-final",
+      "semanticRole": "MONGOLIAN_MANCHU_I.final.form3",
+      "character": "MONGOLIAN LETTER MANCHU I",
+      "baseCodePoint": "U+1873",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+1873",
+        "U+180C"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 273
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          500
+        ],
+        "defaultGlyphIds": [
+          498
+        ]
+      }
+    },
+    {
+      "id": "s2-role-049-medial",
+      "semanticRole": "MONGOLIAN_MANCHU_I.medial.form4",
+      "character": "MONGOLIAN LETTER MANCHU I",
+      "baseCodePoint": "U+1873",
+      "selectorCodePoint": "U+180D",
+      "inputSequence": [
+        "U+1873",
+        "U+180D"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form4",
+      "desiredAppearance": "fourth form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 274
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          496
+        ],
+        "defaultGlyphIds": [
+          496
+        ]
+      }
+    },
+    {
+      "id": "s2-role-050-medial",
+      "semanticRole": "MONGOLIAN_MANCHU_KA.medial.form2",
+      "character": "MONGOLIAN LETTER MANCHU KA",
+      "baseCodePoint": "U+1874",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1874",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 275
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          509
+        ],
+        "defaultGlyphIds": [
+          508
+        ]
+      }
+    },
+    {
+      "id": "s2-role-050-final",
+      "semanticRole": "MONGOLIAN_MANCHU_KA.final.form2",
+      "character": "MONGOLIAN LETTER MANCHU KA",
+      "baseCodePoint": "U+1874",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1874",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 275
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          513
+        ],
+        "defaultGlyphIds": [
+          512
+        ]
+      }
+    },
+    {
+      "id": "s2-role-051-medial",
+      "semanticRole": "MONGOLIAN_MANCHU_KA.medial.form3",
+      "character": "MONGOLIAN LETTER MANCHU KA",
+      "baseCodePoint": "U+1874",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+1874",
+        "U+180C"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 276
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          510
+        ],
+        "defaultGlyphIds": [
+          508
+        ]
+      }
+    },
+    {
+      "id": "s2-role-051-final",
+      "semanticRole": "MONGOLIAN_MANCHU_KA.final.form3",
+      "character": "MONGOLIAN LETTER MANCHU KA",
+      "baseCodePoint": "U+1874",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+1874",
+        "U+180C"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 276
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          514
+        ],
+        "defaultGlyphIds": [
+          512
+        ]
+      }
+    },
+    {
+      "id": "s2-role-052-medial",
+      "semanticRole": "MONGOLIAN_MANCHU_KA.medial.form4",
+      "character": "MONGOLIAN LETTER MANCHU KA",
+      "baseCodePoint": "U+1874",
+      "selectorCodePoint": "U+180D",
+      "inputSequence": [
+        "U+1874",
+        "U+180D"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form4",
+      "desiredAppearance": "fourth form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 277
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          508
+        ],
+        "defaultGlyphIds": [
+          508
+        ]
+      }
+    },
+    {
+      "id": "s2-role-053-initial",
+      "semanticRole": "MONGOLIAN_MANCHU_FA.initial.form2",
+      "character": "MONGOLIAN LETTER MANCHU FA",
+      "baseCodePoint": "U+1876",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1876",
+        "U+180B"
+      ],
+      "joiningState": "initial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 278
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          525
+        ],
+        "defaultGlyphIds": [
+          524
+        ]
+      }
+    },
+    {
+      "id": "s2-role-053-medial",
+      "semanticRole": "MONGOLIAN_MANCHU_FA.medial.form2",
+      "character": "MONGOLIAN LETTER MANCHU FA",
+      "baseCodePoint": "U+1876",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1876",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 278
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          527
+        ],
+        "defaultGlyphIds": [
+          526
+        ]
+      }
+    },
+    {
+      "id": "s2-role-054-context_independent",
+      "semanticRole": "MONGOLIAN_ALI_GALI_ANUSVARA_ONE.any.form2",
+      "character": "MONGOLIAN LETTER ALI GALI ANUSVARA ONE",
+      "baseCodePoint": "U+1880",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1880",
+        "U+180B"
+      ],
+      "joiningState": "any",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 279
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          1517
+        ],
+        "defaultGlyphIds": [
+          1516
+        ]
+      }
+    },
+    {
+      "id": "s2-role-055-context_independent",
+      "semanticRole": "MONGOLIAN_ALI_GALI_VISARGA_ONE.any.form2",
+      "character": "MONGOLIAN LETTER ALI GALI VISARGA ONE",
+      "baseCodePoint": "U+1881",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1881",
+        "U+180B"
+      ],
+      "joiningState": "any",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 280
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          1519
+        ],
+        "defaultGlyphIds": [
+          1518
+        ]
+      }
+    },
+    {
+      "id": "s2-role-056-isolate",
+      "semanticRole": "MONGOLIAN_ALI_GALI_A.isolate.form2",
+      "character": "MONGOLIAN LETTER ALI GALI A",
+      "baseCodePoint": "U+1887",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1887",
+        "U+180B"
+      ],
+      "joiningState": "isolate",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 281
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          533
+        ],
+        "defaultGlyphIds": [
+          533
+        ]
+      }
+    },
+    {
+      "id": "s2-role-056-final",
+      "semanticRole": "MONGOLIAN_ALI_GALI_A.final.form2",
+      "character": "MONGOLIAN LETTER ALI GALI A",
+      "baseCodePoint": "U+1887",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1887",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 281
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "supported",
+        "observation": "aligned",
+        "targetGlyphIds": [
+          537
+        ],
+        "defaultGlyphIds": [
+          536
+        ]
+      }
+    },
+    {
+      "id": "s2-role-057-final",
+      "semanticRole": "MONGOLIAN_ALI_GALI_A.final.form3",
+      "character": "MONGOLIAN LETTER ALI GALI A",
+      "baseCodePoint": "U+1887",
+      "selectorCodePoint": "U+180C",
+      "inputSequence": [
+        "U+1887",
+        "U+180C"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form3",
+      "desiredAppearance": "third form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 282
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          536
+        ],
+        "defaultGlyphIds": [
+          536
+        ]
+      }
+    },
+    {
+      "id": "s2-role-058-final",
+      "semanticRole": "MONGOLIAN_ALI_GALI_A.final.form4",
+      "character": "MONGOLIAN LETTER ALI GALI A",
+      "baseCodePoint": "U+1887",
+      "selectorCodePoint": "U+180D",
+      "inputSequence": [
+        "U+1887",
+        "U+180D"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form4",
+      "desiredAppearance": "fourth form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 283
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          536
+        ],
+        "defaultGlyphIds": [
+          536
+        ]
+      }
+    },
+    {
+      "id": "s2-role-059-final",
+      "semanticRole": "MONGOLIAN_ALI_GALI_I.final.form2",
+      "character": "MONGOLIAN LETTER ALI GALI I",
+      "baseCodePoint": "U+1888",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+1888",
+        "U+180B"
+      ],
+      "joiningState": "final",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 284
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          541
+        ],
+        "defaultGlyphIds": [
+          541
+        ]
+      }
+    },
+    {
+      "id": "s2-role-060-initial",
+      "semanticRole": "MONGOLIAN_ALI_GALI_NGA.initial.form2",
+      "character": "MONGOLIAN LETTER ALI GALI NGA",
+      "baseCodePoint": "U+188A",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+188A",
+        "U+180B"
+      ],
+      "joiningState": "initial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 285
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          547
+        ],
+        "defaultGlyphIds": [
+          547
+        ]
+      }
+    },
+    {
+      "id": "s2-role-060-medial",
+      "semanticRole": "MONGOLIAN_ALI_GALI_NGA.medial.form2",
+      "character": "MONGOLIAN LETTER ALI GALI NGA",
+      "baseCodePoint": "U+188A",
+      "selectorCodePoint": "U+180B",
+      "inputSequence": [
+        "U+188A",
+        "U+180B"
+      ],
+      "joiningState": "medial",
+      "variationIntent": "form2",
+      "desiredAppearance": "second form",
+      "source": {
+        "url": "https://www.unicode.org/Public/17.0.0/ucd/StandardizedVariants.txt",
+        "section": "Mongolian standardized variation sequences",
+        "source_line": 285
+      },
+      "ruleStatus": "unicode-declared-target",
+      "backend": {
+        "id": "noto-sans-mongolian-3.002-harfbuzz-14.3.0",
+        "status": "project-glyph-required",
+        "observation": "missing_variant_response",
+        "targetGlyphIds": [
+          548
+        ],
+        "defaultGlyphIds": [
+          548
+        ]
+      }
+    }
+  ]
+}

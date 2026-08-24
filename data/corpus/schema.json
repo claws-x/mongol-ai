@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claws-x.github.io/mongol-ai/data/corpus/schema.json",
+  "title": "Mongol AI web corpus observation bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedAt", "scope", "documents", "failures"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "scope": { "const": "short-public-web-text-observations-not-redistributable-articles" },
+    "documents": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/document" }
+    },
+    "failures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["sourceId", "code", "message"],
+        "properties": {
+          "sourceId": { "type": "string" },
+          "code": { "type": "string" },
+          "message": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schemaVersion", "sourceId", "sourceUrl", "fetchedAt", "contentHash", "pageLanguage", "license", "redistributable", "segmentCount", "segments"],
+      "properties": {
+        "schemaVersion": { "const": "1.0.0" },
+        "sourceId": { "type": "string" },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "fetchedAt": { "type": "string", "format": "date-time" },
+        "contentHash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+        "pageLanguage": { "type": "string" },
+        "license": { "type": "string" },
+        "redistributable": { "type": "boolean" },
+        "segmentCount": { "type": "integer", "minimum": 0 },
+        "segments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["text", "codepoints", "leftContext", "rightContext", "controls"],
+            "properties": {
+              "text": { "type": "string", "maxLength": 512 },
+              "codepoints": { "type": "array", "items": { "type": "string", "pattern": "^U\\+[0-9A-F]{4,6}$" } },
+              "leftContext": { "type": "string", "maxLength": 128 },
+              "rightContext": { "type": "string", "maxLength": 128 },
+              "controls": { "type": "array", "items": { "type": "string", "pattern": "^U\\+(180[B-F]|200[CD]|202F)$" } }
+            }
+          }
+        }
+      }
+    }
+  }
+}

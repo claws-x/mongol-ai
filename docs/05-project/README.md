@@ -11,6 +11,7 @@
 
 - [`LANGUAGE_REVIEW_WORKFLOW.md`](LANGUAGE_REVIEW_WORKFLOW.md)
 - [`BROWSER_VALIDATION_MATRIX.md`](BROWSER_VALIDATION_MATRIX.md)
+- [`PHASE_S2_SEMANTIC_GLYPH_ENGINE.md`](PHASE_S2_SEMANTIC_GLYPH_ENGINE.md)
 
 人工审核用于语言产品评估和反例发现，不是语义字形引擎研发的审批机关。若本
 目录历史文档出现“等待专家批准后才能继续”“某一字体即正确答案”等表述，按

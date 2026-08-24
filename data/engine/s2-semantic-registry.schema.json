@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claws-x.github.io/mongol-ai/data/engine/s2-semantic-registry.schema.json",
+  "title": "Mongol AI S2 semantic glyph registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedAt", "phase", "scope", "summary", "targets"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "generatedAt": { "type": "string", "format": "date" },
+    "phase": { "const": "S2" },
+    "scope": { "type": "string" },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["targetCount", "semanticRoleCount", "byBackendStatus"],
+      "properties": {
+        "targetCount": { "const": 93 },
+        "semanticRoleCount": { "const": 93 },
+        "byBackendStatus": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } }
+      }
+    },
+    "targets": {
+      "type": "array",
+      "minItems": 93,
+      "maxItems": 93,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "semanticRole", "character", "baseCodePoint", "selectorCodePoint", "inputSequence", "joiningState", "variationIntent", "desiredAppearance", "source", "ruleStatus", "backend"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^s2-role-" },
+          "semanticRole": { "type": "string", "pattern": "^MONGOLIAN_[A-Z0-9_]+\\.(isolate|initial|medial|final|any)\\.form[234]$" },
+          "character": { "type": "string" },
+          "baseCodePoint": { "type": "string", "pattern": "^U\\+[0-9A-F]{4,6}$" },
+          "selectorCodePoint": { "type": "string", "pattern": "^(U\\+180[B-D]|U\\+180F)$" },
+          "inputSequence": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "type": "string" } },
+          "joiningState": { "enum": ["isolate", "initial", "medial", "final", "any"] },
+          "variationIntent": { "enum": ["form2", "form3", "form4"] },
+          "desiredAppearance": { "enum": ["second form", "third form", "fourth form"] },
+          "source": { "type": "object" },
+          "ruleStatus": { "const": "unicode-declared-target" },
+          "backend": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "status", "observation", "targetGlyphIds", "defaultGlyphIds"],
+            "properties": {
+              "id": { "type": "string" },
+              "status": { "enum": ["supported", "substituted", "project-glyph-required"] },
+              "observation": { "type": "string" },
+              "targetGlyphIds": { "type": "array", "items": { "type": "integer" } },
+              "defaultGlyphIds": { "type": "array", "items": { "type": "integer" } }
+            }
+          }
+        }
+      }
+    }
+  }
+}

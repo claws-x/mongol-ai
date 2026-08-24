@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-08-24T11:39:40.837Z",
+  "scope": "short-public-web-text-observations-not-redistributable-articles",
+  "documents": [
+    {
+      "schemaVersion": "1.0.0",
+      "sourceId": "unesun-sambara-editor",
+      "sourceUrl": "https://unesun-sambara.com/",
+      "fetchedAt": "2026-08-24T11:39:36.253Z",
+      "contentHash": "sha256:49993d594c4b5b1c9347363160477623d83beffd333444339cf41bee0219ed28",
+      "pageLanguage": "mn-Mong",
+      "license": "site-terms-unknown-text-observation-only",
+      "redistributable": false,
+      "segmentCount": 1,
+      "segments": [
+        {
+          "text": "ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ᠌",
+          "codepoints": [
+            "U+182E",
+            "U+1823",
+            "U+1829",
+            "U+182D",
+            "U+1823",
+            "U+182F",
+            "U+0020",
+            "U+182A",
+            "U+1822",
+            "U+1834",
+            "U+1822",
+            "U+182D",
+            "U+180C"
+          ],
+          "leftContext": "",
+          "rightContext": "",
+          "controls": [
+            "U+180C"
+          ]
+        }
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "sourceId": "lianghai-mongolian-resources",
+      "sourceUrl": "https://lianghai.github.io/mongolian/",
+      "fetchedAt": "2026-08-24T11:39:37.836Z",
+      "contentHash": "sha256:d95495e33027385c78516361a1deb462f82652b2e861dff591a5b6aedbab3cdf",
+      "pageLanguage": "mn-Mong",
+      "license": "site-terms-unknown-text-observation-only",
+      "redistributable": false,
+      "segmentCount": 1,
+      "segments": [
+        {
+          "text": "ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ",
+          "codepoints": [
+            "U+182E",
+            "U+1823",
+            "U+1829",
+            "U+182D",
+            "U+1823",
+            "U+182F",
+            "U+0020",
+            "U+182A",
+            "U+1822",
+            "U+1834",
+            "U+1822",
+            "U+182D"
+          ],
+          "leftContext": "",
+          "rightContext": ".",
+          "controls": []
+        }
+      ]
+    }
+  ],
+  "failures": []
+}
