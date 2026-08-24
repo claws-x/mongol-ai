@@ -21,7 +21,7 @@ class ProductContractTests(unittest.TestCase):
     def test_engine_page_reports_module_load_failure_instead_of_hanging(self):
         html = (ROOT / "engine/index.html").read_text(encoding="utf-8")
         bootstrap = (ROOT / "engine/engine-bootstrap.js").read_text(encoding="utf-8")
-        self.assertIn('<script src="engine-bootstrap.js"></script>', html)
+        self.assertRegex(html, r'<script src="engine-bootstrap\.js\?v=[0-9.]+"></script>')
         self.assertLess(html.index("engine-bootstrap.js"), html.index("engine-lab.mjs"))
         self.assertIn("引擎资源加载失败", bootstrap)
         self.assertIn("mongol-engine-ready", bootstrap)
@@ -36,6 +36,18 @@ class ProductContractTests(unittest.TestCase):
         self.assertIn('id="lexical-control-body"', html)
         self.assertIn("analyzeMongolianLexicalControls", script)
         self.assertIn("Unicode 16.0 起 MVS", html)
+
+    def test_engine_runtime_urls_are_versioned_with_package_release(self):
+        package = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))
+        version = package["version"]
+        html = (ROOT / "engine/index.html").read_text(encoding="utf-8")
+        script = (ROOT / "engine/engine-lab.mjs").read_text(encoding="utf-8")
+        self.assertIn(f'engine-lab.mjs?v={version}', html)
+        self.assertIn(f'engine-bootstrap.js?v={version}', html)
+        self.assertIn(f'mongolian_super_engine.mjs?v={version}', script)
+        self.assertIn(f'semantic_glyph_engine.mjs?v={version}', script)
+        self.assertIn(f'mongolian_lexical_controls.mjs?v={version}', script)
+        self.assertIn(f's2-semantic-registry.json?v={version}', script)
 
     def test_official_experience_uses_native_vertical_layout(self):
         html = (ROOT / "demos/input/ai-chat.html").read_text(encoding="utf-8")

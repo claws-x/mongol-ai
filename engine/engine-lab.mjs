@@ -1,6 +1,6 @@
-import { MongolianSuperEngine, PROFILES } from "../core/mongolian_super_engine.mjs";
-import { SemanticGlyphRegistry } from "../core/semantic_glyph_engine.mjs";
-import { analyzeMongolianLexicalControls } from "../core/mongolian_lexical_controls.mjs";
+import { MongolianSuperEngine, PROFILES } from "../core/mongolian_super_engine.mjs?v=0.7.0";
+import { SemanticGlyphRegistry } from "../core/semantic_glyph_engine.mjs?v=0.7.0";
+import { analyzeMongolianLexicalControls } from "../core/mongolian_lexical_controls.mjs?v=0.7.0";
 
 const engine = new MongolianSuperEngine();
 const form = document.querySelector("#engine-form");
@@ -213,7 +213,7 @@ document.querySelector("#export-evidence").addEventListener("click", () => {
 try {
     const [report, registryResponse] = await Promise.all([
         engine.init(),
-        fetch(new URL("../data/engine/s2-semantic-registry.json", import.meta.url)),
+        fetch(new URL("../data/engine/s2-semantic-registry.json?v=0.7.0", import.meta.url)),
     ]);
     if (!registryResponse.ok) throw new Error(`semantic registry HTTP ${registryResponse.status}`);
     semanticRegistry = new SemanticGlyphRegistry(await registryResponse.json());
