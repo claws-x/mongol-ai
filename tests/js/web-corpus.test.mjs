@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { buildCorpusDocument, buildCorpusStats, htmlToText } from "../../core/web_corpus.mjs";
+import { buildControlCooccurrenceIndex, buildCorpusDocument, buildCorpusStats, htmlToText } from "../../core/web_corpus.mjs";
 import { parseRobots, robotsAllows } from "../../tools/corpus/crawl.mjs";
 
 const source = {
@@ -31,6 +31,30 @@ test("corpus statistics count code points and domains without shaping guesses", 
     assert.equal(stats.codepoints["U+1820"], 2);
     assert.equal(stats.controls["U+180C"], 1);
     assert.equal(stats.scope, "raw-codepoint-and-context-observation-not-linguistic-truth");
+});
+
+test("control cooccurrence index stores codepoint context and zero-count controls honestly", () => {
+    const first = buildCorpusDocument({
+        source,
+        sourceUrl: "https://one.test/",
+        fetchedAt: "2026-08-24T00:00:00.000Z",
+        html: "<p>ᠮᠣᠩᠭᠣᠯ᠎ᠳᠤᠷ ᠠ᠌</p>",
+    });
+    const second = buildCorpusDocument({
+        source,
+        sourceUrl: "https://two.test/",
+        fetchedAt: "2026-08-24T00:00:00.000Z",
+        html: "<p>ᠮᠣᠩᠭᠣᠯ ᠳᠤᠷ</p>",
+    });
+    const index = buildControlCooccurrenceIndex([first, second]);
+    assert.equal(index.scope, "codepoint-cooccurrence-observation-not-word-or-glyph-truth");
+    assert.equal(index.observedControls["U+180E"], 1);
+    assert.equal(index.observedControls["U+202F"], 1);
+    assert.equal(index.observedControls["U+180C"], 1);
+    assert.equal(index.observedControls["U+200D"], 0);
+    assert.equal(index.records.length, 3);
+    assert.ok(index.records.every((record) => record.leftSequence.every((label) => label.startsWith("U+"))));
+    assert.ok(index.records.every((record) => !("text" in record)));
 });
 
 test("robots rules use longest matching path and never ignore disallow", () => {

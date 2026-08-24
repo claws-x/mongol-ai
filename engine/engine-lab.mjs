@@ -1,5 +1,6 @@
 import { MongolianSuperEngine, PROFILES } from "../core/mongolian_super_engine.mjs";
 import { SemanticGlyphRegistry } from "../core/semantic_glyph_engine.mjs";
+import { analyzeMongolianLexicalControls } from "../core/mongolian_lexical_controls.mjs";
 
 const engine = new MongolianSuperEngine();
 const form = document.querySelector("#engine-form");
@@ -17,6 +18,7 @@ const compositionCount = document.querySelector("#composition-count");
 const lastCommit = document.querySelector("#last-commit");
 const declaredProfile = document.querySelector("#declared-profile");
 const semanticBody = document.querySelector("#semantic-body");
+const lexicalControlBody = document.querySelector("#lexical-control-body");
 let isComposing = false;
 let imeEvents = [];
 let semanticRegistry = null;
@@ -99,10 +101,34 @@ function renderSemanticTrace(trace) {
     }));
 }
 
+function lexicalControlEvents(text) {
+    return analyzeMongolianLexicalControls(text);
+}
+
+function renderLexicalControls(events) {
+    lexicalControlBody.replaceChildren(...events.map((event) => {
+        const row = document.createElement("tr");
+        const values = [
+            `${event.controlName} (${event.control})`,
+            event.kind,
+            event.leftSequence.join(" ") || "—",
+            event.rightSequence.join(" ") || "—",
+            event.semanticStatus,
+        ];
+        values.forEach((value) => {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            row.appendChild(cell);
+        });
+        return row;
+    }));
+}
+
 function run() {
     const inputDocument = engine.createDocument(source.value, profile.value);
     const diagnostics = renderDiagnostics(inputDocument);
     renderSemanticTrace(semanticTrace(inputDocument.raw));
+    renderLexicalControls(lexicalControlEvents(inputDocument.raw));
     profileNote.textContent = `${PROFILES[profile.value].note} 依据：${PROFILES[profile.value].evidence}`;
     declaredProfile.textContent = PROFILES[profile.value].label;
     output.replaceChildren();
@@ -172,6 +198,7 @@ document.querySelector("#export-evidence").addEventListener("click", () => {
         codePoints: inputDocument.tokens.map((token) => token.label),
         diagnostics: inputDocument.diagnostics(),
         semanticTrace: semanticTrace(inputDocument.raw),
+        lexicalControlEvents: lexicalControlEvents(inputDocument.raw),
         events: imeEvents,
         engine: engine.report(),
     };

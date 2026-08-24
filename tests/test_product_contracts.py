@@ -33,6 +33,9 @@ class ProductContractTests(unittest.TestCase):
         self.assertIn("Unicode Joining_Type 17.0.0", html)
         self.assertIn("SemanticGlyphRegistry", script)
         self.assertIn("semanticTrace", script)
+        self.assertIn('id="lexical-control-body"', html)
+        self.assertIn("analyzeMongolianLexicalControls", script)
+        self.assertIn("Unicode 16.0 起 MVS", html)
 
     def test_official_experience_uses_native_vertical_layout(self):
         html = (ROOT / "demos/input/ai-chat.html").read_text(encoding="utf-8")

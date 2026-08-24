@@ -172,6 +172,7 @@ glyph ID 只属于具体字体版本，不能代替 `semanticRole`。不同字�
 - S2.0 已把93个 Unicode 声明目标转换为稳定 `semanticRole`；当前后端75个具体目标可响应、18个具体目标需要项目字形；
 - S2.0 网页语料管线已能检查 robots/TLS、限速抓取、无损提取控制符并生成码位统计。
 - S2.1 已锁定 Unicode 17.0.0 `Joining_Type`，普通蒙古文单词无需注入 ZWJ 即可计算 isolate／initial／medial／final；连接边界、透明选择符和促连字符均有自动断言。
+- S2.1 已将 MVS／NNBSP 结构事件与连接状态分层，并生成不含正文的网页控制符共现索引；当前真实观察为 FVS2 1次、MVS 0次、NNBSP 0次。
 
 这些数字描述**当前后端的可观察行为**，不代表“83 个字已经被专家批准”，
 也不表示开发必须停下来等待批准。
@@ -179,7 +180,7 @@ glyph ID 只属于具体字体版本，不能代替 `semanticRole`。不同字�
 ## 8. 当前阶段：S2 语义字形计算引擎
 
 S2.0 Foundation 已于 2026-08-24 落地；S2.1 Context Model 的确定性连接状态
-纵向切片已实现，当前继续补充 MVS／NNBSP 词法语义和项目字形几何。阶段事实与
+纵向切片与控制符结构层已实现，当前继续扩充真实控制符语料、词法来源和项目字形几何。阶段事实与
 未完成边界见
 [`PHASE_S2_SEMANTIC_GLYPH_ENGINE.md`](05-project/PHASE_S2_SEMANTIC_GLYPH_ENGINE.md)。
 

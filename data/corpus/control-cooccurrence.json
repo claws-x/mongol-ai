@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "codepoint-cooccurrence-observation-not-word-or-glyph-truth",
+  "contextWidth": 16,
+  "documentCount": 2,
+  "recordCount": 1,
+  "observedControls": {
+    "U+180B": 0,
+    "U+180C": 1,
+    "U+180D": 0,
+    "U+180E": 0,
+    "U+180F": 0,
+    "U+200C": 0,
+    "U+200D": 0,
+    "U+202F": 0
+  },
+  "records": [
+    {
+      "control": "U+180C",
+      "leftSequence": [
+        "U+182A",
+        "U+1822",
+        "U+1834",
+        "U+1822",
+        "U+182D"
+      ],
+      "rightSequence": [],
+      "occurrenceCount": 1,
+      "sourceIds": [
+        "unesun-sambara-editor"
+      ],
+      "domains": [
+        "unesun-sambara.com"
+      ]
+    }
+  ]
+}

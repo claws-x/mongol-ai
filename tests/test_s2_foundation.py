@@ -15,6 +15,7 @@ class PhaseS2FoundationTests(unittest.TestCase):
         cls.sources = json.loads((ROOT / "data/corpus/sources.json").read_text(encoding="utf-8"))
         cls.observations = json.loads((ROOT / "data/corpus/observations.json").read_text(encoding="utf-8"))
         cls.joining = json.loads((ROOT / "data/unicode/joining-types-17.0.0.json").read_text(encoding="utf-8"))
+        cls.cooccurrence = json.loads((ROOT / "data/corpus/control-cooccurrence.json").read_text(encoding="utf-8"))
 
     def test_joining_data_is_version_locked_to_unicode_17(self):
         self.assertEqual(self.joining["unicodeVersion"], "17.0.0")
@@ -36,6 +37,21 @@ class PhaseS2FoundationTests(unittest.TestCase):
                 str(output),
             ], check=True)
             self.assertEqual(json.loads(output.read_text(encoding="utf-8")), self.registry)
+
+    def test_control_cooccurrence_index_is_reproducible_and_does_not_claim_truth(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "control-index.json"
+            subprocess.run([
+                "node",
+                str(ROOT / "tools/corpus/cooccurrence.mjs"),
+                str(ROOT / "data/corpus/observations.json"),
+                str(output),
+            ], check=True)
+            self.assertEqual(json.loads(output.read_text(encoding="utf-8")), self.cooccurrence)
+        self.assertEqual(self.cooccurrence["scope"], "codepoint-cooccurrence-observation-not-word-or-glyph-truth")
+        self.assertEqual(self.cooccurrence["observedControls"]["U+180C"], 1)
+        self.assertEqual(self.cooccurrence["observedControls"]["U+180E"], 0)
+        self.assertEqual(self.cooccurrence["observedControls"]["U+202F"], 0)
 
     def test_registry_has_93_unique_semantic_roles_and_honest_backend_states(self):
         targets = self.registry["targets"]

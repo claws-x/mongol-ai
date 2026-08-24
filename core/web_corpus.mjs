@@ -155,3 +155,72 @@ export function buildCorpusStats(documents) {
         controls: sortedObject(controls),
     };
 }
+
+function isHardContextBoundary(character) {
+    return /[\s\u00A0]/u.test(character) && character !== "\u202F";
+}
+
+function boundedContext(characters, controlIndex, step, width) {
+    const result = [];
+    for (let index = controlIndex + step; index >= 0 && index < characters.length && result.length < width; index += step) {
+        const character = characters[index];
+        if (isHardContextBoundary(character)) break;
+        if (step < 0) result.unshift(character);
+        else result.push(character);
+    }
+    return result;
+}
+
+export function buildControlCooccurrenceIndex(documents, options = {}) {
+    const contextWidth = options.contextWidth ?? 16;
+    const records = new Map();
+    const observedControls = new Map();
+
+    for (const document of documents) {
+        const domain = new URL(document.sourceUrl).hostname;
+        for (const segment of document.segments) {
+            const characters = [...segment.text];
+            characters.forEach((character, index) => {
+                if (!MONGOLIAN_CONTROL_RE.test(character)) return;
+                const control = codePointLabels(character)[0];
+                const left = boundedContext(characters, index, -1, contextWidth);
+                const right = boundedContext(characters, index, 1, contextWidth);
+                const leftSequence = codePointLabels(left.join(""));
+                const rightSequence = codePointLabels(right.join(""));
+                const key = `${control}|${leftSequence.join(" ")}|${rightSequence.join(" ")}`;
+                if (!records.has(key)) {
+                    records.set(key, {
+                        control,
+                        leftSequence,
+                        rightSequence,
+                        occurrenceCount: 0,
+                        sourceIds: new Set(),
+                        domains: new Set(),
+                    });
+                }
+                const record = records.get(key);
+                record.occurrenceCount += 1;
+                record.sourceIds.add(document.sourceId);
+                record.domains.add(domain);
+                observedControls.set(control, (observedControls.get(control) ?? 0) + 1);
+            });
+        }
+    }
+
+    const controlsOfInterest = ["U+180B", "U+180C", "U+180D", "U+180E", "U+180F", "U+200C", "U+200D", "U+202F"];
+    return {
+        schemaVersion: "1.0.0",
+        scope: "codepoint-cooccurrence-observation-not-word-or-glyph-truth",
+        contextWidth,
+        documentCount: documents.length,
+        recordCount: records.size,
+        observedControls: Object.fromEntries(controlsOfInterest.map((control) => [control, observedControls.get(control) ?? 0])),
+        records: [...records.values()]
+            .map((record) => ({
+                ...record,
+                sourceIds: [...record.sourceIds].sort(),
+                domains: [...record.domains].sort(),
+            }))
+            .sort((a, b) => `${a.control}|${a.leftSequence}|${a.rightSequence}`.localeCompare(`${b.control}|${b.leftSequence}|${b.rightSequence}`)),
+    };
+}

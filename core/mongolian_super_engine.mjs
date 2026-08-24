@@ -2,7 +2,7 @@
 // not publish node_modules. Keep this path inside the public repository tree.
 import * as hb from "../assets/vendor/harfbuzzjs/index.mjs";
 
-const ENGINE_VERSION = "0.6.0";
+const ENGINE_VERSION = "0.7.0";
 const FONT_URL = new URL("../assets/fonts/NotoSansMongolian-Regular.ttf", import.meta.url);
 const OVERRIDES_URL = new URL("../data/engine/glyph-overrides.json", import.meta.url);
 const LOCKED_FONT_SHA256 = "a28ba3cde3de22de7ddc934bd5d5babe54e6ce28c073a288cd978ffcf26b295b";

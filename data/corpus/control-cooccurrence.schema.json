@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://claws-x.github.io/mongol-ai/data/corpus/control-cooccurrence.schema.json",
+  "title": "Mongol AI control cooccurrence index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "scope", "contextWidth", "documentCount", "recordCount", "observedControls", "records"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "scope": { "const": "codepoint-cooccurrence-observation-not-word-or-glyph-truth" },
+    "contextWidth": { "type": "integer", "minimum": 1 },
+    "documentCount": { "type": "integer", "minimum": 0 },
+    "recordCount": { "type": "integer", "minimum": 0 },
+    "observedControls": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 } },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["control", "leftSequence", "rightSequence", "occurrenceCount", "sourceIds", "domains"],
+        "properties": {
+          "control": { "type": "string", "pattern": "^U\\+[0-9A-F]{4,6}$" },
+          "leftSequence": { "type": "array", "items": { "type": "string" } },
+          "rightSequence": { "type": "array", "items": { "type": "string" } },
+          "occurrenceCount": { "type": "integer", "minimum": 1 },
+          "sourceIds": { "type": "array", "items": { "type": "string" } },
+          "domains": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}
